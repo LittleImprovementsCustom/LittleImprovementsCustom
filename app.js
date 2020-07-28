@@ -9,4 +9,7 @@ const server = http.createServer((req, res) => {
 
 server.listen(port,() => {
   console.log(`Server running at port `+port);
+  if req.method === "POST" {
+    console.log("received post request")
+  }
 });
