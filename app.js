@@ -20,10 +20,8 @@ const server = http.createServer((req, res) => {
 
     req.on('end', function () {
         var post = qs.parse(body);
-        // use post['blah'], etc.
+        console.log(post);
     });
-    
-    console.log(post)
 
     res.end()
   }
