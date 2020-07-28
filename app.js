@@ -4,6 +4,7 @@ const port = process.env.PORT || 3000
 const server = http.createServer((req, res) => {
   if (req.method==="POST") {
     console.log("received post request")
+    res.end()
   }
   else {
     res.statusCode = 200;
