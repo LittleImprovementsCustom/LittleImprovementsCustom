@@ -14,7 +14,4 @@ const server = http.createServer((req, res) => {
 
 server.listen(port,() => {
   console.log(`Server running at port `+port);
-  if (req.method==="GET") {
-    console.log("received get request")
-  }
 });
