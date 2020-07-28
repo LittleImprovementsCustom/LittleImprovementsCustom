@@ -23,6 +23,8 @@ const server = http.createServer((req, res) => {
         // use post['blah'], etc.
     });
     
+    console.log(post)
+
     res.end()
   }
   else {
