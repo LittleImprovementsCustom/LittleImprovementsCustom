@@ -7,9 +7,9 @@ const server = http.createServer(function (req, res) {
   res.end('<h1>Hello World</h1>');
 });
 
-server.listen(port,() => {
+server.listen(port,(req, res) => {
   console.log(`Server running at port `+port);
-  if (server.req.method==="GET") {
+  if (req.method==="GET") {
     console.log("received get request")
   }
 });
