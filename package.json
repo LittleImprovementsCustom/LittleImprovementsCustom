@@ -1,19 +1,22 @@
 {
-  "name": "littleimprovements-custom",
-  "version": "1.0.0",
-  "description": "Resource Pack Picker By Beatso",
-  "main": "app.js",
-  "scripts": {
-  "start": "node app.js"
-},
-  "repository": {
-  "type": "git",
-  "url": ""
-},
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-  "url": ""
-},
-  "homepage": ""
+	"name": "littleimprovements-custom",
+	"version": "1.0.0",
+	"description": "Resource Pack Picker By Beatso",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": ""
+	},
+	"homepage": "",
+	"dependencies": {
+		"querystring":"^0.2.0"
+	}
 }
