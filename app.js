@@ -5,6 +5,7 @@ const server = http.createServer(function (req, res) {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/html');
   res.end('<h1>Hello World</h1>');
+  console.log(`Server running at port `+port);
   if (req.method === "POST") {
     console.log("received post request")
   }
