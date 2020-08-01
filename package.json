@@ -17,6 +17,7 @@
 	},
 	"homepage": "",
 	"dependencies": {
-		"querystring":"^0.2.0"
+		"querystring":"^0.2.0",
+		"fs":"^14.7.0"
 	}
 }
