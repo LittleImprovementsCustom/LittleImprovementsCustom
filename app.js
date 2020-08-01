@@ -11,6 +11,7 @@ const server = http.createServer((req, res) => {
 
     req.on('data', function (data) {
         body += data;
+        console.log("data="+data)
 
         // Too much POST data, kill the connection!
         // 1e6 === 1 * Math.pow(10, 6) === 1 * 1000000 ~~~ 1MB
