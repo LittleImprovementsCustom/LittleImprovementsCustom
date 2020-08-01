@@ -9,6 +9,8 @@ const server = http.createServer((req, res) => {
     console.log("received post request")
     var body = '';
 
+    // hi
+
     req.on('data', function (data) {
         body += data;
         console.log("data="+data)
