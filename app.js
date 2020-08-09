@@ -9,10 +9,15 @@ app.get("/", function (req, res) {
 })
 
 app.post('/', function (req, res) {
-  var factory = req.body.factory;
-  console.log("factory="+factory)
+  //var factory = req.body.factory;
+  //console.log("factory="+factory)
   console.log(req.body)
-  res.send('POST request to homepage');
+  if (req.body.new=="true") {
+    res.send('helo');
+  } else {
+    res.send('sorry');
+  }
+  
 })
 
 app.listen(process.env.PORT || 3000, 
