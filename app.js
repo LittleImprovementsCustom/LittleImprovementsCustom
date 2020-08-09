@@ -14,7 +14,13 @@ app.post('/', function (req, res) {
   console.log(req.body)
   if (req.body.new=="true") {
     res.send('helo');
-    fs.mkdir("potato")
+    fs.mkdir("./potato", function(err) {
+      if (err) {
+        console.log(err)
+      } else {
+        console.log("New directory successfully created. congrats")
+      }
+    })
   } else {
     res.send('sorry ur bad');
   }
