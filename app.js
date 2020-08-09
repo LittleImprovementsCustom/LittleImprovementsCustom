@@ -21,7 +21,9 @@ const server = http.createServer((req, res) => {
         if (body.length > 1e6)
             req.connection.destroy();
     });
-
+    
+    console.log("thedata="+data)
+    
     req.on('end', function () {
         var post = qs.parse(body);
         console.log(post);
