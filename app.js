@@ -1,5 +1,5 @@
 const express = require("express")
-var app = express()
+const app = express()
 //const fs = require('fs')
 
 app.use(express.json());       // to support JSON-encoded bodies
