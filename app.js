@@ -11,6 +11,7 @@ app.get("/", function (req, res) {
 app.post('/', function (req, res) {
   var factory = req.body.factory;
   console.log("factory="+factory)
+  console.log(req.body)
   res.send('POST request to homepage');
 })
 
