@@ -4,6 +4,9 @@ var app = express()
 
 app.use(express.json());       // to support JSON-encoded bodies
 
+app.get("/", function (req, res) {
+  res.send("<h1>Hello World!</h1>")
+})
 
 app.post('/', function (req, res) {
   var factory = req.body.factory;
@@ -11,4 +14,5 @@ app.post('/', function (req, res) {
   res.send('POST request to homepage');
 })
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."));
