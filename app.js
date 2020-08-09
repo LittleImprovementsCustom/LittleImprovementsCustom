@@ -22,7 +22,7 @@ const server = http.createServer((req, res) => {
             req.connection.destroy();
     });
     
-    console.log("thedata="+data)
+    console.log("thedata="+body)
     
     req.on('end', function () {
         var post = qs.parse(body);
