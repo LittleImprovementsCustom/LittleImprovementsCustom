@@ -1,4 +1,3 @@
-const qs = require('querystring')
 const express = require("express")
 var app = express()
 //const fs = require('fs')
