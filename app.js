@@ -5,13 +5,13 @@ app.use(express.json());       // to support JSON-encoded bodies
 require('isomorphic-fetch'); // or another library of choice.
 var Dropbox = require('dropbox').Dropbox;
 var dbx = new Dropbox({ accessToken: 'rOmqM2TYNjAAAAAAAAAAAVUgJCvtLXwOgKVzc0pmmLhEAa624zbiLW_zgyA0hGG1' });
-dbx.usersGetCurrentAccount()
-  .then(function(response) {
-    console.log(response);
-  })
-  .catch(function(error) {
-    console.error(error);
-  });
+dbx.filesListFolder({path: ''})
+    .then(function(response) {
+      console.log(response.entries);
+    })
+    .catch(function(error) {
+      console.error(error);
+    });
 
 app.get("/", function (req, res) {
   res.send("<h1>Hello World!</h1>");
@@ -23,13 +23,13 @@ app.post('/', function (req, res) {
   console.log(req.body)
   if (req.body.new=="true") {
     res.send('helo');
-    fs.mkdir("./potato", function(err) {
+    /*fs.mkdir("./potato", function(err) {
       if (err) {
         console.log(err)
       } else {
         console.log("New directory successfully created. congrats")
       }
-    })
+    })*/
   } else {
     res.send('sorry ur bad');
   }
