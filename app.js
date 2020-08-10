@@ -2,7 +2,16 @@ const express = require("express")
 const app = express();
 app.use(express.json());       // to support JSON-encoded bodies
 
-const fs = require('fs');
+require('isomorphic-fetch'); // or another library of choice.
+var Dropbox = require('dropbox').Dropbox;
+var dbx = new Dropbox({ accessToken: 'rOmqM2TYNjAAAAAAAAAAAVUgJCvtLXwOgKVzc0pmmLhEAa624zbiLW_zgyA0hGG1' });
+dbx.usersGetCurrentAccount()
+  .then(function(response) {
+    console.log(response);
+  })
+  .catch(function(error) {
+    console.error(error);
+  });
 
 app.get("/", function (req, res) {
   res.send("<h1>Hello World!</h1>");
