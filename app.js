@@ -13,6 +13,14 @@ dbx.filesListFolder({path: ''})
       console.error(error);
     });
 
+dbx.filesCreateFolderV2({path: "/potatocheese"})
+.then(function(response) {
+  console.log(response);
+})
+.catch(function(error) {
+  console.error(error);
+});
+
 app.get("/", function (req, res) {
   res.send("<h1>Hello World!</h1>");
 })
