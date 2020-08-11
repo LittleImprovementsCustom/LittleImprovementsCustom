@@ -1,5 +1,5 @@
 const shortid = require("shortid");
 
-export function compilePack(body) {
-    
+module.exports.compilePack  = function(requestBody) {
+    id = shortid.length()
 }

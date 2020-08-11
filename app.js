@@ -1,9 +1,9 @@
 // require modules
 const express = require("express");
 const Dropbox = require("dropbox").Dropbox;
+require("./server/compile.js");
 require("isomorphic-fetch");
 require("dotenv").config();
-import { compilePack } from "server/compile.js";
 
 // setup express
 const app = express();
