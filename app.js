@@ -6,7 +6,7 @@ require('isomorphic-fetch'); // or another library of choice.
 var Dropbox = require('dropbox').Dropbox;
 
 require('dotenv').config();
-console.log(process.env.dropboxAcessToken )
+console.log( process.env.DROPBOXACCESSTOKEN )
 var dbx = new Dropbox({ accessToken: process.env.dropboxAcessToken });
 
 dbx.filesListFolder({path: ''})
