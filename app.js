@@ -1,7 +1,6 @@
 // require modules
 const express = require("express");
 const Dropbox = require("dropbox").Dropbox;
-const shortid = require("shortid");
 require("isomorphic-fetch");
 require("dotenv").config();
 
@@ -35,21 +34,9 @@ app.get("/", function (req, res) {
 
 // how to handle a post request, sent by the client-side js
 app.post('/', function (req, res) {
-  //var factory = req.body.factory;
-  //console.log("factory="+factory)
   console.log(req.body)
   if (req.body.new=="true") {
     res.send('helo');
-    // create id
-    //const smolid = shortid.generate()
-    console.log("id="+shortid.generate());
-    /*fs.mkdir("./potato", function(err) {
-      if (err) {
-        console.log(err)
-      } else {
-        console.log("New directory successfully created. congrats")
-      }
-    })*/
   } else {
     res.send('sorry ur bad');
   }
