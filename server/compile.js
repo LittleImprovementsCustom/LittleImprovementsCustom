@@ -1,6 +1,8 @@
 const Nanoid = require ("nanoid");
 
 const Dropbox = require("dropbox").Dropbox;
+require("isomorphic-fetch");
+require("dotenv").config();
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
 dbx.filesListFolder({path: ''})
     .then(function(response) {
