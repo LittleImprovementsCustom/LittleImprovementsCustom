@@ -7,7 +7,7 @@ var Dropbox = require('dropbox').Dropbox;
 
 require('dotenv').config();
 console.log( process.env.DROPBOXACCESSTOKEN )
-var dbx = new Dropbox({ accessToken: process.env.dropboxAcessToken });
+var dbx = new Dropbox({ accessToken: process.env.DROPBOXACCESSTOKEN });
 
 dbx.filesListFolder({path: ''})
     .then(function(response) {
