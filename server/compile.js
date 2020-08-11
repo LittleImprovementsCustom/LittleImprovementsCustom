@@ -1,6 +1,14 @@
-const shortid = require("shortid");
 const Nanoid = require ("nanoid");
-//shortid.length = 4
+
+const Dropbox = require("dropbox").Dropbox;
+const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
+dbx.filesListFolder({path: ''})
+    .then(function(response) {
+      console.log(response.entries);
+    })
+    .catch(function(error) {
+      console.error(error);
+    });
 
 module.exports.compilePack  = function(requestBody) {
     id = Nanoid.nanoid(4)
