@@ -4,9 +4,7 @@ app.use(express.json());       // to support JSON-encoded bodies
 
 require('isomorphic-fetch'); // or another library of choice.
 var Dropbox = require('dropbox').Dropbox;
-var dropboxaccesstoken = process.env.dropboxAcessToken
-console.log(dropboxaccesstoken)
-var dbx = new Dropbox({ accessToken: 'rOmqM2TYNjAAAAAAAAAAAVUgJCvtLXwOgKVzc0pmmLhEAa624zbiLW_zgyA0hGG1' });
+var dbx = new Dropbox({ accessToken: process.env.dropboxAcessToken });
 dbx.filesListFolder({path: ''})
     .then(function(response) {
       console.log(response.entries);
