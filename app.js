@@ -6,10 +6,10 @@ require('isomorphic-fetch'); // or another library of choice.
 var Dropbox = require('dropbox').Dropbox;
 
 require('dotenv').config();
-console.log( process.env.DROPBOXACCESSTOKEN )
-var dbx = new Dropbox({ accessToken: process.env.DROPBOXACCESSTOKEN });
+console.log( process.env.DPXACCESSTOKEN )
+var dbx = new Dropbox({ accessToken: process.env.DBXACCESSTOKEN });
 
-dbx.filesListFolder({path: ''})
+/*dbx.filesListFolder({path: ''})
     .then(function(response) {
       console.log(response.entries);
     })
@@ -23,7 +23,7 @@ dbx.filesCreateFolderV2({path: "/potatocheese"})
 })
 .catch(function(error) {
   console.error(error);
-});
+});*/
 
 app.get("/", function (req, res) {
   res.send("<h1>Hello World!</h1>");
