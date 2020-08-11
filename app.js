@@ -42,7 +42,7 @@ app.post('/', function (req, res) {
     res.send('helo');
     // create id
     const smolid = shortid.generate()
-    console.log(console.log(shortid.generate());)
+    console.log(shortid.generate());
     /*fs.mkdir("./potato", function(err) {
       if (err) {
         console.log(err)
