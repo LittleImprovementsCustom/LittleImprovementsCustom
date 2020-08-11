@@ -3,6 +3,7 @@ const express = require("express");
 const Dropbox = require("dropbox").Dropbox;
 require("isomorphic-fetch");
 require("dotenv").config();
+import { compilePack } from "server/compile.js";
 
 // setup express
 const app = express();
@@ -37,6 +38,7 @@ app.post('/', function (req, res) {
   console.log(req.body)
   if (req.body.new=="true") {
     res.send('helo');
+    compilePack(req.body);
   } else {
     res.send('sorry ur bad');
   }
