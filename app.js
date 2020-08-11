@@ -1,7 +1,7 @@
 // require modules
 const express = require("express");
 const Dropbox = require("dropbox").Dropbox;
-require("./server/compile.js");
+const compileScript = require("./server/compile");
 require("isomorphic-fetch");
 require("dotenv").config();
 
@@ -38,7 +38,7 @@ app.post('/', function (req, res) {
   console.log(req.body)
   if (req.body.new=="true") {
     res.send('helo');
-    compilePack(req.body);
+    compileScript.compilePack(req.body);
   } else {
     res.send('sorry ur bad');
   }
