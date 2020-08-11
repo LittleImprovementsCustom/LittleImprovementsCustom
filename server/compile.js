@@ -1,8 +1,8 @@
 const shortid = require("shortid");
-const nanoid = require ("nanoid");
+const Nanoid = require ("nanoid");
 //shortid.length = 4
 
 module.exports.compilePack  = function(requestBody) {
-    id = nanoid(4)
+    id = Nanoid.nanoid(4)
     console.log("id="+id)
 }
