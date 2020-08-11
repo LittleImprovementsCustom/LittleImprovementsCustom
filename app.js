@@ -1,23 +1,20 @@
 const express = require("express")
 const app = express();
-app.use(express.json());       // to support JSON-encoded bodies
-
-require('isomorphic-fetch'); // or another library of choice.
-var Dropbox = require('dropbox').Dropbox;
-
+const Dropbox = require('dropbox').Dropbox;
+require('isomorphic-fetch');
 require('dotenv').config();
-console.log( process.env )
-console.log( process.env.DBXACCESSTOKEN )
-var dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
+app.use(express.json()); // to support JSON-encoded bodies
 
-/*dbx.filesListFolder({path: ''})
+const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
+
+dbx.filesListFolder({path: ''})
     .then(function(response) {
       console.log(response.entries);
     })
     .catch(function(error) {
       console.error(error);
     });
-
+/*
 dbx.filesCreateFolderV2({path: "/potatocheese"})
 .then(function(response) {
   console.log(response);
