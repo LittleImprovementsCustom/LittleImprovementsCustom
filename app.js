@@ -1,11 +1,12 @@
 const express = require("express")
-const app = express();
 const Dropbox = require('dropbox').Dropbox;
 require('isomorphic-fetch');
-const dotenv = require('dotenv').config();
+require('dotenv').config();
+
+const app = express();
 app.use(express.json()); // to support JSON-encoded bodies
 
-const dbx = new Dropbox ({ fetch: fetch, accessToken: dotenv.process.env.DBXACCESSTOKEN });
+const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
 
 dbx.filesListFolder({path: ''})
     .then(function(response) {
