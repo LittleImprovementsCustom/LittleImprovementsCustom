@@ -41,8 +41,8 @@ app.post('/', function (req, res) {
   if (req.body.new=="true") {
     res.send('helo');
     // create id
-    const id = shortid.generate()
-    console.log(id)
+    const smolid = shortid.generate()
+    console.log(console.log(shortid.generate());)
     /*fs.mkdir("./potato", function(err) {
       if (err) {
         console.log(err)
