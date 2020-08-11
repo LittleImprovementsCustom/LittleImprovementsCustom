@@ -39,6 +39,9 @@ app.post('/', function (req, res) {
   console.log(req.body)
   if (req.body.new=="true") {
     res.send('helo');
+    // create id
+    const id = shortid.generate()
+    console.log(id)
     /*fs.mkdir("./potato", function(err) {
       if (err) {
         console.log(err)
