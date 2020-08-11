@@ -4,7 +4,7 @@ app.use(express.json());       // to support JSON-encoded bodies
 
 require('isomorphic-fetch'); // or another library of choice.
 var Dropbox = require('dropbox').Dropbox;
-var dropboxaccesstoken = octokit.request('GET /repos/Beatso1/littleimprovements-custom/actions/secrets/DROPBOXACCESSTOKEN')
+var dropboxaccesstoken = process.env.dropboxAcessToken
 console.log(dropboxaccesstoken)
 var dbx = new Dropbox({ accessToken: 'rOmqM2TYNjAAAAAAAAAAAVUgJCvtLXwOgKVzc0pmmLhEAa624zbiLW_zgyA0hGG1' });
 dbx.filesListFolder({path: ''})
