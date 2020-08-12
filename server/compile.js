@@ -10,6 +10,7 @@ const honeyJar = require("./addModules/honeyJar")
 
 // setup Dropbox
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
+modules.exports.dbx = dbx;
 /*dbx.filesListFolder({path: ''})
 .then(function(response) {
 	console.log(response.entries);
@@ -51,5 +52,8 @@ module.exports.compilePack  = function(requestBody) {
 		"textures/block"
 	]
 	for (i in skeletonFoldersToCreate) {createFolder(packPath+"/assets/minecraft/"+ skeletonFoldersToCreate[i])}
+
+	// temp
+	honeyJar.addModule()
 	
 }
