@@ -38,16 +38,18 @@ module.exports.compilePack  = function(requestBody) {
     console.log("id="+id)
 	
 	// create value for invidual pack path
-	packPath = `/packs/${id}`
+	const packPath = `/packs/${id}`
+	console.log("pack path = "+packPath)
 
 	// create pack folder
 	createFolder(packPath);
 	
 	// skeleton folder structure
-	const skeletonFoldersToCreate = [ "textures", "textures/item"]
+	//const skeletonFoldersToCreate = [ "textures", "textures/item"]
 	//for (i in skeletonFoldersToCreate ) { createFolder((packPath+"/"+ skeletonFoldersToCreate[i] )) }
 	//for (i in skeletonFoldersToCreate ) { console.log((packPath+"/"+ skeletonFoldersToCreate[i] )) }
 	
+	console.log("hi im alive")
 	const texturesPath = packPath+"/assets/minecraft/textures/item"
 	createFolder(texturesPath);
 	
