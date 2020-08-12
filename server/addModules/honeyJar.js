@@ -10,7 +10,7 @@ module.exports.addModule = function(packPath) {
         parameters: {
             path: packPath+"/assets/minecraft/textures/item/honey_bottle.png"
         },
-        readStream: fs.createReadStream("../storage/modules/honeyJar/textures/item/honey_bottle.png")
+        readStream: fs.createReadStream("storage/modules/honeyJar/textures/item/honey_bottle.png")
     }, (err, result, response) => {
         //upload completed
     });
