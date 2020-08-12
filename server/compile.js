@@ -1,5 +1,6 @@
 // require npm modules
 const Nanoid = require("nanoid");
+const sleep = require("system-sleep");
 const Dropbox = require("dropbox").Dropbox;
 require("isomorphic-fetch");
 require("dotenv").config();
@@ -25,7 +26,8 @@ function createFolder (folderPath) {
     })
     .catch(function(error) {
     console.error(error);
-    });
+	});
+	sleep(5000);
 }
 
 // compilePack function that gets exported to app.js
