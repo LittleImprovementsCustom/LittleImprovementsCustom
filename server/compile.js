@@ -45,6 +45,7 @@ module.exports.compilePack  = function(requestBody) {
 	const skeletonFoldersToCreate = [ "textures", "textures/item"]
 	//for (i in skeletonFoldersToCreate ) { createFolder((packPath+"/"+ skeletonFoldersToCreate[i] )) }
 	//for (i in skeletonFoldersToCreate ) { console.log((packPath+"/"+ skeletonFoldersToCreate[i] )) }
+	await new Promise(resolve => setTimeout(resolve, 5000));
 	createFolder(packPath+"/textures");
 	
 }
