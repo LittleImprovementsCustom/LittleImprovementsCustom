@@ -50,6 +50,6 @@ module.exports.compilePack  = function(requestBody) {
 		"textures/item",
 		"textures/block"
 	]
-	for (i in skeletonFoldersToCreate) {createFolder((packPath+"/assets/minecraft/"+ skeletonFoldersToCreate[i]))}
+	for (i in skeletonFoldersToCreate) {createFolder(packPath+"/assets/minecraft/"+ skeletonFoldersToCreate[i])}
 	
 }
