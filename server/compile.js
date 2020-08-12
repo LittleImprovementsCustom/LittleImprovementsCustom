@@ -35,7 +35,14 @@ module.exports.compilePack  = function(requestBody) {
     id = Nanoid.nanoid(4)
     console.log("id="+id)
 	
+	// create value for invidual pack path
+	packPath = `/packs/${id}`
+
 	// create pack folder
-    createFolder(`/packs/${id}`);
+	createFolder(packPath);
+	
+	// skeleton folder structure
+	const skeletonFoldersToCreate = [ "textures", "textures/item"]
+	for (i in skeletonFoldersToCreate ) { createFolder((packPath+"/"+i)) }
 	
 }
