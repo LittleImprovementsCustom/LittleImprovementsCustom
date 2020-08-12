@@ -1,3 +1,4 @@
+const fs = require("fs");
 const Dropbox = require("dropbox").Dropbox;
 require("isomorphic-fetch");
 require("dotenv").config();
