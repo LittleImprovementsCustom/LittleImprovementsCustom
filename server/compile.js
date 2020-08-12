@@ -47,8 +47,8 @@ module.exports.compilePack  = function(requestBody) {
 	
 	// skeleton folder structure
 	const skeletonFoldersToCreate = [ "/assets/minecraft/textures/item", "/assets/minecraft/textures/block"]
-	for (i in skeletonFoldersToCreate ) { createFolder((packPath+"/"+ skeletonFoldersToCreate[i] )) }
-	//for (i in skeletonFoldersToCreate ) { console.log((packPath+"/"+ skeletonFoldersToCreate[i] )) }
+	//for (i in skeletonFoldersToCreate ) { createFolder((packPath+"/"+ skeletonFoldersToCreate[i] )) }
+	for (i in skeletonFoldersToCreate ) { console.log((packPath+"/"+ skeletonFoldersToCreate[i] )) }
 	
 	/*console.log("hi im alive")
 	const texturesPath = packPath+"/assets/minecraft/textures/item"
