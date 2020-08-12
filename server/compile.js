@@ -2,7 +2,7 @@
 const Nanoid = require("nanoid");
 const sleep = require("system-sleep");
 const Dropbox = require("dropbox").Dropbox;
-const modules = require("./modules.json")
+const modulesList = require("./modulesList.json")
 require("isomorphic-fetch");
 require("dotenv").config();
 
@@ -48,7 +48,7 @@ module.exports.compilePack  = function(requestBody) {
 	for (i in skeletonFoldersToCreate) {createFolder(packPath+"/assets/minecraft/"+ skeletonFoldersToCreate[i])}
 
 	// temp
-	console.log(modules.modules)
+	console.log(modulesList.mainModules)
 	honeyJar.addModule(packPath)
 	
 }
