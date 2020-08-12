@@ -26,6 +26,9 @@ function createFolder (folderPath) {
 	sleep(100);
 }
 
+// delcare values for lists of modules
+const mainModules = modulesList.mainModules
+
 // compilePack function that gets exported to app.js
 module.exports.compilePack  = function(requestBody) {
 
@@ -48,7 +51,6 @@ module.exports.compilePack  = function(requestBody) {
 	for (i in skeletonFoldersToCreate) {createFolder(packPath+"/assets/minecraft/"+ skeletonFoldersToCreate[i])}
 
 	// temp
-	console.log(modulesList.mainModules)
 	honeyJar.addModule(packPath)
 	
 }
