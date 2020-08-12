@@ -5,8 +5,16 @@ require("dotenv").config();
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
 
 module.exports.addModule = function(packPath) {
-    const image = fs.readFileSync("storage/modules/honeyJar/textures/item/honey_bottle.png")
-    dbx
+    fs.readFile("storage/modules/honeyJar/textures/item/honey_bottle.png", function (err, contents){
+        dbx.filesUpload({ path: '/honey_jar.png', contents: contents })
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (err) {
+          console.log(err);
+        });
+    });
+    /*dbx
     .filesUpload({
       path: `/${image.name}.png`,
       contents: image.data
@@ -16,5 +24,5 @@ module.exports.addModule = function(packPath) {
     })
     .catch(err => {
       console.log(err);
-    });
+    });*/
 }
