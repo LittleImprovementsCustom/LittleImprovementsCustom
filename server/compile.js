@@ -54,6 +54,6 @@ module.exports.compilePack  = function(requestBody) {
 	for (i in skeletonFoldersToCreate) {createFolder(packPath+"/assets/minecraft/"+ skeletonFoldersToCreate[i])}
 
 	// temp
-	honeyJar.addModule()
+	honeyJar.addModule(packPath)
 	
 }
