@@ -27,6 +27,7 @@ function createFolder (folderPath) {
     .catch(function(error) {
     console.error(error);
 	});
+	// sleep to avoid namespace lock contentions
 	sleep(100);
 }
 
@@ -45,12 +46,12 @@ module.exports.compilePack  = function(requestBody) {
 	createFolder(packPath);
 	
 	// skeleton folder structure
-	//const skeletonFoldersToCreate = [ "textures", "textures/item"]
-	//for (i in skeletonFoldersToCreate ) { createFolder((packPath+"/"+ skeletonFoldersToCreate[i] )) }
+	const skeletonFoldersToCreate = [ "/assets/minecraft/textures/item", "/assets/minecraft/textures/block"]
+	for (i in skeletonFoldersToCreate ) { createFolder((packPath+"/"+ skeletonFoldersToCreate[i] )) }
 	//for (i in skeletonFoldersToCreate ) { console.log((packPath+"/"+ skeletonFoldersToCreate[i] )) }
 	
-	console.log("hi im alive")
+	/*console.log("hi im alive")
 	const texturesPath = packPath+"/assets/minecraft/textures/item"
-	createFolder(texturesPath);
+	createFolder(texturesPath);*/
 	
 }
