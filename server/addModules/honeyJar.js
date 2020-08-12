@@ -4,7 +4,7 @@ require("dotenv").config();
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
 
 module.exports.addModule = function(packPath) {
-    dropbox({
+    dbx({
         resource: "../storage/modules/honeyJar/textures/item/honey_bottle",
         parameters: {
             path: (packPath+"/assets/minecraft/textures/item/honey_bottle.png")
