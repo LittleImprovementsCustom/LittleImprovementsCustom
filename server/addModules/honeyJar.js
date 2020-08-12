@@ -1,4 +1,15 @@
-const dbx = require("../compile").dbx
+const Dropbox = require("dropbox").Dropbox;
+require("isomorphic-fetch");
+require("dotenv").config();
+const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
+dbx.filesListFolder({path: ''})
+.then(function(response) {
+	console.log(response.entries);
+})
+.catch(function(error) {
+	console.error(error);
+});
+
 module.exports.addModule = function() {
     dbx.filesListFolder({path: ''})
     .then(function(response) {
