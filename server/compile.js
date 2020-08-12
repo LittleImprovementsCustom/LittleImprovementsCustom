@@ -49,11 +49,15 @@ module.exports.compilePack  = function(requestBody) {
 	// create pack folder
 	createFolder(packPath);
 	
-	// skeleton folder structure
-	
+	// create skeleton folder structure
 	for (i in skeletonFoldersToCreate) {createFolder(packPath+"/assets/minecraft/"+ skeletonFoldersToCreate[i])}
 
+	// go through every available module, and if it is included in the request body, run the function to add it
+	if ( requestBody.modules.includes ("honeyJar") ) {
+		honeyJar.addModule(packPath)
+	}
+
 	// temp
-	honeyJar.addModule(packPath)
+	//honeyJar.addModule(packPath)
 	
 }
