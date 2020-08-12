@@ -8,7 +8,7 @@ module.exports.addModule = function(packPath) {
     const image = fs.readFileSync("storage/modules/honeyJar/textures/item/honey_bottle.png")
     dbx
     .filesUpload({
-      path: `/${image.name}`,
+      path: `/${image.name}.png`,
       contents: image.data
     })
     .then(response => {
