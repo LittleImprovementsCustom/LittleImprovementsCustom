@@ -14,15 +14,4 @@ module.exports.addModule = function(packPath) {
           console.log(err);
         });
     });
-    /*dbx
-    .filesUpload({
-      path: `/${image.name}.png`,
-      contents: image.data
-    })
-    .then(response => {
-      console.log(response);
-    })
-    .catch(err => {
-      console.log(err);
-    });*/
 }

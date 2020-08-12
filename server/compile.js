@@ -11,13 +11,6 @@ const honeyJar = require("./addModules/honeyJar")
 // setup Dropbox
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
 module.exports.dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });;
-/*dbx.filesListFolder({path: ''})
-.then(function(response) {
-	console.log(response.entries);
-})
-.catch(function(error) {
-	console.error(error);
-});*/
 
 // function to create folder
 function createFolder (folderPath) {
