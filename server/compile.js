@@ -27,7 +27,7 @@ function createFolder (folderPath) {
     .catch(function(error) {
     console.error(error);
 	});
-	sleep(25);
+	sleep(50);
 }
 
 // compilePack function that gets exported to app.js
