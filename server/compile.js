@@ -29,6 +29,12 @@ function createFolder (folderPath) {
 // delcare values for lists of modules
 const mainModules = modulesList.mainModules
 
+// delcare constant for folders that need to be created in a pack
+const skeletonFoldersToCreate = [
+	"textures/item",
+	"textures/block"
+]
+
 // compilePack function that gets exported to app.js
 module.exports.compilePack  = function(requestBody) {
 
@@ -44,10 +50,7 @@ module.exports.compilePack  = function(requestBody) {
 	createFolder(packPath);
 	
 	// skeleton folder structure
-	const skeletonFoldersToCreate = [
-		"textures/item",
-		"textures/block"
-	]
+	
 	for (i in skeletonFoldersToCreate) {createFolder(packPath+"/assets/minecraft/"+ skeletonFoldersToCreate[i])}
 
 	// temp
