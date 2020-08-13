@@ -60,6 +60,15 @@ module.exports.compilePack  = function(requestBody) {
 		console.log("no honey jar")
 	}
 
+	// test sharing link gen
+	dbx.sharingCreateSharedLink({path: "/modules"})
+	.then(function(response) {
+		console.log(response);
+	  })
+	  .catch(function(error) {
+		console.log(error);
+	  });
+
 	// temp
 	//honeyJar.addModule(packPath)
 	
