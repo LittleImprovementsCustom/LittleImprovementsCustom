@@ -1,0 +1,143 @@
+:root {
+	--background: white;
+	--primary-background: #F8F9FA;
+	--secondary-background: #e0e0e0;
+	--emphasis-background: #9BA2A9;
+	--font-color: black;
+	--emphasis-font-color: white;
+}
+
+body {
+	background-color: var(--background);
+	font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.title {
+	font-size: 24px;
+	padding: 5px;
+}
+
+.navbar {
+	list-style-type: none;
+	margin: 0;
+	margin-left: 75%;
+	padding: 0;
+	width: 25%;
+	background-color: var(--primary-background);
+	height: auto; /* Full height */
+	position: fixed; /* Make it stick, even on scroll */
+	overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+.navbar-item {
+	display: block;
+	padding: 8px 16px;
+	text-decoration: none;
+	text-align:center;
+}
+
+.primary-navbar-item {
+	background-color: var(--emphasis-background);
+	color: var(--emphasis-font-color);
+}
+
+.secondary-navbar-item {
+	color: var(--font-color);
+}
+
+.secondary-navbar-item:hover {
+	background-color: var(--secondary-background);
+}
+
+.grid-container {
+	margin-right: 25%;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+
+}
+
+.selection-box {
+	width: 20vw;
+	height: 13vw;
+	background-color: var(--emphasis-background);
+	border-radius: 2vw;
+	padding: 10px;
+	margin: 20px;
+	cursor: pointer;
+	color: var(--font-color);
+}
+
+.unselected {
+	background-color: var(--secondary-background);
+}
+
+.selected {
+	background-color: var(--emphasis-background);
+	color: var(--emphasis-font-color);
+}
+
+.pack-icon {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+.pack-label {
+	text-align: center;
+	font-size: large;
+}
+
+.pack-desc {
+	text-align: center;
+	font-size: medium;
+}
+
+.invisible {
+	display: none;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: var(--secondary-background);
+    color: var(--font-color);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 103%;
+    left: 50%;
+    margin-left: -125px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--secondary-background) transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+} 
