@@ -5,8 +5,8 @@ require("dotenv").config();
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
 
 module.exports.addModule = function(packPath) {
-    fs.readFile("storage/modules/honeyJar/textures/item/honey_bottle.png", function (err, contents){
-        dbx.filesUpload({ path: `${packPath}/assets/minecraft/textures/item/honey_jar.png`, contents: contents })
+    fs.readFile("storage/modules/honeyJar/textures/item", function (err, contents){
+        dbx.filesUpload({ path: `${packPath}/assets/minecraft/textures/item`, contents: contents })
         .then(function (response) {
           console.log(response);
         })
