@@ -1,7 +1,6 @@
 // requirements
 const Nanoid = require("nanoid");
 const Dropbox = require("dropbox").Dropbox;
-const modulesList = require("./modulesList.json")
 require("isomorphic-fetch");
 require("dotenv").config();
 
