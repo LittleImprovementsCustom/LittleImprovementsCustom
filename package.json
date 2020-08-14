@@ -21,6 +21,6 @@
 		"dropbox": "^5.2.1",
 		"isomorphic-fetch": "^2.2.1",
 		"dotenv": "^8.2.0",
-		"nanoid": "^3.1.12",
+		"nanoid": "^3.1.12"
 	}
 }
