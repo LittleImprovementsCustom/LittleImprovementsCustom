@@ -11,9 +11,6 @@ const honeyJar = require("./addModules/honeyJar")
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
 module.exports.dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });;
 
-// delcare values for lists of modules
-const mainModules = modulesList.mainModules
-
 // compilePack function that gets exported to app.js
 module.exports.compilePack  = function(requestBody) {
 
