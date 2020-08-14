@@ -1,6 +1,5 @@
-let selectedModules = []
-
 // SELECT OR UNSELECT A MODULE WHEN THE USER CLICKS THE SELECTOR
+let selectedModules = []
 function toggleSelected(id) {
     const theDiv = document.getElementById(id)
     if (theDiv.classList.contains("unselected")) {
