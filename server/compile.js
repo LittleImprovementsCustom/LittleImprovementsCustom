@@ -13,8 +13,8 @@ module.exports.dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXAC
 
 
 function uploadFiles ( storageFilePaths, packFilePaths ) {
-	for (i in filePaths) {
-		fs.readFile(filePaths[i], function (err, contents){
+	for (i in storageFilePaths) {
+		fs.readFile(storageFilePaths[i], function (err, contents){
 			dbx.filesUpload({ path: packPath+packFilePaths[i], contents: contents })
 			.then(function (response) {
 			  console.log(response);
