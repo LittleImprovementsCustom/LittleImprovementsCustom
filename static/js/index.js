@@ -1,5 +1,6 @@
 let selectedModules = []
 
+// SELECT OR UNSELECT A MODULE WHEN THE USER CLICKS THE SELECTOR
 function toggleSelected(id) {
     const theDiv = document.getElementById(id)
     if (theDiv.classList.contains("unselected")) {
@@ -13,4 +14,22 @@ function toggleSelected(id) {
         theDiv.classList.add("unselected")
         selectedModules.pop(id)
     }
+}
+
+// HIDE THE IMAGE AND SHOW THE DESCRIPTION WHEN THE USER HOVERS OVER A SELECTOR
+// create array of all the modules
+const availableModules = Array.from(document.getElementById("pack-selector-container").children)
+// add event listeners to all modules
+for (i in availableModules) {
+    availableModules[i].addEventListener("mouseover", mouseOver)
+    availableModules[i].addEventListener("mouseout", mouseOut)
+}
+// what to do when the user hovers over a selector
+function mouseOver() {
+    document.getElementById(this.id+"Img").classList.add("invisible")
+    document.getElementById(this.id+"Desc").classList.remove("invisible")
+}
+function mouseOut() {
+    document.getElementById(this.id+"Img").classList.remove("invisible")
+    document.getElementById(this.id+"Desc").classList.add("invisible")
 }

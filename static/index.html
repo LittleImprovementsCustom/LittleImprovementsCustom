@@ -10,12 +10,11 @@
         <li class="navbar-item secondary-navbar-item"><a class="navbar-item secondary-navbar-item" href="contact.asp">Planet Minecraft</a></li>
         <li class="navbar-item secondary-navbar-item"><a class="navbar-item secondary-navbar-item" href="about.asp">GitHub</a></li>
     </ul>
-    <div class="grid-container">
+    <div class="grid-container" id="pack-selector-container">
         <div class="grid-item selection-box unselected tooltip" onclick="javascript: toggleSelected('honeyJar')" id="honeyJar">
-            <img src="../storage/modules/honeyJar/icon.png" class="pack-icon">
-            <p class="pack-desc"></p>
-            <span class="tooltiptext">A beautiful texture</span>
             <p class="pack-label">Honey Jar</p>
+            <img src="../storage/modules/honeyJar/icon.png" class="pack-icon" id="honeyJarImg">
+            <p class="pack-desc invisible" id="honeyJarDesc">hello world</p>
         </div>
     </div>
     <script src=js/index.js></script>
