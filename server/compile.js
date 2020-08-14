@@ -3,6 +3,8 @@ const Nanoid = require("nanoid");
 const Dropbox = require("dropbox").Dropbox;
 require("isomorphic-fetch");
 require("dotenv").config();
+const fs = require("fs");
+
 
 // require addModule files
 const honeyJar = require("./addModules/honeyJar")
