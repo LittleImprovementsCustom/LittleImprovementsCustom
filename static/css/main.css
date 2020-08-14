@@ -57,7 +57,7 @@ body {
 }
 
 .selection-box {
-	width: 20vw;
+	width: 16vw;
 	height: 13vw;
 	background-color: var(--emphasis-background);
 	border-radius: 2vw;
