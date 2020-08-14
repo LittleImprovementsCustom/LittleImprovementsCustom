@@ -1,6 +1,5 @@
 // requirements
 const Nanoid = require("nanoid");
-const sleep = require("system-sleep");
 const Dropbox = require("dropbox").Dropbox;
 const modulesList = require("./modulesList.json")
 require("isomorphic-fetch");
