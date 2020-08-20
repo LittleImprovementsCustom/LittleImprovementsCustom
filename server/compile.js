@@ -11,6 +11,7 @@ module.exports.dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXAC
 
 // get availableModules object
 const availableModules = JSON.parse(fs.readFile("availableModules.json"));
+console.log(availableModules)
 
 
 function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
