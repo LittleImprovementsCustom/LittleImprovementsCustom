@@ -11,12 +11,21 @@ const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN
 // get availableModules object
 const availableModules = JSON.parse(fs.readFileSync('availableModules.json'))
 
-function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
+function uploadFiles ( storageFilePaths, packFilePaths, packRoot, createSharingLink ) {
 	for (i in storageFilePaths) {
 		fs.readFile(storageFilePaths[i], function (err, contents){
 			dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: contents })
 			.then(function (response) {
 				console.log(response);
+				if (createSharingLink) {
+					dbx.sharingCreateSharedLink({path: packRoot})
+					.then(function(response) {
+						console.log(response);
+					  })
+					.catch(function(error) {
+						console.log(error);
+					});
+				}
 			})
 			.catch(function (err) {
 				console.log(err);
@@ -37,18 +46,10 @@ module.exports.compilePack  = function(requestBody) {
 	// go through every available module, and if it is included in the request body, run the function to add it
 	for (i in availableModules) {
 		if (requestBody.modules.includes (availableModules[i].id)) {
-			uploadFiles(availableModules[i].storageFiles,availableModules[i].packFiles,packPath)
+			uploadFiles(availableModules[i].storageFiles,availableModules[i].packFiles,packPath,false)
 		}
 	}
 	// add pack.mcmeta file
-	uploadFiles(["storage/pack.mcmeta"],["/pack.mcmeta"],packPath)
+	uploadFiles(["storage/pack.mcmeta"],["/pack.mcmeta"],packPath,true)
 
-	// sharing link
-	dbx.sharingCreateSharedLink({path: packPath})
-	.then(function(response) {
-		console.log(response);
-	  })
-	.catch(function(error) {
-		console.log(error);
-	});
 }
