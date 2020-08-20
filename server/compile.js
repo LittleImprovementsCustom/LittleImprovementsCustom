@@ -50,7 +50,9 @@ module.exports.compilePack  = function(requestBody) {
 		}
 	}
 	// add pack.mcmeta file, and create sharing link
-	downloadLink = uploadFiles(["storage/pack.mcmeta"],["/pack.mcmeta"],packPath,true)
+	let downloadLink = uploadFiles(["storage/pack.mcmeta"],["/pack.mcmeta"],packPath,true)
+	// replace the ?dl=0 with ?dl=1 for direct download link
+	downloadLink = downloadLink.slice(0, -1)+"1"
 	console.log(downloadLink)
 
 }
