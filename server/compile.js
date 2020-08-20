@@ -10,8 +10,20 @@ const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN
 module.exports.dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });;
 
 // get availableModules object
-const availableModules = JSON.parse(fs.readFile("availableModules.json"));
-console.log(availableModules)
+// const availableModules = JSON.parse(fs.readFile("availableModules.json"));
+// console.log(availableModules)
+fs.readFile('availableModules.json',
+    // callback function that is called when reading file is done
+    function(err, data) { 
+        // json data
+        var jsonData = data;
+ 
+        // parse json
+        var jsonParsed = JSON.parse(jsonData);
+ 
+        // access elements
+        console.log(jsonParsed)
+}); 
 
 
 function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
