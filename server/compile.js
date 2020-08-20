@@ -12,18 +12,15 @@ const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN
 const availableModules = JSON.parse(fs.readFileSync('availableModules.json'))
 
 function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
-	console.log(storageFilePaths)
-	console.log(packFilePaths)
-	console.log(packRoot)
 	for (i in storageFilePaths) {
 		fs.readFile(storageFilePaths[i], function (err, contents){
 			console.log(`try to upload file from ${storageFilePaths[i]} to ${packRoot+packFilePaths[i]}`)
 			dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: contents })
 			.then(function (response) {
-			  console.log(response);
+				console.log(response);
 			})
 			.catch(function (err) {
-			//   console.log(err);
+				console.log(err);
 			});
 		});
 	}
@@ -55,4 +52,3 @@ module.exports.compilePack  = function(requestBody) {
 	  });
 	*/
 }
-
