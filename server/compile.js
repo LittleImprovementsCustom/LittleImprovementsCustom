@@ -37,8 +37,8 @@ module.exports.compilePack  = function(requestBody) {
 	for (i in availableModules) {
 		if (requestBody.modules.includes (availableModules[i].id)) {
 			for (x in availableModules[i].storageFiles) {
-				uploadFiles(availableModules[i].storageFiles[x],availableModules[i].packFiles[x],packPath)
-				console.log(`try to upload file ${availableModules[i].packFiles[x]}`)
+				//uploadFiles(availableModules[i].storageFiles[x],availableModules[i].packFiles[x],packPath)
+				console.log(`try to upload file from ${availableModules[i].storageFiles[x]} to ${availableModules[i].packFiles[x]}`)
 			}
 		}
 	}
