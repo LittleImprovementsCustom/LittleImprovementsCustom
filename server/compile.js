@@ -14,10 +14,10 @@ const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN
 module.exports.dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });;
 
 
-function uploadFiles ( storageFilePaths, packFilePaths ) {
+function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
 	for (i in storageFilePaths) {
 		fs.readFile(storageFilePaths[i], function (err, contents){
-			dbx.filesUpload({ path: packPath+packFilePaths[i], contents: contents })
+			dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: contents })
 			.then(function (response) {
 			  console.log(response);
 			})
@@ -42,7 +42,7 @@ module.exports.compilePack  = function(requestBody) {
 	// go through every available module, and if it is included in the request body, run the function to add it
 	if ( requestBody.modules.includes ("honeyJar") ) {
 		console.log("yes honey jar")
-		uploadFiles(["storage/modules/honeyJar/textures/item/honey_bottle.png"],["/assets/minecraft/textures/item/honey_jar.png"])
+		uploadFiles(["storage/modules/honeyJar/textures/item/honey_bottle.png"],["/assets/minecraft/textures/item/honey_jar.png"],packPath)
 	} else {
 		console.log("no honey jar")
 	}
