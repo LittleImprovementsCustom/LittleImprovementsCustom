@@ -5,10 +5,6 @@ require("isomorphic-fetch");
 require("dotenv").config();
 const fs = require("fs");
 
-
-// require addModule files
-const honeyJar = require("./addModules/honeyJar")
-
 // setup Dropbox
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
 module.exports.dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });;
@@ -47,6 +43,7 @@ module.exports.compilePack  = function(requestBody) {
 		console.log("no honey jar")
 	}
 
+	/*
 	// test sharing link gen
 	dbx.sharingCreateSharedLink({path: "/modules"})
 	.then(function(response) {
@@ -55,9 +52,6 @@ module.exports.compilePack  = function(requestBody) {
 	  .catch(function(error) {
 		console.log(error);
 	  });
-
-	// temp
-	//honeyJar.addModule(packPath)
-	
+	*/
 }
 
