@@ -28,10 +28,8 @@ function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
 // compilePack function that gets exported to app.js
 module.exports.compilePack  = function(requestBody) {
 
-	// generate id
-    id = Nanoid.nanoid(4)
-	
-	// create value for invidual pack path
+	// generate id and create pack path
+    const id = Nanoid.nanoid(4)	
 	const packPath = `/packs/${id}`
 	console.log("pack path = "+packPath)
 
