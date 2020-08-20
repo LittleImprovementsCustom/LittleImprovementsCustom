@@ -12,8 +12,12 @@ const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN
 const availableModules = JSON.parse(fs.readFileSync('availableModules.json'))
 
 function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
-	for (i in storageFilePaths) {
+	console.log(storageFilePaths)
+	console.log(packFilePaths)
+	console.packRoot
+	/*for (i in storageFilePaths) {
 		fs.readFile(storageFilePaths[i], function (err, contents){
+			console.log(`try to upload file from ${storageFilePaths[i]} to ${packRoot+packFilePaths[i]}`)
 			dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: contents })
 			.then(function (response) {
 			  console.log(response);
@@ -22,14 +26,14 @@ function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
 			//   console.log(err);
 			});
 		});
-	}
+	}*/
 }
 
 // compilePack function that gets exported to app.js
 module.exports.compilePack  = function(requestBody) {
 
 	// generate id and create pack path
-    const id = Nanoid.nanoid(5)	
+	const id = Nanoid.nanoid(5)	
 	const packPath = `/packs/${id}`
 	console.log("pack path = "+packPath)
 
@@ -37,8 +41,8 @@ module.exports.compilePack  = function(requestBody) {
 	for (i in availableModules) {
 		if (requestBody.modules.includes (availableModules[i].id)) {
 			for (x in availableModules[i].storageFiles) {
-				//uploadFiles(availableModules[i].storageFiles[x],availableModules[i].packFiles[x],packPath)
-				console.log(`try to upload file from ${availableModules[i].storageFiles[x]} to ${availableModules[i].packFiles[x]}`)
+				uploadFiles(availableModules[i].storageFiles[x],availableModules[i].packFiles[x],packPath)
+				
 			}
 		}
 	}
