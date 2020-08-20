@@ -14,7 +14,7 @@ const availableModules = JSON.parse(fs.readFileSync('availableModules.json'))
 function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
 	console.log(storageFilePaths)
 	console.log(packFilePaths)
-	console.packRoot
+	console.log.packRoot
 	/*for (i in storageFilePaths) {
 		fs.readFile(storageFilePaths[i], function (err, contents){
 			console.log(`try to upload file from ${storageFilePaths[i]} to ${packRoot+packFilePaths[i]}`)
