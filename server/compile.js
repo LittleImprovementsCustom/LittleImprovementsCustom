@@ -34,12 +34,15 @@ module.exports.compilePack  = function(requestBody) {
 	const packPath = `/packs/${id}`
 	console.log("pack path = "+packPath)
 
+	// ADD PACK FILES
 	// go through every available module, and if it is included in the request body, run the function to add it
 	for (i in availableModules) {
 		if (requestBody.modules.includes (availableModules[i].id)) {
 			uploadFiles(availableModules[i].storageFiles,availableModules[i].packFiles,packPath)
 		}
 	}
+	// add pack.mcmeta file
+	uploadFiles(["storage/pack.mcmeta"],["/"],packPath)
 
 	/*
 	// test sharing link gen
