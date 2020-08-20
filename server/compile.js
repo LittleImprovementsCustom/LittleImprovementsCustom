@@ -57,7 +57,7 @@ module.exports.compilePack  = function(requestBody) {
 		dbx.filesUpload({ path: packPath+"/pack.mcmeta", contents: contents })
 		.then(function (response) {
 			console.log(response);
-			dbx.sharingCreateSharedLink({path: packRoot})
+			dbx.sharingCreateSharedLink({path: packPath})
 			.then(function(response) {
 				downloadLink = response.url
 			})
