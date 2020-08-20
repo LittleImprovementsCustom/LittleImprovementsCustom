@@ -17,15 +17,6 @@ function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
 			dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: contents })
 			.then(function (response) {
 				console.log(response);
-				if (createSharingLink) {
-					dbx.sharingCreateSharedLink({path: packRoot})
-					.then(function(response) {
-						return response.url
-					  })
-					.catch(function(error) {
-						console.log(error);
-					});
-				}
 			})
 			.catch(function (err) {
 				console.log(err);
