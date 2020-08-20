@@ -36,8 +36,8 @@ module.exports.compilePack  = function(requestBody) {
 	// go through every available module, and if it is included in the request body, run the function to add it
 	for (i in availableModules) {
 		if (requestBody.modules.includes (availableModules[i].id)) {
-			for (x in availableModules[i].storageFilePaths) {
-				uploadFiles(availableModules[i].storageFiles[x],availableModules[i].storageFiles[x],packPath)
+			for (x in availableModules[i].storageFiles) {
+				uploadFiles(availableModules[i].storageFiles[x],availableModules[i].packFiles[x],packPath)
 			}
 		}
 	}
