@@ -9,6 +9,9 @@ const fs = require("fs");
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
 module.exports.dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });;
 
+// get availableModules object
+const availableModules = JSON.parse(fs.readFile("availableModules.json"));
+
 
 function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
 	for (i in storageFilePaths) {

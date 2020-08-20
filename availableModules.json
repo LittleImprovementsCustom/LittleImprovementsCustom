@@ -1,0 +1,6 @@
+{
+    "honeyJar": {
+        "storageFiles": ["storage/modules/honeyJar/textures/item/honey_bottle.png"],
+        "packFiles": ["/assets/minecraft/textures/item/honey_jar.png"]
+    }
+}
