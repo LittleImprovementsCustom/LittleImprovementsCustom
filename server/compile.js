@@ -42,7 +42,7 @@ module.exports.compilePack  = function(requestBody) {
 		}
 	}
 	// add pack.mcmeta file
-	uploadFiles(["storage/pack.mcmeta"],["/"],packPath)
+	uploadFiles(["storage/pack.mcmeta"],["/pack.mcmeta"],packPath)
 
 	/*
 	// test sharing link gen
