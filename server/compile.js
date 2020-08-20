@@ -15,9 +15,9 @@ fs.readFile('availableModules.json',
     function(err, data) { 
         // parse json
         var jsonParsed = JSON.parse(data);
-        // access elements
-        console.log(jsonParsed)
-}); 
+});
+// access elements
+console.log(jsonParsed)
 
 
 function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
