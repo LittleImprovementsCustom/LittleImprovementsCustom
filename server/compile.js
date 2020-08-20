@@ -20,7 +20,7 @@ function uploadFiles ( storageFilePaths, packFilePaths, packRoot, createSharingL
 				if (createSharingLink) {
 					dbx.sharingCreateSharedLink({path: packRoot})
 					.then(function(response) {
-						console.log(response);
+						return response.url
 					  })
 					.catch(function(error) {
 						console.log(error);
@@ -49,7 +49,8 @@ module.exports.compilePack  = function(requestBody) {
 			uploadFiles(availableModules[i].storageFiles,availableModules[i].packFiles,packPath,false)
 		}
 	}
-	// add pack.mcmeta file
-	uploadFiles(["storage/pack.mcmeta"],["/pack.mcmeta"],packPath,true)
+	// add pack.mcmeta file, and create sharing link
+	downloadLink = uploadFiles(["storage/pack.mcmeta"],["/pack.mcmeta"],packPath,true)
+	console.log(downloadLink)
 
 }
