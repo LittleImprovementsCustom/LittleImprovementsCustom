@@ -15,7 +15,7 @@ function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
 	console.log(storageFilePaths)
 	console.log(packFilePaths)
 	console.log(packRoot)
-	/*for (i in storageFilePaths) {
+	for (i in storageFilePaths) {
 		fs.readFile(storageFilePaths[i], function (err, contents){
 			console.log(`try to upload file from ${storageFilePaths[i]} to ${packRoot+packFilePaths[i]}`)
 			dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: contents })
@@ -26,7 +26,7 @@ function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
 			//   console.log(err);
 			});
 		});
-	}*/
+	}
 }
 
 // compilePack function that gets exported to app.js
@@ -40,10 +40,7 @@ module.exports.compilePack  = function(requestBody) {
 	// go through every available module, and if it is included in the request body, run the function to add it
 	for (i in availableModules) {
 		if (requestBody.modules.includes (availableModules[i].id)) {
-			for (x in availableModules[i].storageFiles) {
-				uploadFiles(availableModules[i].storageFiles[x],availableModules[i].packFiles[x],packPath)
-				
-			}
+			uploadFiles(availableModules[i].storageFiles,availableModules[i].packFiles,packPath)
 		}
 	}
 
