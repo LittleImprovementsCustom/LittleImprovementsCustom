@@ -30,7 +30,6 @@ module.exports.compilePack  = function(requestBody) {
 
 	// generate id
     id = Nanoid.nanoid(4)
-    console.log("id="+id)
 	
 	// create value for invidual pack path
 	const packPath = `/packs/${id}`
