@@ -37,10 +37,7 @@ module.exports.compilePack  = function(requestBody) {
 
 	// go through every available module, and if it is included in the request body, run the function to add it
 	if ( requestBody.modules.includes ("honeyJar") ) {
-		console.log("yes honey jar")
 		uploadFiles(["storage/modules/honeyJar/textures/item/honey_bottle.png"],["/assets/minecraft/textures/item/honey_jar.png"],packPath)
-	} else {
-		console.log("no honey jar")
 	}
 
 	/*
