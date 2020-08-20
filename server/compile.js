@@ -5,10 +5,6 @@ require("isomorphic-fetch");
 require("dotenv").config();
 const fs = require("fs");
 
-
-// require addModule files
-const honeyJar = require("./addModules/honeyJar")
-
 // setup Dropbox
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
 module.exports.dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });;
