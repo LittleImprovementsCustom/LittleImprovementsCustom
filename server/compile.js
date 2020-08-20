@@ -55,9 +55,6 @@ module.exports.compilePack  = function(requestBody) {
 	  .catch(function(error) {
 		console.log(error);
 	  });
-
-	// temp
-	//honeyJar.addModule(packPath)
 	
 }
 
