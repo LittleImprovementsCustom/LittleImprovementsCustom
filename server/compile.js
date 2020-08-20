@@ -43,14 +43,12 @@ module.exports.compilePack  = function(requestBody) {
 	// add pack.mcmeta file
 	uploadFiles(["storage/pack.mcmeta"],["/pack.mcmeta"],packPath)
 
-	/*
-	// test sharing link gen
-	dbx.sharingCreateSharedLink({path: "/modules"})
+	// sharing link
+	dbx.sharingCreateSharedLink({path: packPath})
 	.then(function(response) {
 		console.log(response);
 	  })
-	  .catch(function(error) {
+	.catch(function(error) {
 		console.log(error);
-	  });
-	*/
+	});
 }
