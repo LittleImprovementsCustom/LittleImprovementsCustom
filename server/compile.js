@@ -10,12 +10,11 @@ const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN
 module.exports.dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });;
 
 // get availableModules object
-let availableModules = {}
 fs.readFile('availableModules.json',
     // callback function that is called when reading file is done
     function(err, data) { 
 	// parse json
-	availableModules = JSON.parse(data);
+	var availableModules = JSON.parse(data);
 });
 // access elements
 console.log(availableModules)
