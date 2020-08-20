@@ -50,7 +50,8 @@ module.exports.compilePack  = function(requestBody) {
 			console.log(response);
 			dbx.sharingCreateSharedLink({path: packPath})
 			.then(function(response) {
-				downloadLink = response.url
+				downloadLink = response.url.slice(0, -1)+"1"
+        console.log(downloadLink)
 			})
 			.catch(function(error) {
 				console.log(error);
@@ -60,8 +61,4 @@ module.exports.compilePack  = function(requestBody) {
 			console.log(err);
 		});
 	});
-	// replace the ?dl=0 with ?dl=1 for direct download link
-	downloadLink = downloadLink.slice(0, -1)+"1"
-	console.log(downloadLink)
-
 }
