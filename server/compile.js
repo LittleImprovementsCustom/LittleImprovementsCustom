@@ -19,7 +19,7 @@ function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
 			  console.log(response);
 			})
 			.catch(function (err) {
-			  console.log(err);
+			//   console.log(err);
 			});
 		});
 	}
@@ -38,6 +38,7 @@ module.exports.compilePack  = function(requestBody) {
 		if (requestBody.modules.includes (availableModules[i].id)) {
 			for (x in availableModules[i].storageFiles) {
 				uploadFiles(availableModules[i].storageFiles[x],availableModules[i].packFiles[x],packPath)
+				console.log(`try to upload file ${availableModules[i].packFiles[x]}`)
 			}
 		}
 	}
