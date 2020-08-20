@@ -1,9 +1,9 @@
 // requirements
 const Nanoid = require("nanoid");
+const fs = require("fs");
 const Dropbox = require("dropbox").Dropbox;
 require("isomorphic-fetch");
 require("dotenv").config();
-const fs = require("fs");
 
 // setup Dropbox
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
