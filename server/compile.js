@@ -43,6 +43,7 @@ module.exports.compilePack  = function(requestBody) {
 		console.log("no honey jar")
 	}
 
+	/*
 	// test sharing link gen
 	dbx.sharingCreateSharedLink({path: "/modules"})
 	.then(function(response) {
@@ -51,6 +52,6 @@ module.exports.compilePack  = function(requestBody) {
 	  .catch(function(error) {
 		console.log(error);
 	  });
-	
+	*/
 }
 
