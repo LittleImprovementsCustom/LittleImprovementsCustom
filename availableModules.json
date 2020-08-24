@@ -8,11 +8,15 @@
         "id": "animatedCampfireItems",
         "storageFiles": [
             "storage/modules/animatedCampfireItems/textures/item/campfire.png",
-            "storage/modules/animatedCampfireItems/textures/item/soul_campfire.png"
+            "storage/modules/animatedCampfireItems/textures/item/campfire.png.mcmeta",
+            "storage/modules/animatedCampfireItems/textures/item/soul_campfire.png",
+            "storage/modules/animatedCampfireItems/textures/item/soul_campfire.png.mcmeta"
         ],
         "packFiles": [
             "/assets/minecraft/textures/item/campfire.png",
-            "/assets/minecraft/textures/item/soul_campfire.png"
+            "/assets/minecraft/textures/item/campfire.png.mcmeta",
+            "/assets/minecraft/textures/item/soul_campfire.png",
+            "/assets/minecraft/textures/item/soul_campfire.png.mcmeta"
         ]
     }
 ]
