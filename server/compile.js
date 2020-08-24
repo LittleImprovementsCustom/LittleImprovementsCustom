@@ -42,25 +42,25 @@ module.exports.compilePack  = function(requestBody) {
 	}
 
 	// add pack.mcmeta file, and create sharing link
-	fs.readFile("storage/pack.mcmeta", function (err, contents){
+	let downloadLink = ""
+	console.log(fs.readFile("storage/pack.mcmeta", function (err, contents){
 		dbx.filesUpload({ path: packPath+"/pack.mcmeta", contents: contents })
 		.then(function (response) {
 			console.log(response);
+			dbx.sharingCreateSharedLink({path: packPath})
+			.then(function(response) {
+				downloadLink = response.url.slice(0, -1)+"1"
+				// console.log(downloadLink)
+				
+			})
+			.catch(function(error) {
+				console.log(error);
+			});
 		})
 		.catch(function (err) {
 			console.log(err);
 		});
-	})
-
-	var downloadLink = ""
-	dbx.sharingCreateSharedLink({path: packPath})
-	.then(function(response) {
-		downloadLink = response.url.slice(0, -1)+"1"
-		// console.log(downloadLink)
-	})
-	.catch(function(error) {
-		console.log(error);
-	});
+	}))
 	return downloadLink
 	
 }
