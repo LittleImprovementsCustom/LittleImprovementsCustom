@@ -39,7 +39,6 @@ app.get("/", function (req, res) {
 app.post('/', function (req, res) {
   console.log(req.body)
   if (req.body.new=="true") {
-    res.send('helo');
     // generate id and create pack path
     const id = Nanoid.nanoid(5)	
     const packPath = `/packs/LittleImprovementsCustom-${id}`
@@ -71,8 +70,7 @@ app.post('/', function (req, res) {
         console.log(err);
       });
     })
-    console.log(downloadLink)
-    return downloadLink
+    res.send(downloadLink)
     
     } else {
       res.send('sorry ur bad');
