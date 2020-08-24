@@ -41,7 +41,7 @@ app.post('/', function (req, res) {
   if (req.body.new=="true") {
     // generate id and create pack path
     const id = Nanoid.nanoid(5)	
-    const packPath = `/packs/LittleImprovementsCustom-${id}`
+    const packPath = `/packs/LittleImprovementsCustom_${id}`
     console.log("pack path = "+packPath)
 
     // ADD PACK FILES
