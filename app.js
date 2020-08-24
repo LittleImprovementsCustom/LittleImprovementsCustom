@@ -53,14 +53,13 @@ app.post('/', function (req, res) {
     }
 
     // add pack.mcmeta file, and create sharing link
-    var downloadLink = ""
     fs.readFile("storage/pack.mcmeta", function (err, contents){
       dbx.filesUpload({ path: packPath+"/pack.mcmeta", contents: contents })
       .then(function (response) {
         console.log(response);
         dbx.sharingCreateSharedLink({path: packPath})
         .then(function(response) {
-          downloadLink = response.url.slice(0, -1)+"1"
+          res.send(response.url.slice(0, -1)+"1")
         })
         .catch(function(error) {
           console.log(error);
@@ -70,7 +69,6 @@ app.post('/', function (req, res) {
         console.log(err);
       });
     })
-    res.send(downloadLink)
     
     } else {
       res.send('sorry ur bad');
