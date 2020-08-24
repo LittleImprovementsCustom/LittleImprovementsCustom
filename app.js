@@ -62,7 +62,6 @@ app.post('/', function (req, res) {
         dbx.sharingCreateSharedLink({path: packPath})
         .then(function(response) {
           downloadLink = response.url.slice(0, -1)+"1"
-          // console.log(downloadLink)
         })
         .catch(function(error) {
           console.log(error);
