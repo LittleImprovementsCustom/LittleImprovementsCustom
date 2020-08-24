@@ -40,4 +40,5 @@ function downloadPack() {
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify( {"new":"true","modules":selectedModules} ));
     console.log(xhr);
+    window.location.href = xhr.response;
 }
