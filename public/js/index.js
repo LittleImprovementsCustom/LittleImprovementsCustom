@@ -39,6 +39,5 @@ function downloadPack() {
     xhr.open("POST", "https://littleimprovements-custom.beatso1.repl.co/", false);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify( {"new":"true","modules":selectedModules} ));
-    console.log(xhr);
     window.location.href = xhr.response;
 }
