@@ -16,7 +16,7 @@ app.post('/', function (req, res) {
   console.log(req.body)
   if (req.body.new=="true") {
     res.send('helo');
-    compileScript.compilePack(req.body);
+    console.log(compileScript.compilePack(req.body));
   } else {
     res.send('sorry ur bad');
   }
