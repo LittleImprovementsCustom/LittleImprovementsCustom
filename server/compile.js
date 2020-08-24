@@ -43,14 +43,17 @@ module.exports.compilePack  = function(requestBody) {
 
 	// add pack.mcmeta file, and create sharing link
 	let downloadLink = ""
-	const linkGen = fs.readFile("storage/pack.mcmeta", function (err, contents){
+	console.log(fs.readFile("storage/pack.mcmeta", function (err, contents){
+		var link = ""
 		dbx.filesUpload({ path: packPath+"/pack.mcmeta", contents: contents })
 		.then(function (response) {
 			console.log(response);
 			dbx.sharingCreateSharedLink({path: packPath})
 			.then(function(response) {
 				downloadLink = response.url.slice(0, -1)+"1"
-        		console.log(downloadLink)
+				link = downloadLink
+				// console.log(downloadLink)
+				
 			})
 			.catch(function(error) {
 				console.log(error);
@@ -59,6 +62,7 @@ module.exports.compilePack  = function(requestBody) {
 		.catch(function (err) {
 			console.log(err);
 		});
-	});
-	return downloadLink
+		return link
+	}))
+	
 }
