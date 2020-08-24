@@ -32,7 +32,7 @@ app.use(express.json()); // to support JSON-encoded bodies
 
 // webpage the user sees, on a get request
 app.get("/", function (req, res) {
-  res.send("<h1>Hello World!</h1>");
+  res.sendFile(__dirname+"/public/index.html")
 })
 
 // how to handle a post request, sent by the client-side js
