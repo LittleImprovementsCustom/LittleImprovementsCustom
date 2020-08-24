@@ -2,6 +2,8 @@
     {
         "id": "honeyJar",
         "storageFiles": ["storage/modules/honeyJar/textures/item/honey_bottle.png"],
-        "packFiles": ["/assets/minecraft/textures/item/honey_bottle.png"]
+        "packFiles": ["/assets/minecraft/textures/item/honey_bottle.png"],
+        "label": "Honey Jar",
+        "description": "Changes honey bottle to a jar of honey, and renames the item."
     }
 ]
