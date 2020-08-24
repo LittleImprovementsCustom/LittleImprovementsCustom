@@ -31,9 +31,7 @@ const app = express();
 app.use(express.json()); // to support JSON-encoded bodies
 
 // webpage the user sees, on a get request
-app.get("/", function (req, res) {
-  res.sendFile(__dirname+"/public/index.html")
-})
+app.use(express.static("public"));
 
 // how to handle a post request, sent by the client-side js
 app.post('/', function (req, res) {
