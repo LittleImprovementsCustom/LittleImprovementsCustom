@@ -42,7 +42,7 @@ app.post('/', function (req, res) {
     res.send('helo');
     // generate id and create pack path
     const id = Nanoid.nanoid(5)	
-    const packPath = `/packs/${id}`
+    const packPath = `/packs/LittleImprovementsCustom-${id}`
     console.log("pack path = "+packPath)
 
     // ADD PACK FILES
