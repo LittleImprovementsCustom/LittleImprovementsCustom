@@ -14,15 +14,13 @@ const availableModules = JSON.parse(fs.readFileSync('availableModules.json'))
 
 function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
 	for (i in storageFilePaths) {
-		fs.readFile(storageFilePaths[i], function (err, contents){
-			dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: contents })
+		dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: fs.readFileSync(storageFilePaths[i]) })
 			.then(function (response) {
 				console.log(response);
 			})
 			.catch(function (err) {
 				console.log(err);
 			});
-		});
 	}
 }
 
