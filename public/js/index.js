@@ -32,3 +32,12 @@ function mouseOut() {
     document.getElementById(this.id+"Img").classList.remove("invisible")
     document.getElementById(this.id+"Desc").classList.add("invisible")
 }
+
+// HANDLE THE USER PRESSING THE DOWNLOAD BUTTON
+function downloadPack() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", yourUrl, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify( {"new":"true","modules":selectedModules} ));
+    console.log(xhr);
+}
