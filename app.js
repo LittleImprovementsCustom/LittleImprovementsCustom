@@ -48,7 +48,7 @@ app.post('/', function (req, res) {
     // ADD PACK FILES
     // go through every available module, and if it is included in the request body, run the function to add it
     for (i in availableModules) {
-      if (requestBody.modules.includes (availableModules[i].id)) {
+      if (req.body.modules.includes (availableModules[i].id)) {
         uploadFiles(availableModules[i].storageFiles,availableModules[i].packFiles,packPath)
       }
     }
@@ -71,11 +71,10 @@ app.post('/', function (req, res) {
       .catch(function (err) {
         console.log(err);
       });
-      console.log("link = "+link)
-      return link
     })
     console.log(downloadLink)
     return downloadLink
+    
     } else {
       res.send('sorry ur bad');
     }
