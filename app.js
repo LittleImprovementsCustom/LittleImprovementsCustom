@@ -71,8 +71,8 @@ async function addFilesGetDownload (selectedModules) {
 	await uploadFile("storage/pack.mcmeta","/pack.mcmeta",packPath)
 
 	// get share link and return it
-  const shareLink = await getShareLink(packPath)
-  return shareLink
+  	const shareLink = await getShareLink(packPath)
+  	return shareLink
 
 }
 
@@ -87,36 +87,6 @@ app.use(express.static("public"));
 app.post('/', function (req, res) {
   console.log(req.body)
   if (req.body.new=="true") {
-    // // generate id and create pack path
-    // const id = Nanoid.nanoid(5)	
-    // const packPath = `/packs/LittleImprovementsCustom_${id}`
-    // console.log("pack path = "+packPath)
-
-    // // ADD PACK FILES
-    // // go through every available module, and if it is included in the request body, run the function to add it
-    // for (i in availableModules) {
-    //   if (req.body.modules.includes (availableModules[i].id)) {
-    //     uploadMultipleFiles(availableModules[i].storageFiles,availableModules[i].packFiles,packPath)
-    //   }
-    // }
-
-    // // add pack.mcmeta file, and create sharing link
-    // fs.readFile("storage/pack.mcmeta", function (err, contents){
-    //   dbx.filesUpload({ path: packPath+"/pack.mcmeta", contents: contents })
-    //   .then(function (response) {
-    //     console.log(response);
-    //     dbx.sharingCreateSharedLink({path: packPath})
-    //     .then(function(response) {
-    //       res.send(response.url.slice(0, -1)+"1")
-    //     })
-    //     .catch(function(error) {
-    //       console.log(error);
-    //     });
-    //   })
-    //   .catch(function (err) {
-    //     console.log(err);
-    //   });
-	// })
   	(async function() {
     	const downloadLink = await addFilesGetDownload(req.body.modules)
 		console.log("dl="+downloadLink)
