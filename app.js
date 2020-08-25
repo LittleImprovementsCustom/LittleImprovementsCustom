@@ -12,24 +12,48 @@ const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN
 // get availableModules object
 const availableModules = JSON.parse(fs.readFileSync('availableModules.json'))
 
-async function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
-	for (i in storageFilePaths) {
-    try {
-      const uploadFile = await dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: fs.readFileSync(storageFilePaths[i]) })
-      console.log(response)
-    } catch {
-      console.log(err)
-    }
-    
-		// dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: fs.readFileSync(storageFilePaths[i]) })
-		// 	.then(function (response) {
-		// 		console.log(response);
-		// 	})
-		// 	.catch(function (err) {
-		// 		console.log(err);
-		// 	});
+function uploadFile (storageFilePath,packFilePath,packRoot) {
+  return new Promise((resolve,reject) => {
+    	dbx.filesUpload({ path: packRoot+packFilePath, contents: fs.readFileSync(storageFilePath) })
+		.then(function (response) {
+			console.log(response)
+			resolve("file uploaded")
+		})
+		.catch(function (err) {
+			console.log(err);
+			reject("failed")
+		})
+  })
+}
+
+async function uploadMultipleFiles (storageFilePaths,packFilePaths,packRoot) {
+	try {
+		for (i in storageFilePaths) {
+			await uploadFile(storageFilePaths[i],packFilePaths[i],packRoot)
+		}
+	} catch {
+		console.log(err)
 	}
 }
+
+// async function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
+// 	for (i in storageFilePaths) {
+//     try {
+//       const uploadFile = await dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: fs.readFileSync(storageFilePaths[i]) })
+//       console.log(response)
+//     } catch {
+//       console.log(err)
+//     }
+    
+// 		// dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: fs.readFileSync(storageFilePaths[i]) })
+// 		// 	.then(function (response) {
+// 		// 		console.log(response);
+// 		// 	})
+// 		// 	.catch(function (err) {
+// 		// 		console.log(err);
+// 		// 	});
+// 	}
+// }
 
 // setup express
 const app = express();
@@ -51,7 +75,7 @@ app.post('/', function (req, res) {
     // go through every available module, and if it is included in the request body, run the function to add it
     for (i in availableModules) {
       if (req.body.modules.includes (availableModules[i].id)) {
-        uploadFiles(availableModules[i].storageFiles,availableModules[i].packFiles,packPath)
+        uploadMultipleFiles(availableModules[i].storageFiles,availableModules[i].packFiles,packPath)
       }
     }
 
