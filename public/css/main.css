@@ -17,6 +17,11 @@ body {
 	padding: 5px;
 }
 
+.description {
+	font-size: large;
+	padding: 5px;
+}
+
 .navbar {
 	list-style-type: none;
 	margin: 0;
