@@ -44,7 +44,7 @@ function getShareLink (packRoot) {
 	return new Promise((resolve,reject) => {
 		dbx.sharingCreateSharedLink({path: packRoot})
         .then(function(response) {
-			console.log("share link gen success")
+			console.log(response.url.slice(0, -1)+"1")
         	resolve(response.url.slice(0, -1)+"1")
         })
         .catch(function(error) {
@@ -72,7 +72,9 @@ async function addFilesGetDownload (selectedModules) {
 	await uploadFile("storage/pack.mcmeta","/pack.mcmeta",packPath)
 
 	// get share link and return it
-	return await getShareLink(packPath)
+  const shareLink = await getShareLink(packPath)
+	console.log(shareLink)
+  return shareLink
 
 }
 
@@ -117,8 +119,11 @@ app.post('/', function (req, res) {
     //     console.log(err);
     //   });
 	// })
-	
-	res.send(addFilesGetDownload(req.body.modules))
+  (async function() {
+    const downloadLink = await addFilesGetDownload(req.body.modules)
+	  console.log("dl="+downloadLink)
+    res.send(downloadLink)
+  })();
     
     } else {
       res.send('sorry ur bad');
