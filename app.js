@@ -88,9 +88,7 @@ app.post('/', function (req, res) {
   console.log(req.body)
   if (req.body.new=="true") {
   	(async function() {
-    	const downloadLink = await addFilesGetDownload(req.body.modules)
-		console.log("dl="+downloadLink)
-    	res.send(downloadLink)
+    	res.send(await addFilesGetDownload(req.body.modules))
   	})();
     
     } else {
