@@ -27,7 +27,7 @@ function uploadFile (storageFilePath,packFilePath,packRoot) {
 }
 
 async function uploadMultipleFiles (storageFilePaths,packFilePaths,packRoot) {
-	return new Promise((resolve,reject) => {
+	return new Promise(async (resolve,reject) => {
 		try {
 			for (i in storageFilePaths) {
 				await uploadFile(storageFilePaths[i],packFilePaths[i],packRoot)
@@ -40,9 +40,21 @@ async function uploadMultipleFiles (storageFilePaths,packFilePaths,packRoot) {
 	})
 }
 
-async function addFilesGetDownload (selectedModules) {
+function getShareLink (packRoot) {
+	return new Promise((resolve,reject) => {
+		dbx.sharingCreateSharedLink({path: packRoot})
+        .then(function(response) {
+			console.log("share link gen success")
+        	resolve(response.url.slice(0, -1)+"1")
+        })
+        .catch(function(error) {
+			console.log(error)
+			reject("fail")
+        });
+	})
+}
 
-	try {
+async function addFilesGetDownload (selectedModules) {
 
 	// generate id and create pack path
 	const id = Nanoid.nanoid(5)	
@@ -60,10 +72,7 @@ async function addFilesGetDownload (selectedModules) {
 	await uploadFile("storage/pack.mcmeta","/pack.mcmeta",packPath)
 
 	// get share link and return it
-	dbx.sharingCreateSharedLink({path: packPath})
-	return response.url.slice(0, -1)+"1"
-
-	} catch {console.log(err)}
+	return await getShareLink(packPath)
 
 }
 
