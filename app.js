@@ -36,25 +36,6 @@ async function uploadMultipleFiles (storageFilePaths,packFilePaths,packRoot) {
 	}
 }
 
-// async function uploadFiles ( storageFilePaths, packFilePaths, packRoot ) {
-// 	for (i in storageFilePaths) {
-//     try {
-//       const uploadFile = await dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: fs.readFileSync(storageFilePaths[i]) })
-//       console.log(response)
-//     } catch {
-//       console.log(err)
-//     }
-    
-// 		// dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: fs.readFileSync(storageFilePaths[i]) })
-// 		// 	.then(function (response) {
-// 		// 		console.log(response);
-// 		// 	})
-// 		// 	.catch(function (err) {
-// 		// 		console.log(err);
-// 		// 	});
-// 	}
-// }
-
 // setup express
 const app = express();
 app.use(express.json()); // to support JSON-encoded bodies
