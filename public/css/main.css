@@ -1,14 +1,10 @@
 :root {
-	--background: white;
-	--primary-background: #F8F9FA;
-	--secondary-background: #e0e0e0;
-	--emphasis-background: #9BA2A9;
-	--font-color: black;
-	--emphasis-font-color: white;
-}
+	--color-scheme: light dark;
+  }
 
 body {
 	background-color: var(--background);
+	color: var(--font-color);
 	font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
