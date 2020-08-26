@@ -14,12 +14,12 @@ body {
 
 .title {
 	font-size: xx-large;
-	padding: 0.4vw;
+	padding-left: 1vw;
 }
 
 .description {
 	font-size: large;
-	padding: 0.4vw;
+	padding-left: 1vw;
 }
 
 .navbar {
