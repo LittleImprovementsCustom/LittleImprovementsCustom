@@ -2,7 +2,8 @@
 	--background: white;
 	--primary-background: #F8F9FA;
 	--secondary-background: #e0e0e0;
-	--emphasis-background: #9BA2A9;
+    --emphasis-background: #9BA2A9;
+    --separator: var(--secondary-background);
 	--font-color: black;
     --emphasis-font-color: white;
     --toast-font-color: white;

@@ -13,6 +13,12 @@ body {
 	padding-left: 1vw;
 }
 
+hr{
+	height:2px;
+	border-width:0;
+	background-color:var(--separator);
+}
+
 .description {
 	font-size: large;
 	padding-left: 1vw;
