@@ -1,11 +1,17 @@
 [
     {
         "id": "honeyJar",
+        "label": "Honey Jar",
+        "icontype": "png",
+        "description": "Changes honey bottle to a jar of honey, and renames the item.",
         "storageFiles": ["storage/modules/honeyJar/textures/item/honey_bottle.png"],
         "packFiles": ["/assets/minecraft/textures/item/honey_bottle.png"]
     },
     {
         "id": "animatedCampfireItems",
+        "label": "Animated Campfire Items",
+        "icontype": "gif",
+        "description": "Animates campfire and soul campfire items in the inventory and in a player's hand.",
         "storageFiles": [
             "storage/modules/animatedCampfireItems/textures/item/campfire.png",
             "storage/modules/animatedCampfireItems/textures/item/campfire.png.mcmeta",
