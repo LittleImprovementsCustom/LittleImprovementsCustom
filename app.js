@@ -72,8 +72,9 @@ const app = express();
 app.use(express.json()); // to support JSON-encoded bodies
 
 app.use(express.static("public"));
-app.use(express.static("availableModules.json"));
 app.use('/favicon.ico', express.static('public/logo/favicon.ico'));
+
+app.get('/availableModules', (req, res) => res.sendFile(__dirname+"/availableModules.json") );
 
 app.get('/', (req, res) => res.sendFile(__dirname+"/public/index.html") );
 app.get('/credits', (req, res) => res.sendFile(__dirname+"/public/credits.html") );
