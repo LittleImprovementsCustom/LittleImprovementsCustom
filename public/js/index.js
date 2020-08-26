@@ -35,15 +35,33 @@ function mouseOut() {
 
 // HANDLE THE USER PRESSING THE DOWNLOAD BUTTON
 function downloadPack() {
+    // stop the user downloading a pack with nothing selected
     if (selectedModules.length==0) {
         // let the user know they can't download a pack with no modules
         alert("You can't download a pack with nothing selected.")
         // return, so the post request is not sent
         return
     }
+
+    // show the download toast
+    document.getElementById("download-toast").classList.remove("invisible")
+
+    // send post request to the server
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "https://littleimprovements-custom.beatso1.repl.co/", false);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify( {"new":"true","modules":selectedModules} ));
-    window.location.href = xhr.response; // redirect user to the download page
+
+    // show fail toast if the response was "error"
+    if (xhr.response == "error") {
+        // hide the download toast
+        document.getElementById("download-toast").classList.add("invisible")
+        // show fail toast
+        document.getElementById("error-toast").classList.remove("invisible")
+        // return, so the user doesnt get redirected
+        return
+    }
+    
+    // download
+    window.location.href = xhr.response
 }

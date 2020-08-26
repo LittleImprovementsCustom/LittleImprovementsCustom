@@ -62,6 +62,8 @@ async function addFilesGetDownload (selectedModules) {
 		return shareLink
 	} catch (err) {
 		console.log(err)
+		// return "error", so the client knows and can show fail toast
+		return "error"
 	}
 }
 

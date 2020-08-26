@@ -96,6 +96,30 @@ body {
 	font-size: medium;
 }
 
+a, a:hover, a:active, a:visited {
+	color: white;
+}
+
+.toast {
+	width: fit-content;
+	max-width: 40%;
+	padding: 0.8vw;
+	border-radius: 0.4vw;
+	text-align: center;
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+	color: white;
+}
+
+.success-toast {
+	background-color: green;
+}
+
+.fail-toast {
+	background-color: red;
+}
+
 .invisible {
 	display: none;
 }
