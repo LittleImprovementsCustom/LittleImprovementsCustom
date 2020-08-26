@@ -92,7 +92,6 @@ function createModuleSelector(moduleid, modulelabel, icontype, moduledesc) {
 
 }
 
-
 // function to read JSON file containing data
 function loadJSON(callback) {   
     const xobj = new XMLHttpRequest();
@@ -106,7 +105,6 @@ function loadJSON(callback) {
     };
     xobj.send(null);
 }
-
 
 // function to load JSON then send to be added to HTML
 loadJSON(function(response) {
