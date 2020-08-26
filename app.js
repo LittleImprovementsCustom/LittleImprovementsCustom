@@ -54,8 +54,8 @@ async function addFilesGetDownload (selectedModules) {
 			}
 		}
 
-		// add pack.mcmeta and pack.png
-		await uploadMultipleFiles(["storage/pack.mcmeta","storage/pack.png"],["/pack.mcmeta","/pack.png"],packPath)
+		// add pack.mcmeta, pack.png and credits.txt
+		await uploadMultipleFiles(["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"],["/pack.mcmeta","/pack.png","/credits.txt"],packPath)
 
 		// get share link and return it
 		const shareLink = await getShareLink(packPath)
