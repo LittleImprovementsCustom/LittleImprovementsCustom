@@ -1,0 +1,15 @@
+[
+    {
+        "id": "honeyJar",
+        "label": "Honey Jar",
+        "icontype": "png",
+        "description": "Changes honey bottle to a jar of honey, and renames the item."
+
+    },
+    {
+        "id": "animatedCampfireItems",
+        "label": "Animated Campfire Items",
+        "icontype": "gif",
+        "description": "Animates campfire and soul campfire items in the inventory and in a player's hand."
+    }
+]

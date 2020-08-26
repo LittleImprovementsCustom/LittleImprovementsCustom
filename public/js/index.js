@@ -1,20 +1,3 @@
-// DATA FOR MODULE SELECTORS. ADD TO THIS WHEN CREATING A NEW MODULE
-const modulesToCreate = [
-    {
-        "id": "honeyJar",
-        "label": "Honey Jar",
-        "icontype": "png",
-        "description": "Changes honey bottle to a jar of honey, and renames the item."
-
-    },
-    {
-        "id": "animatedCampfireItems",
-        "label": "Animated Campfire Items",
-        "icontype": "gif",
-        "description": "Animates campfire and soul campfire items in the inventory and in a player's hand."
-    }
-]
-
 // SELECT OR UNSELECT A MODULE WHEN THE USER CLICKS THE SELECTOR
 let selectedModules = []
 function toggleSelected(id) {
@@ -77,6 +60,8 @@ function downloadPack() {
 
 
 // DYNAMICALLY ADD MODULE SELECTORS
+
+// function to add html elements
 function createModuleSelector(moduleid, modulelabel, icontype, moduledesc) {
 
     const div = document.createElement("div");
@@ -107,7 +92,28 @@ function createModuleSelector(moduleid, modulelabel, icontype, moduledesc) {
 
 }
 
-for (i in modulesToCreate) {
-    const data = modulesToCreate[i]
-    createModuleSelector(data.id,data.label,data.icontype,data.description)
+
+// function to read JSON file containing data
+function loadJSON(callback) {   
+    const xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', 'moduleData.json', true); // Replace 'my_data' with the path to your file
+    xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+            callback(xobj.responseText);
+        }
+    };
+    xobj.send(null);
 }
+
+
+// function to load JSON then send to be added to HTML
+loadJSON(function(response) {
+    // Parse JSON string into object
+    var actual_JSON = JSON.parse(response);
+    for (i in actual_JSON) {
+        const data = actual_JSON[i]
+        createModuleSelector(data.id,data.label,data.icontype,data.description)
+    }
+})
