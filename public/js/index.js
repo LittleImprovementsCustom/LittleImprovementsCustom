@@ -57,7 +57,7 @@ function downloadPack() {
         // hide the download toast
         document.getElementById("download-toast").classList.add("invisible")
         // show fail toast
-        document.getElementById("error-toast").classList.remove("invisible")
+        document.getElementById("fail-toast").classList.remove("invisible")
         // return, so the user doesnt get redirected
         return
     }
