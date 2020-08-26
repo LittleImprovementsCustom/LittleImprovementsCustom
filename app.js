@@ -12,18 +12,13 @@ const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN
 // get availableModules object
 const availableModules = JSON.parse(fs.readFileSync('availableModules.json'))
 
-function uploadFile (storageFilePath,packFilePath,packRoot) {
-  return new Promise((resolve,reject) => {
-    	dbx.filesUpload({ path: packRoot+packFilePath, contents: fs.readFileSync(storageFilePath) })
-		.then(function (response) {
-			console.log(response)
-			resolve("file uploaded")
-		})
-		.catch(function (err) {
-			console.log(err);
-			reject("failed")
-		})
-  })
+async function uploadFile (storageFilePath,packFilePath,packRoot) {
+	try {
+		const response = await dbx.filesUpload({ path: packRoot+packFilePath, contents: fs.readFileSync(storageFilePath) })
+		console.log(response)
+	} catch (err) {
+		throw err
+	}
 }
 
 async function uploadMultipleFiles (storageFilePaths,packFilePaths,packRoot) {
@@ -31,47 +26,43 @@ async function uploadMultipleFiles (storageFilePaths,packFilePaths,packRoot) {
 		for (i in storageFilePaths) {
 			await uploadFile(storageFilePaths[i],packFilePaths[i],packRoot)
 		}
-		return "files uploaded"
-	} catch {
-		console.log(err)
-		throw "fail"
+	} catch (err) {
+		throw err
 	}
 }
 
-function getShareLink (packRoot) {
-	return new Promise((resolve,reject) => {
-		dbx.sharingCreateSharedLink({path: packRoot})
-        .then(function(response) {
-        	resolve(response.url.slice(0, -1)+"1")
-        })
-        .catch(function(error) {
-			console.log(error)
-			reject("fail")
-        });
-	})
+async function getShareLink (packRoot) {
+	try {
+		const response = await dbx.sharingCreateSharedLink({path: packRoot})
+		return response.url.slice(0, -1)+"1"
+	} catch (err) {
+		throw err
+	}
 }
 
 async function addFilesGetDownload (selectedModules) {
+	try {
+		// generate id and create pack path
+		const id = Nanoid.nanoid(5)	
+		const packPath = `/packs/LittleImprovementsCustom_${id}`
+		console.log("pack path = "+packPath)
 
-	// generate id and create pack path
-	const id = Nanoid.nanoid(5)	
-	const packPath = `/packs/LittleImprovementsCustom_${id}`
-	console.log("pack path = "+packPath)
-
-	// add modules files to pack
-	for (i in availableModules) {
-		if (selectedModules.includes (availableModules[i].id)) {
-		  await uploadMultipleFiles(availableModules[i].storageFiles,availableModules[i].packFiles,packPath)
+		// add modules files to pack
+		for (i in availableModules) {
+			if (selectedModules.includes (availableModules[i].id)) {
+			await uploadMultipleFiles(availableModules[i].storageFiles,availableModules[i].packFiles,packPath)
+			}
 		}
+
+		// add pack.mcmeta file
+		await uploadFile("storage/pack.mcmeta","/pack.mcmeta",packPath)
+
+		// get share link and return it
+		const shareLink = await getShareLink(packPath)
+		return shareLink
+	} catch (err) {
+		console.log(err)
 	}
-
-	// add pack.mcmeta file
-	await uploadFile("storage/pack.mcmeta","/pack.mcmeta",packPath)
-
-	// get share link and return it
-  	const shareLink = await getShareLink(packPath)
-  	return shareLink
-
 }
 
 // setup express
