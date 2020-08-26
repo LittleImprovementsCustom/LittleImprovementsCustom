@@ -1,3 +1,20 @@
+// DATA FOR MODULE SELECTORS. ADD TO THIS WHEN CREATING A NEW MODULE
+const modulesToCreate = [
+    {
+        "id": "honeyJar",
+        "label": "Honey Jar",
+        "icontype": "png",
+        "description": "Changes honey bottle to a jar of honey, and renames the item."
+
+    },
+    {
+        "id": "animatedCampfireItems",
+        "label": "Animated Campfire Items",
+        "icontype": "gif",
+        "description": "Animates campfire and soul campfire items in the inventory and in a player's hand."
+    }
+]
+
 // SELECT OR UNSELECT A MODULE WHEN THE USER CLICKS THE SELECTOR
 let selectedModules = []
 function toggleSelected(id) {
@@ -16,14 +33,6 @@ function toggleSelected(id) {
 }
 
 // HIDE THE IMAGE AND SHOW THE DESCRIPTION WHEN THE USER HOVERS OVER A SELECTOR
-// create array of all the modules
-const availableModules = Array.from(document.getElementById("pack-selector-container").children)
-// add event listeners to all modules
-for (i in availableModules) {
-    availableModules[i].addEventListener("mouseover", mouseOver)
-    availableModules[i].addEventListener("mouseout", mouseOut)
-}
-// what to do when the user hovers over a selector
 function mouseOver() {
     document.getElementById(this.id+"Img").classList.add("invisible")
     document.getElementById(this.id+"Desc").classList.remove("invisible")
@@ -64,4 +73,41 @@ function downloadPack() {
     
     // download
     window.location.href = xhr.response
+}
+
+
+// DYNAMICALLY ADD MODULE SELECTORS
+function createModuleSelector(moduleid, modulelabel, icontype, moduledesc) {
+
+    const div = document.createElement("div");
+    div.setAttribute("class","grid-item selection-box unselected tooltip");
+    div.setAttribute("onclick", `javascript: toggleSelected('${moduleid}')`)
+    div.setAttribute("id", moduleid)
+    document.getElementById("pack-selector-container").appendChild(div)
+
+    const label = document.createElement("p")
+    label.setAttribute("class", "pack-label")
+    label.appendChild(document.createTextNode(modulelabel))
+    div.appendChild(label)
+
+    const icon = document.createElement("img")
+    icon.setAttribute("class","pack-icon")
+    icon.setAttribute("src",`icons/${moduleid}.${icontype}`)
+    icon.setAttribute("id",moduleid+"Img")
+    div.appendChild(icon)
+
+    const desc = document.createElement("p")
+    desc.setAttribute("class","pack-desc invisible")
+    desc.setAttribute("id", moduleid+"Desc")
+    desc.appendChild(document.createTextNode(moduledesc))
+    div.appendChild(desc);
+
+    div.addEventListener("mouseover", mouseOver)
+    div.addEventListener("mouseout", mouseOut)
+
+}
+
+for (i in modulesToCreate) {
+    const data = modulesToCreate[i]
+    createModuleSelector(data.id,data.label,data.icontype,data.description)
 }
