@@ -13,7 +13,26 @@ body {
 	padding-left: 1vw;
 }
 
-hr{
+.float-my-children > * {
+	float:left;
+    margin-right:5px;
+}
+
+.clearfix:before,.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.middle-div {
+	position: relative;
+	top: 50%;
+}
+
+.hr{
 	height:2px;
 	border-width:0;
 	background-color:var(--separator);
