@@ -13,37 +13,44 @@ const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN
 const availableModules = JSON.parse(fs.readFileSync('availableModules.json'))
 
 function uploadFile (storageFilePath,packFilePath,packRoot) {
-	dbx.filesUpload({ path: packRoot+packFilePath, contents: fs.readFileSync(storageFilePath) })
-	.then(function (response) {
-		console.log(response)
-		return "file uploaded"
-	})
-	.catch(function (err) {
-		console.log(err);
-		throw "fail"
-	})
+  return new Promise((resolve,reject) => {
+    	dbx.filesUpload({ path: packRoot+packFilePath, contents: fs.readFileSync(storageFilePath) })
+		.then(function (response) {
+			console.log(response)
+			resolve("file uploaded")
+		})
+		.catch(function (err) {
+			console.log(err);
+			reject("failed")
+		})
+  })
 }
 
 async function uploadMultipleFiles (storageFilePaths,packFilePaths,packRoot) {
-	try {
-		for (i in storageFilePaths) {
-			await uploadFile(storageFilePaths[i],packFilePaths[i],packRoot)
+	return new Promise(async (resolve,reject) => {
+		try {
+			for (i in storageFilePaths) {
+				await uploadFile(storageFilePaths[i],packFilePaths[i],packRoot)
+			}
+			resolve("files uploaded")
+		} catch {
+			console.log(err)
+			reject("fail")
 		}
-		return "files uploaded"
-	} catch {
-		console.log(err)
-		throw "fail"
-	}
+	})
 }
 
 function getShareLink (packRoot) {
-	try {
+	return new Promise((resolve,reject) => {
 		dbx.sharingCreateSharedLink({path: packRoot})
-		return response.url.slice(0, -1)+"1")
-	} catch {
-		console.log(err)
-		throw "fail"
-	}
+        .then(function(response) {
+        	resolve(response.url.slice(0, -1)+"1")
+        })
+        .catch(function(error) {
+			console.log(error)
+			reject("fail")
+        });
+	})
 }
 
 async function addFilesGetDownload (selectedModules) {
