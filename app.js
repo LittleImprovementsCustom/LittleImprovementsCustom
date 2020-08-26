@@ -76,12 +76,11 @@ app.get('/credits', (req, res) => res.sendFile(__dirname+"/public/credits.html")
 
 // how to handle a post request, sent by the client-side js
 app.post('/', function (req, res) {
-  console.log(req.body)
-  if (req.body.new=="true") {
-  	(async function() {
-    	res.send(await addFilesGetDownload(req.body.modules))
-  	})();
-    
+	console.log(req.body)
+	if (req.body.new=="true") {
+		(async function() {
+			res.send(await addFilesGetDownload(req.body.modules))
+		})();
     } else {
       res.send('sorry ur bad');
     }
