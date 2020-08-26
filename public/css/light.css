@@ -4,5 +4,8 @@
 	--secondary-background: #e0e0e0;
 	--emphasis-background: #9BA2A9;
 	--font-color: black;
-	--emphasis-font-color: white;
+    --emphasis-font-color: white;
+    --toast-font-color: white;
+    --success-background: green;
+    --fail-background: red;
 }
