@@ -27,17 +27,15 @@ function uploadFile (storageFilePath,packFilePath,packRoot) {
 }
 
 async function uploadMultipleFiles (storageFilePaths,packFilePaths,packRoot) {
-	return new Promise(async (resolve,reject) => {
-		try {
-			for (i in storageFilePaths) {
-				await uploadFile(storageFilePaths[i],packFilePaths[i],packRoot)
-			}
-			resolve("files uploaded")
-		} catch {
-			console.log(err)
-			reject("fail")
+	try {
+		for (i in storageFilePaths) {
+			await uploadFile(storageFilePaths[i],packFilePaths[i],packRoot)
 		}
-	})
+		return "files uploaded"
+	} catch {
+		console.log(err)
+		throw "fail"
+	}
 }
 
 function getShareLink (packRoot) {
