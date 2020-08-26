@@ -65,7 +65,7 @@ function downloadPack() {
 function createModuleSelector(moduleid, modulelabel, icontype, moduledesc) {
 
     const div = document.createElement("div");
-    div.setAttribute("class","grid-item selection-box unselected tooltip");
+    div.setAttribute("class","grid-item selection-box unselected");
     div.setAttribute("onclick", `javascript: toggleSelected('${moduleid}')`)
     div.setAttribute("id", moduleid)
     document.getElementById("pack-selector-container").appendChild(div)
