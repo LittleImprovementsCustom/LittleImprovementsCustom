@@ -12,19 +12,10 @@ const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN
 // get availableModules object
 const availableModules = JSON.parse(fs.readFileSync('storage/data/modules.json'))
 
-async function uploadFile (storageFilePath,packFilePath,packRoot) {
-	try {
-		const response = await dbx.filesUpload({ path: packRoot+packFilePath, contents: fs.readFileSync(storageFilePath) })
-		console.log(response)
-	} catch (err) {
-		throw err
-	}
-}
-
 async function uploadMultipleFiles (storageFilePaths,packFilePaths,packRoot) {
 	try {
 		for (i in storageFilePaths) {
-			await uploadFile(storageFilePaths[i],packFilePaths[i],packRoot)
+			console.log(await dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: fs.readFileSync(storageFilePaths[i]) }))
 		}
 	} catch (err) {
 		throw err
