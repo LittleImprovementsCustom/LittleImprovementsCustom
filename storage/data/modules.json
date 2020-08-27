@@ -24,5 +24,45 @@
             "/assets/minecraft/textures/item/soul_campfire.png",
             "/assets/minecraft/textures/item/soul_campfire.png.mcmeta"
         ]
+    },
+    {
+        "id": "restockClock",
+        "label": "Restock Clock",
+        "icontype": "png",
+        "description": "Makes clocks show when villagers can restock their trades.",
+        "storageFiles": [
+            "storage/modules/restockClock/textures/item/clock_00",
+            "storage/modules/restockClock/textures/item/clock_01",
+            "storage/modules/restockClock/textures/item/clock_02",
+            "storage/modules/restockClock/textures/item/clock_03",
+            "storage/modules/restockClock/textures/item/clock_04",
+            "storage/modules/restockClock/textures/item/clock_05",
+            "storage/modules/restockClock/textures/item/clock_06",
+            "storage/modules/restockClock/textures/item/clock_56",
+            "storage/modules/restockClock/textures/item/clock_57",
+            "storage/modules/restockClock/textures/item/clock_58",
+            "storage/modules/restockClock/textures/item/clock_59",
+            "storage/modules/restockClock/textures/item/clock_60",
+            "storage/modules/restockClock/textures/item/clock_61",
+            "storage/modules/restockClock/textures/item/clock_62",
+            "storage/modules/restockClock/textures/item/clock_63"
+        ],
+        "packFiles": [
+            "/assets/minecraft/textures/item/clock_00",
+            "/assets/minecraft/textures/item/clock_01",
+            "/assets/minecraft/textures/item/clock_02",
+            "/assets/minecraft/textures/item/clock_03",
+            "/assets/minecraft/textures/item/clock_04",
+            "/assets/minecraft/textures/item/clock_05",
+            "/assets/minecraft/textures/item/clock_06",
+            "/assets/minecraft/textures/item/clock_56",
+            "/assets/minecraft/textures/item/clock_57",
+            "/assets/minecraft/textures/item/clock_58",
+            "/assets/minecraft/textures/item/clock_59",
+            "/assets/minecraft/textures/item/clock_60",
+            "/assets/minecraft/textures/item/clock_61",
+            "/assets/minecraft/textures/item/clock_62",
+            "/assets/minecraft/textures/item/clock_63"
+        ]
     }
 ]
