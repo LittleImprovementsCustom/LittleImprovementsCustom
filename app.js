@@ -15,7 +15,11 @@ const availableModules = JSON.parse(fs.readFileSync('storage/data/modules.json')
 async function uploadMultipleFiles (storageFilePaths,packFilePaths,packRoot) {
 	try {
 		for (i in storageFilePaths) {
-			console.log(await dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: fs.readFileSync(storageFilePaths[i]) }))
+			console.log(await dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: function(){
+				fs.readFile(storageFilePaths[i],function(err,data){
+					if ( err ) { throw err } else if ( data ) { return data }
+				})
+			}}))
 		}
 	} catch (err) {
 		throw err
