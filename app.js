@@ -57,6 +57,12 @@ async function addFilesGetDownload (selectedModules) {
 		// add pack.mcmeta, pack.png and credits.txt
 		await uploadMultipleFiles(["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"],["/pack.mcmeta","/pack.png","/credits.txt"],packPath)
 
+		// add selectedModules.json file
+		console.log(await dbx.filesUpload({
+			path:packPath+"/selectedModules.json",
+			contents: JSON.stringify(selectedModules)
+		}))
+
 		// get share link and return it
 		const shareLink = await getShareLink(packPath)
 		return shareLink
