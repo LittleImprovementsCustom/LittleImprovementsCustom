@@ -75,6 +75,7 @@ app.use(express.static("public"));
 app.use('/favicon.ico', express.static('public/logo/favicon.ico'));
 
 app.get('/availableModules', (req, res) => res.sendFile(__dirname+"/availableModules.json") );
+app.get('/creditsData', (req, res) => res.sendFile(__dirname+"storage/credits.json") );
 
 app.get('/', (req, res) => res.sendFile(__dirname+"/public/index.html") );
 app.get('/credits', (req, res) => res.sendFile(__dirname+"/public/credits.html") );

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Beatso",
+        "link": "https://www.beatso.tk",
+        "uuid": "895ae84776e0441283db420cf8444e30",
+        "desc": "Website and pack development"
+    },
+    {
+        "name": "Banakin",
+        "link": "https://banakin.github.io/",
+        "uuid": "f2fff0b8661f4b80bf54dbfb6d86119e",
+        "desc": "Helping with some technical stuff for the website"
+    },
+    {
+        "name": "Vanilla Tweaks",
+        "link": "https://vanillatweaks.net/",
+        "uuid": "77dde245108d490186834cd88ec672c0",
+        "desc": "Some resources are from Vanilla Tweaks by Xisumavoid"
+    }
+]
