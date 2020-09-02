@@ -9,18 +9,7 @@ require("dotenv").config();
 // setup Dropbox
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN });
 
-// get availableModules object
 const availableModules = JSON.parse(fs.readFileSync('storage/data/modules.json'))
-
-async function uploadMultipleFiles (storageFilePaths,packFilePaths,packRoot) {
-	try {
-		for (i in storageFilePaths) {
-			console.log(await dbx.filesUpload({ path: packRoot+packFilePaths[i], contents: fs.readFileSync(storageFilePaths[i])}))
-		}
-	} catch (err) {
-		throw err
-	}
-}
 
 async function getShareLink (packRoot) {
 	try {
@@ -33,20 +22,10 @@ async function getShareLink (packRoot) {
 
 async function addFilesGetDownload (selectedModules) {
 	try {
-		// generate id and create pack path
-		const id = Nanoid.nanoid(5)	
-		const packPath = `/packs/LittleImprovementsCustom_${id}`
-		console.log("pack path = "+packPath)
-
-		// add modules files to pack
-		for (i in availableModules) {
-			if (selectedModules.includes (availableModules[i].id)) {
-			await uploadMultipleFiles(availableModules[i].storageFiles,availableModules[i].packFiles,packPath)
-			}
-		}
 
 		// add pack.mcmeta, pack.png and credits.txt
-		await uploadMultipleFiles(["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"],["/pack.mcmeta","/pack.png","/credits.txt"],packPath)
+		//await uploadMultipleFiles(["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"],["/pack.mcmeta","/pack.png","/credits.txt"],packPath)
+
 
 		// add selectedModules.json file
 		console.log(await dbx.filesUpload({
@@ -55,41 +34,102 @@ async function addFilesGetDownload (selectedModules) {
 		}))
 
 		// get share link and return it
-		const shareLink = await getShareLink(packPath)
-		return shareLink
+		//const shareLink = await getShareLink(packPath)
+		return getShareLink(packPath)
 	} catch (err) {
-		console.log(err)
+		console.error(err)
 		// return "error", so the client knows and can show fail toast
 		return "error"
 	}
 }
 
 // setup express
-const app = express();
-app.use(express.json()); // to support JSON-encoded bodies
+const app = express()
+app.use(express.json()) // to support JSON-encoded bodies
 
-app.use(express.static("public"));
-app.use('/favicon.ico', express.static('public/logo/favicon.ico'));
+app.use(express.static("public"))
+app.use('/favicon.ico', express.static('public/logo/favicon.ico'))
 
-app.get('/modulesData', (req, res) => res.sendFile(__dirname+"/storage/data/modules.json") );
-app.get('/creditsData', (req, res) => res.sendFile(__dirname+"/storage/data/credits.json") );
+app.get('/modulesData', (req, res) => res.sendFile(__dirname+"/storage/data/modules.json") )
+app.get('/creditsData', (req, res) => res.sendFile(__dirname+"/storage/data/credits.json") )
 
-app.get('/', (req, res) => res.sendFile(__dirname+"/public/index.html") );
-app.get('/credits', (req, res) => res.sendFile(__dirname+"/public/credits.html") );
+app.get('/', (req, res) => res.sendFile(__dirname+"/public/index.html") )
+app.get('/credits', (req, res) => res.sendFile(__dirname+"/public/credits.html") )
 
 // how to handle a post request, sent by the client-side js
 app.post('/', function (req, res) {
 	console.log(req.body)
 	if (req.body.new=="true") {
-		(async function() {
-			res.send(await addFilesGetDownload(req.body.modules))
-		})();
+
+        // generate id and create pack path
+		const packPath = `/packs/LittleImprovementsCustom_${Nanoid.nanoid(5)}`
+		console.log("pack path = "+packPath)
+
+        let storageFilePathsToUpload = ["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"]
+        let packFilePathsToUpload = ["/pack.mcmeta","/pack.png","/credits.txt"]
+
+        for (i in availableModules){
+            if (req.body.modules.includes(availableModules[i].id)) {
+                storageFilePathsToUpload=storageFilePathsToUpload.concat(availableModules[i].storageFiles)
+                packFilePathsToUpload=packFilePathsToUpload.concat(availableModules[i].packFiles)
+            }
+        }
+        
+        async function startSessions () {
+			entries = []
+			for (let [index,val] of storageFilePathsToUpload.entries()) {
+				let fileData = fs.readFileSync(val)
+				await dbx.filesUploadSessionStart({
+					contents: fileData,
+					close: true,
+				})
+				.then(function (response) {
+					entries.push({cursor:{session_id:response.session_id,offset:fileData.length},commit:{path:packPath+packFilePathsToUpload[index]}})
+				})
+				.catch(function (err) {
+					console.error(err)
+				})
+			}
+		}
+		
+		
+		startSessions().then(()=>{
+			console.log(entries)
+			dbx.filesUploadSessionFinishBatch({entries:entries})
+			.then(function(response){
+				var checkIntervalID = setInterval(checkBatch,2000)
+				function checkBatch () {
+					dbx.filesUploadSessionFinishBatchCheck({async_job_id: response.async_job_id})
+					.then(function(output){
+						console.log(output)
+						if (output[".tag"] == "complete" ) {
+							getShareLink(packPath)
+							.then((response)=>res.send(response))
+							.catch((error)=>{
+								res.send("error")
+								console.error(error)
+							})
+							clearInterval(checkIntervalID)
+						}
+					})
+					.catch(function(err){
+						console.error(err)
+					})
+				}
+			}).catch(err => {
+				console.error(err)
+			})
+			
+		}).catch((err)=>{console.error(err)})
+
+
+
     } else {
-      res.send('sorry ur bad');
+      res.send('sorry ur bad')
     }
   
 })
 
 // listen server with express
 app.listen(process.env.PORT || 3000, 
-	() => console.log("Server running"));
+	() => console.log("Server running"))
