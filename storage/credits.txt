@@ -2,8 +2,12 @@ Little Improvments: Custom
 Credits:
 
 Beatso
-Creation of website and resource packs
+Website and pack development
 https://www.beatso.tk/
+
+Daggsy
+Pack development
+https://www.planetminecraft.com/member/daggsy/
 
 Banakin
 Helping with some technical stuff for the website
