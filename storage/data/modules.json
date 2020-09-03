@@ -117,4 +117,12 @@
             "/assets/minecraft/textures/item/cracked_nether_bricks_glow.png.mcmeta"
         ]
     },
+    {
+        "id": "obsidianEnderChest",
+        "label": "Obsidian Ender Chest",
+        "icontype": "png",
+        "description": "Removes green and replaced it by obsidian looking texture.",
+        "storageFiles": ["storage/modules/obsidianEnderChest/textures/entity/chest/ender.png"],
+        "packFiles": ["/assets/minecraft/textures/entity/chest/ender.png"]
+    }
 ]
