@@ -72,5 +72,31 @@
             "/assets/minecraft/textures/item/clock_62.png",
             "/assets/minecraft/textures/item/clock_63.png"
         ]
+    },
+    {
+        "id": "betterSignIcons",
+        "label": "Better Sign Icons",
+        "icontype": "png",
+        "description": "Changes Sign Icons to more similar to block.",
+        "storageFiles": [
+            "storage/modules/betterSignIcons/textures/item/acacia_sign.png",
+            "storage/modules/betterSignIcons/textures/item/birch_sign.png",
+            "storage/modules/betterSignIcons/textures/item/crimson_sign.png",
+            "storage/modules/betterSignIcons/textures/item/dark_oak_sign.png",
+            "storage/modules/betterSignIcons/textures/item/jungle_sign.png",
+            "storage/modules/betterSignIcons/textures/item/oak_sign.png",
+            "storage/modules/betterSignIcons/textures/item/spruce_sign.png",
+            "storage/modules/betterSignIcons/textures/item/warped_sign.png"
+        ],
+        "packFiles": [
+            "/assets/minecraft/textures/item/acacia_sign.png",
+            "/assets/minecraft/textures/item/birch_sign.png",
+            "/assets/minecraft/textures/item/crimson_sign.png",
+            "/assets/minecraft/textures/item/dark_oak_sign.png",
+            "/assets/minecraft/textures/item/jungle_sign.png",
+            "/assets/minecraft/textures/item/oak_sign.png",
+            "/assets/minecraft/textures/item/spruce_sign.png",
+            "/assets/minecraft/textures/item/warped_sign.png"
+        ]
     }
 ]
