@@ -20,29 +20,6 @@ async function getShareLink (packRoot) {
 	}
 }
 
-async function addFilesGetDownload (selectedModules) {
-	try {
-
-		// add pack.mcmeta, pack.png and credits.txt
-		//await uploadMultipleFiles(["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"],["/pack.mcmeta","/pack.png","/credits.txt"],packPath)
-
-
-		// add selectedModules.json file
-		console.log(await dbx.filesUpload({
-			path:packPath+"/selectedModules.json",
-			contents: JSON.stringify(selectedModules)
-		}))
-
-		// get share link and return it
-		//const shareLink = await getShareLink(packPath)
-		return getShareLink(packPath)
-	} catch (err) {
-		console.error(err)
-		// return "error", so the client knows and can show fail toast
-		return "error"
-	}
-}
-
 // setup express
 const app = express()
 app.use(express.json()) // to support JSON-encoded bodies
