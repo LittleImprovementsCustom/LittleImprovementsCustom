@@ -8,11 +8,11 @@
         "packFiles": ["/assets/minecraft/textures/item/honey_bottle.png"]
     },
     {
-        "id": "HotLavaBucket",
+        "id": "hotLavaBucket",
         "label": "Hot Lava Bucket",
         "icontype": "png",
         "description": "Makes original Lava Bucket really, really hot.",
-        "storageFiles": ["storage/modules/HotLavaBucket/textures/item/lava_bucket.png"],
+        "storageFiles": ["storage/modules/hotLavaBucket/textures/item/lava_bucket.png"],
         "packFiles": ["/assets/minecraft/textures/item/lava_bucket.png"]
     },
     {
