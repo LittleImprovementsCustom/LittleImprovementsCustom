@@ -154,5 +154,14 @@
             "/assets/minecraft/textures/models/armor/netherite_layer_1.png",
             "/assets/minecraft/textures/models/armor/turtle_layer_1.png"            
         ]
+    },
+    {
+        "id": "egglessSlimeBlock",
+        "label": "Eggless Slime Block",
+        "icontype": "png",
+        "description": "Removes the \"egg\" in the middle of slime blocks",
+        "storageFiles": ["storage/modules/egglessSlimeBlock/models/block/slime_block.png"],
+        "packFiles": ["/assets/minecraft/textures/models/block/slime_block.png"]
+    },
     }
 ]
