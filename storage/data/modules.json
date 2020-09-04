@@ -124,5 +124,13 @@
         "description": "Removes green and replaces it with an obsidian-like texture.",
         "storageFiles": ["storage/modules/obsidianEnderChest/textures/entity/chest/ender.png"],
         "packFiles": ["/assets/minecraft/textures/entity/chest/ender.png"]
+    },
+    {
+        "id": "noNauseaOverlay",
+        "label": "No Nasuea Overlay",
+        "icontype": "png",
+        "description": "Removes the green overlay from nausea when distortion effects is set to off.",
+        "storageFiles": ["storage/modules/noNauseaOverlay/textures/misc/nasuea.png"],
+        "packFiles": ["/assets/minecraft/textures/misc/nasuea.png"]
     }
 ]
