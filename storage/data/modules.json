@@ -160,15 +160,15 @@
         "label": "Eggless Slime Block",
         "icontype": "png",
         "description": "Removes the \"egg\" in the middle of slime blocks",
-        "storageFiles": ["storage/modules/egglessSlimeBlock/models/block/slime_block.png"],
-        "packFiles": ["/assets/minecraft/textures/models/block/slime_block.png"]
+        "storageFiles": ["storage/modules/egglessSlimeBlock/models/block/slime_block.json"],
+        "packFiles": ["/assets/minecraft/textures/models/block/slime_block.json"]
     },
     {
         "id": "egglessHoneyBlock",
         "label": "Eggless Honey Block",
         "icontype": "png",
         "description": "Removes the \"egg\" in the middle of honey blocks",
-        "storageFiles": ["storage/modules/egglessHoneyBlock/models/block/honey_block.png"],
-        "packFiles": ["/assets/minecraft/textures/models/block/honey_block.png"]
+        "storageFiles": ["storage/modules/egglessHoneyBlock/models/block/honey_block.json"],
+        "packFiles": ["/assets/minecraft/textures/models/block/honey_block.json"]
     }
 ]
