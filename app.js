@@ -50,9 +50,9 @@ app.post('/', function (req, res) {
                 storageFilePathsToUpload=storageFilePathsToUpload.concat(availableModules[i].storageFiles)
                 packFilePathsToUpload=packFilePathsToUpload.concat(availableModules[i].packFiles)
             }
-        }
-        
-        async function startSessions () {
+        }	
+		
+		(async function () {
 			entries = []
 			const selectedModulesData = JSON.stringify(req.body.modules)
 			await dbx.filesUploadSessionStart({
@@ -78,10 +78,7 @@ app.post('/', function (req, res) {
 					console.error(err)
 				})
 			}
-		}
-		
-		
-		startSessions().then(()=>{
+		})().then(()=>{
 			console.log(entries)
 			dbx.filesUploadSessionFinishBatch({entries:entries})
 			.then(function(response){
