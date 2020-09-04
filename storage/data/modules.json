@@ -132,5 +132,27 @@
         "description": "Removes the green overlay from nausea when distortion effects is set to off.",
         "storageFiles": ["storage/modules/noNauseaOverlay/textures/misc/nasuea.png"],
         "packFiles": ["/assets/minecraft/textures/misc/nasuea.png"]
+    },
+    {
+        "id": "betterHelmets",
+        "label": "Better Helmets",
+        "icontype": "png",
+        "description": "Makes your face more visible when wearing a helmet.",
+        "storageFiles": [
+            "storage/modules/betterHelmets/textures/item/netherite_helmet.png",
+            "storage/modules/betterHelmets/textures/models/armor/diamond_layer_1.png",
+            "storage/modules/betterHelmets/textures/models/armor/gold_layer_1.png",
+            "storage/modules/betterHelmets/textures/models/armor/iron_layer_1.png",
+            "storage/modules/betterHelmets/textures/models/armor/netherite_layer_1.png",
+            "storage/modules/betterHelmets/textures/models/armor/turtle_layer_1.png"            
+        ],
+        "packFiles": [
+            "/assets/minecraft/textures/item/netherite_helmet.png",
+            "/assets/minecraft/textures/models/armor/diamond_layer_1.png",
+            "/assets/minecraft/textures/models/armor/gold_layer_1.png",
+            "/assets/minecraft/textures/models/armor/iron_layer_1.png",
+            "/assets/minecraft/textures/models/armor/netherite_layer_1.png",
+            "/assets/minecraft/textures/models/armor/turtle_layer_1.png"            
+        ]
     }
 ]
