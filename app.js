@@ -11,15 +11,6 @@ const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN
 
 const availableModules = JSON.parse(fs.readFileSync('storage/data/modules.json'))
 
-async function getShareLink (packRoot) {
-	try {
-		const response = await dbx.sharingCreateSharedLink({path: packRoot})
-		return response.url.slice(0, -1)+"1"
-	} catch (err) {
-		throw err
-	}
-}
-
 // setup express
 const app = express()
 app.use(express.json()) // to support JSON-encoded bodies
@@ -88,7 +79,12 @@ app.post('/', function (req, res) {
 					.then(function(output){
 						console.log(output)
 						if (output[".tag"] == "complete" ) {
-							getShareLink(packPath)
+							(async function (packPath) {
+								try {
+									const response = await dbx.sharingCreateSharedLink({path: packPath})
+									return response.url.slice(0, -1)+"1"
+								} catch (err) { throw err }
+							})(packPath)
 							.then((response)=>res.send(response))
 							.catch((error)=>{
 								res.send("error")
