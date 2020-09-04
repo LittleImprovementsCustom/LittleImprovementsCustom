@@ -54,6 +54,17 @@ app.post('/', function (req, res) {
         
         async function startSessions () {
 			entries = []
+			const selectedModulesData = JSON.stringify(req.body.modules)
+			await dbx.filesUploadSessionStart({
+				contents: selectedModulesData,
+				close: true,
+			})
+			.then(function (response) {
+				entries.push({cursor:{session_id:response.session_id,offset:selectedModulesData.length},commit:{path:packPath+"/selectedModules.json"}})
+			})
+			.catch(function (err) {
+				console.error(err)
+			})
 			for (let [index,val] of storageFilePathsToUpload.entries()) {
 				let fileData = fs.readFileSync(val)
 				await dbx.filesUploadSessionStart({
