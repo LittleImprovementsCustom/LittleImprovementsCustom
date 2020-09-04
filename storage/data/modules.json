@@ -127,11 +127,11 @@
     },
     {
         "id": "noNauseaOverlay",
-        "label": "No Nasuea Overlay",
+        "label": "No Nausea Overlay",
         "icontype": "png",
         "description": "Removes the green overlay from nausea when distortion effects is set to off.",
-        "storageFiles": ["storage/modules/noNauseaOverlay/textures/misc/nasuea.png"],
-        "packFiles": ["/assets/minecraft/textures/misc/nasuea.png"]
+        "storageFiles": ["storage/modules/noNauseaOverlay/textures/misc/nausea.png"],
+        "packFiles": ["/assets/minecraft/textures/misc/nausea.png"]
     },
     {
         "id": "betterHelmets",
