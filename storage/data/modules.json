@@ -170,5 +170,21 @@
         "description": "Removes the \"egg\" in the middle of honey blocks",
         "storageFiles": ["storage/modules/egglessHoneyBlock/models/block/honey_block.json"],
         "packFiles": ["/assets/minecraft/textures/models/block/honey_block.json"]
+    },
+    {
+        "id": "purpleEndPortalFrame",
+        "label": "Purple End Portal Frame",
+        "icontype": "png",
+        "description": "Makes End Portal Frame purple and changed after filled.",
+        "storageFiles": [
+            "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_filled.png",
+            "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_side.png",
+            "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_top.png"
+        ],
+        "packFiles": [
+            "/assets/minecraft/textures/block/end_portal_frame_filled.png",
+            "/assets/minecraft/textures/block/end_portal_frame_side.png",
+            "/assets/minecraft/textures/block/end_portal_frame_top.png"
+        ]
     }
 ]
