@@ -11,38 +11,6 @@ const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN
 
 const availableModules = JSON.parse(fs.readFileSync('storage/data/modules.json'))
 
-async function getShareLink (packRoot) {
-	try {
-		const response = await dbx.sharingCreateSharedLink({path: packRoot})
-		return response.url.slice(0, -1)+"1"
-	} catch (err) {
-		throw err
-	}
-}
-
-async function addFilesGetDownload (selectedModules) {
-	try {
-
-		// add pack.mcmeta, pack.png and credits.txt
-		//await uploadMultipleFiles(["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"],["/pack.mcmeta","/pack.png","/credits.txt"],packPath)
-
-
-		// add selectedModules.json file
-		console.log(await dbx.filesUpload({
-			path:packPath+"/selectedModules.json",
-			contents: JSON.stringify(selectedModules)
-		}))
-
-		// get share link and return it
-		//const shareLink = await getShareLink(packPath)
-		return getShareLink(packPath)
-	} catch (err) {
-		console.error(err)
-		// return "error", so the client knows and can show fail toast
-		return "error"
-	}
-}
-
 // setup express
 const app = express()
 app.use(express.json()) // to support JSON-encoded bodies
@@ -50,8 +18,8 @@ app.use(express.json()) // to support JSON-encoded bodies
 app.use(express.static("public"))
 app.use('/favicon.ico', express.static('public/logo/favicon.ico'))
 
-app.get('/modulesData', (req, res) => res.sendFile(__dirname+"/storage/data/modules.json") )
-app.get('/creditsData', (req, res) => res.sendFile(__dirname+"/storage/data/credits.json") )
+app.get('/api/modules', (req, res) => res.sendFile(__dirname+"/storage/data/modules.json") )
+app.get('/api/credits', (req, res) => res.sendFile(__dirname+"/storage/data/credits.json") )
 
 app.get('/', (req, res) => res.sendFile(__dirname+"/public/index.html") )
 app.get('/credits', (req, res) => res.sendFile(__dirname+"/public/credits.html") )
@@ -73,10 +41,21 @@ app.post('/', function (req, res) {
                 storageFilePathsToUpload=storageFilePathsToUpload.concat(availableModules[i].storageFiles)
                 packFilePathsToUpload=packFilePathsToUpload.concat(availableModules[i].packFiles)
             }
-        }
-        
-        async function startSessions () {
+        }	
+		
+		(async function () {
 			entries = []
+			const selectedModulesData = JSON.stringify(req.body.modules)
+			await dbx.filesUploadSessionStart({
+				contents: selectedModulesData,
+				close: true,
+			})
+			.then(function (response) {
+				entries.push({cursor:{session_id:response.session_id,offset:selectedModulesData.length},commit:{path:packPath+"/selectedModules.json"}})
+			})
+			.catch(function (err) {
+				console.error(err)
+			})
 			for (let [index,val] of storageFilePathsToUpload.entries()) {
 				let fileData = fs.readFileSync(val)
 				await dbx.filesUploadSessionStart({
@@ -90,10 +69,7 @@ app.post('/', function (req, res) {
 					console.error(err)
 				})
 			}
-		}
-		
-		
-		startSessions().then(()=>{
+		})().then(()=>{
 			console.log(entries)
 			dbx.filesUploadSessionFinishBatch({entries:entries})
 			.then(function(response){
@@ -103,7 +79,12 @@ app.post('/', function (req, res) {
 					.then(function(output){
 						console.log(output)
 						if (output[".tag"] == "complete" ) {
-							getShareLink(packPath)
+							(async function (packPath) {
+								try {
+									const response = await dbx.sharingCreateSharedLink({path: packPath})
+									return response.url.slice(0, -1)+"1"
+								} catch (err) { throw err }
+							})(packPath)
 							.then((response)=>res.send(response))
 							.catch((error)=>{
 								res.send("error")

@@ -8,11 +8,11 @@
         "packFiles": ["/assets/minecraft/textures/item/honey_bottle.png"]
     },
     {
-        "id": "HotLavaBucket",
+        "id": "hotLavaBucket",
         "label": "Hot Lava Bucket",
         "icontype": "png",
         "description": "Makes original Lava Bucket really, really hot.",
-        "storageFiles": ["storage/modules/HotLavaBucket/textures/item/lava_bucket.png"],
+        "storageFiles": ["storage/modules/hotLavaBucket/textures/item/lava_bucket.png"],
         "packFiles": ["/assets/minecraft/textures/item/lava_bucket.png"]
     },
     {
@@ -77,7 +77,7 @@
         "id": "betterSignIcons",
         "label": "Better Sign Icons",
         "icontype": "png",
-        "description": "Changes Sign Icons to more similar to block.",
+        "description": "Changes sign inventory icons to be more similar to the block.",
         "storageFiles": [
             "storage/modules/betterSignIcons/textures/item/acacia_sign.png",
             "storage/modules/betterSignIcons/textures/item/birch_sign.png",
@@ -103,7 +103,7 @@
         "id": "crackedNetherBricks",
         "label": "Cracked Nether Bricks",
         "icontype": "gif",
-        "description": "Improves Cracked Nether Bricks by adding magma animation in cracks.",
+        "description": "Improves Cracked Nether Bricks by adding a magma animation in cracks.",
         "storageFiles": [
             "storage/modules/crackedNetherBricks/textures/block/cracked_nether_bricks.png",
             "storage/modules/crackedNetherBricks/textures/block/cracked_nether_bricks.png.mcmeta",
@@ -121,24 +121,54 @@
         "id": "obsidianEnderChest",
         "label": "Obsidian Ender Chest",
         "icontype": "png",
-        "description": "Removes green and replaced it by obsidian looking texture.",
+        "description": "Removes green and replaces it with an obsidian-like texture.",
         "storageFiles": ["storage/modules/obsidianEnderChest/textures/entity/chest/ender.png"],
         "packFiles": ["/assets/minecraft/textures/entity/chest/ender.png"]
     },
     {
-        "id": "purpleEndPortalFrame",
-        "label": "Purple End Portal Frame",
+        "id": "noNauseaOverlay",
+        "label": "No Nausea Overlay",
         "icontype": "png",
-        "description": "Makes End Portal Frame purple and changed after filled.",
+        "description": "Removes the green overlay from nausea when distortion effects is set to off.",
+        "storageFiles": ["storage/modules/noNauseaOverlay/textures/misc/nausea.png"],
+        "packFiles": ["/assets/minecraft/textures/misc/nausea.png"]
+    },
+    {
+        "id": "betterHelmets",
+        "label": "Better Helmets",
+        "icontype": "png",
+        "description": "Makes your face more visible when wearing a helmet.",
         "storageFiles": [
-            "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_filled.png",
-            "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_side.png",
-            "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_top.png"
+            "storage/modules/betterHelmets/textures/item/netherite_helmet.png",
+            "storage/modules/betterHelmets/textures/models/armor/diamond_layer_1.png",
+            "storage/modules/betterHelmets/textures/models/armor/gold_layer_1.png",
+            "storage/modules/betterHelmets/textures/models/armor/iron_layer_1.png",
+            "storage/modules/betterHelmets/textures/models/armor/netherite_layer_1.png",
+            "storage/modules/betterHelmets/textures/models/armor/turtle_layer_1.png"            
         ],
         "packFiles": [
-            "/assets/minecraft/textures/block/end_portal_frame_filled.png",
-            "/assets/minecraft/textures/block/end_portal_frame_side.png",
-            "/assets/minecraft/textures/block/end_portal_frame_top.png"
+            "/assets/minecraft/textures/item/netherite_helmet.png",
+            "/assets/minecraft/textures/models/armor/diamond_layer_1.png",
+            "/assets/minecraft/textures/models/armor/gold_layer_1.png",
+            "/assets/minecraft/textures/models/armor/iron_layer_1.png",
+            "/assets/minecraft/textures/models/armor/netherite_layer_1.png",
+            "/assets/minecraft/textures/models/armor/turtle_layer_1.png"            
         ]
     },
+    {
+        "id": "egglessSlimeBlock",
+        "label": "Eggless Slime Block",
+        "icontype": "png",
+        "description": "Removes the \"egg\" in the middle of slime blocks",
+        "storageFiles": ["storage/modules/egglessSlimeBlock/models/block/slime_block.json"],
+        "packFiles": ["/assets/minecraft/textures/models/block/slime_block.json"]
+    },
+    {
+        "id": "egglessHoneyBlock",
+        "label": "Eggless Honey Block",
+        "icontype": "png",
+        "description": "Removes the \"egg\" in the middle of honey blocks",
+        "storageFiles": ["storage/modules/egglessHoneyBlock/models/block/honey_block.json"],
+        "packFiles": ["/assets/minecraft/textures/models/block/honey_block.json"]
+    }
 ]
