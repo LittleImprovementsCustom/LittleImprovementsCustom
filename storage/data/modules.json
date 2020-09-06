@@ -200,8 +200,8 @@
             "storage/modules/connectedSmoothStone/optifine/ctm/smooth_stone/3.png",
             "storage/modules/connectedSmoothStone/optifine/ctm/smooth_stone/4.png",
             "storage/modules/connectedSmoothStone/optifine/ctm/smooth_stone/smooth_stone.properties",
-            "storage/modules/connectedSmoothStone/textures/block/smooth_stone/borderless_smooth_stone.png",
-            "storage/modules/connectedSmoothStone/textures/block/smooth_stone/smooth_stone.png"
+            "storage/modules/connectedSmoothStone/textures/block/borderless_smooth_stone.png",
+            "storage/modules/connectedSmoothStone/textures/block/smooth_stone.png"
         ],
         "packFiles": [
             "/assets/minecraft/models/block/smooth_stone.json",
@@ -211,8 +211,8 @@
             "/assets/minecraft/optifine/ctm/smooth_stone/3.png",
             "/assets/minecraft/optifine/ctm/smooth_stone/4.png",
             "/assets/minecraft/optifine/ctm/smooth_stone/smooth_stone.properties",
-            "/assets/minecraft/textures/block/smooth_stone/borderless_smooth_stone.png",
-            "/assets/minecraft/textures/block/smooth_stone/smooth_stone.png"
+            "/assets/minecraft/textures/block/borderless_smooth_stone.png",
+            "/assets/minecraft/textures/block/smooth_stone.png"
         ]
     }
 ]
