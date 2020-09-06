@@ -177,12 +177,12 @@
         "icontype": "png",
         "description": "Makes End Portal Frame purple and changed after filled.",
         "storageFiles": [
-            "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_filled.png",
+            "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_filled_top.png",
             "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_side.png",
             "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_top.png"
         ],
         "packFiles": [
-            "/assets/minecraft/textures/block/end_portal_frame_filled.png",
+            "/assets/minecraft/textures/block/end_portal_frame_filled_top.png",
             "/assets/minecraft/textures/block/end_portal_frame_side.png",
             "/assets/minecraft/textures/block/end_portal_frame_top.png"
         ]
