@@ -20,6 +20,7 @@ app.use('/favicon.ico', express.static('public/logo/favicon.ico'))
 
 app.get('/api/modules', (req, res) => res.sendFile(__dirname+"/storage/data/modules.json") )
 app.get('/api/credits', (req, res) => res.sendFile(__dirname+"/storage/data/credits.json") )
+app.get('/api/site-logo', (req, res) => res.sendFile(__dirname+"/public/logo/site-logo.png") )
 
 app.get('/', (req, res) => res.sendFile(__dirname+"/public/index.html") )
 app.get('/credits', (req, res) => res.sendFile(__dirname+"/public/credits.html") )
