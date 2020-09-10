@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-    <script src=js/theme.js></script>
-    <link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="css/light.css" media="(prefers-color-scheme: light)">
-    <link rel="stylesheet" href="css/main.css">
+    <meta charset="utf-8"/>
+    <meta name="theme-color" content="#e90700">
+    <meta name="title" content="Little Improvements: Custom">
+    <meta name="description" content="An open-source resource pack picker made for Minecraft.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@LICustom">
+    <meta name="twitter:title" content="Little Improvements: Custom">
+    <meta name="twitter:description" content="An open-source resource pack picker made for Minecraft.">
+    <meta name="twitter:image" content="https://www.littleimprovements-custom.tk/logo/site-logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="An open-source resource pack picker made for Minecraft.">
+    <meta property="og:image" content="https://www.littleimprovements-custom.tk/logo/site-logo.png">
+    <script src=/js/theme.js></script>
+    <script src=/js/theme.js></script>
+    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/css/light.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="/css/main.css">
     <title>Little Improvements: Custom</title>
 </head>
 <body>
     <div class="clearfix float-my-children">
-        <img src="logo/site-logo.png" height=50>
+        <img src="/logo/site-logo.png" height=50>
         <div class="title middle-div">Little Improvements: Custom</div>
      </div>         
     <hr>
     <p class="description">Click to select the tweaks you want to use, and click again to unselect. Hover over an image to see more info.</p>
     <ul class="navbar">
         <li class="navbar-item primary-navbar-item"><a class="navbar-item primary-navbar-item" onclick="downloadPack()">Download</a></li>
-        <li class="navbar-item secondary-navbar-item"><a class="navbar-item secondary-navbar-item" href="https://discord.gg/bNcZjFe">Discord</a></li>
-        <li class="navbar-item secondary-navbar-item"><a class="navbar-item secondary-navbar-item" href="https://github.com/Beatso1/littleimprovements-custom/">GitHub</a></li>
+        <li class="navbar-item secondary-navbar-item"><a class="navbar-item secondary-navbar-item" href="https://discord.gg/bNcZjFe"  target="_blank">Discord</a></li>
+        <li class="navbar-item secondary-navbar-item"><a class="navbar-item secondary-navbar-item" href="https://github.com/LittleImprovementsCustom/LittleImprovementsCustom"  target="_blank">GitHub</a></li>
         <li class="navbar-item secondary-navbar-item"><a class="navbar-item secondary-navbar-item" href="/credits">Credits</a></li>
     </ul>
     <div class="grid-container" id="pack-selector-container"></div> <!-- the script will add elements to this -->
     <div class="toast success-toast invisible" id="download-toast">Your pack is beginning to download. This make take up to a minute.</div>
     <div class="toast fail-toast invisible" id="fail-toast">There was an error downloading your pack. Please reload the page and try again. If the issue persists, please <a href="example.com">get in touch</a>.</div>
-    <script src=js/index.js></script>
+    <script src=/js/index.js></script>
 </body>

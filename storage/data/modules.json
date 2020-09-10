@@ -188,5 +188,49 @@
             "/assets/minecraft/textures/entity/iron_golem/iron_golem_crackiness_medium.png",
             "/assets/minecraft/textures/entity/iron_golem/iron_golem_crackiness_high.png"
         ]
+    },
+    {
+        "id": "purpleEndPortalFrame",
+        "label": "Purple End Portal Frame",
+        "icontype": "png",
+        "description": "Makes End Portal Frame purple and changed after filled.",
+        "storageFiles": [
+            "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_filled_top.png",
+            "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_side.png",
+            "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_top.png"
+        ],
+        "packFiles": [
+            "/assets/minecraft/textures/block/end_portal_frame_filled_top.png",
+            "/assets/minecraft/textures/block/end_portal_frame_side.png",
+            "/assets/minecraft/textures/block/end_portal_frame_top.png"
+        ]
+    },
+    {
+        "id": "connectedSmoothStone",
+        "label": "Connected Smooth Stone",
+        "icontype": "png",
+        "description": "Connected smooth stone. No OptiFine required.",
+        "storageFiles": [
+            "storage/modules/connectedSmoothStone/models/block/smooth_stone.json",
+            "storage/modules/connectedSmoothStone/optifine/ctm/smooth_stone/0.png",
+            "storage/modules/connectedSmoothStone/optifine/ctm/smooth_stone/1.png",
+            "storage/modules/connectedSmoothStone/optifine/ctm/smooth_stone/2.png",
+            "storage/modules/connectedSmoothStone/optifine/ctm/smooth_stone/3.png",
+            "storage/modules/connectedSmoothStone/optifine/ctm/smooth_stone/4.png",
+            "storage/modules/connectedSmoothStone/optifine/ctm/smooth_stone/smooth_stone.properties",
+            "storage/modules/connectedSmoothStone/textures/block/borderless_smooth_stone.png",
+            "storage/modules/connectedSmoothStone/textures/block/smooth_stone.png"
+        ],
+        "packFiles": [
+            "/assets/minecraft/models/block/smooth_stone.json",
+            "/assets/minecraft/optifine/ctm/smooth_stone/0.png",
+            "/assets/minecraft/optifine/ctm/smooth_stone/1.png",
+            "/assets/minecraft/optifine/ctm/smooth_stone/2.png",
+            "/assets/minecraft/optifine/ctm/smooth_stone/3.png",
+            "/assets/minecraft/optifine/ctm/smooth_stone/4.png",
+            "/assets/minecraft/optifine/ctm/smooth_stone/smooth_stone.properties",
+            "/assets/minecraft/textures/block/borderless_smooth_stone.png",
+            "/assets/minecraft/textures/block/smooth_stone.png"
+        ]
     }
 ]

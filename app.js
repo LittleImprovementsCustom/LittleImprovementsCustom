@@ -23,6 +23,8 @@ app.get('/api/credits', (req, res) => res.sendFile(__dirname+"/storage/data/cred
 
 app.get('/', (req, res) => res.sendFile(__dirname+"/public/index.html") )
 app.get('/credits', (req, res) => res.sendFile(__dirname+"/public/credits.html") )
+app.get('*', (req, res) => res.sendFile(__dirname+"/public/404.html", 404) ) // 404 page
+
 
 // how to handle a post request, sent by the client-side js
 app.post('/', function (req, res) {
