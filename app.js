@@ -62,14 +62,11 @@ app.post("/", function (req, res) {
 					}
 				}
 			}
-		}
-
-		for (i in availableModules){
 			if (selectedModules.includes(availableModules[i].id)) {
 				storageFilePathsToUpload=storageFilePathsToUpload.concat(availableModules[i].storageFiles)
 				packFilePathsToUpload=packFilePathsToUpload.concat(availableModules[i].packFiles)
 			}
-		}	
+		}
 		
 		(async function () {
 			entries = []
