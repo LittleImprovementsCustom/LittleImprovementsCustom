@@ -290,5 +290,31 @@
             "/assets/minecraft/textures/block/dragon_egg.png",
             "/assets/minecraft/textures/block/dragon_egg.png.mcmeta"
         ]
+    },
+    {
+        "id": "animatedFurnaces",
+        "label": "Animated Furnaces",
+        "icontype": "gif",
+        "description": "Adds animation to Furnace and includes small improvements for Smoker and Blast Furnace.",
+        "storageFiles": [
+            "storage/modules/animatedFurnaces/textures/block/blast_furnace_front_on.png",
+            "storage/modules/animatedFurnaces/textures/block/blast_furnace_front_on.png.mcmeta",
+            "storage/modules/animatedFurnaces/textures/block/furnace_front_on.png",
+            "storage/modules/animatedFurnaces/textures/block/furnace_front_on.png.mcmeta",
+            "storage/modules/animatedFurnaces/textures/block/smoker_bottom.png",
+            "storage/modules/animatedFurnaces/textures/block/smoker_front_on.png",
+            "storage/modules/animatedFurnaces/textures/block/smoker_front_on.png.mcmeta",
+            "storage/modules/animatedFurnaces/textures/block/smoker_top.png"
+        ],
+        "packFiles": [
+            "/assets/minecraft/textures/textures/block/blast_furnace_front_on.png",
+            "/assets/minecraft/textures/textures/block/blast_furnace_front_on.png.mcmeta",
+            "/assets/minecraft/textures/textures/block/furnace_front_on.png",
+            "/assets/minecraft/textures/textures/block/furnace_front_on.png.mcmeta",
+            "/assets/minecraft/textures/textures/block/smoker_bottom.png",
+            "/assets/minecraft/textures/textures/block/smoker_front_on.png",
+            "/assets/minecraft/textures/textures/block/smoker_front_on.png.mcmeta",
+            "/assets/minecraft/textures/textures/block/smoker_top.png"
+        ]
     }
 ]
