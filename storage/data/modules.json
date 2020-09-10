@@ -170,5 +170,23 @@
         "description": "Removes the \"egg\" in the middle of honey blocks",
         "storageFiles": ["storage/modules/egglessHoneyBlock/models/block/honey_block.json"],
         "packFiles": ["/assets/minecraft/textures/models/block/honey_block.json"]
+    },
+    {
+        "id": "flowerGolem",
+        "label": "Flower Golem",
+        "icontype": "png",
+        "description": "Poppies bloom on the texture of the Iron Golem.",
+        "storageFiles": [
+            "storage/modules/flowerGolem/textures/entity/iron_golem/iron_golem.png",
+            "storage/modules/flowerGolem/textures/entity/iron_golem/iron_golem_crackiness_low.png",
+            "storage/modules/flowerGolem/textures/entity/iron_golem/iron_golem_crackiness_medium.png",
+            "storage/modules/flowerGolem/textures/entity/iron_golem/iron_golem_crackiness_high.png"
+        ],
+        "packFiles": [
+            "/assets/minecraft/textures/entity/iron_golem/iron_golem.png",
+            "/assets/minecraft/textures/entity/iron_golem/iron_golem_crackiness_low.png",
+            "/assets/minecraft/textures/entity/iron_golem/iron_golem_crackiness_medium.png",
+            "/assets/minecraft/textures/entity/iron_golem/iron_golem_crackiness_high.png"
+        ]
     }
 ]
