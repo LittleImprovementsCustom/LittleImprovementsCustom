@@ -18,9 +18,11 @@ app.use(express.json()) // to support JSON-encoded bodies
 app.use(express.static("public"))
 app.use("/favicon.ico", express.static("public/logo/favicon.ico"))
 
+// api reqyests
 app.get("/api/modules", (req, res) => res.sendFile(__dirname+"/storage/data/modules.json") )
 app.get("/api/credits", (req, res) => res.sendFile(__dirname+"/storage/data/credits.json") )
 
+// html webpage requests
 app.get("/", (req, res) => res.sendFile(__dirname+"/public/index.html") )
 app.get("/credits", (req, res) => res.sendFile(__dirname+"/public/credits.html") )
 app.get("*", (req, res) => res.sendFile(__dirname+"/public/404.html", 404) ) // 404 page
@@ -35,17 +37,19 @@ app.post("/", function (req, res) {
 		const packPath = `/packs/LittleImprovementsCustom_${Nanoid.nanoid(5)}`
 		console.log("pack path = "+packPath)
 
+		// create variable with selected modules; gets updated later
 		let selectedModules = req.body.modules
 
+		// create variables with file paths to upload; gets updated later
 		let storageFilePathsToUpload = ["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"]
 		let packFilePathsToUpload = ["/pack.mcmeta","/pack.png","/credits.txt"]
 
 
-		// syetem to deal with incompatibilities
+		// system to deal with incompatibilities
 		for (i in availableModules) {
-			if ( (!availableModules[i].incompatibilities==undefined) && (selectedModules.includes(availableModules[i].id)) ) {
+			if ( (!availableModules[i].incompatibilities==undefined) && (selectedModules.includes(availableModules[i].id)) ) { // module has incompatibilities and is selected
 				for (x in availableModules[i].incompatibilities) {
-					if (selectedModules.includes(availableModules[i].incompatibilities[x].id)) {
+					if (selectedModules.includes(availableModules[i].incompatibilities[x].id)) { // an incompatible module is selected
 
 						// remove modules from selectedModules
 						selectedModules.splice(selectedModules.indexOf(availableModules[i].id),1)
