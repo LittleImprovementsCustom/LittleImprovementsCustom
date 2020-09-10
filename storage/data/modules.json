@@ -276,5 +276,19 @@
             "/assets/minecraft/textures/block/borderless_smooth_stone.png",
             "/assets/minecraft/textures/block/smooth_stone.png"
         ]
+    },
+    {
+        "id": "livingDragon",
+        "label": "Living Dragon",
+        "icontype": "gif",
+        "description": "Makes Dragon Egg more detailed and implements animation.",
+        "storageFiles": [
+            "storage/modules/livingDragon/textures/block/dragon_egg.png",
+            "storage/modules/livingDragon/textures/block/dragon_egg.png.mcmeta"
+        ],
+        "packFiles": [
+            "/assets/minecraft/textures/block/dragon_egg.png",
+            "/assets/minecraft/textures/block/dragon_egg.png.mcmeta"
+        ]
     }
 ]
