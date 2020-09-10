@@ -105,6 +105,7 @@
         "icontype": "gif",
         "description": "Improves Cracked Nether Bricks by adding a magma animation in cracks.",
         "storageFiles": [
+            "storage/modules/crackedNetherBricks/optifine/emissive.properties",
             "storage/modules/crackedNetherBricks/textures/block/cracked_nether_bricks.png",
             "storage/modules/crackedNetherBricks/textures/block/cracked_nether_bricks.png.mcmeta",
             "storage/modules/crackedNetherBricks/textures/block/cracked_nether_bricks_glow.png",
@@ -239,6 +240,9 @@
         "icontype": "png",
         "description": "Makes End Portal Frame purple and changed after filled.",
         "storageFiles": [
+            "storage/modules/purpleEndPortalFrame/blockstates/end_portal_frame.png",
+            "storage/modules/purpleEndPortalFrame/models/block/end_portal_frame.png",
+            "storage/modules/purpleEndPortalFrame/models/block/end_portal_frame_filled.png",
             "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_filled_top.png",
             "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_side.png",
             "storage/modules/purpleEndPortalFrame/textures/block/end_portal_frame_top.png"
