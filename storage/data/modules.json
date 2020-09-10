@@ -324,5 +324,21 @@
         "description": "Improves Hearts, Armor points, Attack Indicator and makes Ping icon more colorful.",
         "storageFiles": ["storage/modules/detailedHearts/textures/gui/icons.png"],
         "packFiles": ["/assets/minecraft/textures/gui/icons.png"]
+    },
+    {
+        "id": "matchingGildedBlackstone",
+        "label": "Matching Gilded Blackstone",
+        "icontype": "png",
+        "description": "Improves top texture of Gilded Blackstone.",
+        "storageFiles": [
+            "storage/modules/matchingGildedBlackstone/models/blockgilded_blackstone.json",
+            "storage/modules/matchingGildedBlackstone/textures/block/gilded_blackstone.png",
+            "storage/modules/matchingGildedBlackstone/textures/block/gilded_blackstone_top.png"
+        ],
+        "packFiles": [
+            "/assets/minecraft/models/block/gilded_blackstone.json",
+            "/assets/minecraft/textures/textures/block/gilded_blackstone.png",
+            "/assets/minecraft/textures/textures/block/gilded_blackstone_top.png"
+        ]
     }
 ]
