@@ -316,5 +316,13 @@
             "/assets/minecraft/textures/textures/block/smoker_front_on.png.mcmeta",
             "/assets/minecraft/textures/textures/block/smoker_top.png"
         ]
+    },
+    {
+        "id": "detailedHearts",
+        "label": "Detailed Hearts",
+        "icontype": "png",
+        "description": "Improves Hearts, Armor points, Attack Indicator and makes Ping icon more colorful.",
+        "storageFiles": ["storage/modules/detailedHearts/textures/gui/icons.png"],
+        "packFiles": ["/assets/minecraft/textures/gui/icons.png"]
     }
 ]
