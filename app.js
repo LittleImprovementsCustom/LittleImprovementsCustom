@@ -30,16 +30,38 @@ app.get('*', (req, res) => res.sendFile(__dirname+"/public/404.html", 404) ) // 
 app.post('/', function (req, res) {
 	console.log(req.body)
 	if (req.body.new=="true") {
-
+		
         // generate id and create pack path
 		const packPath = `/packs/LittleImprovementsCustom_${Nanoid.nanoid(5)}`
 		console.log("pack path = "+packPath)
 
+		let selectedModules = req.body.modules
+
         let storageFilePathsToUpload = ["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"]
         let packFilePathsToUpload = ["/pack.mcmeta","/pack.png","/credits.txt"]
 
+
+		// syetem to deal with incompatibilities
+		for (i in availableModules) {
+			if ( availableModules[i].incompatibilities.length!=0 && selectedModules.includes(availableModules[i].id) ) {
+				for (x in availableModules[i].incompatibilities) {
+					if (selectedModules.includes(availableModules[i].incompatibilities[x].id)) {
+
+						// remove modules from selectedModules
+						selectedModules.splice(selectedModules.indexOf(availableModules[i].id),1)
+						selectedModules.splice(selectedModules.indexOf(availableModules[i].incompatibilities[x].id),1)
+
+						// add file paths to relevant arrays
+						storageFilePathsToUpload=storageFilePathsToUpload.concat(availableModules[i].incompatibilities[x].storageFiles)
+						packFilePathsToUpload=packFilePathsToUpload.concat(availableModules[i].incompatibilities[x].packFiles)
+
+					}
+				}
+			}
+		}
+
         for (i in availableModules){
-            if (req.body.modules.includes(availableModules[i].id)) {
+            if (selectedModules.includes(availableModules[i].id)) {
                 storageFilePathsToUpload=storageFilePathsToUpload.concat(availableModules[i].storageFiles)
                 packFilePathsToUpload=packFilePathsToUpload.concat(availableModules[i].packFiles)
             }
@@ -47,7 +69,7 @@ app.post('/', function (req, res) {
 		
 		(async function () {
 			entries = []
-			const selectedModulesData = JSON.stringify(req.body.modules)
+			const selectedModulesData = JSON.stringify(selectedModules)
 			await dbx.filesUploadSessionStart({
 				contents: selectedModulesData,
 				close: true,
