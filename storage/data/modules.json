@@ -4,7 +4,6 @@
         "label": "Honey Jar",
         "icontype": "png",
         "description": "Changes honey bottle to a jar of honey, and renames the item.",
-        "incompatibilities": [],
         "storageFiles": ["storage/modules/honeyJar/textures/item/honey_bottle.png"],
         "packFiles": ["/assets/minecraft/textures/item/honey_bottle.png"]
     },
@@ -13,7 +12,6 @@
         "label": "Hot Lava Bucket",
         "icontype": "png",
         "description": "Makes original Lava Bucket really, really hot.",
-        "incompatibilities": [],
         "storageFiles": ["storage/modules/hotLavaBucket/textures/item/lava_bucket.png"],
         "packFiles": ["/assets/minecraft/textures/item/lava_bucket.png"]
     },
@@ -22,7 +20,6 @@
         "label": "Animated Campfire Items",
         "icontype": "gif",
         "description": "Animates campfire and soul campfire items in the inventory and in a player's hand.",
-        "incompatibilities": [],
         "storageFiles": [
             "storage/modules/animatedCampfireItems/textures/item/campfire.png",
             "storage/modules/animatedCampfireItems/textures/item/campfire.png.mcmeta",
@@ -41,7 +38,6 @@
         "label": "Restock Clock",
         "icontype": "png",
         "description": "Makes clocks show when villagers can restock their trades.",
-        "incompatibilities": [],
         "storageFiles": [
             "storage/modules/restockClock/textures/item/clock_00.png",
             "storage/modules/restockClock/textures/item/clock_01.png",
@@ -82,7 +78,6 @@
         "label": "Better Sign Icons",
         "icontype": "png",
         "description": "Changes sign inventory icons to be more similar to the block.",
-        "incompatibilities": [],
         "storageFiles": [
             "storage/modules/betterSignIcons/textures/item/acacia_sign.png",
             "storage/modules/betterSignIcons/textures/item/birch_sign.png",
@@ -109,7 +104,6 @@
         "label": "Cracked Nether Bricks",
         "icontype": "gif",
         "description": "Improves Cracked Nether Bricks by adding a magma animation in cracks.",
-        "incompatibilities": [],
         "storageFiles": [
             "storage/modules/crackedNetherBricks/optifine/emissive.properties",
             "storage/modules/crackedNetherBricks/textures/block/cracked_nether_bricks.png",
@@ -129,7 +123,6 @@
         "label": "Obsidian Ender Chest",
         "icontype": "png",
         "description": "Removes green and replaces it with an obsidian-like texture.",
-        "incompatibilities": [],
         "storageFiles": ["storage/modules/obsidianEnderChest/textures/entity/chest/ender.png"],
         "packFiles": ["/assets/minecraft/textures/entity/chest/ender.png"]
     },
@@ -138,7 +131,6 @@
         "label": "No Nausea Overlay",
         "icontype": "png",
         "description": "Removes the green overlay from nausea when distortion effects is set to off.",
-        "incompatibilities": [],
         "storageFiles": ["storage/modules/noNauseaOverlay/textures/misc/nausea.png"],
         "packFiles": ["/assets/minecraft/textures/misc/nausea.png"]
     },
@@ -147,7 +139,6 @@
         "label": "Better Helmets",
         "icontype": "png",
         "description": "Makes your face more visible when wearing a helmet.",
-        "incompatibilities": [],
         "storageFiles": [
             "storage/modules/betterHelmets/textures/item/netherite_helmet.png",
             "storage/modules/betterHelmets/textures/models/armor/diamond_layer_1.png",
@@ -170,7 +161,6 @@
         "label": "Eggless Slime Block",
         "icontype": "png",
         "description": "Removes the \"egg\" in the middle of slime blocks",
-        "incompatibilities": [],
         "storageFiles": ["storage/modules/egglessSlimeBlock/models/block/slime_block.json"],
         "packFiles": ["/assets/minecraft/textures/models/block/slime_block.json"]
     },
@@ -179,7 +169,6 @@
         "label": "Eggless Honey Block",
         "icontype": "png",
         "description": "Removes the \"egg\" in the middle of honey blocks",
-        "incompatibilities": [],
         "storageFiles": ["storage/modules/egglessHoneyBlock/models/block/honey_block.json"],
         "packFiles": ["/assets/minecraft/textures/models/block/honey_block.json"]
     },
@@ -188,7 +177,6 @@
         "label": "Flower Golem",
         "icontype": "png",
         "description": "Poppies bloom on the texture of the Iron Golem.",
-        "incompatibilities": [],
         "storageFiles": [
             "storage/modules/flowerGolem/textures/entity/iron_golem/iron_golem.png",
             "storage/modules/flowerGolem/textures/entity/iron_golem/iron_golem_crackiness_low.png",
@@ -207,7 +195,6 @@
         "label": "Fancy Llama Decor",
         "icontype": "png",
         "description": "Llamas now have better clothes.",
-        "incompatibilities": [],
         "storageFiles": [
             "storage/modules/fancyLlamaDecor/textures/entity/llama/decor/black.png",
             "storage/modules/fancyLlamaDecor/textures/entity/llama/decor/blue.png",
@@ -252,7 +239,6 @@
         "label": "Purple End Portal Frame",
         "icontype": "png",
         "description": "Makes End Portal Frame purple and changed after filled.",
-        "incompatibilities": [],
         "storageFiles": [
             "storage/modules/purpleEndPortalFrame/blockstates/end_portal_frame.png",
             "storage/modules/purpleEndPortalFrame/models/block/end_portal_frame.png",
@@ -272,7 +258,6 @@
         "label": "Connected Smooth Stone",
         "icontype": "png",
         "description": "Connected smooth stone. No OptiFine required.",
-        "incompatibilities": [],
         "storageFiles": [
             "storage/modules/connectedSmoothStone/models/block/smooth_stone.json",
             "storage/modules/connectedSmoothStone/optifine/ctm/smooth_stone/0.png",
@@ -301,7 +286,6 @@
         "label": "Living Dragon",
         "icontype": "gif",
         "description": "Makes Dragon Egg more detailed and implements animation.",
-        "incompatibilities": [],
         "storageFiles": [
             "storage/modules/livingDragon/textures/block/dragon_egg.png",
             "storage/modules/livingDragon/textures/block/dragon_egg.png.mcmeta"
@@ -316,7 +300,6 @@
         "label": "Animated Furnaces",
         "icontype": "gif",
         "description": "Adds animation to Furnace and includes small improvements for Smoker and Blast Furnace.",
-        "incompatibilities": [],
         "storageFiles": [
             "storage/modules/animatedFurnaces/textures/block/blast_furnace_front_on.png",
             "storage/modules/animatedFurnaces/textures/block/blast_furnace_front_on.png.mcmeta",
@@ -343,7 +326,6 @@
         "label": "Detailed Hearts",
         "icontype": "png",
         "description": "Improves Hearts, Armor points, Attack Indicator and makes Ping icon more colorful.",
-        "incompatibilities": [],
         "storageFiles": ["storage/modules/detailedHearts/textures/gui/icons.png"],
         "packFiles": ["/assets/minecraft/textures/gui/icons.png"]
     },
@@ -352,7 +334,6 @@
         "label": "Matching Gilded Blackstone",
         "icontype": "png",
         "description": "Improves top texture of Gilded Blackstone.",
-        "incompatibilities": [],
         "storageFiles": [
             "storage/modules/matchingGildedBlackstone/models/blockgilded_blackstone.json",
             "storage/modules/matchingGildedBlackstone/textures/block/gilded_blackstone.png",

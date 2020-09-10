@@ -43,7 +43,7 @@ app.post('/', function (req, res) {
 
 		// syetem to deal with incompatibilities
 		for (i in availableModules) {
-			if ( availableModules[i].incompatibilities.length!=0 && selectedModules.includes(availableModules[i].id) ) {
+			if ( (!availableModules[i].incompatibilities==undefined) && (selectedModules.includes(availableModules[i].id)) ) {
 				for (x in availableModules[i].incompatibilities) {
 					if (selectedModules.includes(availableModules[i].incompatibilities[x].id)) {
 
