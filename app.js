@@ -44,9 +44,9 @@ app.post("/", function (req, res) {
 		let storageFilePathsToUpload = ["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"]
 		let packFilePathsToUpload = ["/pack.mcmeta","/pack.png","/credits.txt"]
 
-
-		// system to deal with incompatibilities
 		for (i in availableModules) {
+
+			// system to deal with incompatibilities
 			if ( (!availableModules[i].incompatibilities==undefined) && (selectedModules.includes(availableModules[i].id)) ) { // module has incompatibilities and is selected
 				for (x in availableModules[i].incompatibilities) {
 					if (selectedModules.includes(availableModules[i].incompatibilities[x].id)) { // an incompatible module is selected
@@ -62,13 +62,18 @@ app.post("/", function (req, res) {
 					}
 				}
 			}
+
+			// if the pack is selected, and didn't get removed above, add the file paths to the arrays
 			if (selectedModules.includes(availableModules[i].id)) {
 				storageFilePathsToUpload=storageFilePathsToUpload.concat(availableModules[i].storageFiles)
 				packFilePathsToUpload=packFilePathsToUpload.concat(availableModules[i].packFiles)
 			}
+
 		}
 		
 		(async function () {
+
+			// start upload session for selectedModules.json file
 			entries = []
 			const selectedModulesData = JSON.stringify(selectedModules)
 			await dbx.filesUploadSessionStart({
@@ -78,9 +83,12 @@ app.post("/", function (req, res) {
 				.then(function (response) {
 					entries.push({cursor:{session_id:response.session_id,offset:selectedModulesData.length},commit:{path:packPath+"/selectedModules.json"}})
 				})
-				.catch(function (err) {
-					console.error(err)
+				.catch((error)=>{
+					res.send("error")
+					console.error(error)
 				})
+			
+			// upload arrays file paths
 			for (let [index,val] of storageFilePathsToUpload.entries()) {
 				let fileData = fs.readFileSync(val)
 				await dbx.filesUploadSessionStart({
@@ -90,20 +98,22 @@ app.post("/", function (req, res) {
 					.then(function (response) {
 						entries.push({cursor:{session_id:response.session_id,offset:fileData.length},commit:{path:packPath+packFilePathsToUpload[index]}})
 					})
-					.catch(function (err) {
-						console.error(err)
+					.catch((error)=>{
+						res.send("error")
+						console.error(error)
 					})
 			}
+
 		})().then(()=>{
 			console.log(entries)
 			dbx.filesUploadSessionFinishBatch({entries:entries})
 				.then(function(response){
-					var checkIntervalID = setInterval(checkBatch,2000)
+					
 					function checkBatch () {
 						dbx.filesUploadSessionFinishBatchCheck({async_job_id: response.async_job_id})
 							.then(function(output){
 								console.log(output)
-								if (output[".tag"] == "complete" ) {
+								if (output[".tag"] == "complete" ) { // batch has finished uploading
 									(async function (packPath) {
 										const response = await dbx.sharingCreateSharedLink({path: packPath})
 										return response.url.slice(0, -1)+"1"
@@ -115,16 +125,22 @@ app.post("/", function (req, res) {
 										})
 									clearInterval(checkIntervalID)
 								}
-							})
-							.catch(function(err){
-								console.error(err)
+							}).catch((error)=>{
+								res.send("error")
+								console.error(error)
 							})
 					}
-				}).catch(err => {
-					console.error(err)
+					
+					var checkIntervalID = setInterval(checkBatch,2000) // check if files have finished uploading every 2 seconds
+				}).catch((error)=>{
+					res.send("error")
+					console.error(error)
 				})
 			
-		}).catch((err)=>{console.error(err)})
+		}).catch((error)=>{
+			res.send("error")
+			console.error(error)
+		})
 
 
 
