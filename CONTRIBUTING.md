@@ -62,28 +62,28 @@ If you do not have push permission, fork the repo, and submit a new pull request
 A `*` denotes that this is optional if the module is hidden.
 
 ```js
-[	// the root of the file
-    {	// each module has its own object
+[  // the root of the file
+    {  // each module has its own object
 
-        "id": "honeyJar",	// the id of the pack
+        "id": "honeyJar",  // the id of the pack
 
-        "label": "Honey Jar",	// the label displayed on the website *
+        "label": "Honey Jar",  // the label displayed on the website *
 
-        "description": "Changes honey bottle to a jar of honey, and renames the item.",	// the description displayed on the website *
+        "description": "Changes honey bottle to a jar of honey, and renames the item.",  // the description displayed on the website *
 
-        "icontype": "png",	// the file extension of the pack icon *
+        "icontype": "png",  // the file extension of the pack icon *
+        
+        "hidden": false,  // [optional] if this is set to true, this pack will not be displayed on the website. used for invisible merged packs
 
-		"hidden": false,	// [optional] if this is set to true, this pack will not be displayed on the website. used for invisible merged packs
-
-        "incompatibilities": [	// [optional] the list of modules this is incompatible with
+        "incompatibilities": [  // [optional] the list of modules this is incompatible with
             {
-				"id": "connectedSmoothStone",	// the id of the incompatible pack
-				"useInstead": "honeyJarPlusConnectedSmoothStone"	// the id of the pack to replace the two incompatible packs with
+                "id": "connectedSmoothStone",  // the id of the incompatible pack
+                "useInstead": "honeyJarPlusConnectedSmoothStone"  // the id of the pack to replace the two incompatible packs with
             }
         ],
 
-        "storageFiles": ["storage/modules/honeyJar/textures/item/honey_bottle.png"],	// the file paths of the module's files in storage
-        "packFiles": ["/assets/minecraft/textures/item/honey_bottle.png"]	// the file paths of the assets in a resource pack
+        "storageFiles": ["storage/modules/honeyJar/textures/item/honey_bottle.png"],  // the file paths of the module's files in storage
+        "packFiles": ["/assets/minecraft/textures/item/honey_bottle.png"]  // the file paths of the assets in a resource pack
     }
 ]
 ```
