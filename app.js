@@ -83,6 +83,7 @@ app.post("/", function (req, res) {
 				close: true,
 			})
 				.then(function (response) {
+					// eslint-disable-next-line camelcase
 					entries.push({cursor:{session_id:response.session_id,offset:selectedModulesData.length},commit:{path:packPath+"/selectedModules.json"}})
 				})
 				.catch(function (err) {
@@ -95,6 +96,7 @@ app.post("/", function (req, res) {
 					close: true,
 				})
 					.then(function (response) {
+						// eslint-disable-next-line camelcase
 						entries.push({cursor:{session_id:response.session_id,offset:fileData.length},commit:{path:packPath+packFilePathsToUpload[index]}})
 					})
 					.catch(function (err) {
@@ -107,6 +109,7 @@ app.post("/", function (req, res) {
 				.then(function(response){
 					var checkIntervalID = setInterval(checkBatch,2000)
 					function checkBatch () {
+						// eslint-disable-next-line camelcase
 						dbx.filesUploadSessionFinishBatchCheck({async_job_id: response.async_job_id})
 							.then(function(output){
 								console.log(output)
