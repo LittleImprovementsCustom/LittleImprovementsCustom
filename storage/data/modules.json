@@ -20,6 +20,10 @@
         "label": "Animated Campfire Items",
         "icontype": "gif",
         "description": "Animates campfire and soul campfire items in the inventory and in a player's hand.",
+        "incompatibleWith": [{
+            "id": "soulCampfire",
+            "useInstead": "soulCampfirePlusAnimatedCampfire"
+        }],
         "storageFiles": [
             "storage/modules/animatedCampfireItems/textures/item/campfire.png",
             "storage/modules/animatedCampfireItems/textures/item/campfire.png.mcmeta",
@@ -350,38 +354,9 @@
         "label": "Soul Campfire",
         "icontype": "png",
         "description": "Replaces Oak Logs by Warped Logs and ash by Soul Soil.",
-        "incompatibilities": [{
+        "incompatibleWith": [{
             "id": "animatedCampfireItems",
-            "storageFiles": [
-                "storage/modules/soulCampfirePlusAnimatedCampfire/blockstates/soul_campfire.json",
-                "storage/modules/soulCampfirePlusAnimatedCampfire/models/block/soul_campfire.json",
-                "storage/modules/soulCampfirePlusAnimatedCampfire/models/block/soul_campfire_off.json",
-                "storage/modules/soulCampfirePlusAnimatedCampfire/models/block/template_soul_campfire.json",
-                "storage/modules/soulCampfirePlusAnimatedCampfire/textures/block/soul_campfire_fire.png",
-                "storage/modules/soulCampfirePlusAnimatedCampfire/textures/block/soul_campfire_fire.png.mcmeta",
-                "storage/modules/soulCampfirePlusAnimatedCampfire/textures/block/soul_campfire_log.png",
-                "storage/modules/soulCampfirePlusAnimatedCampfire/textures/block/soul_campfire_log_lit.png",
-                "storage/modules/soulCampfirePlusAnimatedCampfire/textures/block/soul_campfire_log_lit.png.mcmeta",
-                "storage/modules/soulCampfirePlusAnimatedCampfire/textures/item/campfire.png",
-                "storage/modules/soulCampfirePlusAnimatedCampfire/textures/item/campfire.png.mcmeta",
-                "storage/modules/soulCampfirePlusAnimatedCampfire/textures/item/soul_campfire.png",
-                "storage/modules/soulCampfirePlusAnimatedCampfire/textures/item/soul_campfire.png.mcmeta"
-            ],
-            "packFiles": [
-                "/assets/blockstates/soul_campfire.json",
-                "/assets/models/block/soul_campfire.json",
-                "/assets/models/block/soul_campfire_off.json",
-                "/assets/models/block/template_soul_campfire.json",
-                "/assets/textures/block/soul_campfire_fire.png",
-                "/assets/textures/block/soul_campfire_fire.png.mcmeta",
-                "/assets/textures/block/soul_campfire_log.png",
-                "/assets/textures/block/soul_campfire_log_lit.png",
-                "/assets/textures/block/soul_campfire_log_lit.png.mcmeta",
-                "/assets/textures/item/campfire.png",
-                "/assets/textures/item/campfire.png.mcmeta",
-                "/assets/textures/item/soul_campfire.png",
-                "/assets/textures/item/soul_campfire.png.mcmeta"
-            ]
+            "useInstead": "soulCampfirePlusAnimatedCampfire"
         }],
         "storageFiles": [
             "storage/modules/soulCampfire/blockstates/soul_campfire.json",
@@ -406,6 +381,40 @@
             "/assets/minecraft/textures/block/soul_campfire_log_lit.png",
             "/assets/minecraft/textures/block/soul_campfire_log_lit.png.mcmeta",
             "/assets/minecraft/textures/item/soul_campfire.png"
+        ]
+    },
+    {
+        "id": "soulCampfirePlusAnimatedCampfire",
+        "hidden": true,
+        "storageFiles": [
+            "storage/modules/soulCampfirePlusAnimatedCampfire/blockstates/soul_campfire.json",
+            "storage/modules/soulCampfirePlusAnimatedCampfire/models/block/soul_campfire.json",
+            "storage/modules/soulCampfirePlusAnimatedCampfire/models/block/soul_campfire_off.json",
+            "storage/modules/soulCampfirePlusAnimatedCampfire/models/block/template_soul_campfire.json",
+            "storage/modules/soulCampfirePlusAnimatedCampfire/textures/block/soul_campfire_fire.png",
+            "storage/modules/soulCampfirePlusAnimatedCampfire/textures/block/soul_campfire_fire.png.mcmeta",
+            "storage/modules/soulCampfirePlusAnimatedCampfire/textures/block/soul_campfire_log.png",
+            "storage/modules/soulCampfirePlusAnimatedCampfire/textures/block/soul_campfire_log_lit.png",
+            "storage/modules/soulCampfirePlusAnimatedCampfire/textures/block/soul_campfire_log_lit.png.mcmeta",
+            "storage/modules/soulCampfirePlusAnimatedCampfire/textures/item/campfire.png",
+            "storage/modules/soulCampfirePlusAnimatedCampfire/textures/item/campfire.png.mcmeta",
+            "storage/modules/soulCampfirePlusAnimatedCampfire/textures/item/soul_campfire.png",
+            "storage/modules/soulCampfirePlusAnimatedCampfire/textures/item/soul_campfire.png.mcmeta"
+        ],
+        "packFiles": [
+            "/assets/blockstates/soul_campfire.json",
+            "/assets/models/block/soul_campfire.json",
+            "/assets/models/block/soul_campfire_off.json",
+            "/assets/models/block/template_soul_campfire.json",
+            "/assets/textures/block/soul_campfire_fire.png",
+            "/assets/textures/block/soul_campfire_fire.png.mcmeta",
+            "/assets/textures/block/soul_campfire_log.png",
+            "/assets/textures/block/soul_campfire_log_lit.png",
+            "/assets/textures/block/soul_campfire_log_lit.png.mcmeta",
+            "/assets/textures/item/campfire.png",
+            "/assets/textures/item/campfire.png.mcmeta",
+            "/assets/textures/item/soul_campfire.png",
+            "/assets/textures/item/soul_campfire.png.mcmeta"
         ]
     }
 ]

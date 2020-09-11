@@ -44,36 +44,38 @@ app.post("/", function (req, res) {
 		let storageFilePathsToUpload = ["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"]
 		let packFilePathsToUpload = ["/pack.mcmeta","/pack.png","/credits.txt"]
 
-		for (i in availableModules) {
 
-			// system to deal with incompatibilities
-			if ( (!availableModules[i].incompatibilities==undefined) && (selectedModules.includes(availableModules[i].id)) ) { // module has incompatibilities and is selected
-				for (x in availableModules[i].incompatibilities) {
-					if (selectedModules.includes(availableModules[i].incompatibilities[x].id)) { // an incompatible module is selected
+		// system to deal with incompatibilities
+		for (i of availableModules) {
+			const incompatibilities = i.incompatibleWith
+			if (
+				( incompatibilities!=undefined && incompatibilities.length!=0 ) // this module has incompatibilities
+				&& ( selectedModules.includes(i.id) ) // this module has been selected
+			) {
+				for (n of incompatibilities) {
+					if (selectedModules.includes(n.id)) { // the incompatible module has been selected
 
-						// remove modules from selectedModules
-						selectedModules.splice(selectedModules.indexOf(availableModules[i].id),1)
-						selectedModules.splice(selectedModules.indexOf(availableModules[i].incompatibilities[x].id),1)
+						// remove the two incompatible packs
+						selectedModules.splice(selectedModules.indexOf(i),1)
+						selectedModules.splice(selectedModules.indexOf(n.id),1)
 
-						// add file paths to relevant arrays
-						storageFilePathsToUpload=storageFilePathsToUpload.concat(availableModules[i].incompatibilities[x].storageFiles)
-						packFilePathsToUpload=packFilePathsToUpload.concat(availableModules[i].incompatibilities[x].packFiles)
+						// add the useInstead pack
+						selectedModules.push(n.useInstead)
 
 					}
 				}
 			}
+			//			
+		}
 
-			// if the pack is selected, and didn't get removed above, add the file paths to the arrays
+		for (i in availableModules) {
 			if (selectedModules.includes(availableModules[i].id)) {
 				storageFilePathsToUpload=storageFilePathsToUpload.concat(availableModules[i].storageFiles)
 				packFilePathsToUpload=packFilePathsToUpload.concat(availableModules[i].packFiles)
 			}
-
 		}
 		
 		(async function () {
-
-			// start upload session for selectedModules.json file
 			entries = []
 			const selectedModulesData = JSON.stringify(selectedModules)
 			await dbx.filesUploadSessionStart({
@@ -83,12 +85,9 @@ app.post("/", function (req, res) {
 				.then(function (response) {
 					entries.push({cursor:{session_id:response.session_id,offset:selectedModulesData.length},commit:{path:packPath+"/selectedModules.json"}})
 				})
-				.catch((error)=>{
-					res.send("error")
-					console.error(error)
+				.catch(function (err) {
+					console.error(err)
 				})
-			
-			// upload arrays file paths
 			for (let [index,val] of storageFilePathsToUpload.entries()) {
 				let fileData = fs.readFileSync(val)
 				await dbx.filesUploadSessionStart({
@@ -98,22 +97,20 @@ app.post("/", function (req, res) {
 					.then(function (response) {
 						entries.push({cursor:{session_id:response.session_id,offset:fileData.length},commit:{path:packPath+packFilePathsToUpload[index]}})
 					})
-					.catch((error)=>{
-						res.send("error")
-						console.error(error)
+					.catch(function (err) {
+						console.error(err)
 					})
 			}
-
 		})().then(()=>{
 			console.log(entries)
 			dbx.filesUploadSessionFinishBatch({entries:entries})
 				.then(function(response){
-					
+					var checkIntervalID = setInterval(checkBatch,2000)
 					function checkBatch () {
 						dbx.filesUploadSessionFinishBatchCheck({async_job_id: response.async_job_id})
 							.then(function(output){
 								console.log(output)
-								if (output[".tag"] == "complete" ) { // batch has finished uploading
+								if (output[".tag"] == "complete" ) {
 									(async function (packPath) {
 										const response = await dbx.sharingCreateSharedLink({path: packPath})
 										return response.url.slice(0, -1)+"1"
@@ -125,22 +122,16 @@ app.post("/", function (req, res) {
 										})
 									clearInterval(checkIntervalID)
 								}
-							}).catch((error)=>{
-								res.send("error")
-								console.error(error)
+							})
+							.catch(function(err){
+								console.error(err)
 							})
 					}
-					
-					var checkIntervalID = setInterval(checkBatch,2000) // check if files have finished uploading every 2 seconds
-				}).catch((error)=>{
-					res.send("error")
-					console.error(error)
+				}).catch(err => {
+					console.error(err)
 				})
 			
-		}).catch((error)=>{
-			res.send("error")
-			console.error(error)
-		})
+		}).catch((err)=>{console.error(err)})
 
 
 

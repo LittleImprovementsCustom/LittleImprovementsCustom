@@ -112,6 +112,8 @@ loadJSON(function(response) {
 	var actual_JSON = JSON.parse(response)
 	for (i in actual_JSON) {
 		const data = actual_JSON[i]
-		createModuleSelector(data.id,data.label,data.icontype,data.description)
+		if ((!data.hidden)||data.hidden==undefined) { // module should not be hidden
+			createModuleSelector(data.id,data.label,data.icontype,data.description) // add module to webpage
+		}
 	}
 })
