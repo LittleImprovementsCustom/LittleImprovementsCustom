@@ -45,7 +45,7 @@ Once the icon is made, upload it to `/public/icons/` and name it the ID of your 
 
 Next, you need to add the data from your pack to [`/storage/data/modules.json`](https://github.com/LittleImprovementsCustom/LittleImprovementsCustom/blob/master/storage/data/modules.json).
 
-Open the file, create a new object, and see [here](https://example.com/) for the layout.
+Open the file, create a new object, and see [here](https://github.com/LittleImprovementsCustom/LittleImprovementsCustom/blob/master/CONTRIBUTING.md#modulesjson-layout) for the layout.
 
 ## Committing your changes
 
