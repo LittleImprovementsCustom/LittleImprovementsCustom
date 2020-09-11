@@ -68,10 +68,12 @@ app.post("/", function (req, res) {
 			//			
 		}
 
-		for (i in availableModules) {
-			if (selectedModules.includes(availableModules[i].id)) {
-				storageFilePathsToUpload=storageFilePathsToUpload.concat(availableModules[i].storageFiles)
-				packFilePathsToUpload=packFilePathsToUpload.concat(availableModules[i].packFiles)
+		for (i of availableModules) {
+			if (selectedModules.includes(i.id)) { // if the module is selected
+				for (x of i.filePaths) {
+					storageFilePathsToUpload=storageFilePathsToUpload.concat("storage/"+i.id+x)
+					packFilePathsToUpload=packFilePathsToUpload.concat("/assets/minecraft"+x)
+				}
 			}
 		}
 		

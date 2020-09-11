@@ -82,8 +82,7 @@ A `*` denotes that this is optional if the module is hidden.
             }
         ],
 
-        "storageFiles": ["storage/modules/honeyJar/textures/item/honey_bottle.png"],  // the file paths of the module's files in storage
-        "packFiles": ["/assets/minecraft/textures/item/honey_bottle.png"]  // the file paths of the assets in a resource pack
+        "storageFiles": ["/textures/item/honey_bottle.png"],  // the paths of the module's files
     }
 ]
 ```
