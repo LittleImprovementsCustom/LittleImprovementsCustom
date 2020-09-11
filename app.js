@@ -71,8 +71,8 @@ app.post("/", function (req, res) {
 		for (i of availableModules) {
 			if (selectedModules.includes(i.id)) { // if the module is selected
 				for (x of i.filePaths) {
-					storageFilePathsToUpload=storageFilePathsToUpload.concat("storage/"+i.id+x)
-					packFilePathsToUpload=packFilePathsToUpload.concat("/assets/minecraft"+x)
+					storageFilePathsToUpload=storageFilePathsToUpload.concat("storage/modules/"+i.id+x)
+					packFilePathsToUpload=packFilePathsToUpload.concat(packPath+"/assets/minecraft"+x)
 				}
 			}
 		}
@@ -99,7 +99,7 @@ app.post("/", function (req, res) {
 				})
 					.then(function (response) {
 						// eslint-disable-next-line camelcase
-						entries.push({cursor:{session_id:response.session_id,offset:fileData.length},commit:{path:packPath+packFilePathsToUpload[index]}})
+						entries.push({cursor:{session_id:response.session_id,offset:fileData.length},commit:{path:packFilePathsToUpload[index]}})
 					})
 					.catch(function (err) {
 						console.error(err)
