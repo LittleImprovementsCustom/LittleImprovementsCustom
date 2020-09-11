@@ -164,7 +164,7 @@
         "id": "egglessSlimeBlock",
         "label": "Eggless Slime Block",
         "icontype": "png",
-        "description": "Removes the \"egg\" in the middle of slime blocks",
+        "description": "Removes the \"egg\" in the middle of slime blocks.",
         "storageFiles": ["storage/modules/egglessSlimeBlock/models/block/slime_block.json"],
         "packFiles": ["/assets/minecraft/textures/models/block/slime_block.json"]
     },
@@ -172,7 +172,7 @@
         "id": "egglessHoneyBlock",
         "label": "Eggless Honey Block",
         "icontype": "png",
-        "description": "Removes the \"egg\" in the middle of honey blocks",
+        "description": "Removes the \"egg\" in the middle of honey blocks.",
         "storageFiles": ["storage/modules/egglessHoneyBlock/models/block/honey_block.json"],
         "packFiles": ["/assets/minecraft/textures/models/block/honey_block.json"]
     },
@@ -180,7 +180,7 @@
         "id": "flowerGolem",
         "label": "Flower Golem",
         "icontype": "png",
-        "description": "Poppies bloom on the texture of the Iron Golem.",
+        "description": "Makes poppies bloom on the texture of the iron golem.",
         "storageFiles": [
             "storage/modules/flowerGolem/textures/entity/iron_golem/iron_golem.png",
             "storage/modules/flowerGolem/textures/entity/iron_golem/iron_golem_crackiness_low.png",
@@ -198,7 +198,7 @@
         "id": "fancyLlamaDecor",
         "label": "Fancy Llama Decor",
         "icontype": "png",
-        "description": "Llamas now have better clothes.",
+        "description": "Gives llamas fancier carpet patterns.",
         "storageFiles": [
             "storage/modules/fancyLlamaDecor/textures/entity/llama/decor/black.png",
             "storage/modules/fancyLlamaDecor/textures/entity/llama/decor/blue.png",
@@ -242,7 +242,7 @@
         "id": "purpleEndPortalFrame",
         "label": "Purple End Portal Frame",
         "icontype": "png",
-        "description": "Makes End Portal Frame purple and changed after filled.",
+        "description": "Makes end portal frame purple when filled.",
         "storageFiles": [
             "storage/modules/purpleEndPortalFrame/blockstates/end_portal_frame.png",
             "storage/modules/purpleEndPortalFrame/models/block/end_portal_frame.png",
@@ -289,7 +289,7 @@
         "id": "livingDragon",
         "label": "Living Dragon",
         "icontype": "gif",
-        "description": "Makes Dragon Egg more detailed and implements animation.",
+        "description": "Makes dragon egg more detailed and implements animation.",
         "storageFiles": [
             "storage/modules/livingDragon/textures/block/dragon_egg.png",
             "storage/modules/livingDragon/textures/block/dragon_egg.png.mcmeta"
@@ -303,7 +303,7 @@
         "id": "animatedFurnaces",
         "label": "Animated Furnaces",
         "icontype": "gif",
-        "description": "Adds animation to Furnace and includes small improvements for Smoker and Blast Furnace.",
+        "description": "Adds animation to furnace and small improvements for smoker and blast Furnace.",
         "storageFiles": [
             "storage/modules/animatedFurnaces/textures/block/blast_furnace_front_on.png",
             "storage/modules/animatedFurnaces/textures/block/blast_furnace_front_on.png.mcmeta",
@@ -329,7 +329,7 @@
         "id": "detailedHearts",
         "label": "Detailed Hearts",
         "icontype": "png",
-        "description": "Improves Hearts, Armor points, Attack Indicator and makes Ping icon more colorful.",
+        "description": "Improves hearts, armour points, attack indicator and makes ping icons more colourful.",
         "storageFiles": ["storage/modules/detailedHearts/textures/gui/icons.png"],
         "packFiles": ["/assets/minecraft/textures/gui/icons.png"]
     },
@@ -353,7 +353,7 @@
         "id": "soulCampfire",
         "label": "Soul Campfire",
         "icontype": "png",
-        "description": "Replaces Oak Logs by Warped Logs and ash by Soul Soil.",
+        "description": "Replaces Oak Logs with Warped Logs and ash with Soul Soil.",
         "incompatibleWith": [{
             "id": "animatedCampfireItems",
             "useInstead": "soulCampfirePlusAnimatedCampfire"
