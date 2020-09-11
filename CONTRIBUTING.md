@@ -41,7 +41,7 @@ Then, if it is a PNG, optimise it [here](https://tinypng.com/).
 
 Once the icon is made, upload it to `/public/icons/` and name it the ID of your module, with the relevant file extension.
 
-## Updating [modules.json](https://github.com/LittleImprovementsCustom/LittleImprovementsCustom/blob/master/storage/data/modules.json)
+## Updating `modules.json`
 
 Next, you need to add the data from your pack to [`/storage/data/modules.json`](https://github.com/LittleImprovementsCustom/LittleImprovementsCustom/blob/master/storage/data/modules.json).
 
@@ -57,7 +57,7 @@ If you do not have push permission, fork the repo, and submit a new pull request
 
 
 
-# `modules.json` layout
+# [modules.json](https://github.com/LittleImprovementsCustom/LittleImprovementsCustom/blob/master/storage/data/modules.json) layout
 
 A `*` denotes that this is optional if the module is hidden.
 
