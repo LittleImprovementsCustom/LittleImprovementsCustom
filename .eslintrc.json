@@ -26,6 +26,7 @@
             "never"
         ],
         "no-undef": "off",
-        "no-unused-vars": "off"
+        "no-unused-vars": "off",
+        "camelcase": "warn"
     }
 }
