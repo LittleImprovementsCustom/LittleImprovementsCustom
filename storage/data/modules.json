@@ -192,7 +192,7 @@
         "id": "animatedFurnaces",
         "label": "Animated Furnaces",
         "iconType": "gif",
-        "description": "Adds animation to furnace and small improvements for smoker and blast Furnace.",
+        "description": "Adds animation to furnace and small improvements for smoker and blast furnace.",
         "filePaths": [
             "/textures/block/blast_furnace_front_on.png",
             "/textures/block/blast_furnace_front_on.png.mcmeta",
