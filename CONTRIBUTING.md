@@ -59,7 +59,7 @@ If you do not have push permission, fork the repo, and submit a new pull request
 
 # [modules.json](https://github.com/LittleImprovementsCustom/LittleImprovementsCustom/blob/master/storage/data/modules.json) layout
 
-A `*` denotes that this is optional if the module is hidden.
+A `*` denotes that this is unnecessary if the module is hidden.
 
 ```js
 [  // the root of the file
