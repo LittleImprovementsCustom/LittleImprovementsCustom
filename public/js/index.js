@@ -109,9 +109,9 @@ function loadJSON(callback) {
 // function to load JSON then send to be added to HTML
 loadJSON(function(response) {
 	// Parse JSON string into object
-	var actual_JSON = JSON.parse(response)
-	for (i in actual_JSON) {
-		const data = actual_JSON[i]
+	var actualJSON = JSON.parse(response)
+	for (i in actualJSON) {
+		const data = actualJSON[i]
 		if ((!data.hidden)||data.hidden==undefined) { // module should not be hidden
 			createModuleSelector(data.id,data.label,data.icontype,data.description) // add module to webpage
 		}
