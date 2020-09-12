@@ -1,7 +1,7 @@
 {   "parent": "block/block",
     "textures": {
         "particle": "block/honey_block_top",
-        "down": "block/honey_block_bottom",
+        "down": "block/honey_block_bottom"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],
@@ -17,4 +17,3 @@
         }
     ]
 }
-
