@@ -215,7 +215,7 @@
         "label": "Matching Gilded Blackstone",
         "description": "Improves top texture of Gilded Blackstone.",
         "filePaths": [
-            "/models/blockgilded_blackstone.json",
+            "/models/block/gilded_blackstone.json",
             "/textures/block/gilded_blackstone.png",
             "/textures/block/gilded_blackstone_top.png"
         ]
