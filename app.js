@@ -42,7 +42,7 @@ app.post("/", function (req, res) {
 
 		// create variables with file paths to upload; gets updated later
 		let storageFilePathsToUpload = ["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"]
-		let packFilePathsToUpload = ["/pack.mcmeta","/pack.png","/credits.txt"]
+		let packFilePathsToUpload = [packPath+"/pack.mcmeta",packPath+"/pack.png",packPath+"/credits.txt"]
 
 
 		// system to deal with incompatibilities
