@@ -3,7 +3,9 @@
 [![Discord](https://img.shields.io/discord/738126248194211960?color=success)](https://discord.gg/bNcZjFe)
 [![Minecraft Version](https://img.shields.io/badge/minecraft-1.16.2-success)](https://www.littleimprovements-custom.tk/)
 
-Little Improvements: Custom is a custom resource pack picker I'm working on. It's still in the testing stage, and not quite done yet, so watch this space!
+Little Improvements: Custom is a resource pack picker, inspired by [Vanilla Tweaks](https://vanillatweaks.net/), created by [Beatso](https://www.beatso.tk/) and [Daggsy](https://www.planetminecraft.com/member/daggsy/). There is a nice range of small asthetic tweaks, and utility tweaks.
 
-## Adding modules
-See [here](https://github.com/Beatso1/littleimprovements-custom/commit/d1f1b2ec568587f6f2dddbfaf6274ee8b459fc1b) for an example commit to adding modules. If you are not part of the team, fork this repo then create a pull request.
+Choose and download your pack [here](https://www.littleimprovements-custom.tk/).\
+Be sure to support this project on [its PMC page](https://www.planetminecraft.com/texture-pack/little-improvements-custom/)!
+
+[![Example of pack picker](https://cdn.discordapp.com/attachments/738126248194211964/754353169127178320/13393031-image_l.png)](https://www.littleimprovements-custom.tk/)
