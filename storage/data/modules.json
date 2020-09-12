@@ -154,9 +154,9 @@
         "label": "Purple End Portal Frame",
         "description": "Makes end portal frame purple when filled.",
         "filePaths": [
-            "/blockstates/end_portal_frame.png",
-            "/models/block/end_portal_frame.png",
-            "/models/block/end_portal_frame_filled.png",
+            "/blockstates/end_portal_frame.json",
+            "/models/block/end_portal_frame.json",
+            "/models/block/end_portal_frame_filled.json",
             "/textures/block/end_portal_frame_filled_top.png",
             "/textures/block/end_portal_frame_side.png",
             "/textures/block/end_portal_frame_top.png"
