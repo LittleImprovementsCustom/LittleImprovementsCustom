@@ -71,7 +71,7 @@ A `*` denotes that this is optional if the module is hidden.
 
         "description": "Changes honey bottle to a jar of honey, and renames the item.",  // the description displayed on the website *
 
-        "icontype": "png",  // the file extension of the pack icon *
+        "iconType": "png",  // the file extension of the pack icon *
         
         "hidden": false,  // [optional] if this is set to true, this pack will not be displayed on the website. used for invisible merged packs
 

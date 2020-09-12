@@ -2,21 +2,21 @@
     {
         "id": "honeyJar",
         "label": "Honey Jar",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Changes honey bottle to a jar of honey, and renames the item.",
         "filePaths": ["/textures/item/honey_bottle.png"]
     },
     {
         "id": "hotLavaBucket",
         "label": "Hot Lava Bucket",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Makes original Lava Bucket really, really hot.",
         "filePaths": ["/textures/item/lava_bucket.png"]
     },
     {
         "id": "animatedCampfireItems",
         "label": "Animated Campfire Items",
-        "icontype": "gif",
+        "iconType": "gif",
         "description": "Animates campfire and soul campfire items in the inventory and in a player's hand.",
         "incompatibleWith": [{
             "id": "soulCampfire",
@@ -32,7 +32,7 @@
     {
         "id": "restockClock",
         "label": "Restock Clock",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Makes clocks show when villagers can restock their trades.",
         "filePaths": [
             "/textures/item/clock_00.png",
@@ -55,7 +55,7 @@
     {
         "id": "betterSignIcons",
         "label": "Better Sign Icons",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Changes sign inventory icons to be more similar to the block.",
         "filePaths": [
             "/textures/item/acacia_sign.png",
@@ -71,7 +71,7 @@
     {
         "id": "crackedNetherBricks",
         "label": "Cracked Nether Bricks",
-        "icontype": "gif",
+        "iconType": "gif",
         "description": "Improves Cracked Nether Bricks by adding a magma animation in cracks.",
         "filePaths": [
             "/optifine/emissive.properties",
@@ -84,21 +84,21 @@
     {
         "id": "obsidianEnderChest",
         "label": "Obsidian Ender Chest",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Removes green and replaces it with an obsidian-like texture.",
         "filePaths": ["/textures/entity/chest/ender.png"]
     },
     {
         "id": "noNauseaOverlay",
         "label": "No Nausea Overlay",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Removes the green overlay from nausea when distortion effects is set to off.",
         "filePaths": ["/textures/misc/nausea.png"]
     },
     {
         "id": "betterHelmets",
         "label": "Better Helmets",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Makes your face more visible when wearing a helmet.",
         "filePaths": [
             "/textures/item/netherite_helmet.png",
@@ -112,21 +112,21 @@
     {
         "id": "egglessSlimeBlock",
         "label": "Eggless Slime Block",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Removes the \"egg\" in the middle of slime blocks.",
         "filePaths": ["/models/block/slime_block.json"]
     },
     {
         "id": "egglessHoneyBlock",
         "label": "Eggless Honey Block",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Removes the \"egg\" in the middle of honey blocks.",
         "filePaths": ["/models/block/honey_block.json"]
     },
     {
         "id": "flowerGolem",
         "label": "Flower Golem",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Makes poppies bloom on the texture of the iron golem.",
         "filePaths": [
             "/textures/entity/iron_golem/iron_golem.png",
@@ -138,7 +138,7 @@
     {
         "id": "fancyLlamaDecor",
         "label": "Fancy Llama Decor",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Gives llamas fancier carpet patterns.",
         "filePaths": [
             "/textures/entity/llama/decor/black.png",
@@ -163,7 +163,7 @@
     {
         "id": "purpleEndPortalFrame",
         "label": "Purple End Portal Frame",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Makes end portal frame purple when filled.",
         "filePaths": [
             "/blockstates/end_portal_frame.png",
@@ -177,7 +177,7 @@
     {
         "id": "connectedSmoothStone",
         "label": "Connected Smooth Stone",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Connected smooth stone. No OptiFine required.",
         "filePaths": [
             "/models/block/smooth_stone.json",
@@ -194,7 +194,7 @@
     {
         "id": "livingDragon",
         "label": "Living Dragon",
-        "icontype": "gif",
+        "iconType": "gif",
         "description": "Makes dragon egg more detailed and implements animation.",
         "filePaths": [
             "/textures/block/dragon_egg.png",
@@ -204,7 +204,7 @@
     {
         "id": "animatedFurnaces",
         "label": "Animated Furnaces",
-        "icontype": "gif",
+        "iconType": "gif",
         "description": "Adds animation to furnace and small improvements for smoker and blast Furnace.",
         "filePaths": [
             "/textures/block/blast_furnace_front_on.png",
@@ -220,14 +220,14 @@
     {
         "id": "detailedHearts",
         "label": "Detailed Hearts",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Improves hearts, armour points, attack indicator and makes ping icons more colourful.",
         "filePaths": ["/textures/gui/icons.png"]
     },
     {
         "id": "matchingGildedBlackstone",
         "label": "Matching Gilded Blackstone",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Improves top texture of Gilded Blackstone.",
         "filePaths": [
             "/models/blockgilded_blackstone.json",
@@ -238,7 +238,7 @@
     {
         "id": "soulCampfire",
         "label": "Soul Campfire",
-        "icontype": "png",
+        "iconType": "png",
         "description": "Replaces Oak Logs with Warped Logs and ash with Soul Soil.",
         "incompatibleWith": [{
             "id": "animatedCampfireItems",
