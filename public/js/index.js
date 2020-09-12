@@ -113,7 +113,10 @@ loadJSON(function(response) {
 	for (i in actualJSON) {
 		const data = actualJSON[i]
 		if ((!data.hidden)||data.hidden==undefined) { // module should not be hidden
-			createModuleSelector(data.id,data.label,data.iconType,data.description) // add module to webpage
+			let iconType
+			if (data.iconType==undefined) iconType = "png"
+			else iconType = data.iconType
+			createModuleSelector(data.id,data.label,iconType,data.description) // add module to webpage
 		}
 	}
 })

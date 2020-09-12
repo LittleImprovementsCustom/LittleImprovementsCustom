@@ -2,14 +2,12 @@
     {
         "id": "honeyJar",
         "label": "Honey Jar",
-        "iconType": "png",
         "description": "Changes honey bottle to a jar of honey, and renames the item.",
         "filePaths": ["/textures/item/honey_bottle.png"]
     },
     {
         "id": "hotLavaBucket",
         "label": "Hot Lava Bucket",
-        "iconType": "png",
         "description": "Makes original Lava Bucket really, really hot.",
         "filePaths": ["/textures/item/lava_bucket.png"]
     },
@@ -32,7 +30,6 @@
     {
         "id": "restockClock",
         "label": "Restock Clock",
-        "iconType": "png",
         "description": "Makes clocks show when villagers can restock their trades.",
         "filePaths": [
             "/textures/item/clock_00.png",
@@ -55,7 +52,6 @@
     {
         "id": "betterSignIcons",
         "label": "Better Sign Icons",
-        "iconType": "png",
         "description": "Changes sign inventory icons to be more similar to the block.",
         "filePaths": [
             "/textures/item/acacia_sign.png",
@@ -84,21 +80,18 @@
     {
         "id": "obsidianEnderChest",
         "label": "Obsidian Ender Chest",
-        "iconType": "png",
         "description": "Removes green and replaces it with an obsidian-like texture.",
         "filePaths": ["/textures/entity/chest/ender.png"]
     },
     {
         "id": "noNauseaOverlay",
         "label": "No Nausea Overlay",
-        "iconType": "png",
         "description": "Removes the green overlay from nausea when distortion effects is set to off.",
         "filePaths": ["/textures/misc/nausea.png"]
     },
     {
         "id": "betterHelmets",
         "label": "Better Helmets",
-        "iconType": "png",
         "description": "Makes your face more visible when wearing a helmet.",
         "filePaths": [
             "/textures/item/netherite_helmet.png",
@@ -112,21 +105,18 @@
     {
         "id": "egglessSlimeBlock",
         "label": "Eggless Slime Block",
-        "iconType": "png",
         "description": "Removes the \"egg\" in the middle of slime blocks.",
         "filePaths": ["/models/block/slime_block.json"]
     },
     {
         "id": "egglessHoneyBlock",
         "label": "Eggless Honey Block",
-        "iconType": "png",
         "description": "Removes the \"egg\" in the middle of honey blocks.",
         "filePaths": ["/models/block/honey_block.json"]
     },
     {
         "id": "flowerGolem",
         "label": "Flower Golem",
-        "iconType": "png",
         "description": "Makes poppies bloom on the texture of the iron golem.",
         "filePaths": [
             "/textures/entity/iron_golem/iron_golem.png",
@@ -138,7 +128,6 @@
     {
         "id": "fancyLlamaDecor",
         "label": "Fancy Llama Decor",
-        "iconType": "png",
         "description": "Gives llamas fancier carpet patterns.",
         "filePaths": [
             "/textures/entity/llama/decor/black.png",
@@ -163,7 +152,6 @@
     {
         "id": "purpleEndPortalFrame",
         "label": "Purple End Portal Frame",
-        "iconType": "png",
         "description": "Makes end portal frame purple when filled.",
         "filePaths": [
             "/blockstates/end_portal_frame.png",
@@ -177,7 +165,6 @@
     {
         "id": "connectedSmoothStone",
         "label": "Connected Smooth Stone",
-        "iconType": "png",
         "description": "Connected smooth stone. No OptiFine required.",
         "filePaths": [
             "/models/block/smooth_stone.json",
@@ -220,14 +207,12 @@
     {
         "id": "detailedHearts",
         "label": "Detailed Hearts",
-        "iconType": "png",
         "description": "Improves hearts, armour points, attack indicator and makes ping icons more colourful.",
         "filePaths": ["/textures/gui/icons.png"]
     },
     {
         "id": "matchingGildedBlackstone",
         "label": "Matching Gilded Blackstone",
-        "iconType": "png",
         "description": "Improves top texture of Gilded Blackstone.",
         "filePaths": [
             "/models/blockgilded_blackstone.json",
@@ -238,7 +223,6 @@
     {
         "id": "soulCampfire",
         "label": "Soul Campfire",
-        "iconType": "png",
         "description": "Replaces Oak Logs with Warped Logs and ash with Soul Soil.",
         "incompatibleWith": [{
             "id": "animatedCampfireItems",
