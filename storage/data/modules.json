@@ -259,5 +259,11 @@
             "/textures/item/soul_campfire.png",
             "/textures/item/soul_campfire.png.mcmeta"
         ]
+    },
+    {
+        "id": "fixedBarrel",
+        "label": "Fixed Barrel",
+        "description": "Makes lines on Barrel compatibile with lines on Spruce Planks.",
+        "filePaths": ["/textures/block/barrel_side.png"]
     }
 ]
