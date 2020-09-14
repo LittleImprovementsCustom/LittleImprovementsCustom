@@ -82,7 +82,7 @@ A `*` denotes that this is unnecessary if the module is hidden.
             }
         ],
 
-        "storageFiles": ["/textures/item/honey_bottle.png"],  // the paths of the module's files
+        "filePaths": ["/textures/item/honey_bottle.png"]  // the paths of the module's files
     }
 ]
 ```
