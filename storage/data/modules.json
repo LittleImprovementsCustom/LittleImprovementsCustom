@@ -259,5 +259,45 @@
             "/textures/item/soul_campfire.png",
             "/textures/item/soul_campfire.png.mcmeta"
         ]
+    },
+    {
+        "id": "netherFunguses",
+        "label": "Nether Funguses",
+        "description": "Adds more variants for Nether Funguses.",
+        "filePaths": [
+            "/blockstates/crimson_fungus.json",
+            "/blockstates/potted_crimson_fungus.json",
+            "/blockstates/potted_warped_fungus.json",
+            "/blockstates/warped_fungus.json",
+            "/models/block/crimson_fungus_1.json",
+            "/models/block/crimson_fungus_2.json",
+            "/models/block/crimson_fungus_3.json",
+            "/models/block/crimson_fungus_4.json",
+            "/models/block/crimson_fungus_5.json",
+            "/models/block/flower_pot_cross_custom.json",
+            "/models/block/potted_crimson_fungus_1.json",
+            "/models/block/potted_crimson_fungus_2.json",
+            "/models/block/potted_crimson_fungus_3.json",
+            "/models/block/potted_crimson_fungus_5.json",
+            "/models/block/potted_warped_fungus_1.json",
+            "/models/block/potted_warped_fungus_2.json",
+            "/models/block/potted_warped_fungus_3.json",
+            "/models/block/potted_warped_fungus_5.json",
+            "/models/block/warped_fungus_1.json",
+            "/models/block/warped_fungus_2.json",
+            "/models/block/warped_fungus_3.json",
+            "/models/block/warped_fungus_4.json",
+            "/models/block/warped_fungus_5.json",
+            "/textures/block/crimson_fungus_1.png",
+            "/textures/block/crimson_fungus_2.png",
+            "/textures/block/crimson_fungus_3.png",
+            "/textures/block/crimson_fungus_4.png",
+            "/textures/block/crimson_fungus_5.png",
+            "/textures/block/warped_fungus_1.png",
+            "/textures/block/warped_fungus_2.png",
+            "/textures/block/warped_fungus_3.png",
+            "/textures/block/warped_fungus_4.png",
+            "/textures/block/warped_fungus_5.png"
+        ]
     }
 ]
