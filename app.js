@@ -9,7 +9,21 @@ require("dotenv").config()
 // setup Dropbox
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN })
 
-const availableModules = JSON.parse(fs.readFileSync("storage/data/modules.json"))
+let availableModules = []
+for (originalObject of JSON.parse(fs.readFileSync("storage/data/modules.json"))) {
+	const originalFilePaths = originalObject.filePaths
+	let objectToPush = originalObject
+	objectToPush.filePaths=[]
+	for (individualFilePath of originalFilePaths) {
+		objectToPush.filePaths.push({
+			"path":individualFilePath,
+			"data":fs.readFileSync("storage/modules/"+originalObject.id+individualFilePath)
+		})
+	}
+	availableModules.push(objectToPush)
+}
+
+const defaultStorageFiles = ["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"].map(x=>fs.readFileSync(x))
 
 // setup express
 const app = express()
@@ -41,7 +55,8 @@ app.post("/", function (req, res) {
 		let selectedModules = req.body.modules
 
 		// create variables with file paths to upload; gets updated later
-		let storageFilePathsToUpload = ["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"]
+		let storageFilesToUpload = defaultStorageFiles
+		console.log(storageFilesToUpload)
 		let packFilePathsToUpload = [packPath+"/pack.mcmeta",packPath+"/pack.png",packPath+"/credits.txt"]
 
 
@@ -70,8 +85,8 @@ app.post("/", function (req, res) {
 		for (i of availableModules) {
 			if (selectedModules.includes(i.id)) { // if the module is selected
 				for (x of i.filePaths) {
-					storageFilePathsToUpload=storageFilePathsToUpload.concat("storage/modules/"+i.id+x)
-					packFilePathsToUpload=packFilePathsToUpload.concat(packPath+"/assets/minecraft"+x)
+					storageFilesToUpload=storageFilesToUpload.concat(x.data)
+					packFilePathsToUpload=packFilePathsToUpload.concat(packPath+"/assets/minecraft"+x.path)
 				}
 			}
 		}
@@ -90,15 +105,14 @@ app.post("/", function (req, res) {
 				.catch(function (err) {
 					console.error(err)
 				})
-			for (let [index,val] of storageFilePathsToUpload.entries()) {
-				let fileData = fs.readFileSync(val)
+			for (let [index,val] of storageFilesToUpload.entries()) {
 				await dbx.filesUploadSessionStart({
-					contents: fileData,
+					contents: val,
 					close: true,
 				})
 					.then(function (response) {
 						// eslint-disable-next-line camelcase
-						entries.push({cursor:{session_id:response.session_id,offset:fileData.length},commit:{path:packFilePathsToUpload[index]}})
+						entries.push({cursor:{session_id:response.session_id,offset:val.length},commit:{path:packFilePathsToUpload[index]}})
 					})
 					.catch(function (err) {
 						console.error(err)
