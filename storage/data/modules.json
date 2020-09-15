@@ -264,7 +264,29 @@
         "id": "fixedBarrel",
         "label": "Fixed Barrel",
         "description": "Makes lines on Barrel compatibile with lines on Spruce Planks.",
-        "filePaths": ["/textures/block/barrel_side.png"]
+        "filePaths": [
+            "/blockstates/barrel.json",
+            "/models/block/barrel_down.json",
+            "/models/block/barrel_east.json",
+            "/models/block/barrel_north.json",
+            "/models/block/barrel_open_down.json",
+            "/models/block/barrel_open_east.json",
+            "/models/block/barrel_open_north.json",
+            "/models/block/barrel_open_south.json",
+            "/models/block/barrel_open_up.json",
+            "/models/block/barrel_open_west.json",
+            "/models/block/barrel_south.json",
+            "/models/block/barrel_up.json",
+            "/models/block/barrel_west.json",
+            "/textures/block/barrel_bottom.png",
+            "/textures/block/barrel_side_1.png",
+            "/textures/block/barrel_side_3.png",
+            "/textures/block/barrel_side_4.png",
+            "/textures/block/barrel_side_5.png",
+            "/textures/block/barrel_side_6.png",
+            "/textures/block/barrel_top.png",
+            "/textures/block/barrel_top_open.png"
+        ]
     },
     {
         "id": "netherFunguses",
