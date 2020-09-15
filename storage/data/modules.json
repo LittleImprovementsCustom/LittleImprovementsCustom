@@ -263,7 +263,7 @@
     {
         "id": "fixedBarrel",
         "label": "Fixed Barrel",
-        "description": "Makes lines on Barrel compatibile with lines on Spruce Planks.",
+        "description": "Makes lines on Barrel compatibile with lines on Spruce Planks. Warning: causes long download time",
         "filePaths": [
             "/blockstates/barrel.json",
             "/models/block/barrel_down.json",
@@ -291,7 +291,7 @@
     {
         "id": "netherFunguses",
         "label": "Nether Funguses",
-        "description": "Adds more variants for Nether Funguses.",
+        "description": "Adds more variants for Nether Funguses. Warning: causes long download time",
         "filePaths": [
             "/blockstates/crimson_fungus.json",
             "/blockstates/potted_crimson_fungus.json",
@@ -332,7 +332,7 @@
         "id": "netherRoots",
         "label": "Nether Roots",
         "iconType": "png",
-        "description": "Includes variations for Crimson Nether Roots and Warped Nether Roots.",
+        "description": "Includes variations for Crimson Nether Roots and Warped Nether Roots. Warning: causes long download time",
         "filePaths": [
             "/blockstates/crimson_roots.json",
             "/blockstates/potted_crimson_roots.json",
