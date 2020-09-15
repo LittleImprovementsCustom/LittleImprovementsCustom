@@ -8,7 +8,7 @@
     {
         "id": "hotLavaBucket",
         "label": "Hot Lava Bucket",
-        "description": "Makes original Lava Bucket really, really hot.",
+        "description": "Makes original lava bucket really, really hot.",
         "filePaths": ["/textures/item/lava_bucket.png"]
     },
     {
@@ -68,7 +68,7 @@
         "id": "crackedNetherBricks",
         "label": "Cracked Nether Bricks",
         "iconType": "gif",
-        "description": "Improves Cracked Nether Bricks by adding a magma animation in cracks.",
+        "description": "Improves cracked nether bricks by adding a magma animation in cracks.",
         "filePaths": [
             "/optifine/emissive.properties",
             "/textures/block/cracked_nether_bricks.png",
@@ -213,7 +213,7 @@
     {
         "id": "matchingGildedBlackstone",
         "label": "Matching Gilded Blackstone",
-        "description": "Improves top texture of Gilded Blackstone.",
+        "description": "Improves top texture of gilded blackstone.",
         "filePaths": [
             "/models/block/gilded_blackstone.json",
             "/textures/block/gilded_blackstone.png",
@@ -223,7 +223,7 @@
     {
         "id": "soulCampfire",
         "label": "Soul Campfire",
-        "description": "Replaces Oak Logs with Warped Logs and ash with Soul Soil.",
+        "description": "Replaces oak logs with warped logs and ash with soul soil.",
         "incompatibleWith": [{
             "id": "animatedCampfireItems",
             "useInstead": "soulCampfirePlusAnimatedCampfire"
@@ -263,7 +263,7 @@
     {
         "id": "fixedBarrel",
         "label": "Fixed Barrel",
-        "description": "Makes lines on Barrel compatibile with lines on Spruce Planks. Warning: causes long download time",
+        "description": "Makes lines on barrel compatibile with lines on spruce planks. Warning: causes long download time",
         "filePaths": [
             "/blockstates/barrel.json",
             "/models/block/barrel_down.json",
@@ -289,9 +289,9 @@
         ]
     },
     {
-        "id": "netherFunguses",
-        "label": "Nether Funguses",
-        "description": "Adds more variants for Nether Funguses. Warning: causes long download time",
+        "id": "netherFungi",
+        "label": "Nether Fungi",
+        "description": "Adds more variants for nether fungi. Warning: causes long download time",
         "filePaths": [
             "/blockstates/crimson_fungus.json",
             "/blockstates/potted_crimson_fungus.json",
@@ -332,7 +332,7 @@
         "id": "netherRoots",
         "label": "Nether Roots",
         "iconType": "png",
-        "description": "Includes variations for Crimson Nether Roots and Warped Nether Roots. Warning: causes long download time",
+        "description": "Includes variations for crimson roots and warped roots. Warning: causes long download time",
         "filePaths": [
             "/blockstates/crimson_roots.json",
             "/blockstates/potted_crimson_roots.json",
