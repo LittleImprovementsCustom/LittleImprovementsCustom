@@ -119,6 +119,7 @@ app.post("/", function (req, res) {
 					})
 			}
 		})().then(()=>{
+			console.log(entries)
 			dbx.filesUploadSessionFinishBatch({entries:entries})
 				.then(function(response){
 					var checkIntervalID = setInterval(checkBatch,2000)
