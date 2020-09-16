@@ -56,7 +56,6 @@ app.post("/", function (req, res) {
 
 		// create variables with file paths to upload; gets updated later
 		let storageFilesToUpload = defaultStorageFiles
-		console.log(storageFilesToUpload)
 		let packFilePathsToUpload = [packPath+"/pack.mcmeta",packPath+"/pack.png",packPath+"/credits.txt"]
 
 
