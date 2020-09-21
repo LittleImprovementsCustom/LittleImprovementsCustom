@@ -372,5 +372,25 @@
             "/textures/block/warped_roots_4.png",
             "/textures/block/warped_roots_4_pot.png"
         ]
+    },
+    {
+        "id": "anvilSides",
+        "label": "Anvil Sides",
+        "description": "Adds damage texture on anvil sides.",
+        "filePaths": [
+            "/blockstates/anvil.json",
+            "/blockstates/chipped_anvil.json",
+            "/blockstates/damaged_anvil.json",
+            "/models/block/anvil.json",
+            "/models/block/chipped_anvil.json",
+            "/models/block/damaged_anvil.json",
+            "/models/block/template_anvil.json",
+            "/models/block/template_chipped_anvil.json",
+            "/models/block/template_damaged_anvil.json",
+            "/textures/block/anvil.png",
+            "/textures/block/anvil_top.png",
+            "/textures/block/chipped_anvil_top.png",
+            "/textures/block/damaged_anvil_top.png"
+        ]
     }
 ]
