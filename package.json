@@ -2,7 +2,7 @@
 	"name": "littleimprovements-custom",
 	"version": "1.0.0",
 	"description": "Custom Resource Pack Picker By Beatso",
-	"homepage": "https://littleimprovements-custom.beatso1.repl.co/",
+	"homepage": "https://www.littleimprovements-custom.tk/",
 	"main": "app.js",
 	"scripts": {
 		"start": "node app.js"
