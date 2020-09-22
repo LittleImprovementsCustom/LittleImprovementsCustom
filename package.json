@@ -1,7 +1,7 @@
 {
 	"name": "littleimprovements-custom",
 	"version": "1.0.0",
-	"description": "Custom Resource Pack Picker By Beatso",
+	"description": "An open-source resource pack picker made for Minecraft.",
 	"homepage": "https://www.littleimprovements-custom.tk/",
 	"main": "app.js",
 	"scripts": {
