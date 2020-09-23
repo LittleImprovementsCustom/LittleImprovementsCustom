@@ -56,7 +56,7 @@ app.post("/compile", function (req, res) {
 		}
 
 		// create pack
-		const zipPath = "packs/LittleImprovements_"+packID+".zip"
+		const zipPath = "packs/LittleImprovementsCustom_"+packID+".zip"
 		const output = fs.createWriteStream(zipPath)
 		const archive = archiver("zip",{zlib:{level:9}})
 
@@ -101,7 +101,7 @@ app.post("/compile", function (req, res) {
 
 // how to handle a get request, sent by the client side js, to download the already compiled pack
 app.get("/download", (req, res) => {
-	const zipPath = "packs/LittleImprovements_"+req.query.id+".zip"
+	const zipPath = "packs/LittleImprovementsCustom_"+req.query.id+".zip"
 	res.download(zipPath, (error)=>{
 		if (error) res.send("error")
 		else fs.unlinkSync(zipPath)
