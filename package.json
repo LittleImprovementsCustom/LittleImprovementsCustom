@@ -1,8 +1,8 @@
 {
 	"name": "littleimprovements-custom",
 	"version": "1.0.0",
-	"description": "Custom Resource Pack Picker By Beatso",
-	"homepage": "https://littleimprovements-custom.beatso1.repl.co/",
+	"description": "An open-source resource pack picker made for Minecraft.",
+	"homepage": "https://www.littleimprovements-custom.tk/",
 	"main": "app.js",
 	"scripts": {
 		"start": "node app.js"
@@ -21,6 +21,6 @@
 		"nanoid": "^3.1.12"
 	},
 	"devDependencies": {
-		"eslint": "^7.8.1"
+		"eslint": "^7.9.0"
 	}
 }
