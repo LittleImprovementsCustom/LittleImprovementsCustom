@@ -80,9 +80,8 @@ A `*` denotes that this is unnecessary if the module is hidden.
                 "id": "connectedSmoothStone",  // the id of the incompatible pack
                 "useInstead": "honeyJarPlusConnectedSmoothStone"  // the id of the pack to replace the two incompatible packs with
             }
-        ],
-
-        "filePaths": ["/textures/item/honey_bottle.png"]  // the paths of the module's files
+        ]
+        
     }
 ]
 ```
