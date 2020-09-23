@@ -194,13 +194,20 @@
         "iconType": "gif",
         "description": "Adds animation to furnace and small improvements for smoker and blast furnace.",
         "filePaths": [
+            "/models/block/blast_furnace.json",
+            "/models/block/blast_furnace_on.json",
+            "/textures/block/blast_furnace_bottom.png",
+            "/textures/block/blast_furnace_front.png",
             "/textures/block/blast_furnace_front_on.png",
             "/textures/block/blast_furnace_front_on.png.mcmeta",
+            "/textures/block/furnace_front.png",
             "/textures/block/furnace_front_on.png",
             "/textures/block/furnace_front_on.png.mcmeta",
             "/textures/block/smoker_bottom.png",
+            "/textures/block/smoker_front.png",
             "/textures/block/smoker_front_on.png",
             "/textures/block/smoker_front_on.png.mcmeta",
+            "/textures/block/smoker_side.png",
             "/textures/block/smoker_top.png"
         ]
     },
