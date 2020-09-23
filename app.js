@@ -2,32 +2,16 @@
 const express = require("express")
 const Nanoid = require("nanoid")
 const fs = require("fs")
-const Dropbox = require("dropbox").Dropbox
+const archiver = require("archiver")
 require("isomorphic-fetch")
 require("dotenv").config()
 
-// setup Dropbox
-const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN })
-
-let availableModules = []
-for (originalObject of JSON.parse(fs.readFileSync("storage/data/modules.json"))) {
-	const originalFilePaths = originalObject.filePaths
-	let objectToPush = originalObject
-	objectToPush.filePaths=[]
-	for (individualFilePath of originalFilePaths) {
-		objectToPush.filePaths.push({
-			"path":individualFilePath,
-			"data":fs.readFileSync("storage/modules/"+originalObject.id+individualFilePath)
-		})
-	}
-	availableModules.push(objectToPush)
-}
-
-const defaultStorageFiles = ["storage/pack.mcmeta","storage/pack.png","storage/credits.txt"].map(x=>fs.readFileSync(x))
+const availableModules = JSON.parse(fs.readFileSync("storage/data/modules.json"))
 
 // setup express
 const app = express()
 app.use(express.json()) // to support JSON-encoded bodies
+app.use(express.urlencoded({extended:true})) // to support URL-encoded bodies
 
 app.use(express.static("public"))
 app.use("/favicon.ico", express.static("public/logo/favicon.ico"))
@@ -36,28 +20,18 @@ app.use("/favicon.ico", express.static("public/logo/favicon.ico"))
 app.get("/api/modules", (req, res) => res.sendFile(__dirname+"/storage/data/modules.json") )
 app.get("/api/credits", (req, res) => res.sendFile(__dirname+"/storage/data/credits.json") )
 
-// html webpage requests
-app.get("/", (req, res) => res.sendFile(__dirname+"/public/index.html") )
-app.get("/credits", (req, res) => res.sendFile(__dirname+"/public/credits.html") )
-app.get("*", (req, res) => res.sendFile(__dirname+"/public/404.html", 404) ) // 404 page
-
-
-// how to handle a post request, sent by the client-side js
-app.post("/", function (req, res) {
+// how to handle a post request, sent by the client-side js, to compile the pack
+app.post("/compile", function (req, res) {
 	console.log(req.body)
 	if (req.body.new=="true") {
 		
 		// generate id and create pack path
-		const packPath = `/packs/LittleImprovementsCustom_${Nanoid.nanoid(5)}`
+		const packID = Nanoid.nanoid(5)
+		const packPath = "packs/"+packID
 		console.log("pack path = "+packPath)
 
 		// create variable with selected modules; gets updated later
 		let selectedModules = req.body.modules
-
-		// create variables with file paths to upload; gets updated later
-		let storageFilesToUpload = defaultStorageFiles
-		let packFilePathsToUpload = [packPath+"/pack.mcmeta",packPath+"/pack.png",packPath+"/credits.txt"]
-
 
 		// system to deal with incompatibilities
 		for (i of availableModules) {
@@ -81,82 +55,64 @@ app.post("/", function (req, res) {
 			}
 		}
 
-		for (i of availableModules) {
-			if (selectedModules.includes(i.id)) { // if the module is selected
-				for (x of i.filePaths) {
-					storageFilesToUpload=storageFilesToUpload.concat(x.data)
-					packFilePathsToUpload=packFilePathsToUpload.concat(packPath+"/assets/minecraft"+x.path)
-				}
-			}
+		// create pack
+		const zipPath = "packs/"+packID+".zip"
+		const output = fs.createWriteStream(zipPath)
+		const archive = archiver("zip",{zlib:{level:9}})
+
+		output.on("close", ()=>{
+			console.log("pack generated at "+zipPath)
+			// send pack file
+			res.download(__dirname + "\\" + zipPath)
+		})
+
+		output.on("end", ()=>console.log("data has been drained"))
+		archive.on("error", (error)=>{throw error})
+
+		archive.on("warning", (error)=> {
+			if (error.code=="ENOENT") console.warn(error)
+			else throw error
+		})		
+
+		archive.pipe(output)
+
+		// add base files
+		for (i of ["credits.txt","pack.mcmeta","pack.png"]) {
+			archive.file("storage/baseFiles/"+i, {name:i})
 		}
-		
-		(async function () {
-			entries = []
-			const selectedModulesData = JSON.stringify(selectedModules)
-			await dbx.filesUploadSessionStart({
-				contents: selectedModulesData,
-				close: true,
-			})
-				.then(function (response) {
-					// eslint-disable-next-line camelcase
-					entries.push({cursor:{session_id:response.session_id,offset:selectedModulesData.length},commit:{path:packPath+"/selectedModules.json"}})
-				})
-				.catch(function (err) {
-					console.error(err)
-				})
-			for (let [index,val] of storageFilesToUpload.entries()) {
-				await dbx.filesUploadSessionStart({
-					contents: val,
-					close: true,
-				})
-					.then(function (response) {
-						// eslint-disable-next-line camelcase
-						entries.push({cursor:{session_id:response.session_id,offset:val.length},commit:{path:packFilePathsToUpload[index]}})
-					})
-					.catch(function (err) {
-						console.error(err)
-					})
-			}
-		})().then(()=>{
-			console.log(entries)
-			dbx.filesUploadSessionFinishBatch({entries:entries})
-				.then(function(response){
-					var checkIntervalID = setInterval(checkBatch,2000)
-					function checkBatch () {
-						// eslint-disable-next-line camelcase
-						dbx.filesUploadSessionFinishBatchCheck({async_job_id: response.async_job_id})
-							.then(function(output){
-								console.log(output)
-								if (output[".tag"] == "complete" ) {
-									(async function (packPath) {
-										const response = await dbx.sharingCreateSharedLink({path: packPath})
-										return response.url.slice(0, -1)+"1"
-									})(packPath)
-										.then((response)=>res.send(response))
-										.catch((error)=>{
-											res.send("error")
-											console.error(error)
-										})
-									clearInterval(checkIntervalID)
-								}
-							})
-							.catch(function(err){
-								console.error(err)
-							})
-					}
-				}).catch(err => {
-					console.error(err)
-				})
-			
-		}).catch((err)=>{console.error(err)})
 
+		// add selectedModules.json file
+		archive.append(JSON.stringify(selectedModules),{name:"selectedModules.json"})
 
+		// add selected modules
+		for (i of availableModules) {
+			if (selectedModules.includes(i.id)) archive.directory("storage/modules/"+i.id, "assets/minecraft")
+		}
+
+		archive.finalize()
+
+		res.send(packID)
 
 	} else {
 		res.send("sorry ur bad")
 	}
   
 })
+
+// how to handle a get request, sent by the client side js, to download the already compiled pack
+app.get("/download", (req, res) => {
+	const zipPath = "packs/"+req.query.id+".zip"
+	res.download(zipPath, (error)=>{
+		if (error) res.send("error")
+		else fs.unlinkSync(zipPath)
+	})
+	console.log("received get request for "+req.query.id)
+})
+
+// html webpage requests
+app.get("/", (req, res) => res.sendFile(__dirname+"/public/index.html") )
+app.get("/credits", (req, res) => res.sendFile(__dirname+"/public/credits.html") )
+app.get("*", (req, res) => res.sendFile(__dirname+"/public/404.html", 404) ) // 404 page
 
 // listen server with express
 app.listen(process.env.PORT || 3000, 

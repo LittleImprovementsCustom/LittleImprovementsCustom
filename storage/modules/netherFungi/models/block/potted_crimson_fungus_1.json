@@ -1,5 +1,5 @@
 {
-  "parent": "block/flower_pot_cross_custom",
+  "parent": "block/flower_pot_cross_custom_2",
   "textures": {
     "plant": "minecraft:block/crimson_fungus_1",
     "dirt": "minecraft:block/crimson_nylium",

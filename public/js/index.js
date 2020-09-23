@@ -37,25 +37,23 @@ function downloadPack() {
 
 	// show the download toast
 	document.getElementById("download-toast").classList.remove("invisible")
-
+	
 	// send post request to the server
-	var xhr = new XMLHttpRequest()
-	xhr.open("POST", "/", false)
-	xhr.setRequestHeader("Content-Type", "application/json")
-	xhr.send(JSON.stringify( {"new":"true","modules":selectedModules} ))
+	const compilexhr = new XMLHttpRequest()
+	compilexhr.open("POST", "/compile", false)
+	compilexhr.setRequestHeader("Content-Type", "application/json")
+	compilexhr.send(JSON.stringify( {"new":"true","modules":selectedModules} ))
 
 	// show fail toast if the response was "error"
-	if (xhr.response == "error") {
-		// hide the download toast
-		document.getElementById("download-toast").classList.add("invisible")
-		// show fail toast
-		document.getElementById("fail-toast").classList.remove("invisible")
-		// return, so the user doesnt get redirected
-		return
+	if (compilexhr.response == "error") {
+		document.getElementById("download-toast").classList.add("invisible") // hide the download toast
+		document.getElementById("fail-toast").classList.remove("invisible") // show fail toast
+		return // return, so the user doesnt get redirected
 	}
-    
-	// download
-	window.location.href = xhr.response
+
+	// download pack
+	window.open("/download?id="+compilexhr.response)
+
 }
 
 
