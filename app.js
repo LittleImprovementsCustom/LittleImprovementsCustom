@@ -26,8 +26,6 @@ app.get("/api/credits", (req, res) => res.sendFile(__dirname+"/storage/data/cred
 // how to handle a post request, sent by the client-side js, to compile the pack
 app.post("/download", function (req, res) {
 
-	console.log(req.body)
-
 	// generate id and create pack path
 	const packID = Nanoid.nanoid(5)
 	const packPath = "packs/"+packID
