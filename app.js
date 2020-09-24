@@ -3,14 +3,18 @@ const express = require("express")
 const Nanoid = require("nanoid")
 const fs = require("fs")
 const archiver = require("archiver")
+const Dropbox = require("dropbox").Dropbox
 require("isomorphic-fetch")
 require("dotenv").config()
+
+// setup Dropbox
+const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN })
 
 const availableModules = JSON.parse(fs.readFileSync("storage/data/modules.json"))
 
 // setup express
 const app = express()
-app.use(express.urlencoded({extended:true})) // to support URL-encoded bodies
+app.use(express.json()) // to support JSON-encoded bodies 
 
 app.use(express.static("public"))
 app.use("/favicon.ico", express.static("public/logo/favicon.ico"))
@@ -20,7 +24,9 @@ app.get("/api/modules", (req, res) => res.sendFile(__dirname+"/storage/data/modu
 app.get("/api/credits", (req, res) => res.sendFile(__dirname+"/storage/data/credits.json") )
 
 // how to handle a post request, sent by the client-side js, to compile the pack
-app.get("/download", function (req, res) {
+app.post("/download", function (req, res) {
+
+	console.log(req.body)
 
 	// generate id and create pack path
 	const packID = Nanoid.nanoid(5)
@@ -28,7 +34,7 @@ app.get("/download", function (req, res) {
 	console.log("pack path = "+packPath)
 
 	// create variable with selected modules; gets updated later
-	let selectedModules = JSON.parse(req.query.modules)
+	let selectedModules = req.body.modules
 	console.log(selectedModules)
 
 	// system to deal with incompatibilities
@@ -60,10 +66,13 @@ app.get("/download", function (req, res) {
 
 	output.on("close", ()=>{
 		console.log("pack generated at "+zipPath)
-		res.download(zipPath, (error)=>{
-			if (error) res.send("error")
-			else fs.unlinkSync(zipPath)
-		})
+		dbx.filesUpload({path:"/"+zipPath,contents:fs.readFileSync(zipPath)})
+			.then(()=>{
+				dbx.sharingCreateSharedLink({path:"/"+zipPath})
+					.then(shareLink=>res.send(shareLink.url.slice(0, -1)+"1"))
+					.catch(error=>console.error(error))
+			})
+			.catch(error=>console.error(error))
 	})
 
 	output.on("end", ()=>console.log("data has been drained"))
