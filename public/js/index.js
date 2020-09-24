@@ -37,22 +37,9 @@ function downloadPack() {
 
 	// show the download toast
 	document.getElementById("download-toast").classList.remove("invisible")
-	
-	// send post request to the server
-	const compilexhr = new XMLHttpRequest()
-	compilexhr.open("POST", "/compile", false)
-	compilexhr.setRequestHeader("Content-Type", "application/json")
-	compilexhr.send(JSON.stringify( {"new":"true","modules":selectedModules} ))
-
-	// show fail toast if the response was "error"
-	if (compilexhr.response == "error") {
-		document.getElementById("download-toast").classList.add("invisible") // hide the download toast
-		document.getElementById("fail-toast").classList.remove("invisible") // show fail toast
-		return // return, so the user doesnt get redirected
-	}
 
 	// download pack
-	window.open("/download?id="+compilexhr.response)
+	window.open("/download?modules="+JSON.stringify(selectedModules))
 
 }
 

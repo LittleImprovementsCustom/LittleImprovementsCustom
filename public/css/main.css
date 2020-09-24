@@ -136,14 +136,7 @@ a, a:hover, a:active, a:visited {
 	right: 5%;
 	bottom: 5%;
 	color: var(--toast-font-color);
-}
-
-.success-toast {
 	background-color: var(--success-background);
-}
-
-.fail-toast {
-	background-color: var(--fail-background);
 }
 
 .invisible {
