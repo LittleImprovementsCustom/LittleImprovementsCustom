@@ -69,7 +69,10 @@ app.post("/download", function (req, res) {
 		dbx.filesUpload({path:"/"+zipPath,contents:fs.readFileSync(zipPath)})
 			.then(()=>{
 				dbx.sharingCreateSharedLink({path:"/"+zipPath})
-					.then(shareLink=>res.send(shareLink.url.slice(0, -1)+"1"))
+					.then(shareLink=>{
+						res.send(shareLink.url.slice(0, -1)+"1")
+						fs.unlinkSync(zipPath)
+					})
 					.catch(error=>console.error(error))
 			})
 			.catch(error=>console.error(error))
