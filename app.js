@@ -91,7 +91,7 @@ app.post("/compile", function (req, res) {
 
 		archive.finalize()
 
-		res.send(packID)
+		output.on("close", ()=>res.send(packID))
 
 	} else {
 		res.send("sorry ur bad")
