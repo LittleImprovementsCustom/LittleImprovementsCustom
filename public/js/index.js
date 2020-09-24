@@ -27,6 +27,9 @@ function mouseOut() {
 
 // HANDLE THE USER PRESSING THE DOWNLOAD BUTTON
 function downloadPack() {
+
+	alert("There is currently an issue where Chrome is flagging downloads from Custom as suspicious.\nWe have contacted Google to appeal and they are looking into the issue.\n\nIn the meantime, here is how to avoid the issue:\nOnce the pack downloads, at the bottom of your screen, press the up arrow to the right of the download. Then press Keep, and your pack should download as usual.\nIf you have any queries, feel free to get in touch at discord.gg/bNcZjFe")
+	
 	// stop the user downloading a pack with nothing selected
 	if (selectedModules.length==0) {
 		// let the user know they can't download a pack with no modules
