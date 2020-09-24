@@ -53,7 +53,7 @@ function downloadPack() {
 	}
 
 	// download pack
-	window.open(request.response)
+	window.location.replace(request.response)
 
 }
 
