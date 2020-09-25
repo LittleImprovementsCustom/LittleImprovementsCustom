@@ -134,5 +134,10 @@
         "id": "anvilSides",
         "label": "Anvil Sides",
         "description": "Adds damage texture on anvil sides."
+    },
+    {
+        "id": "knowledgeBookFix",
+        "label": "Knowledge Book Fix",
+        "description": "Corrects GUIs to use the new JAPPA knowledge book texture."
     }
 ]
