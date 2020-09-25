@@ -73,7 +73,7 @@
     {
         "id": "purpleEndPortalFrame",
         "label": "Purple End Portal Frame",
-        "description": "Makes end portal frame purple when filled."
+        "description": "Makes end portal frame purple instead of green."
     },
     {
         "id": "connectedSmoothStone",
