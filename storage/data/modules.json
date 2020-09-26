@@ -2,18 +2,21 @@
     {
         "id": "honeyJar",
         "label": "Honey Jar",
-        "description": "Changes honey bottle to a jar of honey, and renames the item."
+        "description": "Changes honey bottle to a jar of honey, and renames the item.",
+        "category": "aesthetic"
     },
     {
         "id": "hotLavaBucket",
         "label": "Hot Lava Bucket",
-        "description": "Makes original lava bucket really, really hot."
+        "description": "Makes original lava bucket really, really hot.",
+        "category": "aesthetic"
     },
     {
         "id": "animatedCampfireItems",
         "label": "Animated Campfire Items",
         "iconType": "gif",
         "description": "Animates campfire and soul campfire items in the inventory and in a player's hand.",
+        "category": "aesthetic",
         "incompatibleWith": [{
             "id": "soulCampfire",
             "useInstead": "soulCampfirePlusAnimatedCampfire"
@@ -22,90 +25,115 @@
     {
         "id": "restockClock",
         "label": "Restock Clock",
-        "description": "Makes clocks show when villagers can restock their trades."
+        "description": "Makes clocks show when villagers can restock their trades.",
+        "category": "utility"
     },
     {
         "id": "betterSignIcons",
         "label": "Better Sign Icons",
-        "description": "Changes sign inventory icons to be more similar to the block."
+        "description": "Changes sign inventory icons to be more similar to the block.",
+        "category": "fixes"
     },
     {
         "id": "crackedNetherBricks",
         "label": "Cracked Nether Bricks",
         "iconType": "gif",
-        "description": "Improves cracked nether bricks by adding a magma animation in cracks."
+        "description": "Improves cracked nether bricks by adding a magma animation in cracks.",
+        "category": "aesthetic"
     },
     {
         "id": "obsidianEnderChest",
         "label": "Obsidian Ender Chest",
-        "description": "Removes green and replaces it with an obsidian-like texture."
+        "description": "Removes green and replaces it with an obsidian-like texture.",
+        "category": "fixes"
     },
     {
         "id": "noNauseaOverlay",
         "label": "No Nausea Overlay",
-        "description": "Removes the green overlay from nausea when distortion effects is set to off."
+        "description": "Removes the green overlay from nausea when distortion effects is set to off.",
+        "category": "utility"
     },
     {
         "id": "betterHelmets",
         "label": "Better Helmets",
-        "description": "Makes your face more visible when wearing a helmet."
+        "description": "Makes your face more visible when wearing a helmet.",
+        "category": "utility"
     },
     {
         "id": "egglessSlimeBlock",
         "label": "Eggless Slime Block",
-        "description": "Removes the \"egg\" in the middle of slime blocks."
+        "description": "Removes the \"egg\" in the middle of slime blocks.",
+        "category": "aesthetic"
     },
     {
         "id": "egglessHoneyBlock",
         "label": "Eggless Honey Block",
-        "description": "Removes the \"egg\" in the middle of honey blocks."
+        "description": "Removes the \"egg\" in the middle of honey blocks.",
+        "category": "aesthetic"
     },
     {
         "id": "flowerGolem",
         "label": "Flower Golem",
-        "description": "Makes poppies bloom on the texture of the iron golem."
+        "description": "Makes poppies bloom on the texture of the iron golem.",
+        "category": "aesthetic"
     },
     {
         "id": "fancyLlamaDecor",
         "label": "Fancy Llama Decor",
-        "description": "Gives llamas fancier carpet patterns."
+        "description": "Gives llamas fancier carpet patterns.",
+        "category": "aesthetic"
     },
     {
         "id": "purpleEndPortalFrame",
         "label": "Purple End Portal Frame",
+<<<<<<< Updated upstream
         "description": "Makes end portal frame purple instead of green."
+=======
+<<<<<<< Updated upstream
+        "description": "Makes end portal frame purple when filled."
+=======
+        "description": "Makes end portal frame purple instead of green.",
+        "category": "aesthetic"
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     },
     {
         "id": "connectedSmoothStone",
         "label": "Connected Smooth Stone",
-        "description": "Connected smooth stone. No OptiFine required."
+        "description": "Connected smooth stone. No OptiFine required.",
+        "category": "aesthetic"
     },
     {
         "id": "livingDragon",
         "label": "Living Dragon",
         "iconType": "gif",
-        "description": "Makes dragon egg more detailed and implements animation."
+        "description": "Makes dragon egg more detailed and implements animation.",
+        "category": "aesthetic"
     },
     {
         "id": "animatedFurnaces",
         "label": "Animated Furnaces",
         "iconType": "gif",
-        "description": "Adds animation to furnace and small improvements for smoker and blast furnace."
+        "description": "Adds animation to furnace and small improvements for smoker and blast furnace.",
+        "category": "fixes"
     },
     {
         "id": "detailedHearts",
         "label": "Detailed Hearts",
-        "description": "Improves hearts, armour points, attack indicator and makes ping icons more colourful."
+        "description": "Improves hearts, armour points, attack indicator and makes ping icons more colourful.",
+        "category": "aesthetic"
     },
     {
         "id": "matchingGildedBlackstone",
         "label": "Matching Gilded Blackstone",
-        "description": "Improves top texture of gilded blackstone."
+        "description": "Improves top texture of gilded blackstone.",
+        "category": "fixes"
     },
     {
         "id": "soulCampfire",
         "label": "Soul Campfire",
         "description": "Replaces oak logs with warped logs and ash with soul soil.",
+        "category": "fixes",
         "incompatibleWith": [{
             "id": "animatedCampfireItems",
             "useInstead": "soulCampfirePlusAnimatedCampfire"
@@ -118,41 +146,72 @@
     {
         "id": "fixedBarrel",
         "label": "Fixed Barrel",
-        "description": "Makes lines on barrel compatibile with lines on spruce planks."
+        "description": "Makes lines on barrel compatibile with lines on spruce planks.",
+        "category": "fixes"
     },
     {
         "id": "netherFungi",
         "label": "Nether Fungi",
-        "description": "Adds more variants for nether fungi."
+        "description": "Adds more variants for nether fungi.",
+        "category": "aesthetic"
     },
     {
         "id": "netherRoots",
         "label": "Nether Roots",
-        "description": "Includes variations for crimson roots and warped roots."
+        "description": "Includes variations for crimson roots and warped roots.",
+        "category": "aesthetic"
     },
     {
         "id": "anvilSides",
         "label": "Anvil Sides",
+<<<<<<< Updated upstream
         "description": "Adds damage texture on anvil sides."
+<<<<<<< Updated upstream
+=======
+=======
+        "description": "Adds damage texture on anvil sides.",
+        "category": "utility"
+>>>>>>> Stashed changes
     },
     {
         "id": "knowledgeBookFix",
         "label": "Knowledge Book Fix",
+<<<<<<< Updated upstream
         "description": "Corrects GUIs to use the new JAPPA knowledge book texture."
+=======
+        "description": "Corrects GUIs to use the new JAPPA knowledge book texture.",
+        "category": "fixes"
+>>>>>>> Stashed changes
     },
     {
         "id": "emissiveOres",
         "label": "Emissive Ores",
+<<<<<<< Updated upstream
         "description": "Makes ores glow in the dark. Requires OptiFine. By AbdulPlayz03"
+=======
+        "description": "Makes ores glow in the dark. Requires OptiFine. By AbdulPlayz03",
+        "category": "aesthetic"
+>>>>>>> Stashed changes
     },
     {
         "id": "targetScore",
         "label": "Target Score",
+<<<<<<< Updated upstream
         "description": "Targets show their power level when hit with a projectile."
+=======
+        "description": "Targets show their power level when hit with a projectile.",
+        "category": "utility"
+>>>>>>> Stashed changes
     },
     {
         "id": "arrowedDroppersDispensers",
         "label": "Arrowed Droppers & Dispensers",
+<<<<<<< Updated upstream
         "description": "Shows an arrow on all sides of dispensers and droppers so you can differentiate them and know which way they are facing."
+=======
+        "description": "Shows an arrow on all sides of dispensers and droppers so you can differentiate them and know which way they are facing.",
+        "category": "utility"
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     }
 ]
