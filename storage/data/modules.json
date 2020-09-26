@@ -182,5 +182,11 @@
         "label": "Arrowed Droppers & Dispensers",
         "description": "Shows an arrow on all sides of dispensers and droppers so you can differentiate them and know which way they are facing.",
         "category": "utility"
+    },
+    {
+        "id": "shovelsToSpoons",
+        "label": "Shovels to Spoons",
+        "description": "Renames shovels to spoons in-game.",
+        "category": "aesthetic"
     }
 ]
