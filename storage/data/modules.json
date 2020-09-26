@@ -188,5 +188,10 @@
         "label": "Shovels to Spoons",
         "description": "Renames shovels to spoons in-game.",
         "category": "aesthetic"
+    },
+    {
+        "id": "cleanerMaps",
+        "label": "Cleaner Maps",
+        "description": "Changes the border of maps to be cleaner and less torn."
     }
 ]
