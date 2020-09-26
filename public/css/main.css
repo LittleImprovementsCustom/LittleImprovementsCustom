@@ -86,7 +86,6 @@ body {
 .selection-box {
 	width: auto;
 	height: auto;
-	min-height: 180px;
 	border-radius: 2vw;
 	padding: 5px;
 	margin: 20px;
