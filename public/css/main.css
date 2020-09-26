@@ -85,11 +85,9 @@ body {
 
 .selection-box {
 	width: auto;
-	height: auto;
 	border-radius: 2vw;
 	padding: 5px;
 	margin: 20px;
-	color: var(--font-color);
 }
 
 .selectable {
