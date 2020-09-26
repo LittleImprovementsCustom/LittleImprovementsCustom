@@ -60,30 +60,34 @@ function downloadPack() {
 
 // DYNAMICALLY ADD MODULE SELECTORS
 
-// function to add html elements
-function createModuleSelector(moduleid, modulelabel, icontype, moduledesc) {
+// function to add html pack selectors
+function createModuleSelector(data) {
+
+	if (data.hidden) return // stop if the module should be hidden
 
 	const div = document.createElement("div")
-	div.setAttribute("class","grid-item selection-box unselected")
-	div.setAttribute("onclick", `javascript: toggleSelected('${moduleid}')`)
-	div.setAttribute("id", moduleid)
+	div.setAttribute("class","grid-item selection-box selectable unselected")
+	div.setAttribute("onclick", `javascript: toggleSelected('${data.id}')`)
+	div.setAttribute("id", data.id)
 	document.getElementById("pack-selector-container").appendChild(div)
 
 	const label = document.createElement("p")
 	label.setAttribute("class", "pack-label")
-	label.appendChild(document.createTextNode(modulelabel))
+	label.appendChild(document.createTextNode(data.label))
 	div.appendChild(label)
 
+	let iconType = data.iconType
+	if (iconType==undefined) iconType = "png"
 	const icon = document.createElement("img")
 	icon.setAttribute("class","pack-icon")
-	icon.setAttribute("src",`icons/${moduleid}.${icontype}`)
-	icon.setAttribute("id",moduleid+"Img")
+	icon.setAttribute("src",`icons/${data.id}.${iconType}`)
+	icon.setAttribute("id",data.id+"Img")
 	div.appendChild(icon)
 
 	const desc = document.createElement("p")
 	desc.setAttribute("class","pack-desc invisible")
-	desc.setAttribute("id", moduleid+"Desc")
-	desc.appendChild(document.createTextNode(moduledesc))
+	desc.setAttribute("id", data.id+"Desc")
+	desc.appendChild(document.createTextNode(data.description))
 	div.appendChild(desc)
 
 	div.addEventListener("mouseover", mouseOver)
@@ -91,31 +95,48 @@ function createModuleSelector(moduleid, modulelabel, icontype, moduledesc) {
 
 }
 
-// function to read JSON file containing data
-function loadJSON(callback) {   
-	const xobj = new XMLHttpRequest()
-	xobj.overrideMimeType("application/json")
-	xobj.open("GET", "/api/modules", true)
-	xobj.onreadystatechange = function () {
-		if (xobj.readyState == 4 && xobj.status == "200") {
-			// Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-			callback(xobj.responseText)
-		}
-	}
-	xobj.send(null)
+// function to category headers
+function createCategoryHeader(category) {
+
+	const div = document.createElement("div")
+	div.setAttribute("class","grid-item selection-box section-header unselected")
+	document.getElementById("pack-selector-container").appendChild(div)
+
+	const label = document.createElement("p")
+	label.appendChild(document.createTextNode(category))
+	div.appendChild(label)
+
 }
 
-// function to load JSON then send to be added to HTML
-loadJSON(function(response) {
-	// Parse JSON string into object
-	var actualJSON = JSON.parse(response)
-	for (i in actualJSON) {
-		const data = actualJSON[i]
-		if ((!data.hidden)||data.hidden==undefined) { // module should not be hidden
-			let iconType
-			if (data.iconType==undefined) iconType = "png"
-			else iconType = data.iconType
-			createModuleSelector(data.id,data.label,iconType,data.description) // add module to webpage
+//  read JSON file containing data
+const xobj = new XMLHttpRequest()
+xobj.overrideMimeType("application/json")
+xobj.open("GET", "/api/modules", true)
+xobj.onreadystatechange = function () {
+	if (xobj.readyState == 4 && xobj.status == "200") {
+
+		// get JSON and add to HTML
+		const actualJSON = JSON.parse(xobj.responseText) // Parse JSON string into object
+		let categories = {
+			"aesthetic": [],
+			"utility": [],
+			"fixes": []
 		}
+		console.log(actualJSON)
+		for (i of actualJSON) {
+			if (i.category=="aesthetic") categories.aesthetic.push(i)
+			else if (i.category=="utility") categories.utility.push(i)
+			else if (i.category=="fixes") categories.fixes.push(i)
+			else categories.aesthetic.push(i)
+		}
+
+		createCategoryHeader("Aesthetic")
+		for (data of categories.aesthetic) {createModuleSelector(data)}
+		createCategoryHeader("Utility")
+		for (data of categories.utility) {createModuleSelector(data)}
+		createCategoryHeader("Fixes & Inconsistencies")
+		for (data of categories.fixes) {createModuleSelector(data)}
+
 	}
-})
+}
+xobj.send(null)

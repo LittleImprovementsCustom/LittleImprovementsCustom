@@ -2,7 +2,7 @@
 function createModuleSelector(name, userlink, uuid, userdesc) {
 
 	const div = document.createElement("div")
-	div.setAttribute("class","grid-item selection-box unselected")
+	div.setAttribute("class","grid-item selection-box selectable unselected")
 	div.setAttribute("onclick", `location.href='${userlink}'`)
 	document.getElementById("pack-selector-container").appendChild(div)
 
