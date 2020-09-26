@@ -86,15 +86,8 @@
     {
         "id": "purpleEndPortalFrame",
         "label": "Purple End Portal Frame",
-<<<<<<< Updated upstream
-        "description": "Makes end portal frame purple instead of green."
-=======
-<<<<<<< Updated upstream
-        "description": "Makes end portal frame purple when filled."
-=======
         "description": "Makes end portal frame purple instead of green.",
         "category": "aesthetic"
->>>>>>> Stashed changes
 >>>>>>> Stashed changes
     },
     {
@@ -164,54 +157,31 @@
     {
         "id": "anvilSides",
         "label": "Anvil Sides",
-<<<<<<< Updated upstream
-        "description": "Adds damage texture on anvil sides."
-<<<<<<< Updated upstream
-=======
-=======
         "description": "Adds damage texture on anvil sides.",
         "category": "utility"
->>>>>>> Stashed changes
     },
     {
         "id": "knowledgeBookFix",
         "label": "Knowledge Book Fix",
-<<<<<<< Updated upstream
-        "description": "Corrects GUIs to use the new JAPPA knowledge book texture."
-=======
         "description": "Corrects GUIs to use the new JAPPA knowledge book texture.",
         "category": "fixes"
->>>>>>> Stashed changes
     },
     {
         "id": "emissiveOres",
         "label": "Emissive Ores",
-<<<<<<< Updated upstream
-        "description": "Makes ores glow in the dark. Requires OptiFine. By AbdulPlayz03"
-=======
         "description": "Makes ores glow in the dark. Requires OptiFine. By AbdulPlayz03",
         "category": "aesthetic"
->>>>>>> Stashed changes
     },
     {
         "id": "targetScore",
         "label": "Target Score",
-<<<<<<< Updated upstream
-        "description": "Targets show their power level when hit with a projectile."
-=======
         "description": "Targets show their power level when hit with a projectile.",
         "category": "utility"
->>>>>>> Stashed changes
     },
     {
         "id": "arrowedDroppersDispensers",
         "label": "Arrowed Droppers & Dispensers",
-<<<<<<< Updated upstream
-        "description": "Shows an arrow on all sides of dispensers and droppers so you can differentiate them and know which way they are facing."
-=======
         "description": "Shows an arrow on all sides of dispensers and droppers so you can differentiate them and know which way they are facing.",
         "category": "utility"
->>>>>>> Stashed changes
->>>>>>> Stashed changes
     }
 ]
