@@ -85,15 +85,8 @@ body {
 
 .selection-box {
 	width: auto;
-<<<<<<< Updated upstream
 	height: auto;
-<<<<<<< Updated upstream
 	min-height: 180px;
-=======
-	background-color: var(--emphasis-background);
-=======
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 	border-radius: 2vw;
 	padding: 5px;
 	margin: 20px;
