@@ -139,5 +139,10 @@
         "id": "knowledgeBookFix",
         "label": "Knowledge Book Fix",
         "description": "Corrects GUIs to use the new JAPPA knowledge book texture."
+    },
+    {
+        "id": "targetScore",
+        "label": "Target Score",
+        "description": "Targets show their power level when hit with a projectile."
     }
 ]
