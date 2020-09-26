@@ -149,5 +149,10 @@
         "id": "targetScore",
         "label": "Target Score",
         "description": "Targets show their power level when hit with a projectile."
+    },
+    {
+        "id": "arrowedDroppersDispensers",
+        "label": "Arrowed Droppers & Dispensers",
+        "description": "Shows an arrow on all sides of dispensers and droppers so you can differentiate them and know which way they are facing."
     }
 ]

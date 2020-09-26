@@ -1,0 +1,85 @@
+{
+    "parent": "block/block",
+    "textures": {
+        "top": "block/dispenser_top_arrow",
+        "front": "block/dispenser_front_vertical",
+		"back": "block/dispenser_top_indicator",
+        "particle": "block/dispenser_top"
+    },
+    "elements": [
+        {
+            "from": [
+                0, 
+                0,
+                0
+            ],
+            "to": [
+                16,
+                16,
+                16
+            ],
+            "faces": {
+                "down": {
+                    "uv": [
+                        16,
+                        16,
+                        0,
+                        0
+                    ],
+                    "texture": "#back",
+                    "cullface": "down"
+                },
+                "up": {
+                    "uv": [
+                        16,
+                        0,
+                        0,
+                        16
+                    ],
+                    "texture": "#front",
+                    "cullface": "up"
+                },
+                "north": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#top",
+                    "cullface": "north"
+                },
+                "south": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#top",
+                    "cullface": "south"
+                },
+                "west": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#top",
+                    "cullface": "west"
+                },
+                "east": {
+                    "uv": [
+                        16,
+                        0,
+                        0,
+                        16
+                    ],
+                    "texture": "#top",
+                    "cullface": "east"
+                }
+            }
+        }
+    ]
+}
