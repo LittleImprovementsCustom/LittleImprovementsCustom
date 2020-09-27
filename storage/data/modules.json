@@ -60,9 +60,9 @@
         "category": "utility"
     },
     {
-        "id": "egglessSlimeBlock",
-        "label": "Eggless Slime Block",
-        "description": "Removes the \"egg\" in the middle of slime blocks.",
+        "id": "egglessSlime",
+        "label": "Eggless Slime",
+        "description": "Removes the \"egg\" in the middle of slime blocks and mobs.",
         "category": "aesthetic"
     },
     {
