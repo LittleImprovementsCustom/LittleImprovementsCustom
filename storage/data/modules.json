@@ -179,8 +179,8 @@
     },
     {
         "id": "arrowedDroppersDispensers",
-        "label": "Arrowed Droppers & Dispensers",
-        "description": "Shows an arrow on all sides of dispensers and droppers so you can differentiate them and know which way they are facing.",
+        "label": "Arrowed Dispensers",
+        "description": "Shows arrows on droppers and dispensers so you can differentiate them and know which way they are facing.",
         "category": "utility"
     },
     {
