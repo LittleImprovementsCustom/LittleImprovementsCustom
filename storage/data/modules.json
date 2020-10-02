@@ -16,7 +16,7 @@
         "label": "Animated Campfire Items",
         "iconType": "gif",
         "description": "Animates campfire and soul campfire items in the inventory and in a player's hand.",
-        "category": "aesthetic",
+        "category": "fixes",
         "incompatibleWith": [{
             "id": "soulCampfire",
             "useInstead": "soulCampfirePlusAnimatedCampfire"
