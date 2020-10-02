@@ -193,5 +193,11 @@
         "id": "cleanerMaps",
         "label": "Cleaner Maps",
         "description": "Changes the border of maps to be cleaner and less torn."
+    },
+    {
+        "id": "variatedBricks",
+        "label": "Variated Bricks",
+        "description": "Makes bricks vary in colour.",
+        "category": "aesthetic"
     }
 ]
