@@ -193,5 +193,27 @@
         "id": "cleanerMaps",
         "label": "Cleaner Maps",
         "description": "Changes the border of maps to be cleaner and less torn."
+    },
+	{
+        "id": "daggers",
+        "label": "Daggers",
+        "description": "Makes all swords shorter and renames them.",
+		"category": "utility"
+    },
+	{
+        "id": "tinyMeals",
+        "label": "Tiny Meals",
+        "description": "Changes food items models to small, so it's not covering as much screen.",
+		"category": "utility"
+    },
+	{
+        "id": "shinyClocks",
+        "label": "Shiny Clocks",
+        "description": "Changes clock texture to fit more new textures style."
+    },
+	{
+        "id": "warted",
+        "label": "Warted",
+        "description": "Changes wart crops, blocks and item textures to not be as ugly as before."
     }
 ]
