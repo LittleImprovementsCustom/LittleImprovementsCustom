@@ -203,7 +203,7 @@
 	{
         "id": "tinyMeals",
         "label": "Tiny Meals",
-        "description": "Changes food items models to small, so it's not covering as much screen.",
+        "description": "Changes food items models to be smaller, so it's not covering as much of the screen.",
 		"category": "utility"
     },
 	{
