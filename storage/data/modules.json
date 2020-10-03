@@ -209,7 +209,8 @@
 	{
         "id": "shinyClocks",
         "label": "Shiny Clocks",
-        "description": "Changes clock texture to fit more new textures style."
+        "description": "Changes clock texture to fit more new textures style.",
+        "category": "fixes"
     },
 	{
         "id": "warted",
