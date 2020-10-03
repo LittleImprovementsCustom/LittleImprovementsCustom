@@ -16,7 +16,7 @@
         "label": "Animated Campfire Items",
         "iconType": "gif",
         "description": "Animates campfire and soul campfire items in the inventory and in a player's hand.",
-        "category": "aesthetic",
+        "category": "fixes",
         "incompatibleWith": [{
             "id": "soulCampfire",
             "useInstead": "soulCampfirePlusAnimatedCampfire"
@@ -179,8 +179,8 @@
     },
     {
         "id": "arrowedDroppersDispensers",
-        "label": "Arrowed Droppers & Dispensers",
-        "description": "Shows an arrow on all sides of dispensers and droppers so you can differentiate them and know which way they are facing.",
+        "label": "Arrowed Dispensers",
+        "description": "Shows arrows on droppers and dispensers so you can differentiate them and know which way they are facing.",
         "category": "utility"
     },
     {
@@ -215,5 +215,11 @@
         "id": "warted",
         "label": "Warted",
         "description": "Changes wart crops, blocks and item textures to not be as ugly as before."
+    },
+    {
+        "id": "variatedBricks",
+        "label": "Variated Bricks",
+        "description": "Makes bricks vary in colour.",
+        "category": "aesthetic"
     }
 ]
