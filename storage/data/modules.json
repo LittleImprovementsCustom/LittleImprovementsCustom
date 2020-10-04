@@ -223,10 +223,10 @@
         "label": "Shiny Clocks",
         "description": "Changes clock texture to fit more new textures style.",
         "category": "fixes",
-        "incompatibleWith": {
+        "incompatibleWith": [{
             "id": "restockClock",
             "useInstead": "restockAndShinyClocks"
-        }
+        }]
     },
 	{
         "id": "warted",
