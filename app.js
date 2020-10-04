@@ -91,8 +91,9 @@ app.post("/download", function (req, res) {
 		archive.file("storage/baseFiles/"+i, {name:i})
 	}
 
-	// add selectedModules.json file
-	archive.append(JSON.stringify(selectedModules),{name:"selectedModules.json"})
+	// add selectedModules.txt file
+	const infoText = `Little Improvements: Custom\nDownloaded: ${new Date().toUTCString()}\nID: ${packID}\n\nSelected modules:\n${selectedModules.join("\n")}`
+	archive.append(infoText,{name:"selectedModules.txt"})
 
 	// add selected modules
 	for (i of availableModules) {
