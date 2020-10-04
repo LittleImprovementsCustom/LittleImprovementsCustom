@@ -26,7 +26,11 @@
         "id": "restockClock",
         "label": "Restock Clock",
         "description": "Makes clocks show when villagers can restock their trades.",
-        "category": "utility"
+        "category": "utility",
+        "incompatibleWith": {
+            "id": "shinyClocks",
+            "useInstead": "restockAndShinyClocks"
+        }
     },
     {
         "id": "betterSignIcons",
@@ -218,7 +222,11 @@
         "id": "shinyClocks",
         "label": "Shiny Clocks",
         "description": "Changes clock texture to fit more new textures style.",
-        "category": "fixes"
+        "category": "fixes",
+        "incompatibleWith": {
+            "id": "restockClock",
+            "useInstead": "restockAndShinyClocks"
+        }
     },
 	{
         "id": "warted",
@@ -233,6 +241,10 @@
     },
     {
         "id": "daggersAndSpoons",
+        "hidden": true
+    },
+    {
+        "id": "restockAndShinyClocks",
         "hidden": true
     }
 ]
