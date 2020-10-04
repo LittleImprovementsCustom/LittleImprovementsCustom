@@ -187,7 +187,11 @@
         "id": "shovelsToSpoons",
         "label": "Shovels to Spoons",
         "description": "Renames shovels to spoons in-game.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "incompatibleWith":[{
+            "id": "daggers",
+            "useInstead": "daggersAndSpoons"
+        }]
     },
     {
         "id": "cleanerMaps",
@@ -198,7 +202,11 @@
         "id": "daggers",
         "label": "Daggers",
         "description": "Makes all swords shorter and renames them.",
-		"category": "utility"
+        "category": "utility",
+        "incompatibleWith": [{
+            "id": "shovelsToSpoons",
+            "useInstead": "daggersAndSpoons"
+        }]
     },
 	{
         "id": "tinyMeals",
@@ -222,5 +230,9 @@
         "label": "Variated Bricks",
         "description": "Makes bricks vary in colour.",
         "category": "aesthetic"
+    },
+    {
+        "id": "daggersAndSpoons",
+        "hidden": true
     }
 ]
