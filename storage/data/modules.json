@@ -27,10 +27,10 @@
         "label": "Restock Clock",
         "description": "Makes clocks show when villagers can restock their trades.",
         "category": "utility",
-        "incompatibleWith": {
+        "incompatibleWith": [{
             "id": "shinyClocks",
             "useInstead": "restockAndShinyClocks"
-        }
+        }]
     },
     {
         "id": "betterSignIcons",
