@@ -66,10 +66,10 @@ app.post("/download", function (req, res) {
 		console.log("pack generated at "+zipPath)
 		dbx.filesUpload({path:"/"+zipPath,contents:fs.readFileSync(zipPath)})
 			.then(()=>{
-				dbx.sharingCreateSharedLink({path:"/"+zipPath})
+				dbx.filesGetTemporaryLink({path:"/"+zipPath})
 					.then(shareLink=>{
-						res.send(shareLink.url.slice(0, -1)+"1")
-						fs.unlinkSync(zipPath)
+						res.send(shareLink.link) // send download link
+						fs.unlinkSync(zipPath) // delete zip from local storage
 					})
 					.catch(error=>console.error(error))
 			})
