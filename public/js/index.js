@@ -122,7 +122,6 @@ xobj.onreadystatechange = function () {
 			"utility": [],
 			"fixes": []
 		}
-		console.log(actualJSON)
 		for (i of actualJSON) {
 			if (i.category=="aesthetic") categories.aesthetic.push(i)
 			else if (i.category=="utility") categories.utility.push(i)
