@@ -35,22 +35,22 @@ app.post("/download", function (req, res) {
 	let selectedModules = req.body.modules
 	console.log(selectedModules)
 
-	// system to deal with incompatibilities
+	// system to deal with merged packs
 	for (i of availableModules) {
-		const incompatibilities = i.incompatibleWith
+		const merges = i.merges
 		if (
-			( incompatibilities!=undefined && incompatibilities.length!=0 ) // this module has incompatibilities
+			( merges!=undefined && merges.length!=0 ) // this module has merges
 				&& ( selectedModules.includes(i.id) ) // this module has been selected
 		) {
-			for (n of incompatibilities) {
-				if (selectedModules.includes(n.id)) { // the incompatible module has been selected
+			for (n of merges) {
+				if (selectedModules.includes(n.id)) { // the mergeable module has been selected
 
-					// remove the two incompatible packs
+					// remove the two mergeable packs
 					selectedModules.splice(selectedModules.indexOf(i),1)
 					selectedModules.splice(selectedModules.indexOf(n.id),1)
 
-					// add the useInstead pack
-					selectedModules.push(n.useInstead)
+					// add the mergeWith pack
+					selectedModules.push(n.mergeWith)
 
 				}
 			}

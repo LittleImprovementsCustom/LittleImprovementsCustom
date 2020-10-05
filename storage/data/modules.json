@@ -17,9 +17,9 @@
         "iconType": "gif",
         "description": "Animates campfire and soul campfire items in the inventory and in a player's hand.",
         "category": "fixes",
-        "incompatibleWith": [{
+        "merges": [{
             "id": "soulCampfire",
-            "useInstead": "soulCampfirePlusAnimatedCampfire"
+            "mergeWith": "soulCampfirePlusAnimatedCampfire"
         }]
     },
     {
@@ -27,9 +27,9 @@
         "label": "Restock Clock",
         "description": "Makes clocks show when villagers can restock their trades.",
         "category": "utility",
-        "incompatibleWith": [{
+        "merges": [{
             "id": "shinyClocks",
-            "useInstead": "restockAndShinyClocks"
+            "mergeWith": "restockAndShinyClocks"
         }]
     },
     {
@@ -130,9 +130,9 @@
         "label": "Soul Campfire",
         "description": "Replaces oak logs with warped logs and ash with soul soil.",
         "category": "fixes",
-        "incompatibleWith": [{
+        "merges": [{
             "id": "animatedCampfireItems",
-            "useInstead": "soulCampfirePlusAnimatedCampfire"
+            "mergeWith": "soulCampfirePlusAnimatedCampfire"
         }]
     },
     {
@@ -192,9 +192,9 @@
         "label": "Shovels to Spoons",
         "description": "Renames shovels to spoons in-game.",
         "category": "aesthetic",
-        "incompatibleWith":[{
+        "merges":[{
             "id": "daggers",
-            "useInstead": "daggersAndSpoons"
+            "mergeWith": "daggersAndSpoons"
         }]
     },
     {
@@ -207,9 +207,9 @@
         "label": "Daggers",
         "description": "Makes all swords shorter and renames them.",
         "category": "utility",
-        "incompatibleWith": [{
+        "merges": [{
             "id": "shovelsToSpoons",
-            "useInstead": "daggersAndSpoons"
+            "mergeWith": "daggersAndSpoons"
         }]
     },
 	{
@@ -223,9 +223,9 @@
         "label": "Shiny Clocks",
         "description": "Changes clock texture to fit more new textures style.",
         "category": "fixes",
-        "incompatibleWith": [{
+        "merges": [{
             "id": "restockClock",
-            "useInstead": "restockAndShinyClocks"
+            "mergeWith": "restockAndShinyClocks"
         }]
     },
 	{
