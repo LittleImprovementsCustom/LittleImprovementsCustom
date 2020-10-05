@@ -88,12 +88,12 @@ body {
 	border-radius: 2vw;
 	padding: 5px;
 	margin: 20px;
+	height: auto;
+	min-height: 180px;
 }
 
 .selectable {
 	cursor: pointer;
-	height: auto;
-	min-height: 180px;
 }
 
 .section-header {

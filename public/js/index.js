@@ -2,16 +2,32 @@
 let selectedModules = []
 function toggleSelected(id) {
 	const theDiv = document.getElementById(id)
-	if (theDiv.classList.contains("unselected")) {
-		// the box is currently unselected; select it
+	var action = ""
+	if (theDiv.classList.contains("unselected")&&theDiv.classList.contains("selectable")) action="adding"
+	else if (theDiv.classList.contains("selected")&&theDiv.classList.contains("selectable")) action="removing"
+	if (action=="adding") {
+		// the box is currently unselected and selectable; select it
 		theDiv.classList.remove("unselected")
 		theDiv.classList.add("selected")
 		selectedModules.push(id)
-	} else {
+	} else if (action=="removing") {
 		// the box is currently selected; unselect it
 		theDiv.classList.remove("selected")
 		theDiv.classList.add("unselected")
 		selectedModules.pop(id)
+	}
+	const incompatibilities = modulesJSON[modulesJSON.map(x=>x.id).indexOf(id)].incompatibilities
+	if (incompatibilities!=undefined) {
+		if (action=="adding") for (i of incompatibilities) {
+			document.getElementById(i).classList.remove("selectable") // remove the selectable class from the element
+		} else if (action=="removing") for (i of incompatibilities) {
+			const childIncompatibilities = modulesJSON[modulesJSON.map(x=>x.id).indexOf(i)].incompatibilities
+			for (j of childIncompatibilities) {
+				if (!selectedModules.includes(j)) {
+					document.getElementById(i).classList.add("selectable") // add the selectable class to the element
+				}
+			}
+		}
 	}
 }
 
@@ -116,13 +132,13 @@ xobj.onreadystatechange = function () {
 	if (xobj.readyState == 4 && xobj.status == "200") {
 
 		// get JSON and add to HTML
-		const actualJSON = JSON.parse(xobj.responseText) // Parse JSON string into object
+		modulesJSON = JSON.parse(xobj.responseText) // Parse JSON string into object
 		let categories = {
 			"aesthetic": [],
 			"utility": [],
 			"fixes": []
 		}
-		for (i of actualJSON) {
+		for (i of modulesJSON) {
 			if (i.category=="aesthetic") categories.aesthetic.push(i)
 			else if (i.category=="utility") categories.utility.push(i)
 			else if (i.category=="fixes") categories.fixes.push(i)
