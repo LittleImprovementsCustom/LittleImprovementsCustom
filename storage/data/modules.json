@@ -276,5 +276,11 @@
         "label": "Lectern Bottom",
         "description": "Changes lectern model to show carpet on the bottom.",
         "category": "fixes"
+    },
+    {
+        "id": "craftingTableBottom",
+        "label": "Crafting Table Bottom",
+        "description": "Replaces wooden planks from crafting table bottom",
+        "category": "fixes"
     }
 ]
