@@ -282,5 +282,11 @@
         "label": "Crafting Table Bottom",
         "description": "Replaces wooden planks from crafting table bottom",
         "category": "fixes"
+    },
+    {
+        "id": "fixedDropperandDispenser",
+        "label": "Fixed Dropper and Dispenser",
+        "description": "Adds bottom texture to Dropper and Dispenser. Also changes vertical versions.",
+        "category": "fixes"
     }
 ]
