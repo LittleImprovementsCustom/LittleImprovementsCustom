@@ -252,5 +252,11 @@
         "label": "Moobloom",
         "description": "Adds moobloom to game. Requires OptiFine.",
         "category": "aesthetic"
+    },
+    {
+        "id": "soulLantern",
+        "label": "Soul Lantern",
+        "description": "Changes the regular sides of Soul Lantern to warped.",
+        "category": "fixes"
     }
 ]
