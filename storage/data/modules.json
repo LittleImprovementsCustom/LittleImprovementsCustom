@@ -146,14 +146,14 @@
         "category": "fixes"
     },
     {
-        "id": "netherFungi",
-        "label": "Nether Fungi",
+        "id": "variatedNetherFungi",
+        "label": "Variated Nether Fungi",
         "description": "Adds more variants for nether fungi.",
         "category": "aesthetic"
     },
     {
-        "id": "netherRoots",
-        "label": "Nether Roots",
+        "id": "variatedNetherRoots",
+        "label": "Variated Nether Roots",
         "description": "Includes variations for crimson roots and warped roots.",
         "category": "aesthetic"
     },
@@ -254,8 +254,8 @@
         "category": "aesthetic"
     },
     {
-        "id": "soulLantern",
-        "label": "Soul Lantern",
+        "id": "warpedSoulLantern",
+        "label": "Warped Soul Lantern",
         "description": "Changes the regular sides of Soul Lantern to warped.",
         "category": "fixes"
     },
@@ -266,8 +266,8 @@
         "category": "fixes"
     },
     {
-        "id": "pistonsFronts",
-        "label": "Pistons Fronts",
+        "id": "pistonFront",
+        "label": "Piston Front",
         "description": "Makes fronts of pistons similar to planks.",
         "category": "fixes"
     },
@@ -284,8 +284,8 @@
         "category": "fixes"
     },
     {
-        "id": "fixedDropperandDispenser",
-        "label": "Fixed Dropper and Dispenser",
+        "id": "fixedDispensers",
+        "label": "Fixed Dispensers",
         "description": "Adds bottom texture to Dropper and Dispenser. Also changes vertical versions.",
         "category": "fixes"
     }
