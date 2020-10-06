@@ -246,5 +246,11 @@
     {
         "id": "restockAndShinyClocks",
         "hidden": true
+    },
+    {
+        "id": "moobloom",
+        "label": "Moobloom",
+        "description": "Adds moobloom to game. Requires OptiFine.",
+        "category": "aesthetic"
     }
 ]
