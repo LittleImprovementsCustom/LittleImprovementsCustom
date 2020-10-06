@@ -16,6 +16,14 @@
         "desc": "Pack development"
     },
     {
+        "name": "kemiu",
+        "group": "team",
+        "link": "https://www.planetminecraft.com/member/kemiu/",
+        "type": "static",
+        "avatar": "kemiu.png",
+        "desc": "Pack development"
+    },
+    {
         "name": "Banakin",
         "group": "contributor",
         "link": "https://banakin.github.io/",
