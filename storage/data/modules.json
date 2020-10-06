@@ -270,5 +270,11 @@
         "label": "Pistons Fronts",
         "description": "Makes fronts of pistons similar to planks.",
         "category": "fixes"
+    },
+    {
+        "id": "lecternBottom",
+        "label": "Lectern Bottom",
+        "description": "Changes lectern model to show carpet on the bottom.",
+        "category": "fixes"
     }
 ]
