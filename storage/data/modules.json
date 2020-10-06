@@ -215,7 +215,7 @@
 	{
         "id": "tinyMeals",
         "label": "Tiny Meals",
-        "description": "Changes food items models to be smaller, so it's not covering as much of the screen.",
+        "description": "Changes food item models to be smaller, so they don't cover as much of the screen.",
 		"category": "utility"
     },
 	{
@@ -231,7 +231,7 @@
 	{
         "id": "warted",
         "label": "Warted",
-        "description": "Changes wart crops, blocks and item textures to not be as ugly as before."
+        "description": "Changes wart crops, blocks and item textures to not be less ugly."
     },
     {
         "id": "variatedBricks",
@@ -250,7 +250,7 @@
     {
         "id": "moobloom",
         "label": "Moobloom",
-        "description": "Adds moobloom to game. Requires OptiFine.",
+        "description": "Adds the moobloom to game. Requires OptiFine.",
         "category": "aesthetic"
     },
     {
