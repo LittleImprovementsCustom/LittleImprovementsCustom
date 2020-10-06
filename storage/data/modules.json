@@ -264,5 +264,11 @@
         "label": "Fixed Stonecutter",
         "description": "Changes colour of wood on top of Stonecutter and add wood texture on bottom.",
         "category": "fixes"
+    },
+    {
+        "id": "pistonsFronts",
+        "label": "Pistons Fronts",
+        "description": "Makes fronts of pistons similar to planks.",
+        "category": "fixes"
     }
 ]
