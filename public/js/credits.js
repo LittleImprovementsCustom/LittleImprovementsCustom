@@ -2,7 +2,7 @@
 function createModuleSelector(data) {
 
 	const div = document.createElement("div")
-	div.setAttribute("class","grid-item selection-box unselected box-height")
+	div.setAttribute("class","grid-item selection-box selectable unselected box-height")
 	div.setAttribute("onclick", `location.href='${data.link}'`)
 	document.getElementById("pack-selector-container").appendChild(div)
 
