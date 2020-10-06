@@ -149,13 +149,13 @@
         "id": "variatedNetherFungi",
         "label": "Variated Nether Fungi",
         "description": "Adds more variants for nether fungi.",
-        "category": "aesthetic"
+        "category": "variated"
     },
     {
         "id": "variatedNetherRoots",
         "label": "Variated Nether Roots",
         "description": "Includes variations for crimson roots and warped roots.",
-        "category": "aesthetic"
+        "category": "variated"
     },
     {
         "id": "anvilSides",
@@ -237,7 +237,7 @@
         "id": "variatedBricks",
         "label": "Variated Bricks",
         "description": "Makes bricks vary in colour.",
-        "category": "aesthetic"
+        "category": "variated"
     },
     {
         "id": "daggersAndSpoons",

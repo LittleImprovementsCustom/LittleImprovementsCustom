@@ -135,12 +135,14 @@ xobj.onreadystatechange = function () {
 		modulesJSON = JSON.parse(xobj.responseText) // Parse JSON string into object
 		let categories = {
 			"aesthetic": [],
+			"variated": [],
 			"utility": [],
 			"fixes": []
 		}
 		for (i of modulesJSON) {
 			if (i.category=="aesthetic") categories.aesthetic.push(i)
 			else if (i.category=="utility") categories.utility.push(i)
+			else if (i.category=="variated") categories.variated.push(i)
 			else if (i.category=="fixes") categories.fixes.push(i)
 			else categories.aesthetic.push(i)
 		}
@@ -149,6 +151,8 @@ xobj.onreadystatechange = function () {
 		for (data of categories.aesthetic) {createModuleSelector(data)}
 		createCategoryHeader("Utility")
 		for (data of categories.utility) {createModuleSelector(data)}
+		createCategoryHeader("Variated")
+		for (data of categories.variated) {createModuleSelector(data)}
 		createCategoryHeader("Fixes & Inconsistencies")
 		for (data of categories.fixes) {createModuleSelector(data)}
 
