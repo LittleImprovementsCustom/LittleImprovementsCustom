@@ -258,5 +258,11 @@
         "label": "Soul Lantern",
         "description": "Changes the regular sides of Soul Lantern to warped.",
         "category": "fixes"
+    },
+    {
+        "id": "fixedStonecutter",
+        "label": "Fixed Stonecutter",
+        "description": "Changes colour of wood on top of Stonecutter and add wood texture on bottom.",
+        "category": "fixes"
     }
 ]
