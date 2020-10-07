@@ -185,7 +185,8 @@
         "id": "arrowedDispensers",
         "label": "Arrowed Dispensers",
         "description": "Shows arrows on droppers and dispensers so you can differentiate them and know which way they are facing.",
-        "category": "utility"
+        "category": "utility",
+        "incompatibleWith": ["fixedDispensers"]
     },
     {
         "id": "shovelsToSpoons",
@@ -287,6 +288,7 @@
         "id": "fixedDispensers",
         "label": "Fixed Dispensers",
         "description": "Adds bottom texture to Dropper and Dispenser. Also changes vertical versions.",
-        "category": "fixes"
+        "category": "fixes",
+        "incompatibleWith": ["arrowedDispensers"]
     }
 ]
