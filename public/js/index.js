@@ -5,6 +5,7 @@ function toggleSelected(id) {
 	var action = ""
 	if (theDiv.classList.contains("unselected")&&theDiv.classList.contains("selectable")) action="adding"
 	else if (theDiv.classList.contains("selected")&&theDiv.classList.contains("selectable")) action="removing"
+	else if (theDiv.classList.contains("unselected")&&theDiv.classList.contains("not-selectable")) action="failToAdd"
 	if (action=="adding") {
 		// the box is currently unselected and selectable; select it
 		theDiv.classList.remove("unselected")
@@ -15,6 +16,14 @@ function toggleSelected(id) {
 		theDiv.classList.remove("selected")
 		theDiv.classList.add("unselected")
 		selectedModules.pop(id)
+	} else if (action=="failToAdd") {
+		const tryData = modulesJSON[modulesJSON.map(i=>i.id).indexOf(theDiv.getAttribute("id"))] // the data of the module that could not be selected
+		for (i of tryData.incompatibilities) {
+			if (selectedModules.includes(i)) {
+				const failData = modulesJSON[modulesJSON.map(i=>i.id).indexOf(i)] // the data of the module that was preventing it from being selected
+				alert (`You cannot select the pack ${tryData.label} because you have the incompatible pack ${failData.label} selected.\nDeselect the incompatible pack to use this pack.`)
+			}
+		}
 	}
 	const incompatibilities = modulesJSON[modulesJSON.map(x=>x.id).indexOf(id)].incompatibilities
 	if (incompatibilities!=undefined) {
@@ -91,6 +100,7 @@ function createModuleSelector(data) {
 
 	const label = document.createElement("p")
 	label.setAttribute("class", "pack-label")
+	label.setAttribute("id", data.id+"Label")
 	label.appendChild(document.createTextNode(data.label))
 	div.appendChild(label)
 
