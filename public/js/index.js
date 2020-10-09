@@ -20,11 +20,13 @@ function toggleSelected(id) {
 	if (incompatibilities!=undefined) {
 		if (action=="adding") for (i of incompatibilities) {
 			document.getElementById(i).classList.remove("selectable") // remove the selectable class from the element
+			document.getElementById(i).classList.add("not-selectable") // add the not-selectable class to the element
 		} else if (action=="removing") for (i of incompatibilities) {
 			const childIncompatibilities = modulesJSON[modulesJSON.map(x=>x.id).indexOf(i)].incompatibilities
 			for (j of childIncompatibilities) {
 				if (!selectedModules.includes(j)) {
 					document.getElementById(i).classList.add("selectable") // add the selectable class to the element
+					document.getElementById(i).classList.remove("not-selectable") // remove the not-selectable class from the element
 				}
 			}
 		}

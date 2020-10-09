@@ -94,6 +94,10 @@ body {
 	cursor: pointer;
 }
 
+.not-selectable {
+	cursor: not-allowed;
+}
+
 .box-height {
 	height: auto;
 	min-height: 180px;
