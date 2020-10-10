@@ -124,7 +124,7 @@
         "label": "Matching Gilded Blackstone",
         "description": "Improves top texture of gilded blackstone.",
         "category": "fixes",
-        "incompatibilities": ["variatedGildedBlackstone"]
+        "incompatibilities": ["variatedOres"]
     },
     {
         "id": "soulCampfire",
@@ -291,5 +291,12 @@
         "description": "Adds a unique bottom texture to droppers and dispensers. Also adds side texture for vertical versions.",
         "category": "fixes",
         "incompatibilities": ["arrowedDispensers"]
+    },
+    {
+        "id": "variatedOres",
+        "label": "Variated Ores",
+        "description": "Variates the minerals in ore blocks to avoid the grid pattern",
+        "category": "variated",
+        "incompatibilities": ["matchingGildedBlackstone"]
     }
 ]

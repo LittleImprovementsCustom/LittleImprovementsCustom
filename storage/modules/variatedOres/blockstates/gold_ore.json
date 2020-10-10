@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "": [
+            { "model": "block/gold_ore/1" },
+            { "model": "block/gold_ore/2" },
+            { "model": "block/gold_ore/3" },
+            { "model": "block/gold_ore/4" },
+            { "model": "block/gold_ore/5" }
+        ]
+    }
+}
