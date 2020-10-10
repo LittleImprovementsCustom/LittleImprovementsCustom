@@ -123,7 +123,8 @@
         "id": "matchingGildedBlackstone",
         "label": "Matching Gilded Blackstone",
         "description": "Improves top texture of gilded blackstone.",
-        "category": "fixes"
+        "category": "fixes",
+        "incompatibilities": ["variatedGildedBlackstone"]
     },
     {
         "id": "soulCampfire",
@@ -290,5 +291,12 @@
         "description": "Adds bottom texture to Dropper and Dispenser. Also changes vertical versions.",
         "category": "fixes",
         "incompatibilities": ["arrowedDispensers"]
+    },
+    {
+        "id": "variatedGildedBlackstone",
+        "label": "Variated Gilded Blackstone",
+        "description": "Variated the gold veins in gilded blackstone to avoid a grid pattern.",
+        "category": "variated",
+        "incompatibilities": ["matchingGildedBlackstone"]
     }
 ]
