@@ -310,5 +310,11 @@
     {
         "id": "variatedEmissiveOres",
         "hidden": true
+    },
+    {
+        "id": "variatedGlass",
+        "label": "Variated Glass",
+        "description": "Variated glass to avoid grid patterns in big walls.",
+        "category": "variated"
     }
 ]
