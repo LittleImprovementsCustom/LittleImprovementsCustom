@@ -233,7 +233,7 @@
 	{
         "id": "warted",
         "label": "Warted",
-        "description": "Changes wart crops, blocks and item textures to not be less ugly."
+        "description": "Changes nether wart crops, blocks and item textures to be less ugly and fit with JAPPA's style."
     },
     {
         "id": "variatedBricks",
@@ -252,43 +252,43 @@
     {
         "id": "moobloom",
         "label": "Moobloom",
-        "description": "Adds the moobloom to game. Requires OptiFine.",
+        "description": "Adds the moobloom from Minecraft Earth to the game. Requires OptiFine.",
         "category": "aesthetic"
     },
     {
         "id": "warpedSoulLantern",
         "label": "Warped Soul Lantern",
-        "description": "Changes the regular sides of Soul Lantern to warped.",
+        "description": "Changes the sides of Soul Lantern to blue and warped.",
         "category": "fixes"
     },
     {
         "id": "fixedStonecutter",
         "label": "Fixed Stonecutter",
-        "description": "Changes colour of wood on top of Stonecutter and add wood texture on bottom.",
+        "description": "Changes the colour of wood on the top of Stonecutter and adds texture with wood to the bottom.",
         "category": "fixes"
     },
     {
         "id": "pistonFront",
         "label": "Piston Front",
-        "description": "Makes fronts of pistons similar to planks.",
+        "description": "Makes fronts of pistons more similar to planks.",
         "category": "fixes"
     },
     {
         "id": "lecternBottom",
         "label": "Lectern Bottom",
-        "description": "Changes lectern model to show carpet on the bottom.",
+        "description": "Changes the lectern model to show some carpet on the bottom.",
         "category": "fixes"
     },
     {
         "id": "craftingTableBottom",
         "label": "Crafting Table Bottom",
-        "description": "Replaces wooden planks from crafting table bottom",
+        "description": "Adds a unique texture to the bottom of crafting tables, that is not just oak planks.",
         "category": "fixes"
     },
     {
         "id": "fixedDispensers",
         "label": "Fixed Dispensers",
-        "description": "Adds bottom texture to Dropper and Dispenser. Also changes vertical versions.",
+        "description": "Adds a unique bottom texture to droppers and dispensers. Also adds side texture for vertical versions.",
         "category": "fixes",
         "incompatibilities": ["arrowedDispensers"]
     },
