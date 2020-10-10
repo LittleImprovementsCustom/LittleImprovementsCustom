@@ -291,12 +291,5 @@
         "description": "Adds a unique bottom texture to droppers and dispensers. Also adds side texture for vertical versions.",
         "category": "fixes",
         "incompatibilities": ["arrowedDispensers"]
-    },
-    {
-        "id": "variatedGildedBlackstone",
-        "label": "Variated Gilded Blackstone",
-        "description": "Variated the gold veins in gilded blackstone to avoid a grid pattern.",
-        "category": "variated",
-        "incompatibilities": ["matchingGildedBlackstone"]
     }
 ]
