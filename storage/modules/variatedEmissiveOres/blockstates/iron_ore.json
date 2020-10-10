@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "": [
+            { "model": "block/iron_ore/1" },
+            { "model": "block/iron_ore/2" },
+            { "model": "block/iron_ore/3" },
+            { "model": "block/iron_ore/4" },
+            { "model": "block/iron_ore/5" }
+        ]
+    }
+}

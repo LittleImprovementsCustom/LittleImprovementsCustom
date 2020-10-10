@@ -174,7 +174,11 @@
         "id": "emissiveOres",
         "label": "Emissive Ores",
         "description": "Makes ores glow in the dark. Requires OptiFine. By AbdulPlayz03",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "merges": [{
+            "id": "variatedOres",
+            "mergeWith": "variatedEmissiveOres"
+        }]
     },
     {
         "id": "targetScore",
@@ -297,6 +301,14 @@
         "label": "Variated Ores",
         "description": "Variates the minerals in ore blocks to avoid the grid pattern",
         "category": "variated",
-        "incompatibilities": ["matchingGildedBlackstone"]
+        "incompatibilities": ["matchingGildedBlackstone"],
+        "merges": [{
+            "id": "emissiveOres",
+            "mergeWith": "variatedEmissiveOres"
+        }]
+    },
+    {
+        "id": "variatedEmissiveOres",
+        "hidden": true
     }
 ]
