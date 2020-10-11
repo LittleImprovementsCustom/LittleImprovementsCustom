@@ -316,5 +316,11 @@
         "label": "Variated Glass",
         "description": "Variated glass to avoid grid patterns in big walls.",
         "category": "variated"
+    },
+    {
+        "id": "alternativeNetheriteTools",
+        "label": "Alternative Netherite Tools",
+        "description": "Makes Netherite tools a slightly different shape to other tools to make them more special",
+        "category": "aesthetic"
     }
 ]
