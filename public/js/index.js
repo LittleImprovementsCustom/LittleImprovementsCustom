@@ -110,6 +110,7 @@ function createModuleSelector(data) {
 	icon.setAttribute("class","pack-icon")
 	icon.setAttribute("src",`icons/${data.id}.${iconType}`)
 	icon.setAttribute("id",data.id+"Img")
+	icon.setAttribute("alt",data.label)
 	div.appendChild(icon)
 
 	const desc = document.createElement("p")
