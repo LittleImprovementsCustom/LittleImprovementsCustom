@@ -198,10 +198,7 @@
         "label": "Shovels to Spoons",
         "description": "Renames shovels to spoons in-game.",
         "category": "aesthetic",
-        "merges":[{
-            "id": "daggers",
-            "mergeWith": "daggersAndSpoons"
-        }]
+        "lang": true
     },
     {
         "id": "cleanerMaps",
@@ -213,11 +210,8 @@
         "label": "Daggers",
         "description": "Makes all swords shorter and renames them.",
         "category": "utility",
-        "merges": [{
-            "id": "shovelsToSpoons",
-            "mergeWith": "daggersAndSpoons"
-        }],
-        "incompatibilities": ["alternativeNetheriteTools"]
+        "incompatibilities": ["alternativeNetheriteTools"],
+        "lang": true
     },
 	{
         "id": "tinyMeals",
@@ -245,10 +239,6 @@
         "label": "Variated Bricks",
         "description": "Makes bricks vary in colour.",
         "category": "variated"
-    },
-    {
-        "id": "daggersAndSpoons",
-        "hidden": true
     },
     {
         "id": "restockAndShinyClocks",
