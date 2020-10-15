@@ -95,9 +95,43 @@ app.post("/download", function (req, res) {
 	const infoText = `Little Improvements: Custom\nDownloaded: ${new Date().toUTCString()}\nID: ${packID}\n\nSelected modules:\n${selectedModules.join("\n")}`
 	archive.append(infoText,{name:"selectedModules.txt"})
 
+	let createdLangFiles = []
+
 	// add selected modules
 	for (i of availableModules) {
-		if (selectedModules.includes(i.id)) archive.directory("storage/modules/"+i.id, "assets/minecraft")
+		if (selectedModules.includes(i.id)) {
+			
+			// add resource pack files
+			archive.directory("storage/modules/"+i.id, "assets/minecraft")
+
+			// add lang files
+			if (i.lang) {
+				const moduleLangData = JSON.parse(fs.readFileSync(`storage/lang/${i.id}.json`))
+				const createdLangNames = createdLangFiles.map(n=>n.name)
+				for (const [fileName, langData] of Object.entries(moduleLangData)) {
+
+					// check if the lang file has been added to createdLangFiles. if not, add it.
+					if (!createdLangNames.includes(fileName)) {
+						createdLangNames.push(fileName)
+						createdLangFiles.push ({
+							"name": fileName,
+							"source" : {},
+							"data" : { name : `assets/minecraft/lang/${fileName}` } 
+						})
+					}
+
+					// add the lang data
+					for (const [langKey, langValue] of Object.entries(langData)) {
+						createdLangFiles[createdLangNames.indexOf(fileName)].source[langKey] = langValue
+					}
+					
+				}
+			}
+		}
+	}
+
+	for (i of createdLangFiles) {
+		archive.append(JSON.stringify(i.source), i.data)
 	}
 
 	archive.finalize()
