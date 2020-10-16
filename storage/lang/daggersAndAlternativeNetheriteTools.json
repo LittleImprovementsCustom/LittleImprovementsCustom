@@ -1,0 +1,34 @@
+{
+	"en_us.json": {
+		"item.minecraft.iron_sword": "Iron Dagger",
+		"item.minecraft.wooden_sword": "Wooden Dagger",
+		"item.minecraft.diamond_sword": "Diamond Dagger",
+		"item.minecraft.golden_sword": "Golden Dagger",
+		"item.minecraft.netherite_sword": "Netherite Dagger"
+	},
+	"en_gb.json": {
+		"item.minecraft.iron_sword": "Iron Dagger",
+		"item.minecraft.wooden_sword": "Wooden Dagger",
+		"item.minecraft.diamond_sword": "Diamond Dagger",
+		"item.minecraft.golden_sword": "Golden Dagger",
+		"item.minecraft.netherite_sword": "Netherite Dagger"
+	},	"en_au.json": {
+		"item.minecraft.iron_sword": "Iron Dagger",
+		"item.minecraft.wooden_sword": "Wooden Dagger",
+		"item.minecraft.diamond_sword": "Diamond Dagger",
+		"item.minecraft.golden_sword": "Golden Dagger",
+		"item.minecraft.netherite_sword": "Netherite Dagger"
+	},	"en_nz.json": {
+		"item.minecraft.iron_sword": "Iron Dagger",
+		"item.minecraft.wooden_sword": "Wooden Dagger",
+		"item.minecraft.diamond_sword": "Diamond Dagger",
+		"item.minecraft.golden_sword": "Golden Dagger",
+		"item.minecraft.netherite_sword": "Netherite Dagger"
+	},	"en_ca.json": {
+		"item.minecraft.iron_sword": "Iron Dagger",
+		"item.minecraft.wooden_sword": "Wooden Dagger",
+		"item.minecraft.diamond_sword": "Diamond Dagger",
+		"item.minecraft.golden_sword": "Golden Dagger",
+		"item.minecraft.netherite_sword": "Netherite Dagger"
+	}
+}
