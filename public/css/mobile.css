@@ -142,7 +142,7 @@ body {
 
 .pack-desc {
 	text-align: center;
-	font-size: medium;
+	font-size: 3vw;
 }
 
 a, a:hover, a:active, a:visited {
@@ -159,6 +159,7 @@ a, a:hover, a:active, a:visited {
 	right: 5%;
 	bottom: 5%;
 	color: var(--toast-font-color);
+	font-size: 3vw;
 }
 
 .success-toast {
