@@ -210,7 +210,10 @@
         "label": "Daggers",
         "description": "Makes all swords shorter and renames them.",
         "category": "utility",
-        "incompatibilities": ["alternativeNetheriteTools"],
+        "merges": [{
+            "id": "alternativeNetheriteTools",
+            "mergeWith": "daggersAndAlternativeNetheriteTools"
+        }],
         "lang": true
     },
 	{
@@ -313,6 +316,13 @@
         "label": "Alternative Netherite Tools",
         "description": "Makes Netherite tools a slightly different shape to other tools to make them more special",
         "category": "aesthetic",
-        "incompatibilities": ["daggers"]
+        "merges": [{
+            "id": "daggers",
+            "mergeWith": "daggersAndAlternativeNetheriteTools"
+        }]
+    },
+    {
+        "id": "daggersAndAlternativeNetheriteTools",
+        "hidden": true
     }
 ]
