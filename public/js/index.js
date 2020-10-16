@@ -114,13 +114,16 @@ function createModuleSelector(data) {
 	div.appendChild(icon)
 
 	const desc = document.createElement("p")
-	desc.setAttribute("class","pack-desc invisible")
+	if (platform=="desktop") desc.setAttribute("class","pack-desc invisible")
+	else desc.setAttribute("class","pack-desc")
 	desc.setAttribute("id", data.id+"Desc")
 	desc.appendChild(document.createTextNode(data.description))
 	div.appendChild(desc)
 
-	div.addEventListener("mouseover", mouseOver)
-	div.addEventListener("mouseout", mouseOut)
+	if (platform=="desktop") {
+		div.addEventListener("mouseover", mouseOver)
+		div.addEventListener("mouseout", mouseOut)
+	}
 
 }
 
