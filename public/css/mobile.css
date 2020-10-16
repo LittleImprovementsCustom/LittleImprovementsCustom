@@ -46,18 +46,18 @@ body {
 .navbar {
 	list-style-type: none;
 	margin: 0;
-	margin-left: 75%;
 	padding: 0;
-	width: 25%;
+	padding-bottom: 10px;
+	width: 100%;
 	background-color: var(--primary-background);
 	height: auto; /* Full height */
-	position: fixed; /* Make it stick, even on scroll */
 	overflow: auto; /* Enable scrolling if the sidenav has too much content */
 	border-radius: 10px;
 }
 
 .navbar-item {
-	display: block;
+	font-size: 5vw;
+	display: inline;
 	padding: 8px 16px;
 	text-decoration: none;
 	text-align:center;
@@ -79,7 +79,7 @@ body {
 
 .grid-container {
 	display: grid;
-	width: 75%;
+	width: 100%;
 	grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
 }
 
