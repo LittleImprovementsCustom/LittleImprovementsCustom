@@ -1,0 +1,42 @@
+{
+	"en_us.json": {
+		"item.minecraft.wooden_shovel": "Wooden Spoon",
+		"item.minecraft.stone_shovel": "Stone Spoon",
+		"item.minecraft.iron_shovel": "Iron Spoon",
+		"item.minecraft.golden_shovel": "Golden Spoon",
+		"item.minecraft.diamond_shovel": "Diamond Spoon",
+		"item.minecraft.netherite_shovel": "Netherite Spoon"
+	},
+	"en_gb.json": {
+		"item.minecraft.wooden_shovel": "Wooden Spoon",
+		"item.minecraft.stone_shovel": "Stone Spoon",
+		"item.minecraft.iron_shovel": "Iron Spoon",
+		"item.minecraft.golden_shovel": "Golden Spoon",
+		"item.minecraft.diamond_shovel": "Diamond Spoon",
+		"item.minecraft.netherite_shovel": "Netherite Spoon"
+	},
+	"en_au.json": {
+		"item.minecraft.wooden_shovel": "Wooden Spoon",
+		"item.minecraft.stone_shovel": "Stone Spoon",
+		"item.minecraft.iron_shovel": "Iron Spoon",
+		"item.minecraft.golden_shovel": "Golden Spoon",
+		"item.minecraft.diamond_shovel": "Diamond Spoon",
+		"item.minecraft.netherite_shovel": "Netherite Spoon"
+	},
+	"en_nz.json": {
+		"item.minecraft.wooden_shovel": "Wooden Spoon",
+		"item.minecraft.stone_shovel": "Stone Spoon",
+		"item.minecraft.iron_shovel": "Iron Spoon",
+		"item.minecraft.golden_shovel": "Golden Spoon",
+		"item.minecraft.diamond_shovel": "Diamond Spoon",
+		"item.minecraft.netherite_shovel": "Netherite Spoon"
+	},
+	"en_ca.json": {
+		"item.minecraft.wooden_shovel": "Wooden Spoon",
+		"item.minecraft.stone_shovel": "Stone Spoon",
+		"item.minecraft.iron_shovel": "Iron Spoon",
+		"item.minecraft.golden_shovel": "Golden Spoon",
+		"item.minecraft.diamond_shovel": "Diamond Spoon",
+		"item.minecraft.netherite_shovel": "Netherite Spoon"
+	}
+}

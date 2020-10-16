@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/food",
+  "textures": {
+    "layer0": "minecraft:item/sweet_berries",
+	"particle": "minecraft:item/sweet_berries_particle"
+  }
+}

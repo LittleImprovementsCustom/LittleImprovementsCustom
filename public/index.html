@@ -14,7 +14,7 @@
     <meta property="og:description" content="An open-source resource pack picker made for Minecraft.">
     <meta property="og:image" content="https://www.littleimprovements-custom.tk/logo/site-logo.png">
     <script src=/js/theme.js></script>
-    <script src=/js/theme.js></script>
+    <script src=/js/mobileRedirect.js></script>
     <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="/css/light.css" media="(prefers-color-scheme: light)">
     <link rel="stylesheet" href="/css/main.css">
@@ -22,7 +22,7 @@
 </head>
 <body>
     <div class="clearfix float-my-children">
-        <img src="/logo/site-logo.png" height=50>
+        <img src="/logo/site-logo.png" height=50 alt="LIC logo">
         <div class="title middle-div">Little Improvements: Custom</div>
      </div>         
     <hr>
@@ -34,7 +34,7 @@
         <li class="navbar-item secondary-navbar-item"><a class="navbar-item secondary-navbar-item" href="/credits">Credits</a></li>
     </ul>
     <div class="grid-container" id="pack-selector-container"></div> <!-- the script will add elements to this -->
-    <div class="toast success-toast invisible" id="download-toast">Your pack is beginning to download. This make take up to a minute.</div>
+    <div class="toast success-toast invisible" id="download-toast">Your pack is beginning to download.</div>
     <div class="toast fail-toast invisible" id="fail-toast">There was an error downloading your pack. Please reload the page and try again. If the issue persists, please <a href="https://discord.gg/bNcZjFe">get in touch</a>.</div>
     <script src=/js/index.js></script>
 </body>

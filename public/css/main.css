@@ -80,19 +80,35 @@ body {
 .grid-container {
 	display: grid;
 	width: 75%;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-
+	grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
 }
 
 .selection-box {
 	width: auto;
-	height: auto;
-	background-color: var(--emphasis-background);
 	border-radius: 2vw;
 	padding: 5px;
 	margin: 20px;
+}
+
+.selectable {
 	cursor: pointer;
-	color: var(--font-color);
+}
+
+.not-selectable {
+	cursor: not-allowed;
+}
+
+.box-height {
+	height: auto;
+	min-height: 180px;
+}
+
+.section-header {
+	height: min-content;
+	padding: 0;
+	grid-column: 1 / -1;
+	font-size: x-large;
+	text-align: center;
 }
 
 .unselected {
@@ -109,7 +125,8 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 10px;
-	height: 100px;
+	max-height: 100px;
+	max-width: 200px;
 }
 
 .pack-label {

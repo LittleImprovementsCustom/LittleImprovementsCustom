@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "block/glass/1" },
+            { "model": "block/glass/2" },
+            { "model": "block/glass/3" },
+            { "model": "block/glass/4" }
+        ]
+    }
+}

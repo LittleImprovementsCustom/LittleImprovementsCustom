@@ -3,374 +3,316 @@
         "id": "honeyJar",
         "label": "Honey Jar",
         "description": "Changes honey bottle to a jar of honey, and renames the item.",
-        "filePaths": ["/textures/item/honey_bottle.png"]
+        "category": "aesthetic"
     },
     {
         "id": "hotLavaBucket",
         "label": "Hot Lava Bucket",
-        "description": "Makes original Lava Bucket really, really hot.",
-        "filePaths": ["/textures/item/lava_bucket.png"]
+        "description": "Makes original lava bucket really, really hot.",
+        "category": "aesthetic"
     },
     {
         "id": "animatedCampfireItems",
         "label": "Animated Campfire Items",
         "iconType": "gif",
         "description": "Animates campfire and soul campfire items in the inventory and in a player's hand.",
-        "incompatibleWith": [{
+        "category": "fixes",
+        "merges": [{
             "id": "soulCampfire",
-            "useInstead": "soulCampfirePlusAnimatedCampfire"
-        }],
-        "filePaths": [
-            "/textures/item/campfire.png",
-            "/textures/item/campfire.png.mcmeta",
-            "/textures/item/soul_campfire.png",
-            "/textures/item/soul_campfire.png.mcmeta"
-        ]
+            "mergeWith": "soulCampfirePlusAnimatedCampfire"
+        }]
     },
     {
         "id": "restockClock",
         "label": "Restock Clock",
         "description": "Makes clocks show when villagers can restock their trades.",
-        "filePaths": [
-            "/textures/item/clock_00.png",
-            "/textures/item/clock_01.png",
-            "/textures/item/clock_02.png",
-            "/textures/item/clock_03.png",
-            "/textures/item/clock_04.png",
-            "/textures/item/clock_05.png",
-            "/textures/item/clock_06.png",
-            "/textures/item/clock_56.png",
-            "/textures/item/clock_57.png",
-            "/textures/item/clock_58.png",
-            "/textures/item/clock_59.png",
-            "/textures/item/clock_60.png",
-            "/textures/item/clock_61.png",
-            "/textures/item/clock_62.png",
-            "/textures/item/clock_63.png"
-        ]
+        "category": "utility",
+        "merges": [{
+            "id": "shinyClocks",
+            "mergeWith": "restockAndShinyClocks"
+        }]
     },
     {
         "id": "betterSignIcons",
         "label": "Better Sign Icons",
         "description": "Changes sign inventory icons to be more similar to the block.",
-        "filePaths": [
-            "/textures/item/acacia_sign.png",
-            "/textures/item/birch_sign.png",
-            "/textures/item/crimson_sign.png",
-            "/textures/item/dark_oak_sign.png",
-            "/textures/item/jungle_sign.png",
-            "/textures/item/oak_sign.png",
-            "/textures/item/spruce_sign.png",
-            "/textures/item/warped_sign.png"
-        ]
+        "category": "fixes"
     },
     {
         "id": "crackedNetherBricks",
         "label": "Cracked Nether Bricks",
         "iconType": "gif",
-        "description": "Improves Cracked Nether Bricks by adding a magma animation in cracks.",
-        "filePaths": [
-            "/optifine/emissive.properties",
-            "/textures/block/cracked_nether_bricks.png",
-            "/textures/block/cracked_nether_bricks.png.mcmeta",
-            "/textures/block/cracked_nether_bricks_glow.png",
-            "/textures/block/cracked_nether_bricks_glow.png.mcmeta"
-        ]
+        "description": "Improves cracked nether bricks by adding a magma animation in cracks.",
+        "category": "aesthetic"
     },
     {
         "id": "obsidianEnderChest",
         "label": "Obsidian Ender Chest",
         "description": "Removes green and replaces it with an obsidian-like texture.",
-        "filePaths": ["/textures/entity/chest/ender.png"]
+        "category": "fixes"
     },
     {
         "id": "noNauseaOverlay",
         "label": "No Nausea Overlay",
         "description": "Removes the green overlay from nausea when distortion effects is set to off.",
-        "filePaths": ["/textures/misc/nausea.png"]
+        "category": "utility"
     },
     {
         "id": "betterHelmets",
         "label": "Better Helmets",
         "description": "Makes your face more visible when wearing a helmet.",
-        "filePaths": [
-            "/textures/item/netherite_helmet.png",
-            "/textures/models/armor/diamond_layer_1.png",
-            "/textures/models/armor/gold_layer_1.png",
-            "/textures/models/armor/iron_layer_1.png",
-            "/textures/models/armor/netherite_layer_1.png",
-            "/textures/models/armor/turtle_layer_1.png"            
-        ]
+        "category": "utility"
     },
     {
-        "id": "egglessSlimeBlock",
-        "label": "Eggless Slime Block",
-        "description": "Removes the \"egg\" in the middle of slime blocks.",
-        "filePaths": ["/models/block/slime_block.json"]
+        "id": "egglessSlime",
+        "label": "Eggless Slime",
+        "description": "Removes the \"egg\" in the middle of slime blocks and mobs.",
+        "category": "aesthetic"
     },
     {
         "id": "egglessHoneyBlock",
         "label": "Eggless Honey Block",
         "description": "Removes the \"egg\" in the middle of honey blocks.",
-        "filePaths": ["/models/block/honey_block.json"]
+        "category": "aesthetic"
     },
     {
         "id": "flowerGolem",
         "label": "Flower Golem",
         "description": "Makes poppies bloom on the texture of the iron golem.",
-        "filePaths": [
-            "/textures/entity/iron_golem/iron_golem.png",
-            "/textures/entity/iron_golem/iron_golem_crackiness_low.png",
-            "/textures/entity/iron_golem/iron_golem_crackiness_medium.png",
-            "/textures/entity/iron_golem/iron_golem_crackiness_high.png"
-        ]
+        "category": "aesthetic"
     },
     {
         "id": "fancyLlamaDecor",
         "label": "Fancy Llama Decor",
         "description": "Gives llamas fancier carpet patterns.",
-        "filePaths": [
-            "/textures/entity/llama/decor/black.png",
-            "/textures/entity/llama/decor/blue.png",
-            "/textures/entity/llama/decor/brown.png",
-            "/textures/entity/llama/decor/cyan.png",
-            "/textures/entity/llama/decor/gray.png",
-            "/textures/entity/llama/decor/green.png",
-            "/textures/entity/llama/decor/light_blue.png",
-            "/textures/entity/llama/decor/light_gray.png",
-            "/textures/entity/llama/decor/lime.png",
-            "/textures/entity/llama/decor/magenta.png",
-            "/textures/entity/llama/decor/orange.png",
-            "/textures/entity/llama/decor/pink.png",
-            "/textures/entity/llama/decor/purple.png",
-            "/textures/entity/llama/decor/red.png",
-            "/textures/entity/llama/decor/trader_llama.png",
-            "/textures/entity/llama/decor/white.png",
-            "/textures/entity/llama/decor/yellow.png"
-        ]
+        "category": "aesthetic"
     },
     {
         "id": "purpleEndPortalFrame",
         "label": "Purple End Portal Frame",
-        "description": "Makes end portal frame purple when filled.",
-        "filePaths": [
-            "/blockstates/end_portal_frame.json",
-            "/models/block/end_portal_frame.json",
-            "/models/block/end_portal_frame_filled.json",
-            "/textures/block/end_portal_frame_filled_top.png",
-            "/textures/block/end_portal_frame_side.png",
-            "/textures/block/end_portal_frame_top.png"
-        ]
+        "description": "Makes end portal frame purple instead of green.",
+        "category": "aesthetic"
     },
     {
         "id": "connectedSmoothStone",
         "label": "Connected Smooth Stone",
         "description": "Connected smooth stone. No OptiFine required.",
-        "filePaths": [
-            "/models/block/smooth_stone.json",
-            "/optifine/ctm/smooth_stone/0.png",
-            "/optifine/ctm/smooth_stone/1.png",
-            "/optifine/ctm/smooth_stone/2.png",
-            "/optifine/ctm/smooth_stone/3.png",
-            "/optifine/ctm/smooth_stone/4.png",
-            "/optifine/ctm/smooth_stone/smooth_stone.properties",
-            "/textures/block/borderless_smooth_stone.png",
-            "/textures/block/smooth_stone.png"
-        ]
+        "category": "aesthetic"
     },
     {
         "id": "livingDragon",
         "label": "Living Dragon",
         "iconType": "gif",
         "description": "Makes dragon egg more detailed and implements animation.",
-        "filePaths": [
-            "/textures/block/dragon_egg.png",
-            "/textures/block/dragon_egg.png.mcmeta"
-        ]
+        "category": "aesthetic"
     },
     {
         "id": "animatedFurnaces",
         "label": "Animated Furnaces",
         "iconType": "gif",
         "description": "Adds animation to furnace and small improvements for smoker and blast furnace.",
-        "filePaths": [
-            "/textures/block/blast_furnace_front_on.png",
-            "/textures/block/blast_furnace_front_on.png.mcmeta",
-            "/textures/block/furnace_front_on.png",
-            "/textures/block/furnace_front_on.png.mcmeta",
-            "/textures/block/smoker_bottom.png",
-            "/textures/block/smoker_front_on.png",
-            "/textures/block/smoker_front_on.png.mcmeta",
-            "/textures/block/smoker_top.png"
-        ]
+        "category": "fixes"
     },
     {
         "id": "detailedHearts",
         "label": "Detailed Hearts",
         "description": "Improves hearts, armour points, attack indicator and makes ping icons more colourful.",
-        "filePaths": ["/textures/gui/icons.png"]
+        "category": "aesthetic"
     },
     {
         "id": "matchingGildedBlackstone",
         "label": "Matching Gilded Blackstone",
-        "description": "Improves top texture of Gilded Blackstone.",
-        "filePaths": [
-            "/models/block/gilded_blackstone.json",
-            "/textures/block/gilded_blackstone.png",
-            "/textures/block/gilded_blackstone_top.png"
-        ]
+        "description": "Improves top texture of gilded blackstone.",
+        "category": "fixes",
+        "incompatibilities": ["variatedOres"]
     },
     {
         "id": "soulCampfire",
         "label": "Soul Campfire",
-        "description": "Replaces Oak Logs with Warped Logs and ash with Soul Soil.",
-        "incompatibleWith": [{
+        "description": "Replaces oak logs with warped logs and ash with soul soil.",
+        "category": "fixes",
+        "merges": [{
             "id": "animatedCampfireItems",
-            "useInstead": "soulCampfirePlusAnimatedCampfire"
-        }],
-        "filePaths": [
-            "/blockstates/soul_campfire.json",
-            "/models/block/soul_campfire.json",
-            "/models/block/soul_campfire_off.json",
-            "/models/block/template_soul_campfire.json",
-            "/textures/block/soul_campfire_fire.png",
-            "/textures/block/soul_campfire_fire.png.mcmeta",
-            "/textures/block/soul_campfire_log.png",
-            "/textures/block/soul_campfire_log_lit.png",
-            "/textures/block/soul_campfire_log_lit.png.mcmeta",
-            "/textures/item/soul_campfire.png"
-        ]
+            "mergeWith": "soulCampfirePlusAnimatedCampfire"
+        }]
     },
     {
         "id": "soulCampfirePlusAnimatedCampfire",
-        "hidden": true,
-        "filePaths": [
-            "/blockstates/soul_campfire.json",
-            "/models/block/soul_campfire.json",
-            "/models/block/soul_campfire_off.json",
-            "/models/block/template_soul_campfire.json",
-            "/textures/block/soul_campfire_fire.png",
-            "/textures/block/soul_campfire_fire.png.mcmeta",
-            "/textures/block/soul_campfire_log.png",
-            "/textures/block/soul_campfire_log_lit.png",
-            "/textures/block/soul_campfire_log_lit.png.mcmeta",
-            "/textures/item/campfire.png",
-            "/textures/item/campfire.png.mcmeta",
-            "/textures/item/soul_campfire.png",
-            "/textures/item/soul_campfire.png.mcmeta"
-        ]
+        "hidden": true
     },
     {
         "id": "fixedBarrel",
         "label": "Fixed Barrel",
-        "description": "Makes lines on Barrel compatibile with lines on Spruce Planks. Warning: causes long download time",
-        "filePaths": [
-            "/blockstates/barrel.json",
-            "/models/block/barrel_down.json",
-            "/models/block/barrel_east.json",
-            "/models/block/barrel_north.json",
-            "/models/block/barrel_open_down.json",
-            "/models/block/barrel_open_east.json",
-            "/models/block/barrel_open_north.json",
-            "/models/block/barrel_open_south.json",
-            "/models/block/barrel_open_up.json",
-            "/models/block/barrel_open_west.json",
-            "/models/block/barrel_south.json",
-            "/models/block/barrel_up.json",
-            "/models/block/barrel_west.json",
-            "/textures/block/barrel_bottom.png",
-            "/textures/block/barrel_side_1.png",
-            "/textures/block/barrel_side_3.png",
-            "/textures/block/barrel_side_4.png",
-            "/textures/block/barrel_side_5.png",
-            "/textures/block/barrel_side_6.png",
-            "/textures/block/barrel_top.png",
-            "/textures/block/barrel_top_open.png"
-        ]
+        "description": "Makes lines on barrel compatibile with lines on spruce planks.",
+        "category": "fixes"
     },
     {
-        "id": "netherFunguses",
-        "label": "Nether Funguses",
-        "description": "Adds more variants for Nether Funguses. Warning: causes long download time",
-        "filePaths": [
-            "/blockstates/crimson_fungus.json",
-            "/blockstates/potted_crimson_fungus.json",
-            "/blockstates/potted_warped_fungus.json",
-            "/blockstates/warped_fungus.json",
-            "/models/block/crimson_fungus_1.json",
-            "/models/block/crimson_fungus_2.json",
-            "/models/block/crimson_fungus_3.json",
-            "/models/block/crimson_fungus_4.json",
-            "/models/block/crimson_fungus_5.json",
-            "/models/block/flower_pot_cross_custom.json",
-            "/models/block/potted_crimson_fungus_1.json",
-            "/models/block/potted_crimson_fungus_2.json",
-            "/models/block/potted_crimson_fungus_3.json",
-            "/models/block/potted_crimson_fungus_5.json",
-            "/models/block/potted_warped_fungus_1.json",
-            "/models/block/potted_warped_fungus_2.json",
-            "/models/block/potted_warped_fungus_3.json",
-            "/models/block/potted_warped_fungus_5.json",
-            "/models/block/warped_fungus_1.json",
-            "/models/block/warped_fungus_2.json",
-            "/models/block/warped_fungus_3.json",
-            "/models/block/warped_fungus_4.json",
-            "/models/block/warped_fungus_5.json",
-            "/textures/block/crimson_fungus_1.png",
-            "/textures/block/crimson_fungus_2.png",
-            "/textures/block/crimson_fungus_3.png",
-            "/textures/block/crimson_fungus_4.png",
-            "/textures/block/crimson_fungus_5.png",
-            "/textures/block/warped_fungus_1.png",
-            "/textures/block/warped_fungus_2.png",
-            "/textures/block/warped_fungus_3.png",
-            "/textures/block/warped_fungus_4.png",
-            "/textures/block/warped_fungus_5.png"
-        ]
+        "id": "variatedNetherFungi",
+        "label": "Variated Nether Fungi",
+        "description": "Adds more variants for nether fungi.",
+        "category": "variated"
     },
     {
-        "id": "netherRoots",
-        "label": "Nether Roots",
-        "iconType": "png",
-        "description": "Includes variations for Crimson Nether Roots and Warped Nether Roots. Warning: causes long download time",
-        "filePaths": [
-            "/blockstates/crimson_roots.json",
-            "/blockstates/potted_crimson_roots.json",
-            "/blockstates/potted_warped_roots.json",
-            "/blockstates/warped_roots.json",
-            "/models/block/crimson_roots_1.json",
-            "/models/block/crimson_roots_2.json",
-            "/models/block/crimson_roots_3.json",
-            "/models/block/crimson_roots_4.json",
-            "/models/block/flower_pot_cross_custom.json",
-            "/models/block/potted_crimson_roots_1.json",
-            "/models/block/potted_crimson_roots_2.json",
-            "/models/block/potted_crimson_roots_3.json",
-            "/models/block/potted_crimson_roots_4.json",
-            "/models/block/potted_warped_roots_1.json",
-            "/models/block/potted_warped_roots_2.json",
-            "/models/block/potted_warped_roots_3.json",
-            "/models/block/potted_warped_roots_4.json",
-            "/models/block/warped_roots_1.json",
-            "/models/block/warped_roots_2.json",
-            "/models/block/warped_roots_3.json",
-            "/models/block/warped_roots_4.json",
-            "/textures/block/crimson_roots_1.png",
-            "/textures/block/crimson_roots_1_pot.png",
-            "/textures/block/crimson_roots_2.png",
-            "/textures/block/crimson_roots_2_pot.png",
-            "/textures/block/crimson_roots_3.png",
-            "/textures/block/crimson_roots_3_pot.png",
-            "/textures/block/crimson_roots_4.png",
-            "/textures/block/crimson_roots_4_pot.png",
-            "/textures/block/warped_roots_1.png",
-            "/textures/block/warped_roots_1_pot.png",
-            "/textures/block/warped_roots_2.png",
-            "/textures/block/warped_roots_2_pot.png",
-            "/textures/block/warped_roots_3.png",
-            "/textures/block/warped_roots_3_pot.png",
-            "/textures/block/warped_roots_4.png",
-            "/textures/block/warped_roots_4_pot.png"
-        ]
+        "id": "variatedNetherRoots",
+        "label": "Variated Nether Roots",
+        "description": "Includes variations for crimson roots and warped roots.",
+        "category": "variated"
+    },
+    {
+        "id": "anvilSides",
+        "label": "Anvil Sides",
+        "description": "Adds damage texture on anvil sides.",
+        "category": "utility"
+    },
+    {
+        "id": "knowledgeBookFix",
+        "label": "Knowledge Book Fix",
+        "description": "Corrects GUIs to use the new JAPPA knowledge book texture.",
+        "category": "fixes"
+    },
+    {
+        "id": "emissiveOres",
+        "label": "Emissive Ores",
+        "description": "Makes ores glow in the dark. Requires OptiFine. By AbdulPlayz03",
+        "category": "aesthetic",
+        "merges": [{
+            "id": "variatedOres",
+            "mergeWith": "variatedEmissiveOres"
+        }]
+    },
+    {
+        "id": "targetScore",
+        "label": "Target Score",
+        "description": "Targets show their power level when hit with a projectile.",
+        "category": "utility"
+    },
+    {
+        "id": "arrowedDispensers",
+        "label": "Arrowed Dispensers",
+        "description": "Shows arrows on droppers and dispensers so you can differentiate them and know which way they are facing.",
+        "category": "utility",
+        "incompatibilities": ["fixedDispensers"]
+    },
+    {
+        "id": "shovelsToSpoons",
+        "label": "Shovels to Spoons",
+        "description": "Renames shovels to spoons in-game.",
+        "category": "aesthetic",
+        "lang": true
+    },
+    {
+        "id": "cleanerMaps",
+        "label": "Cleaner Maps",
+        "description": "Changes the border of maps to be cleaner and less torn."
+    },
+	{
+        "id": "daggers",
+        "label": "Daggers",
+        "description": "Makes all swords shorter and renames them.",
+        "category": "utility",
+        "incompatibilities": ["alternativeNetheriteTools"],
+        "lang": true
+    },
+	{
+        "id": "tinyMeals",
+        "label": "Tiny Meals",
+        "description": "Changes food item models to be smaller, so they don't cover as much of the screen.",
+		"category": "utility"
+    },
+	{
+        "id": "shinyClocks",
+        "label": "Shiny Clocks",
+        "description": "Changes clock texture to fit more new textures style.",
+        "category": "fixes",
+        "merges": [{
+            "id": "restockClock",
+            "mergeWith": "restockAndShinyClocks"
+        }]
+    },
+	{
+        "id": "warted",
+        "label": "Warted",
+        "description": "Changes nether wart crops, blocks and item textures to be less ugly and fit with JAPPA's style."
+    },
+    {
+        "id": "variatedBricks",
+        "label": "Variated Bricks",
+        "description": "Makes bricks vary in colour.",
+        "category": "variated"
+    },
+    {
+        "id": "restockAndShinyClocks",
+        "hidden": true
+    },
+    {
+        "id": "moobloom",
+        "label": "Moobloom",
+        "description": "Adds the moobloom from Minecraft Earth to the game. Requires OptiFine.",
+        "category": "aesthetic"
+    },
+    {
+        "id": "warpedSoulLantern",
+        "label": "Warped Soul Lantern",
+        "description": "Changes the sides of Soul Lantern to blue and warped.",
+        "category": "fixes"
+    },
+    {
+        "id": "fixedStonecutter",
+        "label": "Fixed Stonecutter",
+        "description": "Changes the colour of wood on the top of Stonecutter and adds texture with wood to the bottom.",
+        "category": "fixes"
+    },
+    {
+        "id": "pistonFront",
+        "label": "Piston Front",
+        "description": "Makes fronts of pistons more similar to planks.",
+        "category": "fixes"
+    },
+    {
+        "id": "lecternBottom",
+        "label": "Lectern Bottom",
+        "description": "Changes the lectern model to show some carpet on the bottom.",
+        "category": "fixes"
+    },
+    {
+        "id": "craftingTableBottom",
+        "label": "Crafting Table Bottom",
+        "description": "Adds a unique texture to the bottom of crafting tables, that is not just oak planks.",
+        "category": "fixes"
+    },
+    {
+        "id": "fixedDispensers",
+        "label": "Fixed Dispensers",
+        "description": "Adds a unique bottom texture to droppers and dispensers. Also adds side texture for vertical versions.",
+        "category": "fixes",
+        "incompatibilities": ["arrowedDispensers"]
+    },
+    {
+        "id": "variatedOres",
+        "label": "Variated Ores",
+        "description": "Variates the minerals in ore blocks to avoid the grid pattern",
+        "category": "variated",
+        "incompatibilities": ["matchingGildedBlackstone"],
+        "merges": [{
+            "id": "emissiveOres",
+            "mergeWith": "variatedEmissiveOres"
+        }]
+    },
+    {
+        "id": "variatedEmissiveOres",
+        "hidden": true
+    },
+    {
+        "id": "variatedGlass",
+        "label": "Variated Glass",
+        "description": "Variated glass to avoid grid patterns in big walls.",
+        "category": "variated"
+    },
+    {
+        "id": "alternativeNetheriteTools",
+        "label": "Alternative Netherite Tools",
+        "description": "Makes Netherite tools a slightly different shape to other tools to make them more special",
+        "category": "aesthetic",
+        "incompatibilities": ["daggers"]
     }
 ]

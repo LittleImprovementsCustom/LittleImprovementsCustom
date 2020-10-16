@@ -1,26 +1,58 @@
 [
     {
         "name": "Beatso",
+        "group": "team",
         "link": "https://www.beatso.tk",
+        "type": "dynamic",
         "uuid": "895ae84776e0441283db420cf8444e30",
         "desc": "Website and pack development"
     },
     {
         "name": "Daggsy",
+        "group": "team",
         "link": "https://www.planetminecraft.com/member/daggsy/",
+        "type": "dynamic",
         "uuid": "ede8ac1c07734723a0b66817a458fc17",
         "desc": "Pack development"
     },
     {
+        "name": "Kemiu",
+        "group": "team",
+        "link": "https://www.planetminecraft.com/member/kemiu/",
+        "type": "static",
+        "avatar": "kemiu.png",
+        "desc": "Pack development"
+    },
+    {
         "name": "Banakin",
+        "group": "contributor",
         "link": "https://banakin.github.io/",
+        "type": "dynamic",
         "uuid": "d028fc7bff0b4892aaab4d3554c00099",
         "desc": "Helping with some technical stuff for the website"
     },
     {
         "name": "Vanilla Tweaks",
+        "group": "contributor",
         "link": "https://vanillatweaks.net/",
+        "type": "dynamic",
         "uuid": "7c92d6b3635a4226850640d55a97b2f8",
         "desc": "Some resources are by Stridey from Vanilla Tweaks"
+    },
+    {
+        "name": "AbdulPlayz03",
+        "group": "contributor",
+        "link": "https://www.planetminecraft.com/member/abdulplayz03/",
+        "type": "static",
+        "avatar": "AbdulPlayz03.png",
+        "desc": "Emissive Ores module is made by AbdulPlayz03"
+    },
+    {
+        "name": "Fjorde",
+        "group": "contributor",
+        "link": "https://www.planetminecraft.com/member/fjorde/",
+        "type": "dynamic",
+        "uuid": "baa86d889f1d4c3092825b1f5f0843c7",
+        "desc": "Some Variated Ores textures are created by Fjorde"
     }
 ]
