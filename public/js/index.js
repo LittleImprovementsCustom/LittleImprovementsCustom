@@ -74,11 +74,13 @@ function downloadPack() {
 	// show the download toast
 	document.getElementById("download-toast").classList.remove("invisible")
 
+	const readablePlatform = platform.charAt(0).toUpperCase()+platform.slice(1)
+
 	// send post request for pack link
 	const request = new XMLHttpRequest()
 	request.open("POST","/download",false)
 	request.setRequestHeader("Content-Type","application/json")
-	request.send(JSON.stringify({"modules":selectedModules}))
+	request.send(JSON.stringify({"modules":selectedModules,"platform":readablePlatform}))
 
 	// show fail toast if the response was "error"
 	if (request.response == "error") {

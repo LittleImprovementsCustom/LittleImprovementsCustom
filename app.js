@@ -92,7 +92,7 @@ app.post("/download", function (req, res) {
 	}
 
 	// add selectedModules.txt file
-	const infoText = `Little Improvements: Custom\nDownloaded: ${new Date().toUTCString()}\nID: ${packID}\n\nSelected modules:\n${selectedModules.join("\n")}`
+	const infoText = `Little Improvements: Custom\nDownloaded: ${new Date().toUTCString()}\nID: ${packID}\nPlatform: ${req.body.platform}\n\nSelected modules:\n${selectedModules.join("\n")}`
 	archive.append(infoText,{name:"selectedModules.txt"})
 
 	let createdLangFiles = []
