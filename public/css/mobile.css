@@ -57,22 +57,30 @@ body {
 	font-size: 5vw;
 	display: inline;
 	padding: 8px 16px;
-	text-decoration: none;
 	text-align:center;
 	cursor: pointer;
 }
 
 .primary-navbar-item {
 	background-color: var(--emphasis-background);
-	color: var(--emphasis-font-color);
-}
-
-.secondary-navbar-item {
-	color: var(--font-color);
 }
 
 .secondary-navbar-item:hover {
 	background-color: var(--secondary-background);
+}
+
+.navbar-link {
+	display: inline-block;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+.primary-navbar-link {
+	color: var(--emphasis-font-color);
+}
+
+.secondary-navbar-link {
+	color: var(--font-color);
 }
 
 .grid-container {
