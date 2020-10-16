@@ -63,6 +63,14 @@ function downloadPack() {
 		return
 	}
 
+	// warn the user if they are downloading a pack on mobile
+	if (platform=="mobile") {
+		// let the user know Custom is only for Java Edition
+		const x = confirm("We noticed you're on mobile. Little Improvements: Custom is only available for the Java Edition of Minecraft, on PC.\nAre you sure you want to continue and download a pack on mobile?")
+		// return, so the request is not sent, if the user cancelled
+		if (!x) return
+	}
+
 	// show the download toast
 	document.getElementById("download-toast").classList.remove("invisible")
 
