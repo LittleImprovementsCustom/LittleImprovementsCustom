@@ -106,15 +106,19 @@ body {
 
 .box-height {
 	height: auto;
-	min-height: 180px;
 }
 
 .section-header {
-	height: min-content;
+	height: 120px;
 	padding: 0;
 	grid-column: 1 / -1;
 	font-size: 6vw;
 	text-align: center;
+}
+
+.section-header p {
+	display: inline;
+	line-height: 120px;
 }
 
 .unselected {
