@@ -142,6 +142,7 @@ app.post("/download", function (req, res) {
 app.get("/", (req, res) => res.sendFile(__dirname+"/public/index.html") )
 app.get("/credits", (req, res) => res.sendFile(__dirname+"/public/credits.html") )
 app.get("/mobile", (req, res) => res.sendFile(__dirname+"/public/mobile.html") )
+app.get("/credits/mobile", (req, res) => res.sendFile(__dirname+"/public/credits_mobile.html") )
 app.get("*", (req, res) => res.sendFile(__dirname+"/public/404.html", 404) ) // 404 page
 
 // listen server with express
