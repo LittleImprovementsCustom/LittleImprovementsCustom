@@ -1,7 +1,168 @@
-.description {
-	font-size: 4vw;
+:root {
+	--color-scheme: light dark;
+  }
+
+body {
+	background-color: var(--background);
+	color: var(--font-color);
+	font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .title {
 	font-size: 8vw;
+	padding-left: 1vw;
+}
+
+.float-my-children > * {
+	float:left;
+    margin-right:5px;
+}
+
+.clearfix:before,.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.middle-div {
+	position: relative;
+	top: 50%;
+}
+
+.hr{
+	height:2px;
+	border-width:0;
+	background-color:var(--separator);
+}
+
+.description {
+	font-size: 4vw;
+	padding-left: 1vw;
+}
+
+.navbar {
+	list-style-type: none;
+	margin: 0;
+	margin-left: 75%;
+	padding: 0;
+	width: 25%;
+	background-color: var(--primary-background);
+	height: auto; /* Full height */
+	position: fixed; /* Make it stick, even on scroll */
+	overflow: auto; /* Enable scrolling if the sidenav has too much content */
+	border-radius: 10px;
+}
+
+.navbar-item {
+	display: block;
+	padding: 8px 16px;
+	text-decoration: none;
+	text-align:center;
+	cursor: pointer;
+}
+
+.primary-navbar-item {
+	background-color: var(--emphasis-background);
+	color: var(--emphasis-font-color);
+}
+
+.secondary-navbar-item {
+	color: var(--font-color);
+}
+
+.secondary-navbar-item:hover {
+	background-color: var(--secondary-background);
+}
+
+.grid-container {
+	display: grid;
+	width: 75%;
+	grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+}
+
+.selection-box {
+	width: auto;
+	border-radius: 2vw;
+	padding: 5px;
+	margin: 20px;
+}
+
+.selectable {
+	cursor: pointer;
+}
+
+.not-selectable {
+	cursor: not-allowed;
+}
+
+.box-height {
+	height: auto;
+	min-height: 180px;
+}
+
+.section-header {
+	height: min-content;
+	padding: 0;
+	grid-column: 1 / -1;
+	font-size: 6vw;
+	text-align: center;
+}
+
+.unselected {
+	background-color: var(--secondary-background);
+}
+
+.selected {
+	background-color: var(--emphasis-background);
+	color: var(--emphasis-font-color);
+}
+
+.pack-icon {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	max-height: 100px;
+	max-width: 200px;
+}
+
+.pack-label {
+	text-align: center;
+	font-size: 4vw;
+}
+
+.pack-desc {
+	text-align: center;
+	font-size: medium;
+}
+
+a, a:hover, a:active, a:visited {
+	color: var(--font-color);
+}
+
+.toast {
+	width: fit-content;
+	max-width: 40%;
+	padding: 0.8vw;
+	border-radius: 0.4vw;
+	text-align: center;
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+	color: var(--toast-font-color);
+}
+
+.success-toast {
+	background-color: var(--success-background);
+}
+
+.fail-toast {
+	background-color: var(--fail-background);
+}
+
+.invisible {
+	display: none;
 }
