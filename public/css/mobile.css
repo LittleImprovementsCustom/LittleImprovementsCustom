@@ -45,9 +45,7 @@ body {
 
 .navbar {
 	list-style-type: none;
-	margin: 0;
 	padding: 0;
-	padding-bottom: 10px;
 	width: 100%;
 	background-color: var(--primary-background);
 	height: auto; /* Full height */
