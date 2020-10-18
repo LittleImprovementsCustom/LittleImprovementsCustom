@@ -15,6 +15,7 @@
     <meta property="og:image" content="https://www.littleimprovements-custom.tk/logo/site-logo.png">
     <script src=/js/theme.js></script>
     <script src=/js/mobileRedirect.js></script>
+    <script>redirect("/mobile");platform="desktop"</script>
     <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="/css/light.css" media="(prefers-color-scheme: light)">
     <link rel="stylesheet" href="/css/main.css">
@@ -28,10 +29,10 @@
     <hr>
     <p class="description">Click to select the tweaks you want to use, and click again to unselect. Hover over an image to see more info.</p>
     <ul class="navbar">
-        <li class="navbar-item primary-navbar-item"><a class="navbar-item primary-navbar-item" onclick="downloadPack()">Download</a></li>
-        <li class="navbar-item secondary-navbar-item"><a class="navbar-item secondary-navbar-item" href="https://discord.gg/bNcZjFe"  target="_blank">Discord</a></li>
-        <li class="navbar-item secondary-navbar-item"><a class="navbar-item secondary-navbar-item" href="https://github.com/LittleImprovementsCustom/LittleImprovementsCustom"  target="_blank">GitHub</a></li>
-        <li class="navbar-item secondary-navbar-item"><a class="navbar-item secondary-navbar-item" href="/credits">Credits</a></li>
+        <li class="navbar-item primary-navbar-item"><a class="navbar-link primary-navbar-link" onclick="downloadPack()">Download</a></li>
+        <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="https://discord.gg/bNcZjFe"  target="_blank">Discord</a></li>
+        <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="https://github.com/LittleImprovementsCustom/LittleImprovementsCustom"  target="_blank">GitHub</a></li>
+        <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="/credits">Credits</a></li>
     </ul>
     <div class="grid-container" id="pack-selector-container"></div> <!-- the script will add elements to this -->
     <div class="toast success-toast invisible" id="download-toast">Your pack is beginning to download.</div>

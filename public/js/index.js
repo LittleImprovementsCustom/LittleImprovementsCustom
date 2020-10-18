@@ -63,14 +63,24 @@ function downloadPack() {
 		return
 	}
 
+	// warn the user if they are downloading a pack on mobile
+	if (platform=="mobile") {
+		// let the user know Custom is only for Java Edition
+		const x = confirm("We noticed you're on mobile. Little Improvements: Custom is only available for the Java Edition of Minecraft, on PC.\nAre you sure you want to continue and download a pack on mobile?")
+		// return, so the request is not sent, if the user cancelled
+		if (!x) return
+	}
+
 	// show the download toast
 	document.getElementById("download-toast").classList.remove("invisible")
+
+	const readablePlatform = platform.charAt(0).toUpperCase()+platform.slice(1)
 
 	// send post request for pack link
 	const request = new XMLHttpRequest()
 	request.open("POST","/download",false)
 	request.setRequestHeader("Content-Type","application/json")
-	request.send(JSON.stringify({"modules":selectedModules}))
+	request.send(JSON.stringify({"modules":selectedModules,"platform":readablePlatform}))
 
 	// show fail toast if the response was "error"
 	if (request.response == "error") {
@@ -114,13 +124,16 @@ function createModuleSelector(data) {
 	div.appendChild(icon)
 
 	const desc = document.createElement("p")
-	desc.setAttribute("class","pack-desc invisible")
+	if (platform=="desktop") desc.setAttribute("class","pack-desc invisible")
+	else desc.setAttribute("class","pack-desc")
 	desc.setAttribute("id", data.id+"Desc")
 	desc.appendChild(document.createTextNode(data.description))
 	div.appendChild(desc)
 
-	div.addEventListener("mouseover", mouseOver)
-	div.addEventListener("mouseout", mouseOut)
+	if (platform=="desktop") {
+		div.addEventListener("mouseover", mouseOver)
+		div.addEventListener("mouseout", mouseOut)
+	}
 
 }
 

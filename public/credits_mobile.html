@@ -16,24 +16,21 @@
     <meta property="og:image" content="https://www.littleimprovements-custom.tk/logo/site-logo.png">
     <script src=/js/theme.js></script>
     <script src=/js/desktopRedirect.js></script>
-    <script>redirect("/");platform="mobile"</script>
+    <script>redirect("/credits");platform="mobile"</script>
     <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="/css/light.css" media="(prefers-color-scheme: light)">
 	<link rel="stylesheet" href="/css/mobile.css">
-    <title>Little Improvements: Custom</title>
+    <title>Credits</title>
 </head>
 <body>
-    <div class="title middle-div">Little Improvements: Custom</div>
+    <div class="title middle-div">Credits</div>
     <hr>
     <ul class="navbar">
-        <li class="navbar-item primary-navbar-item"><a class="navbar-link primary-navbar-link" onclick="downloadPack()">Download</a></li>
+        <li class="navbar-item primary-navbar-item"><a class="navbar-link primary-navbar-link" href="/">Home</a></li>
         <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="https://discord.gg/bNcZjFe"  target="_blank">Discord</a></li>
         <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="https://github.com/LittleImprovementsCustom/LittleImprovementsCustom"  target="_blank">GitHub</a></li>
-        <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="/credits">Credits</a></li>
     </ul>
     <p class="description">Click to select the tweaks you want to use, and click again to unselect. Hover over an image to see more info.</p>
     <div class="grid-container" id="pack-selector-container"></div> <!-- the script will add elements to this -->
-    <div class="toast success-toast invisible" id="download-toast">Your pack is beginning to download.</div>
-    <div class="toast fail-toast invisible" id="fail-toast">There was an error downloading your pack. Please reload the page and try again. If the issue persists, please <a href="https://discord.gg/bNcZjFe">get in touch</a>.</div>
-    <script src=/js/index.js></script>
+    <script src=/js/credits.js></script>
 </body>
