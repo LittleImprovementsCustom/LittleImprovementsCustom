@@ -232,6 +232,12 @@
             "mergeWith": "restockAndShinyClocks"
         }]
     },
+    {
+        "id": "shinyCompass",
+        "label": "Shiny Compass",
+        "description": "Changes compass texture to fit the new JAPPA style.",
+        "category": "fixes"
+    },
 	{
         "id": "warted",
         "label": "Warted",
