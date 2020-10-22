@@ -348,5 +348,9 @@
         "label": "Colourful Coral",
         "description": "Changes colour of dead corals to more saturated",
         "category": "aesthetic"
-    }
+    },
+    {
+        "id": "colourfulCoralAndCoralIcons",
+        "hidden": true
+    },
 ]
