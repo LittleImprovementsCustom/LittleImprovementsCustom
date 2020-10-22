@@ -341,13 +341,21 @@
         "id": "coralIcons",
         "label": "Coral Icons",
         "description": "Adds unique item icon for every coral",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "merges": [{
+            "id": "colourfulCoral",
+            "mergeWith": "colourfulCoralAndCoralIcons"
+        }]
     },
     {
         "id": "colourfulCoral",
         "label": "Colourful Coral",
         "description": "Changes colour of dead corals to more saturated",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "merges": [{
+            "id": "coralIcons",
+            "mergeWith": "colourfulCoralAndCoralIcons"
+        }]
     },
     {
         "id": "colourfulCoralAndCoralIcons",
