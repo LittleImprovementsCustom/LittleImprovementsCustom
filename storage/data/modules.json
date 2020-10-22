@@ -28,8 +28,8 @@
         "description": "Makes clocks show when villagers can restock their trades.",
         "category": "utility",
         "merges": [{
-            "id": "shinyClocks",
-            "mergeWith": "restockAndShinyClocks"
+            "id": "shinyClock",
+            "mergeWith": "restockAndShinyClock"
         }]
     },
     {
@@ -223,13 +223,13 @@
 		"category": "utility"
     },
 	{
-        "id": "shinyClocks",
-        "label": "Shiny Clocks",
-        "description": "Changes clock texture to fit more new textures style.",
+        "id": "shinyClock",
+        "label": "Shiny Clock",
+        "description": "Changes clock texture to fit the new JAPPA style.",
         "category": "fixes",
         "merges": [{
             "id": "restockClock",
-            "mergeWith": "restockAndShinyClocks"
+            "mergeWith": "restockAndShinyClock"
         }]
     },
     {
@@ -250,7 +250,7 @@
         "category": "variated"
     },
     {
-        "id": "restockAndShinyClocks",
+        "id": "restockAndShinyClock",
         "hidden": true
     },
     {
