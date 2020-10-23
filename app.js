@@ -53,12 +53,11 @@ app.post("/download", function (req, res) {
 
 	// system to deal with merged packs
 	for (i of availableModules) {
-		const merges = i.merges
 		if (
-			( merges!=undefined && merges.length!=0 ) // this module has merges
+			( i.merges!=undefined && i.merges.length!=0 ) // this module has merges
 				&& ( selectedModules.includes(i.id) ) // this module has been selected
 		) {
-			for (n of merges) {
+			for (n of i.merges) {
 				if (selectedModules.includes(n.id)) { // the mergeable module has been selected
 
 					// remove the two mergeable packs
