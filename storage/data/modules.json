@@ -308,13 +308,15 @@
         "id": "lecternBottom",
         "label": "Lectern Bottom",
         "description": "Changes the lectern model to show some carpet on the bottom.",
-        "category": "fixes"
+        "category": "fixes",
+        "incompatibilities": ["flatPlanks"]
     },
     {
         "id": "craftingTableBottom",
         "label": "Crafting Table Bottom",
         "description": "Adds a unique texture to the bottom of crafting tables, that is not just oak planks.",
-        "category": "fixes"
+        "category": "fixes",
+        "incompatibilities": ["flatPlanks"]
     },
     {
         "id": "fixedDispensers",
@@ -363,6 +365,13 @@
         "label": "Better Beacon Sides",
         "description": "Makes the sides of the beacon less bright",
         "category": "aesthetic"
+    },
+    {
+        "id": "flatPlanks",
+        "label": "Flat Planks",
+        "description": "Changes planks to use V3.1 of the texture update textures, making them less plastic.",
+        "category": "aesthetic",
+        "incompatibilities": ["craftingTableBottom","lecternBottom"]
     },
     {
         "id": "coralIcons",
