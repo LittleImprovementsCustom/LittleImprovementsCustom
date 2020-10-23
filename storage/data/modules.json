@@ -3,7 +3,8 @@
         "id": "honeyJar",
         "label": "Honey Jar",
         "description": "Changes honey bottle to a jar of honey, and renames the item.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "lang": true
     },
     {
         "id": "hotLavaBucket",
@@ -46,12 +47,6 @@
         "category": "aesthetic"
     },
     {
-        "id": "obsidianEnderChest",
-        "label": "Obsidian Ender Chest",
-        "description": "Removes green and replaces it with an obsidian-like texture.",
-        "category": "fixes"
-    },
-    {
         "id": "noNauseaOverlay",
         "label": "No Nausea Overlay",
         "description": "Removes the green overlay from nausea when distortion effects is set to off.",
@@ -88,10 +83,42 @@
         "category": "aesthetic"
     },
     {
+        "id": "obsidianEnderChest",
+        "label": "Obsidian Ender Chest",
+        "description": "Removes green and replaces it with an obsidian-like texture.",
+        "category": "fixes",
+        "prefers": [{
+            "id": "purpleEndEyes",
+            "delete": "obsidianEnderChest"
+        }]
+    },
+    {
+        "id": "purpleEndEyes",
+        "label": "Purple End Eyes",
+        "description": "Makes ender pearls, eyes of ender and ender chests all purple",
+        "category": "aesthetic",
+        "merges": [{
+            "id": "purpleEndPortalFrame",
+            "mergeWith": "purpleEndPortalFrameAndPurpleEndEyes"
+        }],
+        "prefers": [{
+            "id": "obsidianEnderChest",
+            "delete": "obsidianEnderChest"
+        }]
+    },
+    {
         "id": "purpleEndPortalFrame",
         "label": "Purple End Portal Frame",
         "description": "Makes end portal frame purple instead of green.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "merges": [{
+            "id": "purpleEndEyes",
+            "mergeWith": "purpleEndPortalFrameAndPurpleEndEyes"
+        }]
+    },
+    {
+        "id": "purpleEndPortalFrameAndPurpleEndEyes",
+        "hidden": true
     },
     {
         "id": "connectedSmoothStone",
@@ -345,5 +372,29 @@
         "description": "Changes planks to use V3.1 of the texture update textures, making them less plastic.",
         "category": "aesthetic",
         "incompatibilities": ["craftingTableBottom","lecternBottom"]
+    },
+    {
+        "id": "coralIcons",
+        "label": "Coral Icons",
+        "description": "Adds unique item icon for every coral",
+        "category": "aesthetic",
+        "merges": [{
+            "id": "colourfulCoral",
+            "mergeWith": "colourfulCoralAndCoralIcons"
+        }]
+    },
+    {
+        "id": "colourfulCoral",
+        "label": "Colourful Coral",
+        "description": "Changes colour of dead corals to more saturated",
+        "category": "aesthetic",
+        "merges": [{
+            "id": "coralIcons",
+            "mergeWith": "colourfulCoralAndCoralIcons"
+        }]
+    },
+    {
+        "id": "colourfulCoralAndCoralIcons",
+        "hidden": true
     }
 ]
