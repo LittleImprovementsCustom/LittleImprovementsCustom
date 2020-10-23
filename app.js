@@ -35,6 +35,22 @@ app.post("/download", function (req, res) {
 	let selectedModules = req.body.modules
 	console.log(selectedModules)
 
+
+	// system to deal with preferred packs
+	for (i of availableModules) {
+		if (
+			( i.prefers!=undefined && i.prefers.length!=0 ) // this module has prefers
+				&& ( selectedModules.includes(i.id) ) // this module has been selected
+		) {
+			console.log(i.id)
+			for (n of i.prefers) {
+				if (selectedModules.includes(n.id)) { // the module to prefer with has also been selected
+					selectedModules.splice(selectedModules.indexOf(n.delete),1) // remove the unpreferrred module
+				}
+			}
+		}
+	}
+
 	// system to deal with merged packs
 	for (i of availableModules) {
 		const merges = i.merges
