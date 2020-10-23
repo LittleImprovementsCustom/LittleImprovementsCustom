@@ -3,7 +3,8 @@
         "id": "honeyJar",
         "label": "Honey Jar",
         "description": "Changes honey bottle to a jar of honey, and renames the item.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "lang": true
     },
     {
         "id": "hotLavaBucket",
