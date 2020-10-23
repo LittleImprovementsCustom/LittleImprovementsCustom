@@ -83,6 +83,16 @@
         "category": "aesthetic"
     },
     {
+        "id": "obsidianEnderChest",
+        "label": "Obsidian Ender Chest",
+        "description": "Removes green and replaces it with an obsidian-like texture.",
+        "category": "fixes",
+        "prefers": [{
+            "id": "purpleEndEyes",
+            "delete": "obsidianEnderChest"
+        }]
+    },
+    {
         "id": "purpleEndEyes",
         "label": "Purple End Eyes",
         "description": "Makes ender pearls, eyes of ender and ender chests all purple",
@@ -90,6 +100,10 @@
         "merges": [{
             "id": "purpleEndPortalFrame",
             "mergeWith": "purpleEndPortalFrameAndPurpleEndEyes"
+        }],
+        "prefers": [{
+            "id": "obsidianEnderChest",
+            "delete": "obsidianEnderChest"
         }]
     },
     {
