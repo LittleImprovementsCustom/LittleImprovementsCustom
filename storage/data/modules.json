@@ -46,12 +46,6 @@
         "category": "aesthetic"
     },
     {
-        "id": "obsidianEnderChest",
-        "label": "Obsidian Ender Chest",
-        "description": "Removes green and replaces it with an obsidian-like texture.",
-        "category": "fixes"
-    },
-    {
         "id": "noNauseaOverlay",
         "label": "No Nausea Overlay",
         "description": "Removes the green overlay from nausea when distortion effects is set to off.",
@@ -88,10 +82,28 @@
         "category": "aesthetic"
     },
     {
+        "id": "purpleEndEyes",
+        "label": "Purple End Eyes",
+        "description": "Makes ender pearls, eyes of ender and ender chests all purple",
+        "category": "aesthetic",
+        "merges": [{
+            "id": "purpleEndPortalFrame",
+            "mergeWith": "purpleEndPortalFrameAndPurpleEndEyes"
+        }]
+    },
+    {
         "id": "purpleEndPortalFrame",
         "label": "Purple End Portal Frame",
         "description": "Makes end portal frame purple instead of green.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "merges": [{
+            "id": "purpleEndEyes",
+            "mergeWith": "purpleEndPortalFrameAndPurpleEndEyes"
+        }]
+    },
+    {
+        "id": "purpleEndPortalFrameAndPurpleEndEyes",
+        "hidden": true
     },
     {
         "id": "connectedSmoothStone",
