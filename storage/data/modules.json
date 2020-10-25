@@ -86,7 +86,7 @@
         "id": "obsidianEnderChest",
         "label": "Obsidian Ender Chest",
         "description": "Removes green and replaces it with an obsidian-like texture.",
-        "category": "fixes",
+        "category": "aesthetic",
         "prefers": [{
             "id": "purpleEndEyes",
             "delete": "obsidianEnderChest"
