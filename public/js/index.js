@@ -198,8 +198,17 @@ function send() {
 	
 	xhr.onreadystatechange = ()=>{
 		if (xhr.readyState == 4 && xhr.status == "200") {
-			const modulesToSelect = JSON.parse(xhr.response)
-			// clear selections and select correct modules
+			const response = JSON.parse(xhr.response)
+			if (response.found) { // the selected modules were found successfully
+
+				const modulesToSelect = response.modulesToSelect
+				console.log(modulesToSelect)
+				// clear selections and select correct modules
+
+			} else {
+				// alert the user that the selected modules was not found
+				alert("Your pack could not be read correctly.\nThis may be because it is an old download, before packs were made readable by the website.\nAre you sure you uploaded the pack properly?\nIf you have any questions, do not hesistate to get in touch.")
+			}
 		}
 	}
 }

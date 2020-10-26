@@ -180,6 +180,14 @@ app.post("/uploadpack", (req, res) => {
 		})
 
 		zip.on ("ready", () => {
+
+			// check if zip contains rawSelectedModules.json
+			if (!Object.values(zip.entries()).map(x=>x.name).includes("assets/rawSelectedModules.json")) {
+				// the file was not found, return an error
+				res.json({"found":false})
+				return
+			}
+
 			// Take a look at the files
 			for (const entry of Object.values(zip.entries())) {
 				const desc = entry.isDirectory ? "directory" : `${entry.size} bytes`
@@ -193,7 +201,7 @@ app.post("/uploadpack", (req, res) => {
 			zip.close()
 
 			// send the selected modules in the response
-			res.json(selectedModulesContents)
+			res.json({"found":true,"modulesToSelect":selectedModulesContents})
 		})
 	})
 	
