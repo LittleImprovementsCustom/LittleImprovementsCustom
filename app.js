@@ -169,6 +169,7 @@ app.post("/uploadpack", (req, res) => {
 	})
 
 	form.parse(req, (err, fields, files) =>{
+
 		if (err) {
 			next(err)
 			return
@@ -198,6 +199,10 @@ app.post("/uploadpack", (req, res) => {
 			// send the selected modules in the response
 			res.json({"found":true,"modulesToSelect":selectedModulesContents})
 		})
+
+		// handle errors such as the file being upload not being a zip
+		zip.on("error", err => res.json({"found":false}) )
+
 	})
 	
 })
