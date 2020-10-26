@@ -98,7 +98,7 @@ function downloadPack() {
 		toast.setAttribute("class", "toast fail-toast")
 		toast.appendChild(document.createTextNode("There was an error downloading your pack. Please reload the page and try again. If the issue persists, please <a href='https://discord.gg/bNcZjFe'>get in touch</a>."))
 		document.body.appendChild(toast)
-		
+
 		return // return, so the user doesnt get redirected
 	}
 
@@ -226,6 +226,9 @@ function send() {
 				for (id of response.modulesToSelect) {
 					toggleSelected(id)
 				}
+
+				// show alert saying that the pack was uploaded with success
+				alert("Your pack was uploaded with success. You can now edit your selection before downloading.")
 
 			} else {
 				// alert the user that the selected modules was not found
