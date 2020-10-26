@@ -201,9 +201,6 @@ function send() {
 			const response = JSON.parse(xhr.response)
 			if (response.found) { // the selected modules were found successfully
 
-				const modulesToSelect = response.modulesToSelect
-				console.log(modulesToSelect)
-
 				// clear modules that were manually selected by the user before pack was uploaded
 				for (id of selectedModules) {
 					const moduleDiv = document.getElementById(id)
@@ -212,6 +209,10 @@ function send() {
 				}
 				selectedModules = []
 
+				// select modules from the pack that was uploaded
+				for (id of response.modulesToSelect) {
+					toggleSelected(id)
+				}
 
 			} else {
 				// alert the user that the selected modules was not found
