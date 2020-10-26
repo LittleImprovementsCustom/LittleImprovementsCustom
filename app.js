@@ -187,11 +187,6 @@ app.post("/uploadpack", (req, res) => {
 				res.json({"found":false})
 				return
 			}
-
-			// Take a look at the files
-			for (const entry of Object.values(zip.entries())) {
-				const desc = entry.isDirectory ? "directory" : `${entry.size} bytes`
-			}
 			
 			// Read rawSelectedModules.json from memory
 			const selectedModulesContents = JSON.parse(zip.entryDataSync("assets/rawSelectedModules.json").toString("utf8"))
