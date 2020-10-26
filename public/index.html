@@ -28,12 +28,14 @@
      </div>         
     <hr>
     <p class="description">Click to select the tweaks you want to use, and click again to unselect. Hover over an image to see more info.</p>
-    <ul class="navbar">
-        <li class="navbar-item primary-navbar-item"><a class="navbar-link primary-navbar-link" onclick="downloadPack()">Download</a></li>
-        <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="https://discord.gg/bNcZjFe"  target="_blank">Discord</a></li>
-        <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="https://github.com/LittleImprovementsCustom/LittleImprovementsCustom"  target="_blank">GitHub</a></li>
-        <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="/credits">Credits</a></li>
-    </ul>
+    <div class="sidebar">
+        <ul class="navbar">
+            <li class="navbar-item primary-navbar-item"><a class="navbar-link primary-navbar-link" onclick="downloadPack()">Download</a></li>
+            <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="https://discord.gg/bNcZjFe"  target="_blank">Discord</a></li>
+            <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="https://github.com/LittleImprovementsCustom/LittleImprovementsCustom"  target="_blank">GitHub</a></li>
+            <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="/credits">Credits</a></li>
+        </ul>
+    </div>
     <div class="grid-container" id="pack-selector-container"></div> <!-- the script will add elements to this -->
     <div class="toast success-toast invisible" id="download-toast">Your pack is beginning to download.</div>
     <div class="toast fail-toast invisible" id="fail-toast">There was an error downloading your pack. Please reload the page and try again. If the issue persists, please <a href="https://discord.gg/bNcZjFe">get in touch</a>.</div>
