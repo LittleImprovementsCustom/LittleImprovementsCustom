@@ -185,3 +185,21 @@ xobj.onreadystatechange = function () {
 	}
 }
 xobj.send(null)
+
+// SYSTEM TO DEAL WITH SENDING AN UPLOADED PACK
+function send() {
+	const form = document.getElementById("uploadForm")
+	const formData = new FormData(form)
+	xhr = new XMLHttpRequest()
+
+	xhr.open("POST", "/uploadpack")  
+	// xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded")
+	xhr.send(formData)
+	
+	xhr.onreadystatechange = ()=>{
+		if (xhr.readyState == 4 && xhr.status == "200") {
+			const modulesToSelect = JSON.parse(xhr.response)
+			// clear selections and select correct modules
+		}
+	}
+}

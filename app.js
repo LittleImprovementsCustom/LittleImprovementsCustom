@@ -158,6 +158,49 @@ app.post("/download", function (req, res) {
   
 })
 
+
+// system to deal with file uploads
+app.post("/uploadpack", (req, res) => {
+	
+	const form = new formidable.IncomingForm()
+
+	form.parse(req, function(err, fields, files) {
+		if (err) console.error(err)
+	})
+
+	form.parse(req, (err, fields, files) =>{
+		if (err) {
+			next(err)
+			return
+		}
+
+		const zip = new streamZip ({
+			file: files.uploadedPack.path,
+			storeEntries: true
+		})
+
+		zip.on ("ready", () => {
+			// Take a look at the files
+			for (const entry of Object.values(zip.entries())) {
+				const desc = entry.isDirectory ? "directory" : `${entry.size} bytes`
+			}
+			
+			// Read rawSelectedModules.json from memory
+			const selectedModulesContents = JSON.parse(zip.entryDataSync("assets/rawSelectedModules.json").toString("utf8"))
+			console.log(selectedModulesContents)
+			
+			// Do not forget to close the file once you're done
+			zip.close()
+
+			// send the selected modules in the response
+			res.json(selectedModulesContents)
+		})
+	})
+	
+})
+
+
+
 // html webpage requests
 app.get("/", (req, res) => res.sendFile(__dirname+"/public/index.html") )
 app.get("/credits", (req, res) => res.sendFile(__dirname+"/public/credits.html") )
