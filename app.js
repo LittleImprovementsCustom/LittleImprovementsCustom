@@ -112,6 +112,9 @@ app.post("/download", function (req, res) {
 	const infoText = `Little Improvements: Custom\nDownloaded: ${new Date().toUTCString()}\nID: ${packID}\nPlatform: ${req.body.platform}\n\nSelected modules:\n${selectedModules.join("\n")}`
 	archive.append(infoText,{name:"selectedModules.txt"})
 
+	// add rawSelectedModules.json file
+	archive.append(JSON.stringify(req.body.modules),{name:"assets/rawSelectedModules.json"})
+
 	let createdLangFiles = []
 
 	// add selected modules
