@@ -88,9 +88,12 @@ function downloadPack() {
 
 	// show fail toast if the response was "error"
 	if (request.response == "error") {
-		document.getElementById("download-toast").classList.add("invisible") // hide the download toast
 
-		// create the download toast
+		// delete the success toast
+		const downloadToast = document.getElementById("download-toast")
+		downloadToast.parentNode.remove(downloadToast)
+
+		// create the fail toast
 		const toast = document.createElement("div")
 		toast.setAttribute("class", "toast fail-toast")
 		toast.appendChild(document.createTextNode("There was an error downloading your pack. Please reload the page and try again. If the issue persists, please <a href='https://discord.gg/bNcZjFe'>get in touch</a>."))
