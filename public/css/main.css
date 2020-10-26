@@ -45,24 +45,27 @@ body {
 
 .sidebar {
 	margin-left: 75%;
-	width: 25%
+	width: 25%;
+}
+
+.sidebar > * {
+	width: 25%;
+	margin: 0;
+	height: auto; /* Full height */
+	position: fixed; /* Make it stick, even on scroll */
 }
 
 .navbar {
 	list-style-type: none;
-	width: 25%;
-	margin: 0;
-	padding: 0;
 	background-color: var(--primary-background);
-	height: auto; /* Full height */
-	position: fixed; /* Make it stick, even on scroll */
 	overflow: auto; /* Enable scrolling if the sidenav has too much content */
 	border-radius: 10px;
+	padding: 0 16px 0 0;
 }
 
 .navbar-item {
 	display: block;
-	padding: 8px 16px;
+	padding: 8px 0 8px 16px;
 	text-align:center;
 	cursor: pointer;
 }
@@ -87,6 +90,18 @@ body {
 
 .secondary-navbar-link {
 	color: var(--font-color);
+}
+
+.upload-form {
+	bottom: 16px;
+	border-radius: 10px;
+	background-color: var(--primary-background);
+	padding: 16px;
+	line-height: 1.6;
+}
+
+.upload-title {
+	font-size: large;
 }
 
 .grid-container {

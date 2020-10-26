@@ -35,6 +35,11 @@
             <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="https://github.com/LittleImprovementsCustom/LittleImprovementsCustom"  target="_blank">GitHub</a></li>
             <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="/credits">Credits</a></li>
         </ul>
+        <form action="uploadpack" method="post" enctype="multipart/form-data" class="upload-form">
+            <span class="upload-title">Upload a pack</span><br>
+            <input type="file" name="uploadedPack" multiple="multiple"/>
+            <input type="submit" value="Upload" class="upload-button"/>
+        </form>
     </div>
     <div class="grid-container" id="pack-selector-container"></div> <!-- the script will add elements to this -->
     <div class="toast success-toast invisible" id="download-toast">Your pack is beginning to download.</div>
