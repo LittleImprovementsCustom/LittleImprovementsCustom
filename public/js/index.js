@@ -71,8 +71,12 @@ function downloadPack() {
 		if (!x) return
 	}
 
-	// show the download toast
-	document.getElementById("download-toast").classList.remove("invisible")
+	// create the download toast
+	const toast = document.createElement("div")
+	toast.setAttribute("class", "toast success-toast")
+	toast.setAttribute("id", "download-toast")
+	toast.appendChild(document.createTextNode("Your pack is beginning to download."))
+	document.body.appendChild(toast)
 
 	const readablePlatform = platform.charAt(0).toUpperCase()+platform.slice(1)
 
@@ -85,7 +89,13 @@ function downloadPack() {
 	// show fail toast if the response was "error"
 	if (request.response == "error") {
 		document.getElementById("download-toast").classList.add("invisible") // hide the download toast
-		document.getElementById("fail-toast").classList.remove("invisible") // show fail toast
+
+		// create the download toast
+		const toast = document.createElement("div")
+		toast.setAttribute("class", "toast fail-toast")
+		toast.appendChild(document.createTextNode("There was an error downloading your pack. Please reload the page and try again. If the issue persists, please <a href='https://discord.gg/bNcZjFe'>get in touch</a>."))
+		document.body.appendChild(toast)
+		
 		return // return, so the user doesnt get redirected
 	}
 
