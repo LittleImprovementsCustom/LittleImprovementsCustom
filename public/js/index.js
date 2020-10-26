@@ -203,7 +203,15 @@ function send() {
 
 				const modulesToSelect = response.modulesToSelect
 				console.log(modulesToSelect)
-				// clear selections and select correct modules
+
+				// clear modules that were manually selected by the user before pack was uploaded
+				for (id of selectedModules) {
+					const moduleDiv = document.getElementById(id)
+					moduleDiv.classList.remove("selected")
+					moduleDiv.classList.add("unselected")
+				}
+				selectedModules = []
+
 
 			} else {
 				// alert the user that the selected modules was not found
