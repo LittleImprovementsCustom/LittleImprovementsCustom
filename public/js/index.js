@@ -225,9 +225,7 @@ function send() {
 				// select modules from the pack that was uploaded
 				const availableModules = modulesJSON.map(x=>x.id)
 				for (id of response.modulesToSelect) {
-					if (availableModules.includes(id)) {
-						toggleSelected(id)
-					}
+					if (availableModules.includes(id)) toggleSelected(id)
 				}
 
 				// show alert saying that the pack was uploaded with success
