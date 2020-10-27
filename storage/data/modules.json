@@ -188,7 +188,7 @@
     {
         "id": "emissiveOres",
         "label": "Emissive Ores",
-        "description": "Makes ores glow in the dark. Requires OptiFine. By AbdulPlayz03",
+        "description": "Makes ores glow in the dark. Requires OptiFine and emissive textures turned on.",
         "category": "aesthetic",
         "merges": [{
             "id": "variatedOres",
