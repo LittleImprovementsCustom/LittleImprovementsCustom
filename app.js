@@ -3,6 +3,8 @@ const express = require("express")
 const Nanoid = require("nanoid")
 const fs = require("fs")
 const archiver = require("archiver")
+const formidable = require("formidable")
+const streamZip = require("node-stream-zip")
 const Dropbox = require("dropbox").Dropbox
 require("isomorphic-fetch")
 require("dotenv").config()
@@ -110,6 +112,9 @@ app.post("/download", function (req, res) {
 	const infoText = `Little Improvements: Custom\nDownloaded: ${new Date().toUTCString()}\nID: ${packID}\nPlatform: ${req.body.platform}\n\nSelected modules:\n${selectedModules.join("\n")}`
 	archive.append(infoText,{name:"selectedModules.txt"})
 
+	// add rawSelectedModules.json file
+	archive.append(JSON.stringify(req.body.modules),{name:"assets/rawSelectedModules.json"})
+
 	let createdLangFiles = []
 
 	// add selected modules
@@ -152,6 +157,53 @@ app.post("/download", function (req, res) {
 	archive.finalize()
   
 })
+
+
+// system to deal with file uploads
+app.post("/uploadpack", (req, res) => {
+	
+	const form = new formidable.IncomingForm()
+
+	form.parse(req, (err, fields, files) =>{
+
+		if (err) {
+			next(err)
+			return
+		}
+
+		const zip = new streamZip ({
+			file: files.uploadedPack.path,
+			storeEntries: true
+		})
+
+		zip.on ("ready", () => {
+
+			// check if zip contains rawSelectedModules.json
+			if (!Object.values(zip.entries()).map(x=>x.name).includes("assets/rawSelectedModules.json")) {
+				// the file was not found, return an error
+				res.json({"found":false})
+				return
+			}
+			
+			// Read rawSelectedModules.json from memory
+			const selectedModulesContents = JSON.parse(zip.entryDataSync("assets/rawSelectedModules.json").toString("utf8"))
+			console.log(selectedModulesContents)
+			
+			// Do not forget to close the file once you're done
+			zip.close()
+
+			// send the selected modules in the response
+			res.json({"found":true,"modulesToSelect":selectedModulesContents})
+		})
+
+		// handle errors such as the file being upload not being a zip
+		zip.on("error", err => res.json({"found":false}))
+
+	})
+	
+})
+
+
 
 // html webpage requests
 app.get("/", (req, res) => res.sendFile(__dirname+"/public/index.html") )

@@ -71,8 +71,12 @@ function downloadPack() {
 		if (!x) return
 	}
 
-	// show the download toast
-	document.getElementById("download-toast").classList.remove("invisible")
+	// create the download toast
+	const toast = document.createElement("div")
+	toast.setAttribute("class", "toast success-toast")
+	toast.setAttribute("id", "download-toast")
+	toast.appendChild(document.createTextNode("Your pack is beginning to download."))
+	document.body.appendChild(toast)
 
 	const readablePlatform = platform.charAt(0).toUpperCase()+platform.slice(1)
 
@@ -84,8 +88,17 @@ function downloadPack() {
 
 	// show fail toast if the response was "error"
 	if (request.response == "error") {
-		document.getElementById("download-toast").classList.add("invisible") // hide the download toast
-		document.getElementById("fail-toast").classList.remove("invisible") // show fail toast
+
+		// delete the success toast
+		const downloadToast = document.getElementById("download-toast")
+		downloadToast.parentNode.remove(downloadToast)
+
+		// create the fail toast
+		const toast = document.createElement("div")
+		toast.setAttribute("class", "toast fail-toast")
+		toast.appendChild(document.createTextNode("There was an error downloading your pack. Please reload the page and try again. If the issue persists, please <a href='https://discord.gg/bNcZjFe'>get in touch</a>."))
+		document.body.appendChild(toast)
+
 		return // return, so the user doesnt get redirected
 	}
 
@@ -185,3 +198,43 @@ xobj.onreadystatechange = function () {
 	}
 }
 xobj.send(null)
+
+// SYSTEM TO DEAL WITH SENDING AN UPLOADED PACK
+function send() {
+	const form = document.getElementById("uploadForm")
+	const formData = new FormData(form)
+	xhr = new XMLHttpRequest()
+
+	xhr.open("POST", "/uploadpack")  
+	// xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded")
+	xhr.send(formData)
+	
+	xhr.onreadystatechange = ()=>{
+		if (xhr.readyState == 4 && xhr.status == "200") {
+			const response = JSON.parse(xhr.response)
+			if (response.found) { // the selected modules were found successfully
+
+				// clear modules that were manually selected by the user before pack was uploaded
+				for (id of selectedModules) {
+					const moduleDiv = document.getElementById(id)
+					moduleDiv.classList.remove("selected")
+					moduleDiv.classList.add("unselected")
+				}
+				selectedModules = []
+
+				// select modules from the pack that was uploaded
+				const availableModules = modulesJSON.map(x=>x.id)
+				for (id of response.modulesToSelect) {
+					if (availableModules.includes(id)) toggleSelected(id)
+				}
+
+				// show alert saying that the pack was uploaded with success
+				alert(`Your pack was uploaded with success. You can now edit your selection before downloading.\nYour previous selection has been cleared, and replaced with the following:\n\n${selectedModules.map(x=>modulesJSON[availableModules.indexOf(x)].label).join("\n")}`)
+
+			} else {
+				// alert the user that the selected modules was not found
+				alert("Your pack could not be read correctly.\nThis may be because it is an old download, before packs were made readable by the website.\nAre you sure you uploaded the pack properly?\nIf you have any questions, do not hesistate to get in touch.")
+			}
+		}
+	}
+}
