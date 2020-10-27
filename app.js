@@ -164,10 +164,6 @@ app.post("/uploadpack", (req, res) => {
 	
 	const form = new formidable.IncomingForm()
 
-	form.parse(req, function(err, fields, files) {
-		if (err) console.error(err)
-	})
-
 	form.parse(req, (err, fields, files) =>{
 
 		if (err) {
@@ -201,7 +197,7 @@ app.post("/uploadpack", (req, res) => {
 		})
 
 		// handle errors such as the file being upload not being a zip
-		zip.on("error", err => res.json({"found":false}) )
+		zip.on("error", err => res.json({"found":false}))
 
 	})
 	
