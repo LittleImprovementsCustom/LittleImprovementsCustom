@@ -229,7 +229,7 @@ function send() {
 				}
 
 				// show alert saying that the pack was uploaded with success
-				alert("Your pack was uploaded with success. You can now edit your selection before downloading.")
+				alert(`Your pack was uploaded with success. You can now edit your selection before downloading.\nYour previous selection has been cleared, and replaced with the following:\n\n${selectedModules.map(x=>modulesJSON[availableModules.indexOf(x)].label).join("\n")}`)
 
 			} else {
 				// alert the user that the selected modules was not found
