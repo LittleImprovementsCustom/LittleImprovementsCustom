@@ -396,5 +396,11 @@
     {
         "id": "colourfulCoralAndCoralIcons",
         "hidden": true
+    },
+    {
+        "id": "newDirt",
+        "label": "New Dirt",
+        "description": "Adds alternative textures for dirt, which are more in-line with JAPPA's style.",
+        "category": "aesthetic"
     }
 ]
