@@ -402,5 +402,11 @@
         "label": "New Dirt",
         "description": "Adds alternative textures for dirt, which are more in-line with JAPPA's style.",
         "category": "aesthetic"
+    },
+    {
+        "id": "brightAndDark",
+        "label": "Bright And Dark",
+        "description": "Adds an alternative texture for sun and moon, making them round.",
+        "category": "aesthetic"
     }
 ]
