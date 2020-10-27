@@ -37,7 +37,7 @@
         "id": "betterSignIcons",
         "label": "Better Sign Icons",
         "description": "Changes sign inventory icons to be more similar to the block.",
-        "category": "fixes"
+        "category": "aesthetic"
     },
     {
         "id": "crackedNetherBricks",
@@ -57,18 +57,6 @@
         "label": "Better Helmets",
         "description": "Makes your face more visible when wearing a helmet.",
         "category": "utility"
-    },
-    {
-        "id": "egglessSlime",
-        "label": "Eggless Slime",
-        "description": "Removes the \"egg\" in the middle of slime blocks and mobs.",
-        "category": "aesthetic"
-    },
-    {
-        "id": "egglessHoneyBlock",
-        "label": "Eggless Honey Block",
-        "description": "Removes the \"egg\" in the middle of honey blocks.",
-        "category": "aesthetic"
     },
     {
         "id": "flowerGolem",
@@ -253,7 +241,7 @@
         "id": "shinyClock",
         "label": "Shiny Clock",
         "description": "Changes clock texture to fit the new JAPPA style.",
-        "category": "fixes",
+        "category": "aesthetic",
         "merges": [{
             "id": "restockClock",
             "mergeWith": "restockAndShinyClock"
@@ -263,7 +251,7 @@
         "id": "shinyCompass",
         "label": "Shiny Compass",
         "description": "Changes compass texture to fit the new JAPPA style.",
-        "category": "fixes"
+        "category": "aesthetic"
     },
 	{
         "id": "warted",
@@ -407,6 +395,18 @@
         "id": "brightAndDark",
         "label": "Bright And Dark",
         "description": "Adds an alternative texture for sun and moon, making them round.",
+        "category": "aesthetic"
+    },
+    {
+        "id": "egglessSlime",
+        "label": "Eggless Slime",
+        "description": "Removes the \"egg\" in the middle of slime blocks and mobs.",
+        "category": "aesthetic"
+    },
+    {
+        "id": "egglessHoneyBlock",
+        "label": "Eggless Honey Block",
+        "description": "Removes the \"egg\" in the middle of honey blocks.",
         "category": "aesthetic"
     }
 ]
