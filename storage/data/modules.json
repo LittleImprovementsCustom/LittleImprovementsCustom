@@ -4,13 +4,15 @@
         "label": "Honey Jar",
         "description": "Changes honey bottle to a jar of honey, and renames the item.",
         "category": "aesthetic",
-        "lang": true
+        "lang": true,
+        "author": "Beatso"
     },
     {
         "id": "hotLavaBucket",
         "label": "Hot Lava Bucket",
         "description": "Makes original lava bucket really, really hot.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Daggsy"
     },
     {
         "id": "animatedCampfireItems",
@@ -21,7 +23,8 @@
         "merges": [{
             "id": "soulCampfire",
             "mergeWith": "soulCampfirePlusAnimatedCampfire"
-        }]
+        }],
+        "author": "Beatso"
     },
     {
         "id": "restockClock",
@@ -31,44 +34,51 @@
         "merges": [{
             "id": "shinyClock",
             "mergeWith": "restockAndShinyClock"
-        }]
+        }],
+        "author": "Beatso"
     },
     {
         "id": "betterSignIcons",
         "label": "Better Sign Icons",
         "description": "Changes sign inventory icons to be more similar to the block.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Daggsy"
     },
     {
         "id": "crackedNetherBricks",
         "label": "Cracked Nether Bricks",
         "iconType": "gif",
         "description": "Improves cracked nether bricks by adding a magma animation in cracks.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Daggsy"
     },
     {
         "id": "noNauseaOverlay",
         "label": "No Nausea Overlay",
         "description": "Removes the green overlay from nausea when distortion effects is set to off.",
-        "category": "utility"
+        "category": "utility",
+        "author": "Beatso"
     },
     {
         "id": "betterHelmets",
         "label": "Better Helmets",
         "description": "Makes your face more visible when wearing a helmet.",
-        "category": "utility"
+        "category": "utility",
+        "author": "Beatso"
     },
     {
         "id": "flowerGolem",
         "label": "Flower Golem",
         "description": "Makes poppies bloom on the texture of the iron golem.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Beatso"
     },
     {
         "id": "fancyLlamaDecor",
         "label": "Fancy Llama Decor",
         "description": "Gives llamas fancier carpet patterns.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Daggsy"
     },
     {
         "id": "obsidianEnderChest",
@@ -78,7 +88,8 @@
         "prefers": [{
             "id": "purpleEndEyes",
             "delete": "obsidianEnderChest"
-        }]
+        }],
+        "author": "Daggsy"
     },
     {
         "id": "purpleEndEyes",
@@ -92,7 +103,8 @@
         "prefers": [{
             "id": "obsidianEnderChest",
             "delete": "obsidianEnderChest"
-        }]
+        }],
+        "author": "Daggsy & Fjorde"
     },
     {
         "id": "purpleEndPortalFrame",
@@ -102,7 +114,8 @@
         "merges": [{
             "id": "purpleEndEyes",
             "mergeWith": "purpleEndPortalFrameAndPurpleEndEyes"
-        }]
+        }],
+        "author": "Daggsy"
     },
     {
         "id": "purpleEndPortalFrameAndPurpleEndEyes",
@@ -112,34 +125,39 @@
         "id": "connectedSmoothStone",
         "label": "Connected Smooth Stone",
         "description": "Connected smooth stone. No OptiFine required.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Beatso"
     },
     {
         "id": "livingDragon",
         "label": "Living Dragon",
         "iconType": "gif",
         "description": "Makes dragon egg more detailed and implements animation.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Daggsy"
     },
     {
         "id": "animatedFurnaces",
         "label": "Animated Furnaces",
         "iconType": "gif",
         "description": "Adds animation to furnace and small improvements for smoker and blast furnace.",
-        "category": "fixes"
+        "category": "fixes",
+        "author": "Daggsy"
     },
     {
         "id": "detailedHearts",
         "label": "Detailed Hearts",
         "description": "Improves hearts, armour points, attack indicator and makes ping icons more colourful.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Daggsy"
     },
     {
         "id": "matchingGildedBlackstone",
         "label": "Matching Gilded Blackstone",
         "description": "Improves top texture of gilded blackstone.",
         "category": "fixes",
-        "incompatibilities": ["variatedOres"]
+        "incompatibilities": ["variatedOres"],
+        "author": "Daggsy"
     },
     {
         "id": "soulCampfire",
@@ -149,7 +167,8 @@
         "merges": [{
             "id": "animatedCampfireItems",
             "mergeWith": "soulCampfirePlusAnimatedCampfire"
-        }]
+        }],
+        "author": "Daggsy"
     },
     {
         "id": "soulCampfirePlusAnimatedCampfire",
@@ -159,31 +178,36 @@
         "id": "fixedBarrel",
         "label": "Fixed Barrel",
         "description": "Makes lines on barrel compatibile with lines on spruce planks.",
-        "category": "fixes"
+        "category": "fixes",
+        "author": "Daggsy"
     },
     {
         "id": "variatedNetherFungi",
         "label": "Variated Nether Fungi",
         "description": "Adds more variants for nether fungi.",
-        "category": "variated"
+        "category": "variated",
+        "author": "Daggsy"
     },
     {
         "id": "variatedNetherRoots",
         "label": "Variated Nether Roots",
         "description": "Includes variations for crimson roots and warped roots.",
-        "category": "variated"
+        "category": "variated",
+        "author": "Daggsy"
     },
     {
         "id": "anvilSides",
         "label": "Anvil Sides",
         "description": "Adds damage texture on anvil sides.",
-        "category": "utility"
+        "category": "utility",
+        "author": "Daggsy"
     },
     {
         "id": "knowledgeBookFix",
         "label": "Knowledge Book Fix",
         "description": "Corrects GUIs to use the new JAPPA knowledge book texture.",
-        "category": "fixes"
+        "category": "fixes",
+        "author": "Beatso"
     },
     {
         "id": "emissiveOres",
@@ -193,32 +217,37 @@
         "merges": [{
             "id": "variatedOres",
             "mergeWith": "variatedEmissiveOres"
-        }]
+        }],
+        "author": "Beatso"
     },
     {
         "id": "targetScore",
         "label": "Target Score",
         "description": "Targets show their power level when hit with a projectile.",
-        "category": "utility"
+        "category": "utility",
+        "author": "Beatso"
     },
     {
         "id": "arrowedDispensers",
         "label": "Arrowed Dispensers",
         "description": "Shows arrows on droppers and dispensers so you can differentiate them and know which way they are facing.",
         "category": "utility",
-        "incompatibilities": ["fixedDispensers"]
+        "incompatibilities": ["fixedDispensers"],
+        "author": "Beatso"
     },
     {
         "id": "shovelsToSpoons",
         "label": "Shovels to Spoons",
         "description": "Renames shovels to spoons in-game.",
         "category": "aesthetic",
-        "lang": true
+        "lang": true,
+        "author": "Beatso"
     },
     {
         "id": "cleanerMaps",
         "label": "Cleaner Maps",
-        "description": "Changes the border of maps to be cleaner and less torn."
+        "description": "Changes the border of maps to be cleaner and less torn.",
+        "author": "Beatso"
     },
 	{
         "id": "daggers",
@@ -229,13 +258,15 @@
             "id": "alternativeNetheriteTools",
             "mergeWith": "daggersAndAlternativeNetheriteTools"
         }],
-        "lang": true
+        "lang": true,
+        "author": "Kemiu"
     },
 	{
         "id": "tinyMeals",
         "label": "Tiny Meals",
         "description": "Changes food item models to be smaller, so they don't cover as much of the screen.",
-		"category": "utility"
+		"category": "utility",
+        "author": "Kemiu"
     },
 	{
         "id": "shinyClock",
@@ -245,24 +276,28 @@
         "merges": [{
             "id": "restockClock",
             "mergeWith": "restockAndShinyClock"
-        }]
+        }],
+        "author": "Kemiu"
     },
     {
         "id": "shinyCompass",
         "label": "Shiny Compass",
         "description": "Changes compass texture to fit the new JAPPA style.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Kemiu"
     },
 	{
         "id": "warted",
         "label": "Warted",
-        "description": "Changes nether wart crops, blocks and item textures to be less ugly and fit with JAPPA's style."
+        "description": "Changes nether wart crops, blocks and item textures to be less ugly and fit with JAPPA's style.",
+        "author": "Kemiu"
     },
     {
         "id": "variatedBricks",
         "label": "Variated Bricks",
         "description": "Makes bricks vary in colour.",
-        "category": "variated"
+        "category": "variated",
+        "author": "Kemiu"
     },
     {
         "id": "restockAndShinyClock",
@@ -272,46 +307,53 @@
         "id": "moobloom",
         "label": "Moobloom",
         "description": "Adds the moobloom from Minecraft Earth to the game. Requires OptiFine.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Daggsy"
     },
     {
         "id": "warpedSoulLantern",
         "label": "Warped Soul Lantern",
         "description": "Changes the sides of Soul Lantern to blue and warped.",
-        "category": "fixes"
+        "category": "fixes",
+        "author": "Daggsy"
     },
     {
         "id": "fixedStonecutter",
         "label": "Fixed Stonecutter",
         "description": "Changes the colour of wood on the top of Stonecutter and adds texture with wood to the bottom.",
-        "category": "fixes"
+        "category": "fixes",
+        "author": "Daggsy"
     },
     {
         "id": "pistonFront",
         "label": "Piston Front",
         "description": "Makes fronts of pistons more similar to planks.",
-        "category": "fixes"
+        "category": "fixes",
+        "author": "Daggsy"
     },
     {
         "id": "lecternBottom",
         "label": "Lectern Bottom",
         "description": "Changes the lectern model to show some carpet on the bottom.",
         "category": "fixes",
-        "incompatibilities": ["flatPlanks"]
+        "incompatibilities": ["flatPlanks"],
+        "author": "Daggsy"
     },
     {
         "id": "craftingTableBottom",
         "label": "Crafting Table Bottom",
         "description": "Adds a unique texture to the bottom of crafting tables, that is not just oak planks.",
         "category": "fixes",
-        "incompatibilities": ["flatPlanks"]
+        "incompatibilities": ["flatPlanks"],
+        "author": "Daggsy"
     },
     {
         "id": "fixedDispensers",
         "label": "Fixed Dispensers",
         "description": "Adds a unique bottom texture to droppers and dispensers. Also adds side texture for vertical versions.",
         "category": "fixes",
-        "incompatibilities": ["arrowedDispensers"]
+        "incompatibilities": ["arrowedDispensers"],
+        "author": "Daggsy"
     },
     {
         "id": "variatedOres",
@@ -322,7 +364,8 @@
         "merges": [{
             "id": "emissiveOres",
             "mergeWith": "variatedEmissiveOres"
-        }]
+        }],
+        "author": "Beatso"
     },
     {
         "id": "variatedEmissiveOres",
@@ -332,7 +375,8 @@
         "id": "variatedGlass",
         "label": "Variated Glass",
         "description": "Variated glass to avoid grid patterns in big walls.",
-        "category": "variated"
+        "category": "variated",
+        "author": "Beatso"
     },
     {
         "id": "alternativeNetheriteTools",
@@ -342,7 +386,8 @@
         "merges": [{
             "id": "daggers",
             "mergeWith": "daggersAndAlternativeNetheriteTools"
-        }]
+        }],
+        "author": "Beatso"
     },
     {
         "id": "daggersAndAlternativeNetheriteTools",
@@ -352,14 +397,16 @@
         "id": "betterBeaconSides",
         "label": "Better Beacon Sides",
         "description": "Makes the sides of the beacon less bright",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Beatso"
     },
     {
         "id": "flatPlanks",
         "label": "Flat Planks",
         "description": "Changes planks to use V3.1 of the texture update textures, making them less plastic.",
         "category": "aesthetic",
-        "incompatibilities": ["craftingTableBottom","lecternBottom"]
+        "incompatibilities": ["craftingTableBottom","lecternBottom"],
+        "author": "Beatso"
     },
     {
         "id": "coralIcons",
@@ -369,7 +416,8 @@
         "merges": [{
             "id": "colourfulCoral",
             "mergeWith": "colourfulCoralAndCoralIcons"
-        }]
+        }],
+        "author": "Daggsy"
     },
     {
         "id": "colourfulCoral",
@@ -379,7 +427,8 @@
         "merges": [{
             "id": "coralIcons",
             "mergeWith": "colourfulCoralAndCoralIcons"
-        }]
+        }],
+        "author": "Daggsy"
     },
     {
         "id": "colourfulCoralAndCoralIcons",
@@ -389,24 +438,28 @@
         "id": "newDirt",
         "label": "New Dirt",
         "description": "Adds alternative textures for dirt, which are more in-line with JAPPA's style.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Kemiu"
     },
     {
         "id": "brightAndDark",
         "label": "Bright And Dark",
         "description": "Adds an alternative texture for sun and moon, making them round.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Kemiu"
     },
     {
         "id": "egglessSlime",
         "label": "Eggless Slime",
         "description": "Removes the \"egg\" in the middle of slime blocks and mobs.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Beatso"
     },
     {
         "id": "egglessHoneyBlock",
         "label": "Eggless Honey Block",
         "description": "Removes the \"egg\" in the middle of honey blocks.",
-        "category": "aesthetic"
+        "category": "aesthetic",
+        "author": "Beatso"
     }
 ]
