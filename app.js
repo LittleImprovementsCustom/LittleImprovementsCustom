@@ -21,6 +21,12 @@ app.use(express.json()) // to support JSON-encoded bodies
 app.use(express.static("public"))
 app.use("/favicon.ico", express.static("public/logo/favicon.ico"))
 
+// disable caching
+app.use((req, res, next) => {
+	res.set("Cache-Control", "max-age=1000")
+	next()
+})
+
 // api reqyests
 app.get("/api/modules", (req, res) => res.sendFile(__dirname+"/storage/data/modules.json") )
 app.get("/api/credits", (req, res) => res.sendFile(__dirname+"/storage/data/credits.json") )
