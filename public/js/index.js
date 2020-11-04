@@ -118,7 +118,7 @@ function createModuleSelector(data) {
 	if (data.hidden) return // stop if the module should be hidden
 
 	const div = document.createElement("div")
-	div.setAttribute("class","grid-item selection-box selectable unselected box-height")
+	div.setAttribute("class","grid-item selection-box selectable unselected pack-height")
 	div.setAttribute("onclick", `javascript: toggleSelected('${data.id}')`)
 	div.setAttribute("id", data.id)
 	document.getElementById("pack-selector-container").appendChild(div)

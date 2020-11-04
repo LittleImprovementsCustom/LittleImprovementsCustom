@@ -125,9 +125,12 @@ body {
 	cursor: not-allowed;
 }
 
-.box-height {
+.pack-height {
+	height: 180px;
+}
+
+.credits-height {
 	height: auto;
-	min-height: 180px;
 }
 
 .section-header {
