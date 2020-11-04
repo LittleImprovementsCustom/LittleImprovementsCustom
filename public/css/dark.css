@@ -4,7 +4,8 @@
 	--secondary-background: #181B1E;
     --emphasis-background: #121416;
     --separator: #5E6063;
-	--font-color: white;
+    --font-color: white;
+    --secondary-font-color: grey;
     --emphasis-font-color: white;
     --toast-font-color: white;
     --success-background: green;

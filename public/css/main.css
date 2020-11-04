@@ -164,6 +164,19 @@ body {
 .pack-desc {
 	text-align: center;
 	font-size: medium;
+	margin-bottom: 5px;
+}
+
+.pack-author {
+	text-align: center;
+	font-size: medium;
+	color: var(--secondary-font-color);
+	margin-top: 5px;
+}
+
+.credits-desc {
+	text-align: center;
+	font-size: medium;
 }
 
 a, a:hover, a:active, a:visited {

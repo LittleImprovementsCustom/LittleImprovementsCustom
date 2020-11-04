@@ -46,10 +46,12 @@ function toggleSelected(id) {
 function mouseOver() {
 	document.getElementById(this.id+"Img").classList.add("invisible")
 	document.getElementById(this.id+"Desc").classList.remove("invisible")
+	document.getElementById(this.id+"Author").classList.remove("invisible")
 }
 function mouseOut() {
 	document.getElementById(this.id+"Img").classList.remove("invisible")
 	document.getElementById(this.id+"Desc").classList.add("invisible")
+	document.getElementById(this.id+"Author").classList.add("invisible")
 }
 
 // HANDLE THE USER PRESSING THE DOWNLOAD BUTTON
@@ -142,6 +144,13 @@ function createModuleSelector(data) {
 	desc.setAttribute("id", data.id+"Desc")
 	desc.appendChild(document.createTextNode(data.description))
 	div.appendChild(desc)
+
+	const author = document.createElement("p")
+	if (platform=="desktop") author.setAttribute("class","pack-author invisible")
+	else author.setAttribute("class", "pack-author")
+	author.setAttribute("id", data.id+"Author")
+	author.appendChild(document.createTextNode("By: "+data.author))
+	div.appendChild(author)
 
 	if (platform=="desktop") {
 		div.addEventListener("mouseover", mouseOver)

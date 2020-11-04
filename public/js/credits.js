@@ -18,7 +18,7 @@ function createModuleSelector(data) {
 	div.appendChild(icon)
 
 	const desc = document.createElement("p")
-	desc.setAttribute("class","pack-desc")
+	desc.setAttribute("class","credits-desc")
 	desc.appendChild(document.createTextNode(data.desc))
 	div.appendChild(desc)
 
