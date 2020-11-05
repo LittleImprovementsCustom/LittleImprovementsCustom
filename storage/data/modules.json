@@ -468,5 +468,13 @@
         "description": "Removes the \"egg\" in the middle of honey blocks.",
         "category": "aesthetic",
         "author": "Beatso"
+    },
+    {
+        "id": "spyglassToTelescope",
+        "label": "Spyglass to Telescope",
+        "description": "Renames the spyglass to telescope.",
+        "category": "snapshot",
+        "author": "Beatso",
+        "lang": true
     }
 ]
