@@ -121,7 +121,7 @@ function createModuleSelector(data) {
 	div.setAttribute("class","grid-item selection-box selectable unselected pack-height")
 	div.setAttribute("onclick", `javascript: toggleSelected('${data.id}')`)
 	div.setAttribute("id", data.id)
-	document.getElementById("pack-selector-container").appendChild(div)
+	document.getElementById(data.category).appendChild(div)
 
 	const label = document.createElement("p")
 	label.setAttribute("class", "pack-label")
@@ -159,54 +159,82 @@ function createModuleSelector(data) {
 
 }
 
-// function to category headers
-function createCategoryHeader(category) {
+const createCategory = (data) => {
 
 	const div = document.createElement("div")
-	div.setAttribute("class","grid-item selection-box section-header unselected")
+	div.setAttribute("id", data.id)
+	div.setAttribute("class","grid-container")
 	document.getElementById("pack-selector-container").appendChild(div)
 
-	const label = document.createElement("p")
-	label.appendChild(document.createTextNode(category))
-	div.appendChild(label)
+	const header = document.createElement("div")
+	header.setAttribute("class","grid-item selection-box section-header unselected")
+	div.appendChild(header)
+
+	const name = document.createElement("p")
+	name.appendChild(document.createTextNode(data.name))
+	header.appendChild(name)
+
+	if (data.description!=undefined) {
+		const description = document.createElement("p")
+		description.appendChild(document.createTextNode(data.description))
+		description.setAttribute("class","section-description")
+		header.appendChild(description)
+		name.setAttribute("class","section-name section-name-with-description")
+	}
+	else name.setAttribute("class","section-name")
 
 }
 
-//  read JSON file containing data
-const xobj = new XMLHttpRequest()
-xobj.overrideMimeType("application/json")
-xobj.open("GET", "/api/modules", true)
-xobj.onreadystatechange = function () {
-	if (xobj.readyState == 4 && xobj.status == "200") {
+//  read JSON files containing data
+const modulesxobj = new XMLHttpRequest()
+modulesxobj.overrideMimeType("application/json")
+modulesxobj.open("GET", "/api/modules", true)
+modulesxobj.onreadystatechange = function () {
+	if (modulesxobj.readyState == 4 && modulesxobj.status == "200") {
 
-		// get JSON and add to HTML
-		modulesJSON = JSON.parse(xobj.responseText) // Parse JSON string into object
-		let categories = {
-			"aesthetic": [],
-			"variated": [],
-			"utility": [],
-			"fixes": []
+		const categoriesxobj = new XMLHttpRequest()
+		categoriesxobj.overrideMimeType("application/json")
+		categoriesxobj.open("GET", "/api/categories", true)
+		categoriesxobj.onreadystatechange = function () {
+			if (categoriesxobj.readyState == 4 && categoriesxobj.status == "200") {
+
+				modulesJSON = JSON.parse(modulesxobj.responseText) // Parse JSON string into object
+				categoryData = JSON.parse(categoriesxobj.responseText)
+				
+				const categoryList = categoryData.map(i=>i.id)
+				let categories = {}
+
+				for (category of categoryList) categories[category] = []
+				
+				for (index in modulesJSON) if (!modulesJSON[index].hidden) {
+
+					if (!categoryList.includes(modulesJSON[index].category)) {
+						modulesJSON[index].category = "aesthetic" // make category aesthetic if no valid category is provided
+					}
+
+					categories[modulesJSON[index].category].push(modulesJSON[index]) // add category to 
+				}
+				
+				for (category of categoryData) {
+
+					// create category
+					createCategory(category)
+
+					// add modules to category
+					for (data of categories[category.id]) createModuleSelector(data)
+					
+				}
+
+				// remove any categories that have no modules
+				const filledCategories = Array.from(document.getElementById("pack-selector-container").children)
+				for (category of filledCategories) if (Object.keys(category.children).length <= 1) category.remove()
+
+			}
 		}
-		for (i of modulesJSON) {
-			if (i.category=="aesthetic") categories.aesthetic.push(i)
-			else if (i.category=="utility") categories.utility.push(i)
-			else if (i.category=="variated") categories.variated.push(i)
-			else if (i.category=="fixes") categories.fixes.push(i)
-			else categories.aesthetic.push(i)
-		}
-
-		createCategoryHeader("Aesthetic")
-		for (data of categories.aesthetic) {createModuleSelector(data)}
-		createCategoryHeader("Utility")
-		for (data of categories.utility) {createModuleSelector(data)}
-		createCategoryHeader("Variated")
-		for (data of categories.variated) {createModuleSelector(data)}
-		createCategoryHeader("Fixes & Inconsistencies")
-		for (data of categories.fixes) {createModuleSelector(data)}
-
+		categoriesxobj.send(null)
 	}
 }
-xobj.send(null)
+modulesxobj.send(null)
 
 // SYSTEM TO DEAL WITH SENDING AN UPLOADED PACK
 function send() {

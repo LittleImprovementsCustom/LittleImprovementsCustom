@@ -1,0 +1,23 @@
+[
+	{
+		"id": "aesthetic",
+		"name": "Aesthetic"
+	},
+	{
+		"id": "utility",
+		"name": "Utility"
+	},
+	{
+		"id": "variated",
+		"name": "Variated"
+	},
+	{
+		"id": "fixes",
+		"name": "Fixes & Inconsistencies"
+	},
+	{
+		"id": "snapshot",
+		"name": "Snapshot",
+		"description": "Packs designed for snapshots of 1.17, the Caves & Cliffs update. These will not work on 1.16 or below."
+	}
+]

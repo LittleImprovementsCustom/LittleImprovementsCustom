@@ -29,6 +29,7 @@ app.use((req, res, next) => {
 
 // api reqyests
 app.get("/api/modules", (req, res) => res.sendFile(__dirname+"/storage/data/modules.json") )
+app.get("/api/categories", (req, res) => res.sendFile(__dirname+"/storage/data/categories.json") )
 app.get("/api/credits", (req, res) => res.sendFile(__dirname+"/storage/data/credits.json") )
 
 // how to handle a post request, sent by the client-side js, to compile the pack

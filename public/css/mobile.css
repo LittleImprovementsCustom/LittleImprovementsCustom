@@ -108,13 +108,20 @@ body {
 	height: 120px;
 	padding: 0;
 	grid-column: 1 / -1;
-	font-size: 6vw;
 	text-align: center;
 }
 
 .section-header p {
 	display: inline;
 	line-height: 120px;
+}
+
+.section-name {
+	font-size: 6vw;
+}
+
+.section-description {
+	font-size: 4vw;
 }
 
 .unselected {

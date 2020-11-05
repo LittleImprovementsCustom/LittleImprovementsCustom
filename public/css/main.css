@@ -137,8 +137,20 @@ body {
 	height: min-content;
 	padding: 0;
 	grid-column: 1 / -1;
-	font-size: x-large;
 	text-align: center;
+}
+
+.section-name {
+	font-size: x-large;
+}
+
+.section-name-with-description {
+	margin-bottom: 0px;
+}
+
+.section-desciption {
+	font-size: large;
+	margin-top: 0px;
 }
 
 .unselected {
