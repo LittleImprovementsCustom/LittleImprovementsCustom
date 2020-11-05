@@ -60,6 +60,13 @@
         "author": "Beatso"
     },
     {
+        "id": "noSpyglassOverlay",
+        "label": "No Spyglass Overlay",
+        "description": "Removes the overlay hiding vision when using spyglass.",
+        "category": "snapshot",
+        "author": "Beatso"
+    },
+    {
         "id": "betterHelmets",
         "label": "Better Helmets",
         "description": "Makes your face more visible when wearing a helmet.",
