@@ -1,6 +1,6 @@
 // require modules
 const express = require("express")
-const Nanoid = require("nanoid")
+const nanoid = require("nanoid")
 const fs = require("fs")
 const archiver = require("archiver")
 const formidable = require("formidable")
@@ -39,7 +39,7 @@ app.get("/api/credits", (req, res) => res.sendFile(__dirname+"/storage/data/cred
 app.post("/download", function (req, res) {
 
 	// generate id and create pack paths
-	const packID = Nanoid.nanoid(5)
+	const packID = nanoid.customAlphabet("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", 5)()
 	console.log("packID = "+packID)
 	const localPackPath = path.join (os.tmpdir(), `${packID}.zip`)
 	const dropboxPackPath = `/packs/"${packID}".zip`
