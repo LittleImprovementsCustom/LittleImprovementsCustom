@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 	next()
 })
 
-// api reqyests
+// api requests
 app.get("/api/modules", (req, res) => res.sendFile(__dirname+"/storage/data/modules.json") )
 app.get("/api/categories", (req, res) => res.sendFile(__dirname+"/storage/data/categories.json") )
 app.get("/api/credits", (req, res) => res.sendFile(__dirname+"/storage/data/credits.json") )
