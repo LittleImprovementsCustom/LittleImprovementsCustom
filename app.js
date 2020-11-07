@@ -4,7 +4,9 @@ const Nanoid = require("nanoid")
 const fs = require("fs")
 const archiver = require("archiver")
 const formidable = require("formidable")
+const os = require("os")
 const streamZip = require("node-stream-zip")
+const path = require("path")
 const Dropbox = require("dropbox").Dropbox
 require("isomorphic-fetch")
 require("dotenv").config()
@@ -37,7 +39,8 @@ app.post("/download", function (req, res) {
 
 	// generate id and create pack path
 	const packID = Nanoid.nanoid(5)
-	const packPath = "packs/"+packID
+	const packPath = path.join (os.tmpdir(), `${packID}.zip`)
+
 	console.log("pack path = "+packPath)
 
 	// create variable with selected modules; gets updated later

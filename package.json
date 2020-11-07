@@ -21,7 +21,8 @@
 		"formidable": "^1.2.2",
 		"isomorphic-fetch": "^2.2.1",
 		"nanoid": "^3.1.12",
-		"node-stream-zip": "^1.11.3"
+		"node-stream-zip": "^1.11.3",
+		"path": "^0.12.7"
 	},
 	"devDependencies": {
 		"eslint": "^7.9.0"
