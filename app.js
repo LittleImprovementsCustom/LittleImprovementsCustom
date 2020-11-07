@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 
 // dynamically serve get requests from requests.json
 const getRequests = JSON.parse(fs.readFileSync("storage/data/requests.json"))
-const pathnames = getRequests.map(i=>i.pathname)
+const pathnames = getRequests.map(i=>i.url)
 for (i of getRequests) app.get(i.url, (req, res) => {
 	const pathname = req._parsedOriginalUrl.pathname
 	const filePath = getRequests[pathnames.indexOf(pathname)].file
