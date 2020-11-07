@@ -14,6 +14,7 @@ require("dotenv").config()
 // setup Dropbox
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN })
 
+// get modules.json
 const availableModules = JSON.parse(fs.readFileSync("storage/data/modules.json"))
 
 // setup express
