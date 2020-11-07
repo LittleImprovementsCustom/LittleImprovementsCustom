@@ -10,3 +10,4 @@ const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN
 const packsPath = "/packs"
 dbx.filesDeleteV2({path:packsPath})
 	.then( () => console.log(`successfully deleted ${packsPath} on Dropbox`) )
+	.catch( ()=> console.log("Error clearing Dropbox packs. Perhaps they were already cleared?"))
