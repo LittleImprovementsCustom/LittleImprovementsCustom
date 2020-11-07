@@ -30,10 +30,14 @@ app.use((req, res, next) => {
 	next()
 })
 
-// api requests
-app.get("/api/modules", (req, res) => res.sendFile(__dirname+"/storage/data/modules.json") )
-app.get("/api/categories", (req, res) => res.sendFile(__dirname+"/storage/data/categories.json") )
-app.get("/api/credits", (req, res) => res.sendFile(__dirname+"/storage/data/credits.json") )
+// dynamically serve get requests from requests.json
+const getRequests = JSON.parse(fs.readFileSync("storage/data/requests.json"))
+const pathnames = getRequests.map(i=>i.pathname)
+for (i of getRequests) app.get(i.url, (req, res) => {
+	const pathname = req._parsedOriginalUrl.pathname
+	const filePath = getRequests[pathnames.indexOf(pathname)].file
+	res.sendFile(__dirname+filePath)
+})
 
 // how to handle a post request, sent by the client-side js, to compile the pack
 app.post("/download", function (req, res) {
@@ -211,15 +215,6 @@ app.post("/uploadpack", (req, res) => {
 	
 })
 
-
-
-// html webpage requests
-app.get("/", (req, res) => res.sendFile(__dirname+"/public/index.html") )
-app.get("/credits", (req, res) => res.sendFile(__dirname+"/public/credits.html") )
-app.get("/mobile", (req, res) => res.sendFile(__dirname+"/public/mobile.html") )
-app.get("/credits/mobile", (req, res) => res.sendFile(__dirname+"/public/credits_mobile.html") )
-app.get("/404/mobile", (req, res) => res.sendFile(__dirname+"/public/404_mobile.html") )
-app.get("*", (req, res) => res.sendFile(__dirname+"/public/404.html", 404) ) // 404 page
 
 // listen server with express
 app.listen(process.env.PORT || 3000, 
