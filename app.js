@@ -42,7 +42,7 @@ app.post("/download", function (req, res) {
 	const packID = nanoid.customAlphabet("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", 5)()
 	console.log("packID = "+packID)
 	const localPackPath = path.join (os.tmpdir(), `${packID}.zip`)
-	const dropboxPackPath = `/packs/"${packID}".zip`
+	const dropboxPackPath = `/packs/"LittleImprovementsCustom_${packID}".zip`
 	const output = fs.createWriteStream(localPackPath)
 	const archive = archiver("zip",{zlib:{level:9}})
 
