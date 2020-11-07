@@ -37,11 +37,13 @@ app.get("/api/credits", (req, res) => res.sendFile(__dirname+"/storage/data/cred
 // how to handle a post request, sent by the client-side js, to compile the pack
 app.post("/download", function (req, res) {
 
-	// generate id and create pack path
+	// generate id and create pack paths
 	const packID = Nanoid.nanoid(5)
-	const packPath = path.join (os.tmpdir(), `${packID}.zip`)
-
-	console.log("pack path = "+packPath)
+	console.log("packID = "+packID)
+	const localPackPath = path.join (os.tmpdir(), `${packID}.zip`)
+	const dropboxPackPath = `/packs/"${packID}".zip`
+	const output = fs.createWriteStream(localPackPath)
+	const archive = archiver("zip",{zlib:{level:9}})
 
 	// create variable with selected modules; gets updated later
 	let selectedModules = req.body.modules
@@ -84,19 +86,14 @@ app.post("/download", function (req, res) {
 		}
 	}
 
-	// create pack
-	const zipPath = "packs/LittleImprovementsCustom_"+packID+".zip"
-	const output = fs.createWriteStream(zipPath)
-	const archive = archiver("zip",{zlib:{level:9}})
-
 	output.on("close", ()=>{
-		console.log("pack generated at "+zipPath)
-		dbx.filesUpload({path:"/"+zipPath,contents:fs.readFileSync(zipPath)})
+		console.log("pack generated at "+localPackPath)
+		dbx.filesUpload({path:dropboxPackPath,contents:fs.readFileSync(localPackPath)})
 			.then(()=>{
-				dbx.filesGetTemporaryLink({path:"/"+zipPath})
+				dbx.filesGetTemporaryLink({path:dropboxPackPath})
 					.then(shareLink=>{
 						res.send(shareLink.link) // send download link
-						fs.unlinkSync(zipPath) // delete zip from local storage
+						fs.unlinkSync(localPackPath) // delete zip from local storage
 					})
 					.catch(error=>console.error(error))
 			})
