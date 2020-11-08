@@ -476,5 +476,12 @@
         "category": "snapshot",
         "author": "Beatso",
         "lang": true
+    },
+    {
+        "id": "newCandleIcons",
+        "label": "New Candle Icons",
+        "description": "Adds bigger candle icons.",
+        "category": "snapshot",
+        "author": "Daggsy",
     }
 ]
