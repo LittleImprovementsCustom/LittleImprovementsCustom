@@ -483,5 +483,12 @@
         "description": "Adds bigger candle icons.",
         "category": "snapshot",
         "author": "Daggsy"
+    },
+    {
+        "id": "amethystBuddies",
+        "label": "Amethyst Buddies",
+        "description": "Adds icons for amethyst buds and changes texture of budding amethyst block.",
+        "category": "snapshot",
+        "author": "Daggsy"
     }
 ]
