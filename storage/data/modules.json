@@ -490,5 +490,12 @@
         "description": "Adds icons for amethyst buds and changes texture of budding amethyst block.",
         "category": "snapshot",
         "author": "Daggsy"
+    },
+    {
+        "id": "coldBucket",
+        "label": "Cold Bucket",
+        "description": "Makes original powder snow bucket really, really cold.",
+        "category": "snapshot",
+        "author": "Daggsy"
     }
 ]
