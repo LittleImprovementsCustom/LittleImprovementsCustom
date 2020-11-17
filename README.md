@@ -8,4 +8,4 @@ Little Improvements: Custom is a resource pack picker, created by [Beatso](https
 Choose and download your pack [here](https://www.littleimprovements-custom.tk/).\
 Be sure to support this project on [its PMC page](https://www.planetminecraft.com/texture-pack/little-improvements-custom/)!
 
-[![Example of pack picker](https://cdn.discordapp.com/attachments/738126248194211964/754353169127178320/13393031-image_l.png)](https://www.littleimprovements-custom.tk/)
+[![Example of pack picker](https://user-images.githubusercontent.com/56277964/99318912-765e8280-281d-11eb-88b6-d6cb32d74bda.png)](https://www.littleimprovements-custom.tk/)
