@@ -18,7 +18,7 @@ body {
     margin-right:5px;
 }
 
-.clearfix:before,.clearfix:after {
+.clearfix:before, .clearfix:after {
     content: " ";
     display: table;
 }
@@ -32,7 +32,7 @@ body {
 	top: 50%;
 }
 
-.hr{
+.hr {
 	height:2px;
 	border-width:0;
 	background-color:var(--separator);
@@ -63,7 +63,7 @@ body {
 	padding: 0 16px 0 0;
 }
 
-.navbar-item {
+.navbar > li {
 	display: block;
 	padding: 8px 0 8px 16px;
 	text-align:center;

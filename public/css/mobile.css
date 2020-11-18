@@ -32,7 +32,7 @@ body {
 	top: 50%;
 }
 
-.hr{
+.hr {
 	height:2px;
 	border-width:0;
 	background-color:var(--separator);
@@ -53,7 +53,7 @@ body {
 	border-radius: 10px;
 }
 
-.navbar-item {
+.navbar > li {
 	font-size: 5vw;
 	display: inline;
 	padding: 8px 16px;
