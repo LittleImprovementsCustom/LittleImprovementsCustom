@@ -111,6 +111,7 @@ body {
 .upload-title {
 	font-size: large;
 	background-color: var(--emphasis-background);
+	text-align: center;
 }
 
 .grid-container {
