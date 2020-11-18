@@ -92,16 +92,25 @@ body {
 	color: var(--font-color);
 }
 
-.upload-form {
+.upload-container {
+	overflow: auto; /* Enable scrolling if the sidenav has too much content */
 	bottom: 16px;
 	border-radius: 10px;
 	background-color: var(--primary-background);
 	padding: 16px;
 	line-height: 1.6;
+	list-style-type: none;
+	padding: 0 16px 0 0;
+}
+
+.upload-container > li {
+	display: block;
+	padding: 8px 0 8px 16px;
 }
 
 .upload-title {
 	font-size: large;
+	background-color: var(--emphasis-background);
 }
 
 .grid-container {

@@ -35,12 +35,17 @@
             <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="https://github.com/LittleImprovementsCustom/LittleImprovementsCustom"  target="_blank">GitHub</a></li>
             <li class="navbar-item secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="/credits">Credits</a></li>
         </ul>
-        <form onsubmit="return false" id="uploadForm" class="upload-form">
-            <span class="upload-title">Upload a pack</span><br>
-            Upload a pack you have previously downloaded to edit your selection, without having to manually select everything again.<br><br>
-            <input id="file" type="file" name="uploadedPack" multiple="multiple"/>
-            <input type="submit" value="Upload" class="upload-button" onclick="send()"/>
-        </form>
+        <ul class="upload-container">
+            <li class="upload-title">Upload a pack</li>
+            <li>
+                <form onsubmit="return false" id="uploadForm" class="upload-form">
+                    Upload a pack you have previously downloaded to edit your selection, without having to manually select everything again.<br><br>
+                    <input id="file" type="file" name="uploadedPack" multiple="multiple"/>
+                    <input type="submit" value="Upload" class="upload-button" onclick="send()"/>
+                </form>
+            </li>
+            
+        </ul>
     </div>
     <div id="pack-selector-container"></div> <!-- the script will add elements to this -->
     <script src=/js/index.js></script>
