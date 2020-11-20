@@ -19,8 +19,8 @@
         "name": "Kemiu",
         "group": "team",
         "link": "https://www.planetminecraft.com/member/kemiu/",
-        "type": "static",
-        "avatar": "kemiu.png",
+        "type": "dynamic",
+        "uuid": "f1ec4cf4584e4b5ba59afcfdf4a8bba1",
         "desc": "Pack development"
     },
     {
