@@ -497,5 +497,9 @@
         "description": "Makes original powder snow bucket really, really cold.",
         "category": "snapshot",
         "author": "Daggsy"
+    },
+    {
+        "id": "flatPlanksAndCraftingTableBottom",
+        "hidden": true
     }
 ]
