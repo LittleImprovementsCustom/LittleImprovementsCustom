@@ -351,7 +351,10 @@
         "label": "Crafting Table Bottom",
         "description": "Adds a unique texture to the bottom of crafting tables, that is not just oak planks.",
         "category": "fixes",
-        "incompatibilities": ["flatPlanks"],
+        "merges": [{
+            "id": "flatPlanks",
+            "mergeWith": "flatPlanksAndCraftingTableBottom"
+        }],
         "author": "Daggsy"
     },
     {
@@ -412,7 +415,11 @@
         "label": "Flat Planks",
         "description": "Changes planks to use V3.1 of the texture update textures, making them less plastic.",
         "category": "aesthetic",
-        "incompatibilities": ["craftingTableBottom","lecternBottom"],
+        "incompatibilities": ["lecternBottom"],
+        "merges": [{
+            "id": "craftingTableBottom",
+            "mergeWith": "flatPlanksAndCraftingTableBottom"
+        }],
         "author": "Beatso"
     },
     {
