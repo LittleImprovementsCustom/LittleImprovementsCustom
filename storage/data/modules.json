@@ -515,5 +515,12 @@
         "description": "Change name of elytra to for example Netherite Elytra to get unique texture. Requires OptiFine.",
         "category": "aesthetic",
         "author": "Daggsy"
+    },
+    {
+        "id": "retiredWanderingTrader",
+        "label": "Retired Wandering Trader",
+        "description": "Changes texture of Nitwit to retired trader.",
+        "category": "aesthetic",
+        "author": "Daggsy"
     }
 ]
