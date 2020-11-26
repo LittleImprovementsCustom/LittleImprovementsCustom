@@ -522,5 +522,12 @@
         "description": "Changes texture of Nitwit to retired trader.",
         "category": "aesthetic",
         "author": "Daggsy"
+    },
+    {
+        "id": "subtleDripstone",
+        "label": "Subtle Dripstone",
+        "description": "Changes colour of dripstone to make it more matching to stone.",
+        "category": "snapshot",
+        "author": "Daggsy"
     }
 ]
