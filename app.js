@@ -39,6 +39,8 @@ for (i of getRequests) app.get(i.url, (req, res) => {
 	res.sendFile(__dirname+filePath)
 })
 
+app.get("/test", (req,res)=>res.send("hello world"))
+
 // how to handle a post request, sent by the client-side js, to compile the pack
 app.post("/download", function (req, res) {
 
@@ -217,5 +219,9 @@ app.post("/uploadpack", (req, res) => {
 
 
 // listen server with express
-app.listen(process.env.PORT || 3000, 
-	() => console.log("Server running"))
+const server = app.listen(process.env.PORT || 3000, () => console.log("Server running"))
+
+// export express stuff for testing
+module.exports.app = app
+module.exports.close = () => server.close
+// server.close()

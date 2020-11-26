@@ -9,7 +9,7 @@
 		"update": "git pull && npm start",
 		"server": "node app.js",
 		"clear": "node clearDropbox.js",
-		"test": "node test.js"
+		"test": "npx mocha"
 	},
 	"repository": "github:LittleImprovementsCustom/LittleImprovementsCustom",
 	"author": "",
@@ -29,6 +29,9 @@
 		"path": "^0.12.7"
 	},
 	"devDependencies": {
-		"eslint": "^7.14.0"
+		"chai": "^4.2.0",
+		"chai-http": "^4.3.0",
+		"eslint": "^7.14.0",
+		"mocha": "^8.2.1"
 	}
 }
