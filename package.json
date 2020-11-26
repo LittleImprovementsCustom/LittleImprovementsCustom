@@ -11,11 +11,11 @@
 		"clear": "node clearDropbox.js",
 		"test": "node test.js"
 	},
-		"repository": "github:Beatso1/littleimprovmenets-custom",
+	"repository": "github:LittleImprovementsCustom/LittleImprovementsCustom",
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/Beatso1/littleimprovements-custom/issues"
+		"url": "https://github.com/LittleImprovementsCustom/LittleImprovementsCustom/issues"
 	},
 	"dependencies": {
 		"archiver": "^5.1.0",
