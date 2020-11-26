@@ -6,7 +6,6 @@
 	"main": "app.js",
 	"scripts": {
 		"start": "npm run clear && npm run server",
-		"start-install": "npm i && npm run start",
 		"update": "git pull && npm start",
 		"server": "node app.js",
 		"clear": "node clearDropbox.js"
