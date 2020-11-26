@@ -9,7 +9,8 @@
 		"update": "git pull && npm start",
 		"server": "node app.js",
 		"clear": "node clearDropbox.js",
-		"test": "npx mocha --exit"
+		"test": "npx mocha --exit",
+		"lint": "eslint ."
 	},
 	"repository": "github:LittleImprovementsCustom/LittleImprovementsCustom",
 	"author": "",
