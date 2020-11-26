@@ -8,9 +8,10 @@
 		"start": "npm run clear && npm run server",
 		"update": "git pull && npm start",
 		"server": "node app.js",
-		"clear": "node clearDropbox.js"
+		"clear": "node clearDropbox.js",
+		"test": "node test.js"
 	},
-	"repository": "github:Beatso1/littleimprovmenets-custom",
+		"repository": "github:Beatso1/littleimprovmenets-custom",
 	"author": "",
 	"license": "ISC",
 	"bugs": {
