@@ -17,7 +17,7 @@
 		"url": "https://github.com/Beatso1/littleimprovements-custom/issues"
 	},
 	"dependencies": {
-		"archiver": "^5.0.2",
+		"archiver": "^5.1.0",
 		"dotenv": "^8.2.0",
 		"dropbox": "^5.2.1",
 		"express": "^4.17.1",
