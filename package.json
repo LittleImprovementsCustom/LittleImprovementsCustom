@@ -25,7 +25,7 @@
 		"express": "^4.17.1",
 		"formidable": "^1.2.2",
 		"isomorphic-fetch": "^3.0.0",
-		"nanoid": "^3.1.19",
+		"nanoid": "^3.1.20",
 		"node-stream-zip": "^1.12.0",
 		"path": "^0.12.7"
 	},
