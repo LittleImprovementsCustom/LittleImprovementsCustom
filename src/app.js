@@ -219,9 +219,8 @@ app.post("/uploadpack", (req, res) => {
 
 
 // listen server with express
-const server = app.listen(process.env.PORT || 3000, () => console.log('Server running'))
+const server = app.listen(process.env.PORT || 3000, () => console.log("Server running"))
 
 // export express stuff for testing
 module.exports.app = app
 module.exports.close = () => server.close
-// server.close()
