@@ -11,14 +11,12 @@ jobs:
       matrix:
         node-version: [12.x]
     
-    defaults:
-      run:
-        working-directory: ./src
+    # defaults:
+    #   run:
+    #     working-directory: ./src
 
 
     steps:
-
-    - run: echo %CD%
 
     - uses: actions/checkout@v2
 
@@ -28,12 +26,15 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: install node dependencies
+      working-directory: ./src
       run: npm install
 
     - name: check eslint
+      working-directory: ./src
       run: npx eslint .
 
     - name: mocha testing
+      working-directory: ./src
       run: npm test
 
       env:
