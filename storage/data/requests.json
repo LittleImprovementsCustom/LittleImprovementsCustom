@@ -1,34 +1,34 @@
 [
 	{
 		"url": "/api/modules",
-		"file": "/storage/data/modules.json"
+		"file": "storage/data/modules.json"
 	},
 	{
 		"url": "/api/categories",
-		"file": "/storage/data/categories.json"
+		"file": "storage/data/categories.json"
 	},
 	{
 		"url": "/api/credits",
-		"file": "/storage/data/credits.json"
+		"file": "storage/data/credits.json"
 	},
 	{
 		"url": "/",
-		"file": "/public/index.html"
+		"file": "public/index.html"
 	},
 	{
 		"url": "/credits",
-		"file": "/public/credits.html"
+		"file": "public/credits.html"
 	},
 	{
 		"url": "/mobile",
-		"file": "/public/mobile.html"
+		"file": "public/mobile.html"
 	},
 	{
 		"url": "/credits/mobile",
-		"file": "/public/credits_mobile.html"
+		"file": "public/credits_mobile.html"
 	},
 	{
 		"url": "/404/mobile",
-		"file": "/public/404_mobile.html"
+		"file": "public/404_mobile.html"
 	}
 ]
