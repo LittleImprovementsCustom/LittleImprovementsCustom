@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Only the current (live) version and the dev site are supported. Do not report a vulnerability for a historical version of the website.
+Only the [current  version](https://www.littleimprovements-custom.tk/) and the [dev site](https://littleimprovementscustom-dev.beatso1.repl.co/) are supported. Do not report a vulnerability for a historical version of the website.
 
 ## Reporting a Vulnerability
 
