@@ -1,6 +1,6 @@
 name: Node.js CI
 
-on: [push]
+on: push
 
 jobs:
   build:
@@ -11,15 +11,10 @@ jobs:
       matrix:
         node-version: [12.x]
     
-    # defaults:
-    #   run:
-    #     working-directory: ./src
-
-
+    
     steps:
-
     - uses: actions/checkout@v2
-
+    
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -31,7 +26,7 @@ jobs:
 
     - name: check eslint
       working-directory: ./src
-      run: npx eslint .
+      run: npm lint
 
     - name: mocha testing
       working-directory: ./src
