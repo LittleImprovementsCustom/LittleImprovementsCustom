@@ -11,7 +11,7 @@
 		"lint": "eslint ."
 	},
 	"repository": "github:LittleImprovementsCustom/LittleImprovementsCustom",
-	"author": "",
+	"author": "Beatso",
 	"license": "GPL-3.0",
 	"bugs": {
 		"url": "https://github.com/LittleImprovementsCustom/LittleImprovementsCustom/issues"
