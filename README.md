@@ -11,7 +11,7 @@ Be sure to support this project on [its PMC page](https://www.planetminecraft.co
 
 [![Example of pack picker](https://user-images.githubusercontent.com/56277964/99318912-765e8280-281d-11eb-88b6-d6cb32d74bda.png)](https://www.littleimprovements-custom.tk/)
 
-# Contact
+## Contact
 
 If you have found a bug, or would like to suggest something, please [open an issue](https://github.com/LittleImprovementsCustom/LittleImprovementsCustom/issues/new).
 
