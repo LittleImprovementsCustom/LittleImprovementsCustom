@@ -15,14 +15,14 @@ require("dotenv").config()
 const dbx = new Dropbox ({ fetch: fetch, accessToken: process.env.DBXACCESSTOKEN })
 
 // get modules.json
-const availableModules = JSON.parse(fs.readFileSync("storage/data/modules.json"))
+const availableModules = JSON.parse(fs.readFileSync("../storage/data/modules.json"))
 
 // setup express
 const app = express()
 app.use(express.json()) // to support JSON-encoded bodies 
 
-app.use(express.static("public"))
-app.use("/favicon.ico", express.static("public/logo/favicon.ico"))
+app.use(express.static("../public"))
+app.use("/favicon.ico", express.static("../public/logo/favicon.ico"))
 
 // disable caching
 app.use((req, res, next) => {
@@ -31,12 +31,12 @@ app.use((req, res, next) => {
 })
 
 // dynamically serve get requests from requests.json
-const getRequests = JSON.parse(fs.readFileSync("storage/data/requests.json"))
+const getRequests = JSON.parse(fs.readFileSync("../storage/data/requests.json"))
 const pathnames = getRequests.map(i=>i.url)
 for (i of getRequests) app.get(i.url, (req, res) => {
 	const pathname = req._parsedOriginalUrl.pathname
 	const filePath = getRequests[pathnames.indexOf(pathname)].file
-	res.sendFile(__dirname+filePath)
+	res.sendFile(filePath, { root: "../" })
 })
 
 app.get("/test", (req,res)=>res.send("hello world"))
@@ -119,7 +119,7 @@ app.post("/download", function (req, res) {
 
 	// add base files
 	for (i of ["credits.txt","pack.mcmeta","pack.png"]) {
-		archive.file("storage/baseFiles/"+i, {name:i})
+		archive.file("../storage/baseFiles/"+i, {name:i})
 	}
 
 	// add selectedModules.txt file
@@ -136,11 +136,11 @@ app.post("/download", function (req, res) {
 		if (selectedModules.includes(i.id)) {
 			
 			// add resource pack files
-			archive.directory("storage/modules/"+i.id, "assets/minecraft")
+			archive.directory("../storage/modules/"+i.id, "assets/minecraft")
 
 			// add lang files
 			if (i.lang) {
-				const moduleLangData = JSON.parse(fs.readFileSync(`storage/lang/${i.id}.json`))
+				const moduleLangData = JSON.parse(fs.readFileSync(`../storage/lang/${i.id}.json`))
 				const createdLangNames = createdLangFiles.map(n=>n.name)
 				for (const [fileName, langData] of Object.entries(moduleLangData)) {
 
@@ -219,9 +219,8 @@ app.post("/uploadpack", (req, res) => {
 
 
 // listen server with express
-const server = app.listen(process.env.PORT || 3000, () => console.log('Server running'))
+const server = app.listen(process.env.PORT || 3000, () => console.log("Server running"))
 
 // export express stuff for testing
 module.exports.app = app
 module.exports.close = () => server.close
-// server.close()
