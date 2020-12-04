@@ -99,7 +99,9 @@ app.post("/download", function (req, res) {
 			.then(()=>{
 				dbx.filesGetTemporaryLink({path:dropboxPackPath})
 					.then(shareLink=>{
-						res.send(shareLink.result.link) // send download link
+						if (shareLink.link!=undefined) resLink = shareLink.link
+						else resLink = shareLink.result.link
+						res.send(resLink) // send download link
 						fs.unlinkSync(localPackPath) // delete zip from local storage
 					})
 					.catch(error=>console.error(error))
