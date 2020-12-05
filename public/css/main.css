@@ -92,6 +92,10 @@ body {
 	color: var(--font-color);
 }
 
+.social-icon {
+	font-size: x-large;
+}
+
 .upload-container {
 	overflow: auto; /* Enable scrolling if the sidenav has too much content */
 	bottom: 16px;

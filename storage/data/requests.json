@@ -12,6 +12,10 @@
 		"file": "storage/data/credits.json"
 	},
 	{
+		"url": "/api/socials",
+		"file": "storage/data/socials.json"
+	},
+	{
 		"url": "/",
 		"file": "public/index.html"
 	},
