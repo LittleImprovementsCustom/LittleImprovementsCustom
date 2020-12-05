@@ -2,11 +2,11 @@ const socialsContainer = document.createElement("div")
 document.getElementById("social-navbar-item").appendChild(socialsContainer)
 
 
-const xobj = new XMLHttpRequest()
-xobj.overrideMimeType("application/json")
-xobj.open("GET", "/api/socials", true)
-xobj.onreadystatechange = () => {
-	if (xobj.readyState == 4 && xobj.status == "200") {
+const socialsXobj = new XMLHttpRequest()
+socialsXobj.overrideMimeType("application/json")
+socialsXobj.open("GET", "/api/socials", true)
+socialsXobj.onreadystatechange = () => {
+	if (socialsXobj.readyState == 4 && socialsXobj.status == "200") {
 		let socialsHTML = ""
 		let socialIcons = []
 		for (i of JSON.parse(xobj.responseText)) socialIcons.push(`<a href=${i.url} target="_blank"><i class="social-icon ${i.style} fa-${i.iconName}"></i></a>`)
@@ -17,4 +17,4 @@ xobj.onreadystatechange = () => {
 		socialsContainer.innerHTML = socialsHTML
 	}
 }
-xobj.send(null)
+socialsXobj.send(null)
