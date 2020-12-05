@@ -16,6 +16,7 @@
     <script src=/js/theme.js></script>
     <script src=/js/mobileRedirect.js></script>
     <script>redirect("/mobile");platform="desktop"</script>
+    <script src="https://kit.fontawesome.com/b00b1bfb20.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="/css/light.css" media="(prefers-color-scheme: light)">
     <link rel="stylesheet" href="/css/main.css">
@@ -31,9 +32,8 @@
     <div class="sidebar">
         <ul class="navbar">
             <li class="primary-navbar-item"><a class="navbar-link primary-navbar-link" onclick="downloadPack()">Download</a></li>
-            <li class="secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="https://discord.gg/bNcZjFe"  target="_blank">Discord</a></li>
-            <li class="secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="https://github.com/LittleImprovementsCustom/LittleImprovementsCustom"  target="_blank">GitHub</a></li>
             <li class="secondary-navbar-item"><a class="navbar-link secondary-navbar-link" href="/credits">Credits</a></li>
+            <li id="social-navbar-item"></li>
         </ul>
         <ul class="upload-container">
             <li class="upload-title">Upload a pack</li>
@@ -49,4 +49,5 @@
     </div>
     <div id="pack-selector-container"></div> <!-- the script will add elements to this -->
     <script src=/js/index.js></script>
+    <script src="js/social.js"></script>
 </body>

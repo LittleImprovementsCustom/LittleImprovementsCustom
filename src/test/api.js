@@ -9,7 +9,7 @@ const { expect } = chai
 chai.use(chaiHttp)
 
 describe("check API GET requests", () => {
-	for (fileName of ["modules", "categories", "credits"]) it(`GET /api/${fileName}`, function(done){
+	for (fileName of ["modules", "categories", "credits", "socials"]) it(`GET /api/${fileName}`, function(done){
 		chai.request(index.app)
 			.get(`/api/${fileName}`)
 			.end(function(err, res) {
