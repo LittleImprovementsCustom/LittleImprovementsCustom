@@ -9,7 +9,7 @@ xobj.onreadystatechange = () => {
 	if (xobj.readyState == 4 && xobj.status == "200") {
 		let socialsHTML = ""
 		let socialIcons = []
-		for (i of JSON.parse(xobj.responseText)) socialIcons.push(`<a href=${i.url} target="_blank"><i class="social-icon fab fa-${i.iconName}"></i></a>`)
+		for (i of JSON.parse(xobj.responseText)) socialIcons.push(`<a href=${i.url} target="_blank"><i class="social-icon ${i.style} fa-${i.iconName}"></i></a>`)
 		for (const [index, value] of socialIcons.entries()) {
 			socialsHTML += value
 			if (index!=socialIcons.length-1) socialsHTML += "&nbsp;&nbsp;"

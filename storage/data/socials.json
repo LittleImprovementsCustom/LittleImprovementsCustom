@@ -1,14 +1,17 @@
 [
 	{
 		"iconName": "discord",
+		"style": "fab",
 		"url": "https://www.beatso.tk/discord/"
 	},
 	{
 		"iconName": "twitter",
+		"style": "fab",
 		"url": "https://twitter.com/licustom"
 	},
 	{
 		"iconName": "github",
+		"style": "fab",
 		"url": "https://github.com/LittleImprovementsCustom/LittleImprovementsCustom"
 	}
 ]
