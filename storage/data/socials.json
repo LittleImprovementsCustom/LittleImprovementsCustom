@@ -13,5 +13,10 @@
 		"iconName": "github",
 		"style": "fab",
 		"url": "https://github.com/LittleImprovementsCustom/LittleImprovementsCustom"
+	},
+	{
+		"iconName": "globe-americas",
+		"style": "fas",
+		"url": "https://www.planetminecraft.com/texture-pack/little-improvements-custom/"
 	}
 ]
