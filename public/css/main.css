@@ -85,7 +85,7 @@ body {
 }
 
 .primary-navbar-link {
-	color: var(--emphasis-font-color);
+	color: var(--font-color);
 }
 
 .secondary-navbar-link {
@@ -173,7 +173,7 @@ body {
 
 .selected {
 	background-color: var(--emphasis-background);
-	color: var(--emphasis-font-color);
+	color: var(--font-color);
 }
 
 .pack-icon {
