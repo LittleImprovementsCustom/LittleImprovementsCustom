@@ -100,10 +100,6 @@ body {
 	cursor: pointer;
 }
 
-.not-selectable {
-	cursor: not-allowed;
-}
-
 .section-header {
 	height: 120px;
 	padding: 0;
@@ -131,6 +127,11 @@ body {
 .selected {
 	background-color: var(--emphasis-background);
 	color: var(--font-color);
+}
+
+.not-selectable {
+	cursor: not-allowed;
+	background-color: var(--unselectable-color);
 }
 
 .pack-icon {
