@@ -2,7 +2,7 @@
 name: Feature request or enhancement
 about: Suggest a way we can make Custom better
 title: ''
-labels: enhancement
+labels: type: enhancement
 assignees: ''
 
 ---
