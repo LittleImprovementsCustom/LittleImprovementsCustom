@@ -32,6 +32,7 @@ function createGroupHeader (group) {
 	document.getElementById("pack-selector-container").appendChild(div)
 
 	const label = document.createElement("p")
+	label.setAttribute("class","section-name")
 	label.appendChild(document.createTextNode(group))
 	div.appendChild(label)
 
