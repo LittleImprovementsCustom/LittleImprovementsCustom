@@ -278,7 +278,7 @@
 	{
         "id": "shinyClock",
         "label": "Shiny Clock",
-        "description": "Changes clock texture to fit the new JAPPA style.",
+        "description": "Gives the clock an alternative texture.",
         "category": "aesthetic",
         "merges": [{
             "id": "restockClock",
@@ -289,7 +289,7 @@
     {
         "id": "shinyCompass",
         "label": "Shiny Compass",
-        "description": "Changes compass texture to fit the new JAPPA style.",
+        "description": "Gives the compass an alternative texture.",
         "category": "aesthetic",
         "author": "Kemiu"
     },
