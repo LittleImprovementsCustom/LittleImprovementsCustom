@@ -529,5 +529,12 @@
         "description": "Changes colour of dripstone to make it more matching to stone.",
         "category": "snapshot",
         "author": "Daggsy"
+    },
+    {
+        "id": "fixedCocoaTop",
+        "label": "Fixed Cocoa Top",
+        "description": "Makes the top of cocoa 8 by 8 pixels instead of 7 by 7.",
+        "category": "fixes",
+        "author": "Daggsy"
     }
 ]
