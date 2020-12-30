@@ -536,5 +536,12 @@
         "description": "Makes the top of cocoa 8 by 8 pixels instead of 7 by 7.",
         "category": "fixes",
         "author": "Daggsy"
+    },
+    {
+        "id": "chocorite",
+        "label": "Chocorite",
+        "description": "Changes netherite into chocolate.",
+        "category": "aesthetic",
+        "author": "Daggsy"
     }
 ]
