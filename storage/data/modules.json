@@ -247,6 +247,7 @@
         "label": "Shovels to Spoons",
         "description": "Renames shovels to spoons in-game.",
         "category": "aesthetic",
+        "incompatibilities": ["chocorite"],
         "lang": true,
         "author": "Beatso"
     },
@@ -265,6 +266,7 @@
             "id": "alternativeNetheriteTools",
             "mergeWith": "daggersAndAlternativeNetheriteTools"
         }],
+        "incompatibilities": ["chocorite"],
         "lang": true,
         "author": "Kemiu"
     },
@@ -397,6 +399,7 @@
             "id": "daggers",
             "mergeWith": "daggersAndAlternativeNetheriteTools"
         }],
+        "incompatibilities": ["chocorite"],
         "author": "Beatso"
     },
     {
@@ -542,6 +545,11 @@
         "label": "Chocorite",
         "description": "Changes netherite into chocolate.",
         "category": "aesthetic",
-        "author": "Daggsy"
+        "author": "Daggsy",
+        "incompatibilities": [
+            "alternativeNetheriteTools",
+            "daggers",
+            "shovelsToSpoons"
+        ]
     }
 ]
