@@ -18,3 +18,20 @@ If you have found a bug, or would like to suggest something, please [open an iss
 Alternatively, you can get in touch on the [discord server](beatso.tk/discord).
 
 If you have found a security vulnerability or something that should be sensitive, please learn how to responsibly report it [here](https://github.com/LittleImprovementsCustom/LittleImprovementsCustom/blob/master/.github/SECURITY.md).
+
+## Hosting Locally
+
+### Prerequisites
+
+- [Git](https://git-scm.com/downloads)
+- [Node.js](https://nodejs.org/en/download/)
+
+### Setup
+
+In the command line:
+```sh
+git clone https://github.com/LittleImprovementsCustom/LittleImprovementsCustom
+cd src
+npm install
+```
+
