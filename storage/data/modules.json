@@ -552,5 +552,12 @@
             "shovelsToSpoons"
         ],
         "lang": true
+    },
+    {
+        "id": "someShulkers",
+        "label": "Some Shulkers",
+        "description": "Changes bottom texture of shulker shell.",
+        "category": "aesthetic",
+        "author": "Daggsy"
     }
 ]
