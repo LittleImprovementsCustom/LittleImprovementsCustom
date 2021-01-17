@@ -35,3 +35,9 @@ cd src
 npm install
 ```
 
+### Running
+
+To run and host the project, run the following your command line from the `src` folder:
+```sh
+npm start
+```
