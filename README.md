@@ -18,3 +18,31 @@ If you have found a bug, or would like to suggest something, please [open an iss
 Alternatively, you can get in touch on the [discord server](beatso.tk/discord).
 
 If you have found a security vulnerability or something that should be sensitive, please learn how to responsibly report it [here](https://github.com/LittleImprovementsCustom/LittleImprovementsCustom/blob/master/.github/SECURITY.md).
+
+## Hosting Locally
+
+### Prerequisites
+
+- [Git](https://git-scm.com/downloads)
+- [Node.js](https://nodejs.org/en/download/)
+
+### Setup
+
+In the command line:
+```sh
+git clone https://github.com/LittleImprovementsCustom/LittleImprovementsCustom
+cd src
+npm install
+```
+
+> Note the following step is only necessary if you are wanting to download packs. If you are just trying to develop the frontend, you don't need to set up dropbox.
+
+Create a new app at https://www.dropbox.com/developers/apps and give it the permissions `files.content.write`, `files.content.read` and `sharing.write`. Generate an access token.  
+Create a new file `.env.example` (in `/src/` based off of `.env.example`). The `DBXACCESSTOKEN` should be the access token you just generated on dropbox.com.
+
+### Running
+
+To run and host the project, run the following your command line from the `src` folder:
+```sh
+npm start
+```
