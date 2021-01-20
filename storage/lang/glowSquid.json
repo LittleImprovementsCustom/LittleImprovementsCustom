@@ -1,0 +1,54 @@
+{
+	"en_us.json": {
+		"item.minecraft.ink_sac": "Glow Ink Sac",
+		"item.minecraft.item_frame": "Glow Item Frame",
+		"entity.minecraft.item_frame": "Glow Item Frame",
+		"item.minecraft.squid_spawn_egg": "Glow Squid Spawn Egg",
+		"entity.minecraft.squid": "Glow Squid",
+		"subtitles.entity.squid.ambient": "Glow Squid swims",
+		"subtitles.entity.squid.death": "Glow Squid dies",
+		"subtitles.entity.squid.hurt": "Glow Squid hurts",
+		"subtitles.entity.squid.squirt": "Glow Squid shoots ink"
+	},
+	"en_gb.json": {
+		"item.minecraft.ink_sac": "Glow Ink Sac",
+		"item.minecraft.item_frame": "Glow Item Frame",
+		"entity.minecraft.item_frame": "Glow Item Frame",
+		"item.minecraft.squid_spawn_egg": "Glow Squid Spawn Egg",
+		"entity.minecraft.squid": "Glow Squid",
+		"subtitles.entity.squid.ambient": "Glow Squid swims",
+		"subtitles.entity.squid.death": "Glow Squid dies",
+		"subtitles.entity.squid.hurt": "Glow Squid hurts",
+		"subtitles.entity.squid.squirt": "Glow Squid shoots ink"
+	},	"en_au.json": {
+		"item.minecraft.ink_sac": "Glow Ink Sac",
+		"item.minecraft.item_frame": "Glow Item Frame",
+		"entity.minecraft.item_frame": "Glow Item Frame",
+		"item.minecraft.squid_spawn_egg": "Glow Squid Spawn Egg",
+		"entity.minecraft.squid": "Glow Squid",
+		"subtitles.entity.squid.ambient": "Glow Squid swims",
+		"subtitles.entity.squid.death": "Glow Squid dies",
+		"subtitles.entity.squid.hurt": "Glow Squid hurts",
+		"subtitles.entity.squid.squirt": "Glow Squid shoots ink"
+	},	"en_nz.json": {
+		"item.minecraft.ink_sac": "Glow Ink Sac",
+		"item.minecraft.item_frame": "Glow Item Frame",
+		"entity.minecraft.item_frame": "Glow Item Frame",
+		"item.minecraft.squid_spawn_egg": "Glow Squid Spawn Egg",
+		"entity.minecraft.squid": "Glow Squid",
+		"subtitles.entity.squid.ambient": "Glow Squid swims",
+		"subtitles.entity.squid.death": "Glow Squid dies",
+		"subtitles.entity.squid.hurt": "Glow Squid hurts",
+		"subtitles.entity.squid.squirt": "Glow Squid shoots ink"
+	},	"en_ca.json": {
+		"item.minecraft.ink_sac": "Glow Ink Sac",
+		"item.minecraft.item_frame": "Glow Item Frame",
+		"entity.minecraft.item_frame": "Glow Item Frame",
+		"item.minecraft.squid_spawn_egg": "Glow Squid Spawn Egg",
+		"entity.minecraft.squid": "Glow Squid",
+		"subtitles.entity.squid.ambient": "Glow Squid swims",
+		"subtitles.entity.squid.death": "Glow Squid dies",
+		"subtitles.entity.squid.hurt": "Glow Squid hurts",
+		"subtitles.entity.squid.squirt": "Glow Squid shoots ink"
+	}
+}

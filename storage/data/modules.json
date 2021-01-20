@@ -320,6 +320,14 @@
         "author": "Daggsy"
     },
     {
+        "id": "glowSquid",
+        "label": "Glow Squid",
+        "description": "Adds the glow squid, glow ink sac and glow item frame from 1.17 snapshots.",
+        "category": "aesthetic",
+        "author": "Beatso",
+        "lang": true
+    },
+    {
         "id": "warpedSoulLantern",
         "label": "Warped Soul Lantern",
         "description": "Changes the sides of Soul Lantern to blue and warped.",
