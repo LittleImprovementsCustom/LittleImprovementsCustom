@@ -328,6 +328,13 @@
         "lang": true
     },
     {
+        "id": "newStyleSquid",
+        "label": "New Style Squid",
+        "description": "Makes squid more similar to the new glow squid style.",
+        "category": "aesthetic",
+        "author": "Daggsy"
+    },
+    {
         "id": "warpedSoulLantern",
         "label": "Warped Soul Lantern",
         "description": "Changes the sides of Soul Lantern to blue and warped.",
