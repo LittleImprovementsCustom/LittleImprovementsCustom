@@ -225,7 +225,8 @@
             "id": "variatedOres",
             "mergeWith": "variatedEmissiveOres"
         }],
-        "author": "Beatso"
+        "author": "Beatso",
+        "optifineRequired": true
     },
     {
         "id": "targetScore",
@@ -317,7 +318,8 @@
         "label": "Moobloom",
         "description": "Adds the moobloom from Minecraft Earth to the game. Requires OptiFine.",
         "category": "aesthetic",
-        "author": "Daggsy"
+        "author": "Daggsy",
+        "optifineRequired": true
     },
     {
         "id": "glowSquid",
@@ -532,7 +534,8 @@
         "label": "Upgraded Elytra",
         "description": "Change name of elytra to for example Netherite Elytra to get unique texture. Requires OptiFine.",
         "category": "aesthetic",
-        "author": "Daggsy"
+        "author": "Daggsy",
+        "optifineRequired": true
     },
     {
         "id": "retiredWanderingTrader",
