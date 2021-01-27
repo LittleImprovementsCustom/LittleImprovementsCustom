@@ -6,8 +6,8 @@
     --separator: var(--secondary-background);
     --font-color: black;
     --secondary-font-color: grey;
-    --emphasis-font-color: white;
     --toast-font-color: white;
     --success-background: green;
     --fail-background: red;
+    --unselectable-color: #E2B9B7;
 }

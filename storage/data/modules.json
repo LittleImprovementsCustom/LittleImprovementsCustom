@@ -248,6 +248,7 @@
         "label": "Shovels to Spoons",
         "description": "Renames shovels to spoons in-game.",
         "category": "aesthetic",
+        "incompatibilities": ["chocorite"],
         "lang": true,
         "author": "Beatso"
     },
@@ -266,6 +267,7 @@
             "id": "alternativeNetheriteTools",
             "mergeWith": "daggersAndAlternativeNetheriteTools"
         }],
+        "incompatibilities": ["chocorite"],
         "lang": true,
         "author": "Kemiu"
     },
@@ -279,7 +281,7 @@
 	{
         "id": "shinyClock",
         "label": "Shiny Clock",
-        "description": "Changes clock texture to fit the new JAPPA style.",
+        "description": "Gives the clock an alternative texture.",
         "category": "aesthetic",
         "merges": [{
             "id": "restockClock",
@@ -290,7 +292,7 @@
     {
         "id": "shinyCompass",
         "label": "Shiny Compass",
-        "description": "Changes compass texture to fit the new JAPPA style.",
+        "description": "Gives the compass an alternative texture.",
         "category": "aesthetic",
         "author": "Kemiu"
     },
@@ -318,6 +320,21 @@
         "category": "aesthetic",
         "author": "Daggsy",
         "optifineRequired": true
+    },
+    {
+        "id": "glowSquid",
+        "label": "Glow Squid",
+        "description": "Adds the glow squid, glow ink sac and glow item frame from 1.17 snapshots.",
+        "category": "aesthetic",
+        "author": "Beatso",
+        "lang": true
+    },
+    {
+        "id": "newStyleSquid",
+        "label": "New Style Squid",
+        "description": "Makes squid more similar to the new glow squid style.",
+        "category": "aesthetic",
+        "author": "Daggsy"
     },
     {
         "id": "warpedSoulLantern",
@@ -399,6 +416,7 @@
             "id": "daggers",
             "mergeWith": "daggersAndAlternativeNetheriteTools"
         }],
+        "incompatibilities": ["chocorite"],
         "author": "Beatso"
     },
     {
@@ -531,6 +549,33 @@
         "label": "Subtle Dripstone",
         "description": "Changes colour of dripstone to make it more matching to stone.",
         "category": "snapshot",
+        "author": "Daggsy"
+    },
+    {
+        "id": "fixedCocoaTop",
+        "label": "Fixed Cocoa Top",
+        "description": "Makes the top of cocoa 8 by 8 pixels instead of 7 by 7.",
+        "category": "fixes",
+        "author": "Daggsy"
+    },
+    {
+        "id": "chocorite",
+        "label": "Chocorite",
+        "description": "Changes netherite into chocolate.",
+        "category": "aesthetic",
+        "author": "Daggsy",
+        "incompatibilities": [
+            "alternativeNetheriteTools",
+            "daggers",
+            "shovelsToSpoons"
+        ],
+        "lang": true
+    },
+    {
+        "id": "someShulkers",
+        "label": "Some Shulkers",
+        "description": "Changes bottom texture of shulker shell.",
+        "category": "aesthetic",
         "author": "Daggsy"
     }
 ]

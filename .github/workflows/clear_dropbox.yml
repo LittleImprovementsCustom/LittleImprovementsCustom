@@ -2,7 +2,7 @@ name: Clear Dropbox Packs
 
 on:
   schedule:
-    - cron: "0 0 * * *" # runs daily
+    - cron: "0 0 * * 4" # runs weekly
 
 jobs:
   build:

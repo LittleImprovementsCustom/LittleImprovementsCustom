@@ -76,7 +76,7 @@ body {
 }
 
 .primary-navbar-link {
-	color: var(--emphasis-font-color);
+	color: var(--font-color);
 }
 
 .secondary-navbar-link {
@@ -98,10 +98,6 @@ body {
 
 .selectable {
 	cursor: pointer;
-}
-
-.not-selectable {
-	cursor: not-allowed;
 }
 
 .section-header {
@@ -130,7 +126,12 @@ body {
 
 .selected {
 	background-color: var(--emphasis-background);
-	color: var(--emphasis-font-color);
+	color: var(--font-color);
+}
+
+.not-selectable {
+	cursor: not-allowed;
+	background-color: var(--unselectable-color);
 }
 
 .pack-icon {

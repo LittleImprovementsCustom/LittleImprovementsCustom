@@ -85,7 +85,7 @@ body {
 }
 
 .primary-navbar-link {
-	color: var(--emphasis-font-color);
+	color: var(--font-color);
 }
 
 .secondary-navbar-link {
@@ -135,10 +135,6 @@ body {
 	cursor: pointer;
 }
 
-.not-selectable {
-	cursor: not-allowed;
-}
-
 .pack-height {
 	height: 180px;
 }
@@ -173,7 +169,12 @@ body {
 
 .selected {
 	background-color: var(--emphasis-background);
-	color: var(--emphasis-font-color);
+	color: var(--font-color);
+}
+
+.not-selectable {
+	cursor: not-allowed;
+	background-color: var(--unselectable-color);
 }
 
 .pack-icon {
