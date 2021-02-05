@@ -1,0 +1,18 @@
+{
+	"variants": {
+		"": [
+			{ "model": "block/hanging_roots_1" },
+			{ "model": "block/hanging_roots_2" },
+			{ "model": "block/hanging_roots_3" },
+			{ "model": "block/hanging_roots_4" },
+			{ "model": "block/hanging_roots_5" },
+			{ "model": "block/hanging_roots_6" },
+			{ "model": "block/hanging_roots_7" },
+			{ "model": "block/hanging_roots_8" },
+			{ "model": "block/hanging_roots_9" },
+			{ "model": "block/hanging_roots_10" },
+			{ "model": "block/hanging_roots_11" },
+			{ "model": "block/hanging_roots_12" }
+		]
+	}
+}

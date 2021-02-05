@@ -574,5 +574,12 @@
         "description": "Changes bottom texture of shulker shell.",
         "category": "aesthetic",
         "author": "Daggsy"
+    },
+    {
+        "id": "variatedHangingRoots",
+        "label": "Variated Hanging Roots",
+        "description": "Adds more variants for hanging roots.",
+        "category": "snapshot",
+        "author": "Daggsy"
     }
 ]
