@@ -325,14 +325,16 @@
         "description": "Adds the glow squid, glow ink sac and glow item frame from 1.17 snapshots.",
         "category": "aesthetic",
         "author": "Beatso",
-        "lang": true
+        "lang": true,
+        "incompatibilities": ["newStyleSquid"]
     },
     {
         "id": "newStyleSquid",
         "label": "New Style Squid",
         "description": "Makes squid more similar to the new glow squid style.",
         "category": "aesthetic",
-        "author": "Daggsy"
+        "author": "Daggsy",
+        "incompatibilities": ["glowSquid"]
     },
     {
         "id": "warpedSoulLantern",
