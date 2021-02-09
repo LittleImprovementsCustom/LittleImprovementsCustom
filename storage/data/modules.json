@@ -590,5 +590,12 @@
         "description": "Adds unique icons for azalea and flowering azalea.",
         "category": "snapshot",
         "author": "Daggsy"
+    },
+    {
+        "id": "piggyBundle",
+        "label": "Piggy Bundle",
+        "description": "Changes the bundle to look like a pig.",
+        "category": "snapshot",
+        "author": "Kemiu"
     }
 ]
