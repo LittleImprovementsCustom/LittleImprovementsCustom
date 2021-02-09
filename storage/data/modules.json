@@ -597,5 +597,12 @@
         "description": "Changes the bundle to look like a pig.",
         "category": "snapshot",
         "author": "Kemiu"
+    },
+    {
+        "id": "chocolateCake",
+        "label": "Chocolate Cake",
+        "description": "Turns cake into chocolate cake.",
+        "category": "aesthetic",
+        "author": "Kemiu"
     }
 ]
