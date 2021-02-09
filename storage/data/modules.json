@@ -623,5 +623,12 @@
     {
         "id": "naturalChocolateCakeSides",
         "hidden": true
+    },
+    {
+        "id": "updatedFlintAndSteel",
+        "label": "Updated Flint and Steel",
+        "description": "Updates the flint and steel texture to be more in line with the new iron and flint textures.",
+        "category": "fixes",
+        "author": "Beatso"
     }
 ]
