@@ -603,6 +603,25 @@
         "label": "Chocolate Cake",
         "description": "Turns cake into chocolate cake.",
         "category": "aesthetic",
-        "author": "Kemiu"
+        "author": "Kemiu",
+        "merges": [{
+            "id": "naturalCakeSides",
+            "mergeWith": "naturalChocolateCakeSides"
+        }]
+    },
+    {
+        "id": "naturalCakeSides",
+        "label": "Natural Cake Sides",
+        "description": "Makes the sides of cake more messy and natural.",
+        "category": "aesthetic",
+        "author": "Beatso",
+        "merges": [{
+            "id": "chocolateCake",
+            "mergeWith": "naturalChocolateCakeSides"
+        }]
+    },
+    {
+        "id": "naturalChocolateCakeSides",
+        "hidden": true
     }
 ]
