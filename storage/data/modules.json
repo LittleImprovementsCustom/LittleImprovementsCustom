@@ -634,7 +634,7 @@
     {
         "id": "betterSnowball",
         "label": "Better Snowball",
-        "description": "Removes ugly gray colouring from snowball texture.",
+        "description": "Removes ugly grey colouring from snowball texture.",
         "category": "fixes",
         "author": "Beatso"
     }
