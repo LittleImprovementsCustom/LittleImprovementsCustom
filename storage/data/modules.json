@@ -306,7 +306,8 @@
         "label": "Variated Bricks",
         "description": "Makes bricks vary in colour.",
         "category": "variated",
-        "author": "Beatso"
+        "author": "Beatso",
+        "incompatibilities": ["alternativeBricks"]
     },
     {
         "id": "restockAndShinyClock",
@@ -637,5 +638,13 @@
         "description": "Removes ugly grey colouring from snowball texture.",
         "category": "fixes",
         "author": "Beatso"
+    },
+    {
+        "id": "alternativeBricks",
+        "label": "Alternative Bricks",
+        "description": "Makes brick related blocks look like stone bricks.",
+        "category": "aesthetic",
+        "author":"Kemiu",
+        "incompatibilities": ["variatedBricks"]
     }
 ]
