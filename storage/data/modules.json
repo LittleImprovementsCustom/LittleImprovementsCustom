@@ -646,5 +646,12 @@
         "category": "aesthetic",
         "author":"Kemiu",
         "incompatibilities": ["variatedBricks"]
+    },
+    {
+        "id": "improvedEffectIcons",
+        "label": "Improved Effect Icons",
+        "description": "Some general improvements to status effect icons.",
+        "category": "aesthetic",
+        "author": "Beatso"
     }
 ]
