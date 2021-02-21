@@ -1,11 +1,12 @@
 :root {
-	--background: #212529;
-	--primary-background: #1B1E22;
-	--secondary-background: #181B1E;
-    --emphasis-background: #0c0f11;
+	--background: #111111;
+    --selector-background: #171717;
+	--primary-background: #1c1c1c;
+	--secondary-background: #1E1E1E;
+    --emphasis-background: #242424;
     --separator: #5E6063;
     --font-color: white;
-    --secondary-font-color: grey;
+    --secondary-font-color: rgb(78, 76, 76);
     --toast-font-color: white;
     --success-background: green;
     --fail-background: red;

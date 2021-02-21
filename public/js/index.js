@@ -201,6 +201,8 @@ modulesxobj.onreadystatechange = function () {
 				modulesJSON = JSON.parse(modulesxobj.responseText) // Parse JSON string into object
 				categoryData = JSON.parse(categoriesxobj.responseText)
 				
+				modulesJSON.sort((a, b) => (a.label > b.label) ? 1 : -1)
+
 				const categoryList = categoryData.map(i=>i.id)
 				let categories = {}
 
