@@ -653,5 +653,12 @@
         "description": "Some general improvements to status effect icons.",
         "category": "aesthetic",
         "author": "Beatso"
+    },
+    {
+        "id": "variatedFungi",
+        "label": "Variated Fungi",
+        "description": "Adds variants for brown and red mushrooms.",
+        "category": "variated",
+        "author": "Daggsy"
     }
 ]

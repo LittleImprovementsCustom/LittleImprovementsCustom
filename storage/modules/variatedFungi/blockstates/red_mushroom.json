@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"": [
+			{ "model": "block/red_mushroom_1" },
+			{ "model": "block/red_mushroom_2" },
+			{ "model": "block/red_mushroom_3" },
+			{ "model": "block/red_mushroom_4" },
+			{ "model": "block/red_mushroom_5" },
+			{ "model": "block/red_mushroom_6" }
+		]
+	}
+}
