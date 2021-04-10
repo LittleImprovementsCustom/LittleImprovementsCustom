@@ -660,5 +660,12 @@
         "description": "Adds variants for brown and red mushrooms.",
         "category": "variated",
         "author": "Daggsy"
+    },
+    {
+        "id": "springFlowers",
+        "label": "Spring Flowers",
+        "description": "Adds variations for each flower.",
+        "category": "variated",
+        "author": "Daggsy"
     }
 ]

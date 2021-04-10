@@ -1,0 +1,20 @@
+{
+	"variants": {
+		"": [
+			{ "model": "block/poppy" },
+			{ "model": "block/poppy_2" },
+			{ "model": "block/poppy_3" },
+			{ "model": "block/poppy_4" },
+			{ "model": "block/poppy_5" },
+			{ "model": "block/poppy_6" },
+			{ "model": "block/rose" },
+			{ "model": "block/poppy" },
+			{ "model": "block/poppy_2" },
+			{ "model": "block/poppy_3" },
+			{ "model": "block/poppy_4" },
+			{ "model": "block/poppy_5" },
+			{ "model": "block/poppy_6" },
+			{ "model": "block/rose_2" }
+		]
+	}
+}

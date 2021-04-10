@@ -1,0 +1,21 @@
+{
+  "variants": {
+      "half=lower": [
+		       { "model": "minecraft:block/lilac_bottom" },
+		       { "model": "minecraft:block/lilac_bottom_2" },
+		       { "model": "minecraft:block/lilac_bottom_3" },
+		       { "model": "minecraft:block/lilac_bottom_4" },
+		       { "model": "minecraft:block/lilac_bottom_5" },
+		       { "model": "minecraft:block/lilac_bottom_6" }
+		    ],
+      "half=upper": [
+		       { "model": "minecraft:block/lilac_top" },
+		       { "model": "minecraft:block/lilac_top_2" },
+		       { "model": "minecraft:block/lilac_top_3" },
+		       { "model": "minecraft:block/lilac_top_4" },
+		       { "model": "minecraft:block/lilac_top_5" },
+		       { "model": "minecraft:block/lilac_top_6" }
+		    ]
+	     }
+      }
+}

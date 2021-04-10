@@ -1,0 +1,45 @@
+{
+  "variants": {
+      "half=lower": [
+		       { "model": "minecraft:block/sunflower_bottom" },
+		       { "model": "minecraft:block/sunflower_bottom_2" },
+		       { "model": "minecraft:block/sunflower_bottom_3" },
+		       { "model": "minecraft:block/sunflower_bottom_4" },
+		       { "model": "minecraft:block/sunflower_bottom_5" },
+		       { "model": "minecraft:block/sunflower_bottom_6" },
+		       { "model": "minecraft:block/sunflower_bottom_2" },
+		       { "model": "minecraft:block/sunflower_bottom_4" },
+		       { "model": "minecraft:block/sunflower_bottom_6" },
+		       { "model": "minecraft:block/sunflower_bottom" },
+		       { "model": "minecraft:block/sunflower_bottom_3" },
+		       { "model": "minecraft:block/sunflower_bottom_5" },
+		       { "model": "minecraft:block/sunflower_bottom_2" },
+		       { "model": "minecraft:block/sunflower_bottom_4" },
+		       { "model": "minecraft:block/sunflower_bottom_6" },
+		       { "model": "minecraft:block/sunflower_bottom" },
+		       { "model": "minecraft:block/sunflower_bottom_3" },
+		       { "model": "minecraft:block/sunflower_bottom_5" }
+		    ],
+      "half=upper": [
+		       { "model": "minecraft:block/sunflower_top" },
+		       { "model": "minecraft:block/sunflower_top_2" },
+		       { "model": "minecraft:block/sunflower_top_3" },
+		       { "model": "minecraft:block/sunflower_top_4" },
+		       { "model": "minecraft:block/sunflower_top_5" },
+		       { "model": "minecraft:block/sunflower_top_6" },
+		       { "model": "minecraft:block/sunflower_top_7" },
+		       { "model": "minecraft:block/sunflower_top_8" },
+		       { "model": "minecraft:block/sunflower_top_9" },
+		       { "model": "minecraft:block/sunflower_top_10" },
+		       { "model": "minecraft:block/sunflower_top_11" },
+		       { "model": "minecraft:block/sunflower_top_12" },
+		       { "model": "minecraft:block/sunflower_top_7" },
+		       { "model": "minecraft:block/sunflower_top_8" },
+		       { "model": "minecraft:block/sunflower_top_9" },
+		       { "model": "minecraft:block/sunflower_top_10" },
+		       { "model": "minecraft:block/sunflower_top_11" },
+		       { "model": "minecraft:block/sunflower_top_12" }
+		    ]
+	     }
+      }
+}

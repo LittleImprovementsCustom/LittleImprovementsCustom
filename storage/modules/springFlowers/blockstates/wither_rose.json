@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"": [
+			{ "model": "block/wither_rose" },
+			{ "model": "block/wither_rose_2" },
+			{ "model": "block/wither_rose_3" },
+			{ "model": "block/wither_rose_4" },
+			{ "model": "block/wither_rose_5" },
+			{ "model": "block/wither_rose_6" }
+		]
+	}
+}

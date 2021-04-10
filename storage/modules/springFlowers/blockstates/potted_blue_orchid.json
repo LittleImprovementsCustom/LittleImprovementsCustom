@@ -1,0 +1,20 @@
+{
+	"variants": {
+		"": [
+			{ "model": "block/potted_blue_orchid" },
+			{ "model": "block/potted_blue_orchid_2" },
+			{ "model": "block/potted_blue_orchid_3" },
+			{ "model": "block/potted_blue_orchid_4" },
+			{ "model": "block/potted_blue_orchid_5" },
+			{ "model": "block/potted_blue_orchid_6" },
+			{ "model": "block/potted_cyan_rose" },
+			{ "model": "block/potted_blue_orchid" },
+			{ "model": "block/potted_blue_orchid_2" },
+			{ "model": "block/potted_blue_orchid_3" },
+			{ "model": "block/potted_blue_orchid_4" },
+			{ "model": "block/potted_blue_orchid_5" },
+			{ "model": "block/potted_blue_orchid_6" },
+			{ "model": "block/potted_cyan_rose_2" }
+		]
+	}
+}

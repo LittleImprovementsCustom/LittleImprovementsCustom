@@ -1,0 +1,12 @@
+{
+	"variants": {
+		"": [
+			{ "model": "block/lily_of_the_valley" },
+			{ "model": "block/lily_of_the_valley_2" },
+			{ "model": "block/lily_of_the_valley_3" },
+			{ "model": "block/lily_of_the_valley_4" },
+			{ "model": "block/lily_of_the_valley_5" },
+			{ "model": "block/lily_of_the_valley_6" }
+		]
+	}
+}

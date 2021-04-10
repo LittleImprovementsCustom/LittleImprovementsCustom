@@ -1,0 +1,20 @@
+{
+	"variants": {
+		"": [
+			{ "model": "block/potted_dandelion" },
+			{ "model": "block/potted_dandelion_2" },
+			{ "model": "block/potted_dandelion_3" },
+			{ "model": "block/potted_dandelion_4" },
+			{ "model": "block/potted_dandelion_5" },
+			{ "model": "block/potted_dandelion_6" },
+			{ "model": "block/potted_old_dandelion" },
+			{ "model": "block/potted_dandelion" },
+			{ "model": "block/potted_dandelion_2" },
+			{ "model": "block/potted_dandelion_3" },
+			{ "model": "block/potted_dandelion_4" },
+			{ "model": "block/potted_dandelion_5" },
+			{ "model": "block/potted_dandelion_6" },
+			{ "model": "block/potted_old_dandelion_2" }
+		]
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"variants": {
+		"": [
+			{ "model": "block/potted_poppy" },
+			{ "model": "block/potted_poppy_2" },
+			{ "model": "block/potted_poppy_3" },
+			{ "model": "block/potted_poppy_4" },
+			{ "model": "block/potted_poppy_5" },
+			{ "model": "block/potted_poppy_6" },
+			{ "model": "block/potted_rose" },
+			{ "model": "block/potted_poppy" },
+			{ "model": "block/potted_poppy_2" },
+			{ "model": "block/potted_poppy_3" },
+			{ "model": "block/potted_poppy_4" },
+			{ "model": "block/potted_poppy_5" },
+			{ "model": "block/potted_poppy_6" },
+			{ "model": "block/potted_rose_2" }
+		]
+	}
+}
