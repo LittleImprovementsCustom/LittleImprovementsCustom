@@ -533,7 +533,7 @@
     {
         "id": "upgradedElytra",
         "label": "Upgraded Elytra",
-        "description": "Change name of elytra to for example Netherite Elytra to get unique texture. Requires OptiFine.",
+        "description": "Requires OptiFine. Rename of elytra to Netherite Elytra to get unique texture.",
         "category": "aesthetic",
         "author": "Daggsy"
     },
