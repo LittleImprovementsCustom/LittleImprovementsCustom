@@ -321,6 +321,13 @@
         "author": "Daggsy"
     },
     {
+        "id": "moobloomStyledCows",
+        "label": "Moobloom Styled Cows",
+        "description": "Changes every cow to appear with the Moobloom design.",
+        "category": "aesthetic",
+        "author": "Bold Muddy"
+    },
+    {
         "id": "glowSquid",
         "label": "Glow Squid",
         "description": "Adds the glow squid, glow ink sac and glow item frame from 1.17 snapshots.",
@@ -667,5 +674,86 @@
         "description": "Adds variations for each flower.",
         "category": "variated",
         "author": "Daggsy"
+    },
+    {
+        "id": "makeupGlowSquid",
+        "label": "Makeup Glow Squid",
+        "description": "Removes a weird glow spot on the Glowsquid's face.",
+        "category": "snapshot",
+        "author": "Bold Muddy"
+    },
+    {
+        "id": "glowyGlowSquid",
+        "label": "Glowy Glow Squid",
+        "description": "Makes the Glow Squid even more glowier.",
+        "category": "snapshot",
+        "author": "Bold Muddy"
+    },
+    {
+        "id": "prismarineGlowSquid",
+        "label": "Prismarine Glow Squid",
+        "description": "Makes the Glow Squid look prismarine like.",
+        "category": "snapshot",
+        "author": "Bold Muddy"
+    },
+    {
+        "id": "redstoneSculkSensors",
+        "label": "Redstone Sculk Sensors",
+        "description": "Changes the Sculk Sensor to be Redstone themed.",
+        "category": "snapshot",
+        "author": "Bold Muddy"
+    },
+    {
+        "id": "redstoneLampSculkSensor",
+        "label": "Redstone Lamp Sculk Sensor",
+        "description": "Changes the Sculk Sensor to be Redstone themed, but with a lamp instead of torches.",
+        "category": "snapshot",
+        "author": "Bold Muddy"
+    },
+    {
+        "id": "amethystTrident",
+        "label": "Amethyst Trident",
+        "description": "Recolors the Trident to be themed with the rest of the Diamond Tools.",
+        "category": "aesthetic",
+        "author": "Bold Muddy",
+        "lang": true
+    },,
+    {
+        "id": "diamondTrident",
+        "label": "Diamond Trident",
+        "description": "Recolors the Trident to be Amethyst Themed.",
+        "category": "aesthetic",
+        "author": "Bold Muddy",
+        "lang": true
+    },
+    {
+        "id": "satanicTrident",
+        "label": "Satanic Trident",
+        "description": "Recolors the Trident with colors straight from hell!",
+        "category": "aesthetic",
+        "author": "Bold Muddy",
+        "lang": true
+    },
+    {
+        "id": "steverStand",
+        "label": "Stever Stand",
+        "description": "Adds a cool steve head to the Armor Stand. Requires OptiFine.",
+        "category": "utility",
+        "author": "Bold Muddy",
+        "lang": true
+    },
+    {
+        "id": "warpcelium",
+        "label": "Warpcelium",
+        "description": "Retextures Warped Nylium to me a bit like Myclium.",
+        "category": "aesthetic",
+        "author": "Bold Muddy"
+    },
+    {
+        "id": "puffierPufferfishes",
+        "label": "Puffier Pufferfishes",
+        "description": "Makes all stages of Pufferfish to the biggest size. Requires OptiFine.",
+        "category": "aesthetic",
+        "author": "Bold Muddy"
     }
 ]

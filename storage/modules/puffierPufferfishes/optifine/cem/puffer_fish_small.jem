@@ -1,0 +1,149 @@
+{
+	"textureSize": [32, 32],
+	"models": [
+		{
+			"part": "body",
+			"id": "body",
+			"invertAxis": "xy",
+			"translate": [0, 0, 0],
+			"boxes": [
+				{"coordinates": [-4, 0, -4, 8, 8, 8], "textureOffset": [0, 0]},
+				{"coordinates": [-4, -1, 0, 8, 1, 1], "textureOffset": [14, 19]},
+				{"coordinates": [-4, 8, 0, 8, 1, 1], "textureOffset": [14, 16]}
+			],
+			"submodels": [
+				{
+					"id": "left_fin",
+					"invertAxis": "xy",
+					"translate": [-4, 7, -2],
+					"boxes": [
+						{"coordinates": [-2, -1, -0.99, 2, 1, 2], "textureOffset": [24, 0]}
+					]
+				},
+				{
+					"id": "right_fin",
+					"invertAxis": "xy",
+					"translate": [4, 7, -2],
+					"boxes": [
+						{"coordinates": [0, -1, -0.99, 2, 1, 2], "textureOffset": [24, 3]}
+					]
+				},
+				{
+					"id": "spikes",
+					"invertAxis": "xy",
+					"translate": [0, 0, 0],
+					"submodels": [
+						{
+							"id": "spikes1",
+							"invertAxis": "xy",
+							"translate": [0, 8, -4],
+							"rotate": [-45, 0, 0],
+							"boxes": [
+								{"coordinates": [-4, 0, 0, 8, 1, 1], "textureOffset": [14, 16]}
+							]
+						},
+						{
+							"id": "spikes3",
+							"invertAxis": "xy",
+							"translate": [0, 0, -4],
+							"rotate": [45, 0, 0],
+							"boxes": [
+								{"coordinates": [-4, -1, 0, 8, 1, 1], "textureOffset": [14, 19]}
+							]
+						},
+						{
+							"id": "spikes4",
+							"invertAxis": "xy",
+							"translate": [4, 4.5, -4],
+							"rotate": [0, 45, 0],
+							"boxes": [
+								{"coordinates": [0, -3.5, 0, 1, 7, 1], "textureOffset": [8, 16]}
+							]
+						},
+						{
+							"id": "spikes5",
+							"invertAxis": "xy",
+							"translate": [0, 8, 4],
+							"rotate": [45, 0, 0],
+							"boxes": [
+								{"coordinates": [-4, 0, 0, 8, 1, 1], "textureOffset": [14, 16]}
+							]
+						},
+						{
+							"id": "spikes6",
+							"invertAxis": "xy",
+							"translate": [-4, 4.5, 4],
+							"rotate": [0, 45, 0],
+							"boxes": [
+								{"coordinates": [-1, -3.5, 0, 1, 7, 1], "textureOffset": [4, 16]}
+							]
+						},
+						{
+							"id": "spikes7",
+							"invertAxis": "xy",
+							"translate": [0, 0, 4],
+							"rotate": [-45, 0, 0],
+							"boxes": [
+								{"coordinates": [-4, -1, 0, 8, 1, 1], "textureOffset": [14, 19]}
+							]
+						},
+						{
+							"id": "spikes8",
+							"invertAxis": "xy",
+							"translate": [4, 4.5, 4],
+							"rotate": [0, -45, 0],
+							"boxes": [
+								{"coordinates": [0, -3.5, 0, 1, 7, 1], "textureOffset": [0, 16]}
+							]
+						},
+						{
+							"id": "spikes2",
+							"invertAxis": "xy",
+							"translate": [-4, 4.5, -4],
+							"rotate": [0, -45, 0],
+							"boxes": [
+								{"coordinates": [-1, -3.5, 0, 1, 7, 1], "textureOffset": [8, 16]}
+							]
+						}
+					]
+				}
+			],
+			"animations": [
+				{
+					"left_fin.rz": "fin_left.rz",
+					"right_fin.rz": "fin_right.rz"
+				}
+			]
+		},
+		{
+			"part": "tail",
+			"id": "tail",
+			"invertAxis": "xy",
+			"translate": [0, -1, -1.5]
+		},
+		{
+			"part": "fin_right",
+			"id": "fin_right",
+			"invertAxis": "xy",
+			"translate": [-1.5, -1, 1.5]
+		},
+		{
+			"part": "fin_left",
+			"id": "fin_left",
+			"invertAxis": "xy",
+			"translate": [1.5, -1, 1.5]
+		},
+		{
+			"part": "eye_right",
+			"id": "eye_right",
+			"invertAxis": "xy",
+			"translate": [0, -3, 0]
+		},
+		{
+			"part": "eye_left",
+			"id": "eye_left",
+			"invertAxis": "xy",
+			"translate": [0, -3, 0]
+		}
+	]
+}
