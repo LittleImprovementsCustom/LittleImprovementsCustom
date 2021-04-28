@@ -1,0 +1,18 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/src"
+  schedule:
+    interval: daily
+    time: "14:00"
+    timezone: Europe/London
+  open-pull-requests-limit: 99
+  labels:
+  - "category: dependencies"
+  ignore:
+  - dependency-name: chai
+    versions:
+    - 4.3.2
+  - dependency-name: eslint
+    versions:
+    - 7.20.0
