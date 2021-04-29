@@ -1,759 +1,758 @@
-[
-    {
-        "id": "honeyJar",
-        "label": "Honey Jar",
-        "description": "Changes honey bottle to a jar of honey, and renames the item.",
-        "category": "aesthetic",
-        "lang": true,
-        "author": "Beatso"
-    },
-    {
-        "id": "hotLavaBucket",
-        "label": "Hot Lava Bucket",
-        "description": "Makes original lava bucket really, really hot.",
-        "category": "aesthetic",
-        "author": "Daggsy"
-    },
-    {
-        "id": "animatedCampfireItems",
-        "label": "Animated Campfire Items",
-        "iconType": "gif",
-        "description": "Animates campfire and soul campfire items in the inventory and in a player's hand.",
-        "category": "fixes",
-        "merges": [{
-            "id": "soulCampfire",
-            "mergeWith": "soulCampfirePlusAnimatedCampfire"
-        }],
-        "author": "Beatso"
-    },
-    {
-        "id": "restockClock",
-        "label": "Restock Clock",
-        "description": "Makes clocks show when villagers can restock their trades.",
-        "category": "utility",
-        "merges": [{
-            "id": "shinyClock",
-            "mergeWith": "restockAndShinyClock"
-        }],
-        "author": "Beatso"
-    },
-    {
-        "id": "betterSignIcons",
-        "label": "Better Sign Icons",
-        "description": "Changes sign inventory icons to be more similar to the block.",
-        "category": "fixes",
-        "author": "Daggsy"
-    },
-    {
-        "id": "crackedNetherBricks",
-        "label": "Cracked Nether Bricks",
-        "iconType": "gif",
-        "description": "Improves cracked nether bricks by adding a magma animation in cracks.",
-        "category": "aesthetic",
-        "author": "Daggsy"
-    },
-    {
-        "id": "noNauseaOverlay",
-        "label": "No Nausea Overlay",
-        "description": "Removes the green overlay from nausea when distortion effects is set to off.",
-        "category": "utility",
-        "author": "Beatso"
-    },
-    {
-        "id": "noSpyglassOverlay",
-        "label": "No Spyglass Overlay",
-        "description": "Removes the overlay hiding vision when using spyglass.",
-        "category": "snapshot",
-        "author": "Beatso"
-    },
-    {
-        "id": "betterHelmets",
-        "label": "Better Helmets",
-        "description": "Makes your face more visible when wearing a helmet.",
-        "category": "utility",
-        "author": "Beatso"
-    },
-    {
-        "id": "flowerGolem",
-        "label": "Flower Golem",
-        "description": "Makes poppies bloom on the texture of the iron golem.",
-        "category": "aesthetic",
-        "author": "Daggsy"
-    },
-    {
-        "id": "fancyLlamaDecor",
-        "label": "Fancy Llama Decor",
-        "description": "Gives llamas fancier carpet patterns.",
-        "category": "aesthetic",
-        "author": "Daggsy"
-    },
-    {
-        "id": "obsidianEnderChest",
-        "label": "Obsidian Ender Chest",
-        "description": "Removes green and replaces it with an obsidian-like texture.",
-        "category": "aesthetic",
-        "prefers": [{
-            "id": "purpleEndEyes",
-            "delete": "obsidianEnderChest"
-        }],
-        "author": "Daggsy"
-    },
-    {
-        "id": "purpleEndEyes",
-        "label": "Purple End Eyes",
-        "description": "Makes ender pearls, eyes of ender and ender chests all purple",
-        "category": "aesthetic",
-        "merges": [{
-            "id": "purpleEndPortalFrame",
-            "mergeWith": "purpleEndPortalFrameAndPurpleEndEyes"
-        }],
-        "prefers": [{
-            "id": "obsidianEnderChest",
-            "delete": "obsidianEnderChest"
-        }],
-        "author": "Daggsy & Fjorde"
-    },
-    {
-        "id": "purpleEndPortalFrame",
-        "label": "Purple End Portal Frame",
-        "description": "Makes end portal frame purple instead of green.",
-        "category": "aesthetic",
-        "merges": [{
-            "id": "purpleEndEyes",
-            "mergeWith": "purpleEndPortalFrameAndPurpleEndEyes"
-        }],
-        "author": "Daggsy"
-    },
-    {
-        "id": "purpleEndPortalFrameAndPurpleEndEyes",
-        "hidden": true
-    },
-    {
-        "id": "connectedSmoothStone",
-        "label": "Connected Smooth Stone",
-        "description": "Connected smooth stone. No OptiFine required.",
-        "category": "aesthetic",
-        "author": "Beatso"
-    },
-    {
-        "id": "livingDragon",
-        "label": "Living Dragon",
-        "iconType": "gif",
-        "description": "Makes dragon egg more detailed and implements animation.",
-        "category": "aesthetic",
-        "author": "Daggsy"
-    },
-    {
-        "id": "animatedFurnaces",
-        "label": "Animated Furnaces",
-        "iconType": "gif",
-        "description": "Adds animation to furnace and small improvements for smoker and blast furnace.",
-        "category": "fixes",
-        "author": "Daggsy"
-    },
-    {
-        "id": "detailedHearts",
-        "label": "Detailed Hearts",
-        "description": "Improves hearts, armour points, attack indicator and makes ping icons more colourful.",
-        "category": "aesthetic",
-        "author": "Daggsy"
-    },
-    {
-        "id": "matchingGildedBlackstone",
-        "label": "Matching Gilded Blackstone",
-        "description": "Improves top texture of gilded blackstone.",
-        "category": "fixes",
-        "incompatibilities": ["variatedOres"],
-        "author": "Daggsy"
-    },
-    {
-        "id": "soulCampfire",
-        "label": "Soul Campfire",
-        "description": "Replaces oak logs with warped logs and ash with soul soil.",
-        "category": "fixes",
-        "merges": [{
-            "id": "animatedCampfireItems",
-            "mergeWith": "soulCampfirePlusAnimatedCampfire"
-        }],
-        "author": "Daggsy"
-    },
-    {
-        "id": "soulCampfirePlusAnimatedCampfire",
-        "hidden": true
-    },
-    {
-        "id": "fixedBarrel",
-        "label": "Fixed Barrel",
-        "description": "Makes lines on barrel compatibile with lines on spruce planks.",
-        "category": "fixes",
-        "author": "Daggsy"
-    },
-    {
-        "id": "variatedNetherFungi",
-        "label": "Variated Nether Fungi",
-        "description": "Adds more variants for nether fungi.",
-        "category": "variated",
-        "author": "Daggsy"
-    },
-    {
-        "id": "variatedNetherRoots",
-        "label": "Variated Nether Roots",
-        "description": "Includes variations for crimson roots and warped roots.",
-        "category": "variated",
-        "author": "Daggsy"
-    },
-    {
-        "id": "anvilSides",
-        "label": "Anvil Sides",
-        "description": "Adds damage texture on anvil sides.",
-        "category": "utility",
-        "author": "Daggsy"
-    },
-    {
-        "id": "knowledgeBookFix",
-        "label": "Knowledge Book Fix",
-        "description": "Corrects GUIs to use the new JAPPA knowledge book texture.",
-        "category": "fixes",
-        "author": "Beatso"
-    },
-    {
-        "id": "emissiveOres",
-        "label": "Emissive Ores",
-        "description": "Makes ores glow in the dark. Requires OptiFine and emissive textures turned on.",
-        "category": "aesthetic",
-        "merges": [{
-            "id": "variatedOres",
-            "mergeWith": "variatedEmissiveOres"
-        }],
-        "author": "Beatso"
-    },
-    {
-        "id": "targetScore",
-        "label": "Target Score",
-        "description": "Targets show their power level when hit with a projectile.",
-        "category": "utility",
-        "author": "Beatso"
-    },
-    {
-        "id": "arrowedDispensers",
-        "label": "Arrowed Dispensers",
-        "description": "Shows arrows on droppers and dispensers so you can differentiate them and know which way they are facing.",
-        "category": "utility",
-        "incompatibilities": ["fixedDispensers"],
-        "author": "Beatso"
-    },
-    {
-        "id": "shovelsToSpoons",
-        "label": "Shovels to Spoons",
-        "description": "Renames shovels to spoons in-game.",
-        "category": "aesthetic",
-        "incompatibilities": ["chocorite"],
-        "lang": true,
-        "author": "Beatso"
-    },
-    {
-        "id": "cleanerMaps",
-        "label": "Cleaner Maps",
-        "description": "Changes the border of maps to be cleaner and less torn.",
-        "author": "Beatso"
-    },
+[{
+		"id": "honeyJar",
+		"label": "Honey Jar",
+		"description": "Changes honey bottle to a jar of honey, and renames the item.",
+		"category": "aesthetic",
+		"lang": true,
+		"author": "Beatso"
+	},
 	{
-        "id": "daggers",
-        "label": "Daggers",
-        "description": "Makes all swords shorter and renames them.",
-        "category": "utility",
-        "merges": [{
-            "id": "alternativeNetheriteTools",
-            "mergeWith": "daggersAndAlternativeNetheriteTools"
-        }],
-        "incompatibilities": ["chocorite"],
-        "lang": true,
-        "author": "Kemiu"
-    },
+		"id": "hotLavaBucket",
+		"label": "Hot Lava Bucket",
+		"description": "Makes original lava bucket really, really hot.",
+		"category": "aesthetic",
+		"author": "Daggsy"
+	},
 	{
-        "id": "tinyMeals",
-        "label": "Tiny Meals",
-        "description": "Changes food item models to be smaller, so they don't cover as much of the screen.",
+		"id": "animatedCampfireItems",
+		"label": "Animated Campfire Items",
+		"iconType": "gif",
+		"description": "Animates campfire and soul campfire items in the inventory and in a player's hand.",
+		"category": "fixes",
+		"merges": [{
+			"id": "soulCampfire",
+			"mergeWith": "soulCampfirePlusAnimatedCampfire"
+		}],
+		"author": "Beatso"
+	},
+	{
+		"id": "restockClock",
+		"label": "Restock Clock",
+		"description": "Makes clocks show when villagers can restock their trades.",
 		"category": "utility",
-        "author": "Kemiu"
-    },
+		"merges": [{
+			"id": "shinyClock",
+			"mergeWith": "restockAndShinyClock"
+		}],
+		"author": "Beatso"
+	},
 	{
-        "id": "shinyClock",
-        "label": "Shiny Clock",
-        "description": "Gives the clock an alternative texture.",
-        "category": "aesthetic",
-        "merges": [{
-            "id": "restockClock",
-            "mergeWith": "restockAndShinyClock"
-        }],
-        "author": "Kemiu"
-    },
-    {
-        "id": "shinyCompass",
-        "label": "Shiny Compass",
-        "description": "Gives the compass an alternative texture.",
-        "category": "aesthetic",
-        "author": "Kemiu"
-    },
+		"id": "betterSignIcons",
+		"label": "Better Sign Icons",
+		"description": "Changes sign inventory icons to be more similar to the block.",
+		"category": "fixes",
+		"author": "Daggsy"
+	},
 	{
-        "id": "warted",
-        "label": "Warted",
-        "description": "Changes nether wart crops, blocks and item textures to be less ugly and fit with JAPPA's style.",
-        "author": "Kemiu"
-    },
-    {
-        "id": "variatedBricks",
-        "label": "Variated Bricks",
-        "description": "Makes bricks vary in colour.",
-        "category": "variated",
-        "author": "Beatso",
-        "incompatibilities": ["alternativeBricks"]
-    },
-    {
-        "id": "restockAndShinyClock",
-        "hidden": true
-    },
-    {
-        "id": "moobloom",
-        "label": "Moobloom",
-        "description": "Adds the moobloom from Minecraft Earth to the game. Requires OptiFine.",
-        "category": "aesthetic",
-        "author": "Daggsy"
-    },
-    {
-        "id": "moobloomStyledCows",
-        "label": "Moobloom Styled Cows",
-        "description": "Changes every cow to appear with the Moobloom design.",
-        "category": "aesthetic",
-        "author": "Bold Muddy"
-    },
-    {
-        "id": "glowSquid",
-        "label": "Glow Squid",
-        "description": "Adds the glow squid, glow ink sac and glow item frame from 1.17 snapshots.",
-        "category": "aesthetic",
-        "author": "Beatso",
-        "lang": true,
-        "incompatibilities": ["newStyleSquid"]
-    },
-    {
-        "id": "newStyleSquid",
-        "label": "New Style Squid",
-        "description": "Makes squid more similar to the new glow squid style.",
-        "category": "aesthetic",
-        "author": "Daggsy",
-        "incompatibilities": ["glowSquid"]
-    },
-    {
-        "id": "warpedSoulLantern",
-        "label": "Warped Soul Lantern",
-        "description": "Changes the sides of Soul Lantern to blue and warped.",
-        "category": "fixes",
-        "author": "Daggsy"
-    },
-    {
-        "id": "fixedStonecutter",
-        "label": "Fixed Stonecutter",
-        "description": "Changes the colour of wood on the top of Stonecutter and adds texture with wood to the bottom.",
-        "category": "fixes",
-        "author": "Daggsy"
-    },
-    {
-        "id": "pistonFront",
-        "label": "Piston Front",
-        "description": "Makes fronts of pistons more similar to planks.",
-        "category": "fixes",
-        "author": "Daggsy"
-    },
-    {
-        "id": "lecternBottom",
-        "label": "Lectern Bottom",
-        "description": "Changes the lectern model to show some carpet on the bottom.",
-        "category": "fixes",
-        "incompatibilities": ["flatPlanks"],
-        "author": "Daggsy"
-    },
-    {
-        "id": "craftingTableBottom",
-        "label": "Crafting Table Bottom",
-        "description": "Adds a unique texture to the bottom of crafting tables, that is not just oak planks.",
-        "category": "fixes",
-        "merges": [{
-            "id": "flatPlanks",
-            "mergeWith": "flatPlanksAndCraftingTableBottom"
-        }],
-        "author": "Daggsy"
-    },
-    {
-        "id": "fixedDispensers",
-        "label": "Fixed Dispensers",
-        "description": "Adds a unique bottom texture to droppers and dispensers. Also adds side texture for vertical versions.",
-        "category": "fixes",
-        "incompatibilities": ["arrowedDispensers"],
-        "author": "Daggsy"
-    },
-    {
-        "id": "variatedOres",
-        "label": "Variated Ores",
-        "description": "Variates the minerals in ore blocks to avoid the grid pattern",
-        "category": "variated",
-        "incompatibilities": ["matchingGildedBlackstone"],
-        "merges": [{
-            "id": "emissiveOres",
-            "mergeWith": "variatedEmissiveOres"
-        }],
-        "author": "Beatso"
-    },
-    {
-        "id": "variatedEmissiveOres",
-        "hidden": true
-    },
-    {
-        "id": "variatedGlass",
-        "label": "Variated Glass",
-        "description": "Variated glass to avoid grid patterns in big walls.",
-        "category": "variated",
-        "author": "Beatso"
-    },
-    {
-        "id": "alternativeNetheriteTools",
-        "label": "Alternative Netherite Tools",
-        "description": "Makes Netherite tools a slightly different shape to other tools to make them more special",
-        "category": "aesthetic",
-        "merges": [{
-            "id": "daggers",
-            "mergeWith": "daggersAndAlternativeNetheriteTools"
-        }],
-        "incompatibilities": ["chocorite"],
-        "author": "Beatso"
-    },
-    {
-        "id": "daggersAndAlternativeNetheriteTools",
-        "hidden": true
-    },
-    {
-        "id": "betterBeaconSides",
-        "label": "Better Beacon Sides",
-        "description": "Makes the sides of the beacon less bright",
-        "category": "aesthetic",
-        "author": "Beatso"
-    },
-    {
-        "id": "flatPlanks",
-        "label": "Flat Planks",
-        "description": "Changes planks to use V3.1 of the texture update textures, making them less plastic.",
-        "category": "aesthetic",
-        "incompatibilities": ["lecternBottom"],
-        "merges": [{
-            "id": "craftingTableBottom",
-            "mergeWith": "flatPlanksAndCraftingTableBottom"
-        }],
-        "author": "Beatso"
-    },
-    {
-        "id": "coralIcons",
-        "label": "Coral Icons",
-        "description": "Adds unique item icon for every coral",
-        "category": "aesthetic",
-        "merges": [{
-            "id": "colourfulCoral",
-            "mergeWith": "colourfulCoralAndCoralIcons"
-        }],
-        "author": "Daggsy"
-    },
-    {
-        "id": "colourfulCoral",
-        "label": "Colourful Dead Coral",
-        "description": "Changes colour of dead corals to more saturated",
-        "category": "aesthetic",
-        "merges": [{
-            "id": "coralIcons",
-            "mergeWith": "colourfulCoralAndCoralIcons"
-        }],
-        "author": "Daggsy"
-    },
-    {
-        "id": "colourfulCoralAndCoralIcons",
-        "hidden": true
-    },
-    {
-        "id": "newDirt",
-        "label": "New Dirt",
-        "description": "Adds alternative textures for dirt, which are more in-line with JAPPA's style.",
-        "category": "aesthetic",
-        "author": "Kemiu"
-    },
-    {
-        "id": "brightAndDark",
-        "label": "Bright And Dark",
-        "description": "Adds an alternative texture for sun and moon, making them round.",
-        "category": "aesthetic",
-        "author": "Kemiu"
-    },
-    {
-        "id": "egglessSlime",
-        "label": "Eggless Slime",
-        "description": "Removes the \"egg\" in the middle of slime blocks and mobs.",
-        "category": "aesthetic",
-        "author": "Beatso"
-    },
-    {
-        "id": "egglessHoneyBlock",
-        "label": "Eggless Honey Block",
-        "description": "Removes the \"egg\" in the middle of honey blocks.",
-        "category": "aesthetic",
-        "author": "Beatso"
-    },
-    {
-        "id": "spyglassToTelescope",
-        "label": "Spyglass to Telescope",
-        "description": "Renames the spyglass to telescope.",
-        "category": "snapshot",
-        "author": "Beatso",
-        "lang": true
-    },
-    {
-        "id": "newCandleIcons",
-        "label": "New Candle Icons",
-        "description": "Adds bigger candle icons.",
-        "category": "snapshot",
-        "author": "Daggsy"
-    },
-    {
-        "id": "amethystBuddies",
-        "label": "Amethyst Buddies",
-        "description": "Adds icons for amethyst buds and changes texture of budding amethyst block.",
-        "category": "snapshot",
-        "author": "Daggsy"
-    },
-    {
-        "id": "coldBucket",
-        "label": "Cold Bucket",
-        "description": "Makes original powder snow bucket really, really cold.",
-        "category": "snapshot",
-        "author": "Daggsy"
-    },
-    {
-        "id": "flatPlanksAndCraftingTableBottom",
-        "hidden": true
-    },
-    {
-        "id": "upgradedElytra",
-        "label": "Upgraded Elytra",
-        "description": "Requires OptiFine. Rename of elytra to Netherite Elytra to get unique texture.",
-        "category": "aesthetic",
-        "author": "Daggsy"
-    },
-    {
-        "id": "retiredWanderingTrader",
-        "label": "Retired Wandering Trader",
-        "description": "Changes texture of Nitwit to retired trader.",
-        "category": "aesthetic",
-        "author": "Daggsy"
-    },
-    {
-        "id": "subtleDripstone",
-        "label": "Subtle Dripstone",
-        "description": "Changes colour of dripstone to make it more matching to stone.",
-        "category": "snapshot",
-        "author": "Daggsy"
-    },
-    {
-        "id": "fixedCocoaTop",
-        "label": "Fixed Cocoa Top",
-        "description": "Makes the top of cocoa 8 by 8 pixels instead of 7 by 7.",
-        "category": "fixes",
-        "author": "Daggsy"
-    },
-    {
-        "id": "chocorite",
-        "label": "Chocorite",
-        "description": "Changes netherite into chocolate.",
-        "category": "aesthetic",
-        "author": "Daggsy",
-        "incompatibilities": [
-            "alternativeNetheriteTools",
-            "daggers",
-            "shovelsToSpoons"
-        ],
-        "lang": true
-    },
-    {
-        "id": "someShulkers",
-        "label": "Some Shulkers",
-        "description": "Changes bottom texture of shulker shell.",
-        "category": "aesthetic",
-        "author": "Daggsy"
-    },
-    {
-        "id": "variatedHangingRoots",
-        "label": "Variated Hanging Roots",
-        "description": "Adds more variants for hanging roots.",
-        "category": "snapshot",
-        "author": "Daggsy"
-    },
-    {
-        "id": "azaleaIcons",
-        "label": "Azalea Icons",
-        "description": "Adds unique icons for azalea and flowering azalea.",
-        "category": "snapshot",
-        "author": "Daggsy"
-    },
-    {
-        "id": "piggyBundle",
-        "label": "Piggy Bundle",
-        "description": "Changes the bundle to look like a pig.",
-        "category": "snapshot",
-        "author": "Kemiu"
-    },
-    {
-        "id": "chocolateCake",
-        "label": "Chocolate Cake",
-        "description": "Turns cake into chocolate cake.",
-        "category": "aesthetic",
-        "author": "Kemiu",
-        "merges": [{
-            "id": "naturalCakeSides",
-            "mergeWith": "naturalChocolateCakeSides"
-        }]
-    },
-    {
-        "id": "naturalCakeSides",
-        "label": "Natural Cake Sides",
-        "description": "Makes the sides of cake more messy and natural.",
-        "category": "aesthetic",
-        "author": "Beatso",
-        "merges": [{
-            "id": "chocolateCake",
-            "mergeWith": "naturalChocolateCakeSides"
-        }]
-    },
-    {
-        "id": "naturalChocolateCakeSides",
-        "hidden": true
-    },
-    {
-        "id": "updatedFlintAndSteel",
-        "label": "Updated Flint and Steel",
-        "description": "Updates the flint and steel texture to be more in line with the new iron and flint textures.",
-        "category": "fixes",
-        "author": "Beatso"
-    },
-    {
-        "id": "betterSnowball",
-        "label": "Better Snowball",
-        "description": "Removes ugly grey colouring from snowball texture.",
-        "category": "fixes",
-        "author": "Beatso"
-    },
-    {
-        "id": "alternativeBricks",
-        "label": "Alternative Bricks",
-        "description": "Makes brick related blocks look like stone bricks.",
-        "category": "aesthetic",
-        "author":"Kemiu",
-        "incompatibilities": ["variatedBricks"]
-    },
-    {
-        "id": "improvedEffectIcons",
-        "label": "Improved Effect Icons",
-        "description": "Some general improvements to status effect icons.",
-        "category": "aesthetic",
-        "author": "Beatso"
-    },
-    {
-        "id": "variatedFungi",
-        "label": "Variated Fungi",
-        "description": "Adds variants for brown and red mushrooms.",
-        "category": "variated",
-        "author": "Daggsy"
-    },
-    {
-        "id": "springFlowers",
-        "label": "Spring Flowers",
-        "description": "Adds variations for each flower.",
-        "category": "variated",
-        "author": "Daggsy"
-    },
-    {
-        "id": "makeupGlowSquid",
-        "label": "Makeup Glow Squid",
-        "description": "Removes a weird glow spot on the Glowsquid's face.",
-        "category": "snapshot",
-        "author": "Bold Muddy"
-    },
-    {
-        "id": "glowyGlowSquid",
-        "label": "Glowy Glow Squid",
-        "description": "Makes the Glow Squid even more glowier.",
-        "category": "snapshot",
-        "author": "Bold Muddy"
-    },
-    {
-        "id": "prismarineGlowSquid",
-        "label": "Prismarine Glow Squid",
-        "description": "Makes the Glow Squid look prismarine like.",
-        "category": "snapshot",
-        "author": "Bold Muddy"
-    },
-    {
-        "id": "redstoneSculkSensors",
-        "label": "Redstone Sculk Sensors",
-        "description": "Changes the Sculk Sensor to be Redstone themed.",
-        "category": "snapshot",
-        "author": "Bold Muddy"
-    },
-    {
-        "id": "redstoneLampSculkSensor",
-        "label": "Redstone Lamp Sculk Sensor",
-        "description": "Changes the Sculk Sensor to be Redstone themed, but with a lamp instead of torches.",
-        "category": "snapshot",
-        "author": "Bold Muddy"
-    },
-    {
-        "id": "amethystTrident",
-        "label": "Amethyst Trident",
-        "description": "Recolors the Trident to be themed with the rest of the Diamond Tools.",
-        "category": "aesthetic",
-        "author": "Bold Muddy",
-        "lang": true
-    },,
-    {
-        "id": "diamondTrident",
-        "label": "Diamond Trident",
-        "description": "Recolors the Trident to be Amethyst Themed.",
-        "category": "aesthetic",
-        "author": "Bold Muddy",
-        "lang": true
-    },
-    {
-        "id": "satanicTrident",
-        "label": "Satanic Trident",
-        "description": "Recolors the Trident with colors straight from hell!",
-        "category": "aesthetic",
-        "author": "Bold Muddy",
-        "lang": true
-    },
-    {
-        "id": "steverStand",
-        "label": "Stever Stand",
-        "description": "Adds a cool steve head to the Armor Stand. Requires OptiFine.",
-        "category": "utility",
-        "author": "Bold Muddy",
-        "lang": true
-    },
-    {
-        "id": "warpcelium",
-        "label": "Warpcelium",
-        "description": "Retextures Warped Nylium to me a bit like Myclium.",
-        "category": "aesthetic",
-        "author": "Bold Muddy"
-    },
-    {
-        "id": "puffierPufferfishes",
-        "label": "Puffier Pufferfishes",
-        "description": "Makes all stages of Pufferfish to the biggest size. Requires OptiFine.",
-        "category": "aesthetic",
-        "author": "Bold Muddy"
-    }
+		"id": "crackedNetherBricks",
+		"label": "Cracked Nether Bricks",
+		"iconType": "gif",
+		"description": "Improves cracked nether bricks by adding a magma animation in cracks.",
+		"category": "aesthetic",
+		"author": "Daggsy"
+	},
+	{
+		"id": "noNauseaOverlay",
+		"label": "No Nausea Overlay",
+		"description": "Removes the green overlay from nausea when distortion effects is set to off.",
+		"category": "utility",
+		"author": "Beatso"
+	},
+	{
+		"id": "noSpyglassOverlay",
+		"label": "No Spyglass Overlay",
+		"description": "Removes the overlay hiding vision when using spyglass.",
+		"category": "snapshot",
+		"author": "Beatso"
+	},
+	{
+		"id": "betterHelmets",
+		"label": "Better Helmets",
+		"description": "Makes your face more visible when wearing a helmet.",
+		"category": "utility",
+		"author": "Beatso"
+	},
+	{
+		"id": "flowerGolem",
+		"label": "Flower Golem",
+		"description": "Makes poppies bloom on the texture of the iron golem.",
+		"category": "aesthetic",
+		"author": "Daggsy"
+	},
+	{
+		"id": "fancyLlamaDecor",
+		"label": "Fancy Llama Decor",
+		"description": "Gives llamas fancier carpet patterns.",
+		"category": "aesthetic",
+		"author": "Daggsy"
+	},
+	{
+		"id": "obsidianEnderChest",
+		"label": "Obsidian Ender Chest",
+		"description": "Removes green and replaces it with an obsidian-like texture.",
+		"category": "aesthetic",
+		"prefers": [{
+			"id": "purpleEndEyes",
+			"delete": "obsidianEnderChest"
+		}],
+		"author": "Daggsy"
+	},
+	{
+		"id": "purpleEndEyes",
+		"label": "Purple End Eyes",
+		"description": "Makes ender pearls, eyes of ender and ender chests all purple",
+		"category": "aesthetic",
+		"merges": [{
+			"id": "purpleEndPortalFrame",
+			"mergeWith": "purpleEndPortalFrameAndPurpleEndEyes"
+		}],
+		"prefers": [{
+			"id": "obsidianEnderChest",
+			"delete": "obsidianEnderChest"
+		}],
+		"author": "Daggsy & Fjorde"
+	},
+	{
+		"id": "purpleEndPortalFrame",
+		"label": "Purple End Portal Frame",
+		"description": "Makes end portal frame purple instead of green.",
+		"category": "aesthetic",
+		"merges": [{
+			"id": "purpleEndEyes",
+			"mergeWith": "purpleEndPortalFrameAndPurpleEndEyes"
+		}],
+		"author": "Daggsy"
+	},
+	{
+		"id": "purpleEndPortalFrameAndPurpleEndEyes",
+		"hidden": true
+	},
+	{
+		"id": "connectedSmoothStone",
+		"label": "Connected Smooth Stone",
+		"description": "Connected smooth stone. No OptiFine required.",
+		"category": "aesthetic",
+		"author": "Beatso"
+	},
+	{
+		"id": "livingDragon",
+		"label": "Living Dragon",
+		"iconType": "gif",
+		"description": "Makes dragon egg more detailed and implements animation.",
+		"category": "aesthetic",
+		"author": "Daggsy"
+	},
+	{
+		"id": "animatedFurnaces",
+		"label": "Animated Furnaces",
+		"iconType": "gif",
+		"description": "Adds animation to furnace and small improvements for smoker and blast furnace.",
+		"category": "fixes",
+		"author": "Daggsy"
+	},
+	{
+		"id": "detailedHearts",
+		"label": "Detailed Hearts",
+		"description": "Improves hearts, armour points, attack indicator and makes ping icons more colourful.",
+		"category": "aesthetic",
+		"author": "Daggsy"
+	},
+	{
+		"id": "matchingGildedBlackstone",
+		"label": "Matching Gilded Blackstone",
+		"description": "Improves top texture of gilded blackstone.",
+		"category": "fixes",
+		"incompatibilities": ["variatedOres"],
+		"author": "Daggsy"
+	},
+	{
+		"id": "soulCampfire",
+		"label": "Soul Campfire",
+		"description": "Replaces oak logs with warped logs and ash with soul soil.",
+		"category": "fixes",
+		"merges": [{
+			"id": "animatedCampfireItems",
+			"mergeWith": "soulCampfirePlusAnimatedCampfire"
+		}],
+		"author": "Daggsy"
+	},
+	{
+		"id": "soulCampfirePlusAnimatedCampfire",
+		"hidden": true
+	},
+	{
+		"id": "fixedBarrel",
+		"label": "Fixed Barrel",
+		"description": "Makes lines on barrel compatibile with lines on spruce planks.",
+		"category": "fixes",
+		"author": "Daggsy"
+	},
+	{
+		"id": "variatedNetherFungi",
+		"label": "Variated Nether Fungi",
+		"description": "Adds more variants for nether fungi.",
+		"category": "variated",
+		"author": "Daggsy"
+	},
+	{
+		"id": "variatedNetherRoots",
+		"label": "Variated Nether Roots",
+		"description": "Includes variations for crimson roots and warped roots.",
+		"category": "variated",
+		"author": "Daggsy"
+	},
+	{
+		"id": "anvilSides",
+		"label": "Anvil Sides",
+		"description": "Adds damage texture on anvil sides.",
+		"category": "utility",
+		"author": "Daggsy"
+	},
+	{
+		"id": "knowledgeBookFix",
+		"label": "Knowledge Book Fix",
+		"description": "Corrects GUIs to use the new JAPPA knowledge book texture.",
+		"category": "fixes",
+		"author": "Beatso"
+	},
+	{
+		"id": "emissiveOres",
+		"label": "Emissive Ores",
+		"description": "Makes ores glow in the dark. Requires OptiFine and emissive textures turned on.",
+		"category": "aesthetic",
+		"merges": [{
+			"id": "variatedOres",
+			"mergeWith": "variatedEmissiveOres"
+		}],
+		"author": "Beatso"
+	},
+	{
+		"id": "targetScore",
+		"label": "Target Score",
+		"description": "Targets show their power level when hit with a projectile.",
+		"category": "utility",
+		"author": "Beatso"
+	},
+	{
+		"id": "arrowedDispensers",
+		"label": "Arrowed Dispensers",
+		"description": "Shows arrows on droppers and dispensers so you can differentiate them and know which way they are facing.",
+		"category": "utility",
+		"incompatibilities": ["fixedDispensers"],
+		"author": "Beatso"
+	},
+	{
+		"id": "shovelsToSpoons",
+		"label": "Shovels to Spoons",
+		"description": "Renames shovels to spoons in-game.",
+		"category": "aesthetic",
+		"incompatibilities": ["chocorite"],
+		"lang": true,
+		"author": "Beatso"
+	},
+	{
+		"id": "cleanerMaps",
+		"label": "Cleaner Maps",
+		"description": "Changes the border of maps to be cleaner and less torn.",
+		"author": "Beatso"
+	},
+	{
+		"id": "daggers",
+		"label": "Daggers",
+		"description": "Makes all swords shorter and renames them.",
+		"category": "utility",
+		"merges": [{
+			"id": "alternativeNetheriteTools",
+			"mergeWith": "daggersAndAlternativeNetheriteTools"
+		}],
+		"incompatibilities": ["chocorite"],
+		"lang": true,
+		"author": "Kemiu"
+	},
+	{
+		"id": "tinyMeals",
+		"label": "Tiny Meals",
+		"description": "Changes food item models to be smaller, so they don't cover as much of the screen.",
+		"category": "utility",
+		"author": "Kemiu"
+	},
+	{
+		"id": "shinyClock",
+		"label": "Shiny Clock",
+		"description": "Gives the clock an alternative texture.",
+		"category": "aesthetic",
+		"merges": [{
+			"id": "restockClock",
+			"mergeWith": "restockAndShinyClock"
+		}],
+		"author": "Kemiu"
+	},
+	{
+		"id": "shinyCompass",
+		"label": "Shiny Compass",
+		"description": "Gives the compass an alternative texture.",
+		"category": "aesthetic",
+		"author": "Kemiu"
+	},
+	{
+		"id": "warted",
+		"label": "Warted",
+		"description": "Changes nether wart crops, blocks and item textures to be less ugly and fit with JAPPA's style.",
+		"author": "Kemiu"
+	},
+	{
+		"id": "variatedBricks",
+		"label": "Variated Bricks",
+		"description": "Makes bricks vary in colour.",
+		"category": "variated",
+		"author": "Beatso",
+		"incompatibilities": ["alternativeBricks"]
+	},
+	{
+		"id": "restockAndShinyClock",
+		"hidden": true
+	},
+	{
+		"id": "moobloom",
+		"label": "Moobloom",
+		"description": "Adds the moobloom from Minecraft Earth to the game. Requires OptiFine.",
+		"category": "aesthetic",
+		"author": "Daggsy"
+	},
+	{
+		"id": "moobloomStyledCows",
+		"label": "Moobloom Styled Cows",
+		"description": "Changes every cow to appear with the Moobloom design.",
+		"category": "aesthetic",
+		"author": "Bold Muddy"
+	},
+	{
+		"id": "glowSquid",
+		"label": "Glow Squid",
+		"description": "Adds the glow squid, glow ink sac and glow item frame from 1.17 snapshots.",
+		"category": "aesthetic",
+		"author": "Beatso",
+		"lang": true,
+		"incompatibilities": ["newStyleSquid"]
+	},
+	{
+		"id": "newStyleSquid",
+		"label": "New Style Squid",
+		"description": "Makes squid more similar to the new glow squid style.",
+		"category": "aesthetic",
+		"author": "Daggsy",
+		"incompatibilities": ["glowSquid"]
+	},
+	{
+		"id": "warpedSoulLantern",
+		"label": "Warped Soul Lantern",
+		"description": "Changes the sides of Soul Lantern to blue and warped.",
+		"category": "fixes",
+		"author": "Daggsy"
+	},
+	{
+		"id": "fixedStonecutter",
+		"label": "Fixed Stonecutter",
+		"description": "Changes the colour of wood on the top of Stonecutter and adds texture with wood to the bottom.",
+		"category": "fixes",
+		"author": "Daggsy"
+	},
+	{
+		"id": "pistonFront",
+		"label": "Piston Front",
+		"description": "Makes fronts of pistons more similar to planks.",
+		"category": "fixes",
+		"author": "Daggsy"
+	},
+	{
+		"id": "lecternBottom",
+		"label": "Lectern Bottom",
+		"description": "Changes the lectern model to show some carpet on the bottom.",
+		"category": "fixes",
+		"incompatibilities": ["flatPlanks"],
+		"author": "Daggsy"
+	},
+	{
+		"id": "craftingTableBottom",
+		"label": "Crafting Table Bottom",
+		"description": "Adds a unique texture to the bottom of crafting tables, that is not just oak planks.",
+		"category": "fixes",
+		"merges": [{
+			"id": "flatPlanks",
+			"mergeWith": "flatPlanksAndCraftingTableBottom"
+		}],
+		"author": "Daggsy"
+	},
+	{
+		"id": "fixedDispensers",
+		"label": "Fixed Dispensers",
+		"description": "Adds a unique bottom texture to droppers and dispensers. Also adds side texture for vertical versions.",
+		"category": "fixes",
+		"incompatibilities": ["arrowedDispensers"],
+		"author": "Daggsy"
+	},
+	{
+		"id": "variatedOres",
+		"label": "Variated Ores",
+		"description": "Variates the minerals in ore blocks to avoid the grid pattern",
+		"category": "variated",
+		"incompatibilities": ["matchingGildedBlackstone"],
+		"merges": [{
+			"id": "emissiveOres",
+			"mergeWith": "variatedEmissiveOres"
+		}],
+		"author": "Beatso"
+	},
+	{
+		"id": "variatedEmissiveOres",
+		"hidden": true
+	},
+	{
+		"id": "variatedGlass",
+		"label": "Variated Glass",
+		"description": "Variated glass to avoid grid patterns in big walls.",
+		"category": "variated",
+		"author": "Beatso"
+	},
+	{
+		"id": "alternativeNetheriteTools",
+		"label": "Alternative Netherite Tools",
+		"description": "Makes Netherite tools a slightly different shape to other tools to make them more special",
+		"category": "aesthetic",
+		"merges": [{
+			"id": "daggers",
+			"mergeWith": "daggersAndAlternativeNetheriteTools"
+		}],
+		"incompatibilities": ["chocorite"],
+		"author": "Beatso"
+	},
+	{
+		"id": "daggersAndAlternativeNetheriteTools",
+		"hidden": true
+	},
+	{
+		"id": "betterBeaconSides",
+		"label": "Better Beacon Sides",
+		"description": "Makes the sides of the beacon less bright",
+		"category": "aesthetic",
+		"author": "Beatso"
+	},
+	{
+		"id": "flatPlanks",
+		"label": "Flat Planks",
+		"description": "Changes planks to use V3.1 of the texture update textures, making them less plastic.",
+		"category": "aesthetic",
+		"incompatibilities": ["lecternBottom"],
+		"merges": [{
+			"id": "craftingTableBottom",
+			"mergeWith": "flatPlanksAndCraftingTableBottom"
+		}],
+		"author": "Beatso"
+	},
+	{
+		"id": "coralIcons",
+		"label": "Coral Icons",
+		"description": "Adds unique item icon for every coral",
+		"category": "aesthetic",
+		"merges": [{
+			"id": "colourfulCoral",
+			"mergeWith": "colourfulCoralAndCoralIcons"
+		}],
+		"author": "Daggsy"
+	},
+	{
+		"id": "colourfulCoral",
+		"label": "Colourful Dead Coral",
+		"description": "Changes colour of dead corals to more saturated",
+		"category": "aesthetic",
+		"merges": [{
+			"id": "coralIcons",
+			"mergeWith": "colourfulCoralAndCoralIcons"
+		}],
+		"author": "Daggsy"
+	},
+	{
+		"id": "colourfulCoralAndCoralIcons",
+		"hidden": true
+	},
+	{
+		"id": "newDirt",
+		"label": "New Dirt",
+		"description": "Adds alternative textures for dirt, which are more in-line with JAPPA's style.",
+		"category": "aesthetic",
+		"author": "Kemiu"
+	},
+	{
+		"id": "brightAndDark",
+		"label": "Bright And Dark",
+		"description": "Adds an alternative texture for sun and moon, making them round.",
+		"category": "aesthetic",
+		"author": "Kemiu"
+	},
+	{
+		"id": "egglessSlime",
+		"label": "Eggless Slime",
+		"description": "Removes the \"egg\" in the middle of slime blocks and mobs.",
+		"category": "aesthetic",
+		"author": "Beatso"
+	},
+	{
+		"id": "egglessHoneyBlock",
+		"label": "Eggless Honey Block",
+		"description": "Removes the \"egg\" in the middle of honey blocks.",
+		"category": "aesthetic",
+		"author": "Beatso"
+	},
+	{
+		"id": "spyglassToTelescope",
+		"label": "Spyglass to Telescope",
+		"description": "Renames the spyglass to telescope.",
+		"category": "snapshot",
+		"author": "Beatso",
+		"lang": true
+	},
+	{
+		"id": "newCandleIcons",
+		"label": "New Candle Icons",
+		"description": "Adds bigger candle icons.",
+		"category": "snapshot",
+		"author": "Daggsy"
+	},
+	{
+		"id": "amethystBuddies",
+		"label": "Amethyst Buddies",
+		"description": "Adds icons for amethyst buds and changes texture of budding amethyst block.",
+		"category": "snapshot",
+		"author": "Daggsy"
+	},
+	{
+		"id": "coldBucket",
+		"label": "Cold Bucket",
+		"description": "Makes original powder snow bucket really, really cold.",
+		"category": "snapshot",
+		"author": "Daggsy"
+	},
+	{
+		"id": "flatPlanksAndCraftingTableBottom",
+		"hidden": true
+	},
+	{
+		"id": "upgradedElytra",
+		"label": "Upgraded Elytra",
+		"description": "Requires OptiFine. Rename of elytra to Netherite Elytra to get unique texture.",
+		"category": "aesthetic",
+		"author": "Daggsy"
+	},
+	{
+		"id": "retiredWanderingTrader",
+		"label": "Retired Wandering Trader",
+		"description": "Changes texture of Nitwit to retired trader.",
+		"category": "aesthetic",
+		"author": "Daggsy"
+	},
+	{
+		"id": "subtleDripstone",
+		"label": "Subtle Dripstone",
+		"description": "Changes colour of dripstone to make it more matching to stone.",
+		"category": "snapshot",
+		"author": "Daggsy"
+	},
+	{
+		"id": "fixedCocoaTop",
+		"label": "Fixed Cocoa Top",
+		"description": "Makes the top of cocoa 8 by 8 pixels instead of 7 by 7.",
+		"category": "fixes",
+		"author": "Daggsy"
+	},
+	{
+		"id": "chocorite",
+		"label": "Chocorite",
+		"description": "Changes netherite into chocolate.",
+		"category": "aesthetic",
+		"author": "Daggsy",
+		"incompatibilities": [
+			"alternativeNetheriteTools",
+			"daggers",
+			"shovelsToSpoons"
+		],
+		"lang": true
+	},
+	{
+		"id": "someShulkers",
+		"label": "Some Shulkers",
+		"description": "Changes bottom texture of shulker shell.",
+		"category": "aesthetic",
+		"author": "Daggsy"
+	},
+	{
+		"id": "variatedHangingRoots",
+		"label": "Variated Hanging Roots",
+		"description": "Adds more variants for hanging roots.",
+		"category": "snapshot",
+		"author": "Daggsy"
+	},
+	{
+		"id": "azaleaIcons",
+		"label": "Azalea Icons",
+		"description": "Adds unique icons for azalea and flowering azalea.",
+		"category": "snapshot",
+		"author": "Daggsy"
+	},
+	{
+		"id": "piggyBundle",
+		"label": "Piggy Bundle",
+		"description": "Changes the bundle to look like a pig.",
+		"category": "snapshot",
+		"author": "Kemiu"
+	},
+	{
+		"id": "chocolateCake",
+		"label": "Chocolate Cake",
+		"description": "Turns cake into chocolate cake.",
+		"category": "aesthetic",
+		"author": "Kemiu",
+		"merges": [{
+			"id": "naturalCakeSides",
+			"mergeWith": "naturalChocolateCakeSides"
+		}]
+	},
+	{
+		"id": "naturalCakeSides",
+		"label": "Natural Cake Sides",
+		"description": "Makes the sides of cake more messy and natural.",
+		"category": "aesthetic",
+		"author": "Beatso",
+		"merges": [{
+			"id": "chocolateCake",
+			"mergeWith": "naturalChocolateCakeSides"
+		}]
+	},
+	{
+		"id": "naturalChocolateCakeSides",
+		"hidden": true
+	},
+	{
+		"id": "updatedFlintAndSteel",
+		"label": "Updated Flint and Steel",
+		"description": "Updates the flint and steel texture to be more in line with the new iron and flint textures.",
+		"category": "fixes",
+		"author": "Beatso"
+	},
+	{
+		"id": "betterSnowball",
+		"label": "Better Snowball",
+		"description": "Removes ugly grey colouring from snowball texture.",
+		"category": "fixes",
+		"author": "Beatso"
+	},
+	{
+		"id": "alternativeBricks",
+		"label": "Alternative Bricks",
+		"description": "Makes brick related blocks look like stone bricks.",
+		"category": "aesthetic",
+		"author": "Kemiu",
+		"incompatibilities": ["variatedBricks"]
+	},
+	{
+		"id": "improvedEffectIcons",
+		"label": "Improved Effect Icons",
+		"description": "Some general improvements to status effect icons.",
+		"category": "aesthetic",
+		"author": "Beatso"
+	},
+	{
+		"id": "variatedFungi",
+		"label": "Variated Fungi",
+		"description": "Adds variants for brown and red mushrooms.",
+		"category": "variated",
+		"author": "Daggsy"
+	},
+	{
+		"id": "springFlowers",
+		"label": "Spring Flowers",
+		"description": "Adds variations for each flower.",
+		"category": "variated",
+		"author": "Daggsy"
+	},
+	{
+		"id": "makeupGlowSquid",
+		"label": "Makeup Glow Squid",
+		"description": "Removes a weird glow spot on the Glowsquid's face.",
+		"category": "snapshot",
+		"author": "Bold Muddy"
+	},
+	{
+		"id": "glowyGlowSquid",
+		"label": "Glowy Glow Squid",
+		"description": "Makes the Glow Squid even more glowier.",
+		"category": "snapshot",
+		"author": "Bold Muddy"
+	},
+	{
+		"id": "prismarineGlowSquid",
+		"label": "Prismarine Glow Squid",
+		"description": "Makes the Glow Squid look prismarine like.",
+		"category": "snapshot",
+		"author": "Bold Muddy"
+	},
+	{
+		"id": "redstoneSculkSensors",
+		"label": "Redstone Sculk Sensors",
+		"description": "Changes the Sculk Sensor to be Redstone themed.",
+		"category": "snapshot",
+		"author": "Bold Muddy"
+	},
+	{
+		"id": "redstoneLampSculkSensor",
+		"label": "Redstone Lamp Sculk Sensor",
+		"description": "Changes the Sculk Sensor to be Redstone themed, but with a lamp instead of torches.",
+		"category": "snapshot",
+		"author": "Bold Muddy"
+	},
+	{
+		"id": "amethystTrident",
+		"label": "Amethyst Trident",
+		"description": "Recolors the Trident to be themed with the rest of the Diamond Tools.",
+		"category": "aesthetic",
+		"author": "Bold Muddy",
+		"lang": true
+	},
+	{
+		"id": "diamondTrident",
+		"label": "Diamond Trident",
+		"description": "Recolors the Trident to be Amethyst Themed.",
+		"category": "aesthetic",
+		"author": "Bold Muddy",
+		"lang": true
+	},
+	{
+		"id": "satanicTrident",
+		"label": "Satanic Trident",
+		"description": "Recolors the Trident with colors straight from hell!",
+		"category": "aesthetic",
+		"author": "Bold Muddy",
+		"lang": true
+	},
+	{
+		"id": "steverStand",
+		"label": "Stever Stand",
+		"description": "Adds a cool steve head to the Armor Stand. Requires OptiFine.",
+		"category": "utility",
+		"author": "Bold Muddy",
+		"lang": true
+	},
+	{
+		"id": "warpcelium",
+		"label": "Warpcelium",
+		"description": "Retextures Warped Nylium to me a bit like Myclium.",
+		"category": "aesthetic",
+		"author": "Bold Muddy"
+	},
+	{
+		"id": "puffierPufferfishes",
+		"label": "Puffier Pufferfishes",
+		"description": "Makes all stages of Pufferfish to the biggest size. Requires OptiFine.",
+		"category": "aesthetic",
+		"author": "Bold Muddy"
+	}
 ]
