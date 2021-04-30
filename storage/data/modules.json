@@ -696,8 +696,8 @@
 		"author": "Bold Muddy"
 	},
 	{
-		"id": "redstoneSculkSensors",
-		"label": "Redstone Sculk Sensors",
+		"id": "redstoneSculkSensor",
+		"label": "Redstone Sculk Sensor",
 		"description": "Changes the Sculk Sensor to be Redstone themed.",
 		"category": "snapshot",
 		"author": "Bold Muddy"
@@ -742,8 +742,8 @@
 		"lang": true
 	},
 	{
-		"id": "warpcelium",
-		"label": "Warpcelium",
+		"id": "warpcilium",
+		"label": "Warpcilium",
 		"description": "Retextures Warped Nylium to me a bit like Myclium.",
 		"category": "aesthetic",
 		"author": "Bold Muddy"
