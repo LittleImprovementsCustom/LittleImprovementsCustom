@@ -754,5 +754,12 @@
 		"description": "Makes all stages of Pufferfish to the biggest size. Requires OptiFine.",
 		"category": "aesthetic",
 		"author": "Bold Muddy"
+	},
+	{
+		"id": "smallerSporeBlossom",
+		"label": "Smaller Smore Blossom",
+		"description": "Improves the appearance of spore blossoms.",
+		"category": "snapshot",
+		"author": "Beatso"
 	}
 ]
