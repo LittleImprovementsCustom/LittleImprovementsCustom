@@ -46,5 +46,13 @@
         "type": "dynamic",
         "uuid": "baa86d889f1d4c3092825b1f5f0843c7",
         "desc": "Some Variated Ores and Purple End Eyes textures"
+    },
+    {
+        "name": "Bold Muddy",
+        "group": "contributor",
+        "link": "https://www.planetminecraft.com/member/bold_muddy/",
+        "type": "dynamic",
+        "uuid": "83c10ac5c3484e20bee044ac6ea4440c",
+        "desc": "Some packs are by Muddy"
     }
 ]
