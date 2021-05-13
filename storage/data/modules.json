@@ -712,7 +712,7 @@
 	{
 		"id": "amethystTrident",
 		"label": "Amethyst Trident",
-		"description": "Recolors the Trident to be themed with the rest of the Diamond Tools.",
+		"description": "Recolors the Trident to be Amethyst Themed.",
 		"category": "aesthetic",
 		"author": "Bold Muddy",
 		"lang": true
@@ -720,7 +720,7 @@
 	{
 		"id": "diamondTrident",
 		"label": "Diamond Trident",
-		"description": "Recolors the Trident to be Amethyst Themed.",
+		"description": "Recolors the Trident to be themed with the rest of the Diamond Tools.",
 		"category": "aesthetic",
 		"author": "Bold Muddy",
 		"lang": true
