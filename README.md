@@ -1,3 +1,5 @@
+**Note: The normal domain is currently down and the site can be accessed at https://littleimprovementscustom.beatso1.repl.co/. (See [#222](https://github.com/LittleImprovementsCustom/LittleImprovementsCustom/issues/222))**
+
 # Little Improvements: Custom
 [![Website](https://img.shields.io/website?down_color=critical&up_color=success&url=https%3A%2F%2Fwww.littleimprovements-custom.tk&logo=firefox-browser&style=flat-square)](https://www.littleimprovements-custom.tk/)
 [![Build](https://img.shields.io/github/workflow/status/LittleImprovementsCustom/LittleImprovementsCustom/Node.js%20CI?logo=github-actions&style=flat-square)](https://github.com/LittleImprovementsCustom/LittleImprovementsCustom/actions?query=workflow%3A%22Node.js+CI%22)
