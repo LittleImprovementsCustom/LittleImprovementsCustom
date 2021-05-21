@@ -539,7 +539,7 @@
 	{
 		"id": "upgradedElytra",
 		"label": "Upgraded Elytra",
-		"description": "Requires OptiFine. Rename of elytra to Netherite Elytra to get unique texture.",
+		"description": "Requires OptiFine. Rename elytra to Netherite Elytra to get a unique texture.",
 		"category": "aesthetic",
 		"author": "Daggsy"
 	},
@@ -761,5 +761,12 @@
 		"description": "Improves the appearance of spore blossoms.",
 		"category": "snapshot",
 		"author": "Beatso"
+	},
+	{
+		"id": "flowerCrowns",
+		"label": "Flower Crowns",
+		"description": "Requires OptiFine. Rename any helmet to Allium Crown, Poppy Crow, etc to get your favorite flower crown.",
+		"category": "aesthetic",
+		"author": "Daggsy"
 	}
 ]
