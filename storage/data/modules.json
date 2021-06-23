@@ -768,5 +768,12 @@
 		"description": "Requires OptiFine. Rename any helmet to Allium Crown, Poppy Crow, etc to get your favorite flower crown.",
 		"category": "aesthetic",
 		"author": "Daggsy"
+	},
+	{
+	"id": "qualityCreeper",
+		"label": "Quality Creeper",
+		"description": "Improves Creeper texture with new flesh-like skin. Optifine needed for better model.",
+		"category": "aesthetic",
+		"author": "Kemiu"
 	}
 ]
