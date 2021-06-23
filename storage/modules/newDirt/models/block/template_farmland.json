@@ -1,18 +1,18 @@
 {
     "parent": "block/block",
     "textures": {
-        "particle": "#dirt"
+        "particle": "#dirt_down"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],
             "to": [ 16, 15, 16 ],
             "faces": {
-                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#dirt", "cullface": "down" },
+                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#dirt_down", "cullface": "down" },
                 "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#top" },
-                "north": { "uv": [ 0, 1, 16, 16 ], "texture": "#dirt", "cullface": "north" },
-                "south": { "uv": [ 0, 1, 16, 16 ], "texture": "#dirt", "cullface": "south" },
-                "west":  { "uv": [ 0, 1, 16, 16 ], "texture": "#dirt", "cullface": "west" },
-                "east":  { "uv": [ 0, 1, 16, 16 ], "texture": "#dirt", "cullface": "east" }
+                "north": { "uv": [ 0, 1, 16, 16 ], "texture": "#dirt_front", "cullface": "north" },
+                "south": { "uv": [ 0, 1, 16, 16 ], "texture": "#dirt_front", "cullface": "south" },
+                "west":  { "uv": [ 0, 1, 16, 16 ], "texture": "#dirt_side", "cullface": "west" },
+                "east":  { "uv": [ 0, 1, 16, 16 ], "texture": "#dirt_side", "cullface": "east" }
             }
         }
     ]
