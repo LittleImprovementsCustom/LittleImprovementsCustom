@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/food",
   "textures": {
-    "layer0": "minecraft:item/glistering_melon_slice"
+    "layer0": "minecraft:item/fermented_spider_eye"
   }
 }
