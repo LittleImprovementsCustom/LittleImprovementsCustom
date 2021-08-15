@@ -49,6 +49,10 @@
 		"iconType": "gif",
 		"description": "Improves cracked nether bricks by adding a magma animation in cracks.",
 		"category": "aesthetic",
+		"merges": [{
+			"id": "alternativeCrackedNetherBricks",
+			"mergeWith": "alternativeBricks"
+		}],
 		"author": "Daggsy"
 	},
 	{
@@ -650,8 +654,16 @@
 		"label": "Alternative Bricks",
 		"description": "Makes brick related blocks look like stone bricks.",
 		"category": "aesthetic",
+		"merges": [{
+			"id": "alternativeCrackedNetherBricks",
+			"mergeWith": "crackedNetherBricks"
+		}],
 		"author": "Kemiu",
 		"incompatibilities": ["variatedBricks"]
+	},
+	{
+		"id": "alternativeCrackedNetherBricks",
+		"hidden": true
 	},
 	{
 		"id": "improvedEffectIcons",
