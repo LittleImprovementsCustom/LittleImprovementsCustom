@@ -27,7 +27,7 @@
 		"node-stream-zip": "^1.13.3"
 	},
 	"devDependencies": {
-		"chai": "^4.3.4",
+		"chai": "^4.3.6",
 		"chai-http": "^4.3.0",
 		"eslint": "^7.25.0",
 		"mocha": "^8.3.2",
